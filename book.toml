@@ -1,0 +1,6 @@
+[book]
+authors = ["Manav Sethi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ATOM Wiki"
