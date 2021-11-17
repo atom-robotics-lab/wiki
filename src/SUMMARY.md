@@ -9,6 +9,11 @@
   - [Linux](./tools/linux.md)
   - [Python](./tools/python.md)
 
+- [Selection Task](./sel-task/selection-task.md)
+  - [Problem statement](./sel-task/problem-statement.md)
+  - [Procedure](./sel-task/procedure.md)
+  - [Hints](./sel-task/hints.md)
+
 - [Intro To ROS](./ros/ros.md)
 
 - [Editing the ATOM main site](./general/main-site.md)
