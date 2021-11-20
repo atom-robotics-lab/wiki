@@ -13,6 +13,7 @@
   - [Problem statement](./sel-task/problem-statement.md)
   - [Procedure](./sel-task/procedure.md)
   - [Hints](./sel-task/hints.md)
+  - [Hints](./sel-task/submissions.md)
 
 - [Intro To ROS](./ros/ros.md)
   - [ROS installation](./ros/installation.md)
