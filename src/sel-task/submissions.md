@@ -4,7 +4,7 @@ For Submissions of your work please refer to the following instructions
 
   - Video
     - After completing the task, record a video of your work as shown in the expected output in the problem statement page
-    - Once the video is recorded upload that video to Youtube 
+    - Once the video is recorded, upload the video to Youtube as an unlisted video
 
   - Code
     - Once your script is complete, add comments to your code to make it more readable.
@@ -18,4 +18,4 @@ For Submissions of your work please refer to the following instructions
 
 [Google Form for Task submission](https://forms.gle/PGfqF2ZmzSH3AY1D7)
 
-**Note:** Even if you are not able to complete entire the task you are requested to make the submission of the work that you have done anyway.
+> **Note:** Even if you are not able to complete entire the task you are requested to make the submission of the work that you have done anyway.
