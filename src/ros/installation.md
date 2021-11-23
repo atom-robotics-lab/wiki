@@ -19,6 +19,8 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 
 ```shell
     sudo apt install curl # if you haven't already installed curl
+```
+```shell
     curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 ```
 
@@ -26,7 +28,9 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 
 * Update package repositories
 
-`sudo apt update`
+```shell
+sudo apt update
+```
 
 * Install ROS
 
@@ -39,14 +43,14 @@ sudo apt install ros-noetic-desktop-full
 1. Adding environment variables: To Automatically add ROS environment variables to your bash session every time a new shell (terminal) is launched, enter the following commands (this step is similar as adding environmental variable in windows):
 
 ```shell
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
 2. Initialize rosdep: Before you can use many ROS tools, you will need to initialize rosdep. rosdep enables you to easily install system dependencies for source you want to compile and is required to run some core components in ROS.
 
 ```shell
-sudo apt install python-rosdep
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 sudo rosdep init
 rosdep update
 ```
@@ -56,17 +60,17 @@ rosdep update
 * Catkin tools
 
 ```shell
-sudo apt-get install ros-melodic-catkin python-catkin-tools
+sudo apt-get install ros-noetic-catkin python3-catkin-tools
 ```
 
 * std_msg package
 
 ```shell
-sudo apt install ros-melodic-std-msgs
+sudo apt install ros-noetic-std-msgs
 ```
 
 * turtlesim
 
 ```shell
-sudo apt-get install ros-melodic-ros-tutorials
+sudo apt-get install ros-noetic-ros-tutorials
 ```
