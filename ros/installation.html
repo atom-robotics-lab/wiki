@@ -157,13 +157,15 @@ installed Ubuntu 20.04 yet make sure to install it before proceeding. </li>
 </code></pre>
 <h3 id="setup-your-keys"><a class="header" href="#setup-your-keys">Setup your keys</a></h3>
 <pre><code class="language-shell">    sudo apt install curl # if you haven't already installed curl
-    curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+</code></pre>
+<pre><code class="language-shell">    curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 </code></pre>
 <h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
 <ul>
 <li>Update package repositories</li>
 </ul>
-<p><code>sudo apt update</code></p>
+<pre><code class="language-shell">sudo apt update
+</code></pre>
 <ul>
 <li>Install ROS</li>
 </ul>
@@ -173,13 +175,13 @@ installed Ubuntu 20.04 yet make sure to install it before proceeding. </li>
 <ol>
 <li>Adding environment variables: To Automatically add ROS environment variables to your bash session every time a new shell (terminal) is launched, enter the following commands (this step is similar as adding environmental variable in windows):</li>
 </ol>
-<pre><code class="language-shell">echo &quot;source /opt/ros/melodic/setup.bash&quot; &gt;&gt; ~/.bashrc
+<pre><code class="language-shell">echo &quot;source /opt/ros/noetic/setup.bash&quot; &gt;&gt; ~/.bashrc
 source ~/.bashrc
 </code></pre>
 <ol start="2">
 <li>Initialize rosdep: Before you can use many ROS tools, you will need to initialize rosdep. rosdep enables you to easily install system dependencies for source you want to compile and is required to run some core components in ROS.</li>
 </ol>
-<pre><code class="language-shell">sudo apt install python-rosdep
+<pre><code class="language-shell">sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 sudo rosdep init
 rosdep update
 </code></pre>
@@ -187,17 +189,17 @@ rosdep update
 <ul>
 <li>Catkin tools</li>
 </ul>
-<pre><code class="language-shell">sudo apt-get install ros-melodic-catkin python-catkin-tools
+<pre><code class="language-shell">sudo apt-get install ros-noetic-catkin python3-catkin-tools
 </code></pre>
 <ul>
 <li>std_msg package</li>
 </ul>
-<pre><code class="language-shell">sudo apt install ros-melodic-std-msgs
+<pre><code class="language-shell">sudo apt install ros-noetic-std-msgs
 </code></pre>
 <ul>
 <li>turtlesim</li>
 </ul>
-<pre><code class="language-shell">sudo apt-get install ros-melodic-ros-tutorials
+<pre><code class="language-shell">sudo apt-get install ros-noetic-ros-tutorials
 </code></pre>
 
                     </main>
