@@ -6,6 +6,8 @@ The TASK provided here is the selection criteria for joiing the **A.T.O.M** soci
 
 This task is not just only test your problem solving skills but see  your diligence to learn new stuff the ablity to get the work done.
 
-> Deadline for completing the task: 27th November, 2021
+
+> **Note**: the deadline has been updated 
+> New deadline for completing the task: 27th November, 2021
 
 Head to the [Problem statement](./sel-task/problem-statement.md) section to begin with the task.
