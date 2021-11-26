@@ -6,7 +6,12 @@
   - [ROS](./setup/ros.md)
 - [Know your tools](./tools/tools.md)
   - [Git](./tools/git.md)
-  - [Linux](./tools/linux.md)
+  - [Linux](./tools/linux/linux.md)
+    - [File System](./tools/linux/file-system.md)
+    - [Basic Commands](./tools/linux/basic-commands.md)
+    - [File Permissions](./tools/linux/file-permissions.md)
+    - [Shell Scripting](./tools/linux/shell-scripting.md)
+
   - [Python](./tools/python.md)
 
 - [Selection Task](./sel-task/selection-task.md)
