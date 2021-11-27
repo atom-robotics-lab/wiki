@@ -4,3 +4,8 @@ language = "en"
 multilingual = false
 src = "src"
 title = "ATOM Wiki"
+
+[output.html.fold]
+enable = true
+level = 0
+
