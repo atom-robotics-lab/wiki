@@ -44,3 +44,4 @@
 
 - [Editing the ATOM main site](./general/main-site.md)
 - [Editing this wiki](./general/edit-wiki.md)
+- [Using the access repo](./general/access-repo.md)
