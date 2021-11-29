@@ -1,4 +1,4 @@
-# Catkin Workspace
+# Create Workspace
 
 * catkin is the oﬃcial build system of ROS and the successor to the original ROS build system, rosbuild.
 * catkin combines CMake macros and Python scripts to provide some functionality on top of CMake's normal workﬂow.
