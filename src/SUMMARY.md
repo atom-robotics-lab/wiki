@@ -41,6 +41,13 @@
   - [ROS Communication](./ros/comm/comm.md)
     - [ROS Topics](./ros/comm/topics/topics.md)
       - [rostopic command](./ros/comm/topics/rostopic.md)
+ 
+- [Projects](./projects/projects.md)
+  - [Curve Tracer](./projects/curve-tracer/curve-tracer.md)
+    - [Installation](./projects/curve-tracer/installation.md)
+  - [Assistive Teleop](./projects/a-teleop/a-teleop.md)
+
+    - [Installation](./projects/a-teleop/installation.md)
 
 - [Editing the ATOM main site](./general/main-site.md)
 - [Editing this wiki](./general/edit-wiki.md)
