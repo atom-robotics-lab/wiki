@@ -3,7 +3,7 @@
 Follow the instructions given below to get started with the task.
 
 * First, you will need to create a package named selection_task within your ROS workspace. Once your package is created, source and build your workspace.
-* Within this package, you should have a  scripts  folder inside which you'll create a python script, named  node_turtle_revolve.py.
+* Within this package, you should have a  'scripts'  folder inside which you'll create a python script, named  node_turtle_revolve.py.
 * Fill the script with proper programming ethics. Doing this will help us understand your code better and quicker than usual.
 * After completing the python script. Make it executable, if it isn't already. To do that, enter the following code.
 
