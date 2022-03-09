@@ -1,6 +1,6 @@
 # Problem Statement
 
-* The objective of the task is to move the turtle inside the turtlesim window in a inward or outward spiral motion and to stop it after a certian amount of distance or turns.
+* The objective of the task is to move the turtle inside the turtlesim window in a inward or outward spiral motion and to stop it after 4 turns in order to create a spiral as given in the expected output.
 
 * To acheive this task you are supposed to create a node named &nbsp; <mark>/node_turtle_spiral</mark>  &nbsp; within a python script,    &nbsp;<mark>node_turtle_spiral.py</mark> &nbsp;
 
