@@ -11,10 +11,10 @@ For Submissions of your work please refer to the following instructions
     - Create a copy of your script and rename it as task_<YourName>.py . Your example if your name is 'Alex', then rename your script as task_alex.py
 
   - Submissions
-    - Once your have both of the above things ready, submit the YouTube link of the video and the script in the google form given below
+    - Once you have both of the above things ready, submit the YouTube link of the video and the script in the google form given below
 
   - Interview
-    - Once we review you submission, we will be calling you for a personal interview  based on your work. 
+    - Once we review your submission, we will be calling you for a personal interview  based on your work. 
 
 [Google Form for Task submission](https://forms.gle/PGfqF2ZmzSH3AY1D7)
 
