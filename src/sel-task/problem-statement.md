@@ -17,7 +17,7 @@ Once you have read the problem statement please visit the [Procedure](./procedur
 <iframe
     width="640"
     height="480"
-    src="https://youtu.be/5snhKotl48k"
+    src="https://www.youtube.com/embed/5snhKotl48k"
     frameborder="0"
     allow="autoplay; encrypted-media"
     allowfullscreen
