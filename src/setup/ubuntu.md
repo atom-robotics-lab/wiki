@@ -1,3 +1,3 @@
 # Ubuntu
 
-comming soon! 
+coming soon! 
