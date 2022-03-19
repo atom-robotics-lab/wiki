@@ -2,7 +2,7 @@
 
 Please refer these resources to learn more about file permissions in Linux :
 
-- [guru99](https://www.guru99.com/file-permissions.html)
+- [linuxize](https://linuxize.com/post/understanding-linux-file-permissions/)
 - [tutorialspoint](https://www.tutorialspoint.com/unix/unix-file-permission.htm)
 
 <br>
