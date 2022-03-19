@@ -3,7 +3,7 @@
 Please refer these resources to learn more about file permissions in Linux :
 
 - [guru99](https://www.guru99.com/file-permissions.html)
-- [linuxfoundation](https://linuxfoundation.org/blog/classic-sysadmin-understanding-linux-file-permissions/)
+- [tutorialspoint](https://www.tutorialspoint.com/unix/unix-file-permission.htm)
 
 <br>
 <br>
