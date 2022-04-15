@@ -4,6 +4,8 @@
 - [Tools setup](./setup/tools-setup.md)
   - [Ubuntu](./setup/ubuntu.md)
   - [ROS](./setup/ros.md)
+  - [PX4](./setup/px4.md)
+  - [VirtualEnv](./setup/virtualenv.md)
 - [Know your tools](./tools/tools.md)
   - [Git](./tools/git.md)
   - [Linux](./tools/linux/linux.md)

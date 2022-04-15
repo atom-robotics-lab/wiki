@@ -1,3 +1,3 @@
 # Tools setup
 
-comming soon! 
+This section is about the basic setup of tools
