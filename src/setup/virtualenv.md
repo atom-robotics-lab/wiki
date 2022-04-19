@@ -50,7 +50,15 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 source ~/.bashrc
 ```
 
-## New virtual environment
+
+
+
+
+
+
+
+
+# New virtual environment
 
 ## Make  a new virtual environment
 
@@ -70,5 +78,7 @@ deactivate
 ```
 
 ## Your virtual environment is now installed
+
+
 
 
