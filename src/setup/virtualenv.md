@@ -1,4 +1,4 @@
-# For installation of virtual environment wrapper and creating a virtual enviornment : 
+# Installation of virtual environment wrapper and creating a virtual enviornment : 
 
 ## To install virtualenvwrapper
 
@@ -64,38 +64,11 @@ mkvirtualenv [name of your virtual environment]
 workon [name of your virtual environment]
 ```
 
-## Your virtual environment is now up and running, now we will install opencv in the virtual environment you just created
-
-## Installation of opencv
-
+## To deactivate virtual environment
 ```bash
-pip install opencv-python
+deactivate
 ```
 
-## Open Python interpreter in terminal
+## Your virtual environment is now installed
 
-```bash
-python
-```
 
-## import opencv in the above open Python interpreter
-
-```python
-import cv2
-```
-
-## Your virtual environment and opencv are installed and good to go 
-
-## Installation of cv-bridge
-
-```bash
-sudo apt-get install ros-noetic-cv-bridge
-```
-
-## To check if cv_bridge is installed
-
-### Note : cv_bridge is a ros package, so make sure you source your ROS before running the command below
-
-```bash
-rospack find cv_bridge
-```
