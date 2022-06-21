@@ -3,7 +3,7 @@
 - [ATOM Wiki](main-page.md)
 - [Tools setup](./setup/tools-setup.md)
   - [Ubuntu](./setup/ubuntu.md)
-  - [ROS](./setup/ros.md)
+  - [ROS](./ros/installation.md)
   - [PX4](./setup/px4.md)
   - [VirtualEnv](./setup/virtualenv.md)
 - [Know your tools](./tools/tools.md)
@@ -23,7 +23,6 @@
   - [Submissions](./sel-task/submissions.md)
 
 - [Intro To ROS](./ros/ros.md)
-  - [ROS installation](./ros/installation.md)
   - [Catkin Workspace](./ros/catkin_ws.md)
   - [ROS Packages](./ros/package/package.md)
     - [Create a ROS package](./ros/package/create.md)

@@ -17,7 +17,7 @@
 <br>
 
 <iframe
-    width="640"
+    width="720"
     height="480"
     src="https://images.techhive.com/images/article/2016/11/linux-penguin-security-100694867-large.jpg?auto=webp&quality=85,70"
     frameborder="0"
