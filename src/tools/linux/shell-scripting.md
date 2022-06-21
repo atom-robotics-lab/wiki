@@ -16,8 +16,8 @@ Please refer these resources to learn more about shell scripting:
 <br>
 
 <iframe
-    width="640"
-    height="480"
+    width="1280"
+    height="1020"
     src="https://www.wallpaperflare.com/static/407/373/130/unix-bash-shell-way-wallpaper.jpg"
     frameborder="0"
     allow="autoplay; encrypted-media"

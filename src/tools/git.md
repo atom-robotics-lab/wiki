@@ -13,8 +13,8 @@ For installing git, you can refer [Official Git Website](https://git-scm.com/dow
 <br>
 
 <iframe
-    width="640"
-    height="480"
+    width="1280"
+    height="860"
     src="https://www.cloudsavvyit.com/p/uploads/2021/09/4d72a7db.png?width=1198&trim=1,1&bg-color=000&pad=1,1"
     frameborder="0"
     allow="autoplay; encrypted-media"
