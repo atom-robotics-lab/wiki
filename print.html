@@ -164,7 +164,18 @@
 <h2 id="featues-and-usage"><a class="header" href="#featues-and-usage">Featues and usage</a></h2>
 <ul>
 <li>
-<p><strong>ROS</strong>: comes with pre-installed ROS neotic and Nav stack packages. For installation and more info on ROS please visit our Intro to ROS section.</p>
+<p><strong>ROS</strong>: The image comes with pre-installed ROS neotic and Nav stack packages. For installation and more info on ROS please visit our Intro to ROS section.</p>
+<ul>
+<li><em><strong>ROS Master-Slave communication</strong></em>: ROS Master-Slave communication is essential when you are working with computational heavy packages which can can create a toll on your raspberry pi. To avoid that a Master-Slave communication is established so you can run differnet nodes on different devices accordingly. While using the above image, the raspberry pi is assumed to be a slave considering its master running on your host device (eg: your ROS running laptop). 
+In order to do so, open your <code>.bashrc</code> file in your <code>/home</code> directory and add the following lines in the end.</li>
+</ul>
+<pre><code class="language-bash">export ROS_MASTER_URI=http://localhost:11311/
+export ROS_HOSTNAME=&lt;ROS IP OF YOUR MASTER DEVICE&gt;
+export ROS_IP=&lt;ROS IP OF YOUR MASTER DEVICE&gt;
+</code></pre>
+<p>Once you are done with that, just save it and close the editor and save it. Source the edited bashrc or open a fresh terminal and run <code>roscore</code> and you will see your ROS_MASTER_URI has been changed from local host to the IP of your master device. </p>
+<p>Once the master url has been exposed, your raspberry pi can connect to your device as a slave. To do so open the .bashrc file of raspberry pi and navigate to the botom.
+You will find some similar lines. Change the IP adress of your devices accordingly and you are good to go...</p>
 </li>
 <li>
 <p><strong>virtualenvwrapper</strong>: virtual enviroment wrapper is a great tool for switching between diffenent python enviroments for diffent projects. The image comes pre-installed with it and has an existing enviroment named <em><strong>cv</strong></em> with OpenCV installed created in it. just type the below command and you are good to go.</p>
