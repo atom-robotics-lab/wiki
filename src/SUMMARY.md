@@ -18,7 +18,8 @@
   - [Python](./tools/python.md)
 
 - [Selection Task](./sel-task/selection-task.md)
-  - [Problem statement](./sel-task/problem-statement.md)
+  - [Task1](./sel-task/task1.md)
+  - [Task2](./sel-task/task2.md)
   - [Submissions](./sel-task/submissions.md)
 
 - [Intro To ROS](./ros/ros.md)
