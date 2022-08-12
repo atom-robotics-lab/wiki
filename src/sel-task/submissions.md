@@ -3,18 +3,18 @@
 For Submissions of your work please refer to the following instructions
 
   - Video
-    - After completing the task, record a video of your work as shown in the expected output in the problem statement page
-    - Once the video is recorded, upload the video to Youtube as an unlisted video
+    - Record a video of your screen showcasing your work in the 3d modeling software.
+    - Once the video is recorded, upload the video to Youtube as an unlisted video.
+    - (optional)plus point if you also record your screen while going through the whole making proccess. Also, Upload it as a unlisted video.
 
-  - Code
-    - Once your script is complete, add comments to your code to make it more readable.
-    - Create a copy of your script and rename it as task_<YourName>.py . Your example if your name is 'Alex', then rename your script as task_alex.py
+  - Model file 
+    - Once your Model is complete, export it as a stl file and rename it as <TaskNumber_><YourName>.stl. Your example if your name is 'Alex', then rename your script as Task1_Alex.stl
 
   - Submissions
-    - Once you have both of the above things ready, submit the YouTube link of the video and the script in the google form given below
+    - Once you have both of the above things ready, submit the YouTube link of the video and the stl file in the google form given below
 
   - Interview
-    - Once we review your submission, we will be calling you for a personal interview  based on your work. 
+    - Once we review your submission, we will be calling you for a personal interview based on your work. 
 
 [Google Form for Task submission](https://forms.gle/PGfqF2ZmzSH3AY1D7)
 

@@ -19,8 +19,6 @@
 
 - [Selection Task](./sel-task/selection-task.md)
   - [Problem statement](./sel-task/problem-statement.md)
-  - [Procedure](./sel-task/procedure.md)
-  - [Hints](./sel-task/hints.md)
   - [Submissions](./sel-task/submissions.md)
 
 - [Intro To ROS](./ros/ros.md)
@@ -56,7 +54,12 @@
 - [Editing this wiki](./general/edit-wiki.md)
 - [Using the access repo](./general/access-repo.md)
 - [Archives](./archives/archives.md)
-  - [Selection Task](./archives/sel-task2021/selection-task.md)
+  - [Selection Task 2022](./archives/sel-task2022/selection-task.md)
+    - [Problem statement](./archives/sel-task2022/problem-statement.md)
+    - [Procedure](./archives/sel-task2022/procedure.md)
+    - [Hints](./archives/sel-task2022/hints.md)
+    - [Submissions](./archives/sel-task2022/submissions.md)
+  - [Selection Task 2021](./archives/sel-task2021/selection-task.md)
     - [Problem statement](./archives/sel-task2021/problem-statement.md)
     - [Procedure](./archives/sel-task2021/procedure.md)
     - [Hints](./archives/sel-task2021/hints.md)

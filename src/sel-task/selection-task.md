@@ -2,12 +2,14 @@
 
 Hi there, Welcome to the Selection Task. 
 
-The TASK provided here is the selection criteria for joiing the **A.T.O.M** society. Those who sucessfully finish the task within the given time frame will be given a chance to give an interview to become a member of the **A.T.O.M** society.
+The TASK provided here is the selection criteria for joiing the **A.T.O.M** society. Those who sucessfully finish the task within the given time frame will be given a chance to give an interview and eventually become a member of the **A.T.O.M** society.
 
-This task is not just only test your problem solving skills but see  your diligence to learn new stuff the ablity to get the work done.
+The tasks are not just only test your problem solving skills but see your diligence to learn new stuff the ablity to get the work done.
 
-> **Note:** All the resources to complete the said task are provided in the ROS section of ATOM WIKI. So make sure to check it out if you are new to ROS.
+You will be required to finish two task in the alloted time frame. Both of them are supposed to be in done in any 3d modeling software preferably fusion360.
+
+> **Note:**Currently we only require students who are skilled in 3d modeling. So, only two students will be selected this time.
 
 
-> The deadline for completing the task: 25th March, 2022
-Head to the Problem statement section to begin with the task.
+> The deadline for completing the task: 21st August, 2022
+Head to [Task 1](./task1.md) to begin with the task.

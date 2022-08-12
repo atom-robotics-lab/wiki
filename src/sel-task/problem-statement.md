@@ -1,13 +1,13 @@
-# Problem Statement
+# Task 1
 
-* The objective of the task is to move the turtle inside the turtlesim window in a inward or outward spiral motion and to stop it after 4 turns in order to create a spiral as given in the expected output.
+* The objective of the task is to make a 3d model of the given engineering drawing.
 
-* To acheive this task you are supposed to create a node named &nbsp; <mark>/node_turtle_spiral</mark>  &nbsp; within a python script,    &nbsp;<mark>node_turtle_spiral.py</mark> &nbsp;
+* To achieve this task you may use any method but the end result should be as close as possible to the origional drawing.
 
 
->**Note:** Dont worry if you are new to ROS or Linux(Ubuntu), the task is fairly simple and we have provided you with ample resource and tutorials in this WIKI to the complete this task so only a strong will and a little bit of brains is required to get the work done. Also even though this just a weekend task we have provided ample amount of time as some of you have your end-term exams(onile though). So we think two weeks time is enough so you guys can study for your exams freely and manage your time in order to complete the task.
+>**Note:** You may use any software that you are familiar with but fusion360 is prefered and you might even have to learn some other 3d modeling software if required.
 
-Once you have read the problem statement please visit the [Procedure](./procedure.md) page to get started with the task.
+Once you are done with the task 1 please submit it my heading over to [Submissions](./submission.md)
 
 <br></br>
 
