@@ -13,16 +13,6 @@ Once you are done with the task 1 please submit it my heading over to [Submissio
 <br></br>
 
 # Expected Output
-[output video](https://youtu.be/5snhKotl48k)
-
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/embed/5snhKotl48k"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
->
-</iframe>
+\[insert_gif\]
 
 
