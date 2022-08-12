@@ -2,11 +2,6 @@
 
 For Submissions of your work please refer to the following instructions
 
-  - Video
-    - Record a video of your screen showcasing your work in the 3d modeling software.
-    - Once the video is recorded, upload the video to Youtube as an unlisted video.
-    - (optional)plus point if you also record your screen while going through the whole making proccess. Also, Upload it as a unlisted video.
-
   - Model file 
     - Once your Model is complete, export it as a stl file and rename it as <TaskNumber_><YourName>.stl. Your example if your name is 'Alex', then rename your script as Task1_Alex.stl
 
