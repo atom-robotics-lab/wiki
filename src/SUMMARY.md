@@ -21,7 +21,7 @@
   - [CAD](./sel-task/cad_sel.md)
     - [Task1](./sel-task/cad_task1.md)
     - [Task2](./sel-task/cad_task2.md)
-  - [OpenCV](./sel-task/opencv.md)
+  - [OpenCV](./sel-task/cv_sel.md)
     - [Task1](./sel-task/cv_task1.md)
     - [Task2](./sel-task/cv_task2.md)
   - [Submissions](./sel-task/submissions.md)
