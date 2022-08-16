@@ -2,7 +2,7 @@
 
 Hi there, Welcome to the Selection Task(2021). 
 
-The TASK provided here is the selection criteria for joiing the **A.T.O.M** society. Those who sucessfully finish the task within the given time frame will be given a chance to give an interview to become a member of the **A.T.O.M** society.
+The TASK provided here is the selection criteria for joining the **A.T.O.M** society. Those who sucessfully finish the task within the given time frame will be given a chance to give an interview to become a member of the **A.T.O.M** society.
 
 This task is not just only test your problem solving skills but see  your diligence to learn new stuff the ablity to get the work done.
 

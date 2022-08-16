@@ -11,7 +11,7 @@ For Submissions of your work please refer to the following instructions
   - Interview
     - Once we review your submission, we will be calling you for a personal interview based on your work. 
 
-*Last date for submission is* **21st of august**
+*Last date for submission is* **28th of august**
 
 [Google Form for Task submission](https://forms.gle/PGfqF2ZmzSH3AY1D7)
 
