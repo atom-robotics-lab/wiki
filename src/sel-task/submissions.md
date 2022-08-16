@@ -1,15 +1,19 @@
 # Submission Instruction
 
 For Submissions of your work please refer to the following instructions
+  
+  - Images 
+    - Once you are done with taking screenshot, rename it as <TaskNumber_YourName>.png. For example if your name is 'Alex', then rename your image as Task1_Alex.png
 
   - Model file 
-    - Once your Model is complete, export it as a stl file and rename it as <TaskNumber_YourName>.stl. Your example if your name is 'Alex', then rename your script as Task1_Alex.stl
+    - Once your Model is complete, export it as a stl file and rename it as <TaskNumber_YourName>.stl. For example if your name is 'Alex', then rename your file as Task1_Alex.stl
 
   - Submissions
     - Once you have both of the above things ready, submit the YouTube link of the video and the stl file in the google form given below
 
   - Interview
-    - Once we review your submission, we will be calling you for a personal interview based on your work. 
+    - Once we review your submission, we will be calling you for a personal interview based on your work.
+    - We would be asking about some general question related to computers and your thought process & stuff related to the task that you have performed.
 
 *Last date for submission is* **28th of august**
 
