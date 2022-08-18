@@ -6,9 +6,6 @@ Currently, As of now we are working on multiple projects and are need of skilled
 - **CAD designer**		0/2<br>
 	_You will be working on projects that require a model to be constructed in order to be used in real life or simulated environment. You will also be required to teach & share your experience with the other fellow members. Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information related to the task._
 
-- **Computer Vision**		0/2<br>
-	_For the OpenCV position your would be working on the perception based problems, that helps the bot to see & visualize the environment around itself. You would be required to help indepth knowledge or enough to learn and troubleshoot as the problems arises. Information related to the OpenCV selection task could be found here [Click here](./cv_sel.md)_
-
 **Question**: _What kind of students would fit perfect for these positions_<br>
 **Ans**: _Somebody who has the following qualities:_
 - Curious
