@@ -36,3 +36,4 @@ _Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information rel
 
 
 > The deadline for completing the task: **26th August, 2022**
+
