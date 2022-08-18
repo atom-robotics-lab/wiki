@@ -2,8 +2,6 @@
 
 - [ATOM Wiki](main-page.md)
 - [Tools setup](./setup/tools-setup.md)
-  - [Ubuntu](./setup/ubuntu.md)
-  - [ROS](./setup/ros.md)
   - [ROS Pi](./setup/ros-pi.md)
   - [PX4](./setup/px4.md)
   - [VirtualEnv](./setup/virtualenv.md)
@@ -44,16 +42,7 @@
   - [ROS Communication](./ros/comm/comm.md)
     - [ROS Topics](./ros/comm/topics/topics.md)
       - [rostopic command](./ros/comm/topics/rostopic.md)
- 
-- [Projects](./projects/projects.md)
-  - [Curve Tracer](./projects/curve-tracer/curve-tracer.md)
-    - [Installation](./projects/curve-tracer/installation.md)
-  - [Assistive Teleop](./projects/a-teleop/a-teleop.md)
 
-    - [Installation](./projects/a-teleop/installation.md)
-
-- [Editing the ATOM main site](./general/main-site.md)
-- [Editing this wiki](./general/edit-wiki.md)
 - [Using the access repo](./general/access-repo.md)
 - [Archives](./archives/archives.md)
   - [Selection Task 2022](./archives/sel-task2022/selection-task.md)

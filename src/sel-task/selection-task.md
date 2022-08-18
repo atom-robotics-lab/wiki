@@ -1,13 +1,21 @@
 # Selection Task
 
-Hey there, Welcome to the **A.T.O.M**'s wiki. This section contains information about **2022's selection task** for joining **A.T.O.M**, _the robotics society of MAIT_. 
+Hello there, Welcome to the **A.T.O.M**'s wiki. This section contains information about **2022's selection task** for joining **A.T.O.M**, _the robotics society of MAIT_. 
 
-Currently, As of now we are working on multiple projects and are need of skilled individuals who could help with the functioning of the society. The following positions are opened as of now.
-- **CAD designer**		0/2<br>
-	_You will be working on projects that require a model to be constructed in order to be used in real life or simulated environment. You will also be required to teach & share your experience with the other fellow members. Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information related to the task._
+Currently we are working on multiple projects and are on the lookout for skilled individuals with different technical backgrounds who could join the society and contribute for the same. The following positions are open as of now:
 
-- **Computer Vision**		0/2<br>
-	_For the OpenCV position your would be working on the perception based problems, that helps the bot to see & visualize the environment around itself. You would be required to help indepth knowledge or enough to learn and troubleshoot as the problems arises. Information related to the OpenCV selection task could be found here [Click here](./cv_sel.md)_
+### CAD DESIGNER
+
+You will be responsbile for the following:
+ * Designing creative and efficient 3D CAD Models for Robotic Parts.
+ * Designing mechanisms (Gear Systems, Pulley Systems etc.) for robotic acutators like servo motors, steppar motors etc.
+ * Designing the above said while keeping 3D Printing in mind since we mostly for our fabrication.
+ 
+_Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information related to the task._
+
+> The deadline for completing the task: **26th August, 2022**
+
+## FAQs
 
 **Question**: _What kind of students would fit perfect for these positions_<br>
 **Ans**: _Somebody who has the following qualities:_
@@ -27,4 +35,4 @@ Currently, As of now we are working on multiple projects and are need of skilled
 > **Note:** The tasks are not just only test your problem solving skills but see your diligence to learn new stuff the ablity to get the work done.<br>You could also showcase any of your projects while submission, this optional but would help us making the process a whole lot faster.
 
 
-> The deadline for completing the task: 26th August, 2022
+> The deadline for completing the task: **26th August, 2022**
