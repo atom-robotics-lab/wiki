@@ -161,6 +161,25 @@
 <p>Immagine the time you have completed your simulation and now you are ready to implement it on your awesome hardare. But to test that beautiful code you get through the boardem task of preping your sd card with a fresh flash of raspbian and go through the tedious job of installing ROS and other packages in it. </p>
 <p>So to avoid that we came up with the idea of creatig our own custom image with pre-installed ROS and many other packages for a user friendly experiance.</p>
 <p>So the next time you mess you mess up something big time, dont worry! Just get ready with a fresh flash of this image and you are good to go.</p>
+<h2 id="initial-setup"><a class="header" href="#initial-setup">Initial Setup</a></h2>
+<p>To get started, download the image file using the link given above. 
+Alright, once the download is complete, it's time to flash it on your sd card. You could do that using various softwares like Balena Etcher, RUFUS or use the Official Raspberry Pi Imager.</p>
+<ul>
+<li><strong>WIFI and SSH</strong>: While working with ROS and robotics related projects you will be required to establish a ssh connection with your raspberry pi to avoid the hassle of connecting it to a display via HDMI. 
+So in order to establish a ssh connection with your laptop both the devices needs to be on the same network.
+To do so, plug in your sd card in your computer and open the <code>wpa_suppicant.conf</code> file in a text editor and add your <em><strong>ssid</strong></em> and <em><strong>password</strong></em> accordingly. This will automatically connect your raspberry pi to the network on startup.</li>
+</ul>
+<p>Ok, Once you pi is on the same network, we need to identify the ip address of for raspberry pi in order to ssh into it. You could use the following command to find all devices connected on the network</p>
+<pre><code class="language-shell">sudo nmap -sN &lt;IP of your device&gt;/24
+</code></pre>
+<p>Find the IP of your raspberry in the list and ssh into using the command below.</p>
+<pre><code class="language-shell">ssh pi@&lt;IP of your Raspberry Pi&gt;
+</code></pre>
+<p>alright! you're all set up and good to go.</p>
+<blockquote>
+<p><strong>NOTE</strong>: Delault username: <em><strong>pi</strong></em>
+Default password: <em><strong>raspberry</strong></em></p>
+</blockquote>
 <h2 id="featues-and-usage"><a class="header" href="#featues-and-usage">Featues and usage</a></h2>
 <ul>
 <li>
@@ -174,7 +193,7 @@ export ROS_HOSTNAME=&lt;ROS IP OF YOUR MASTER DEVICE&gt;
 export ROS_IP=&lt;ROS IP OF YOUR MASTER DEVICE&gt;
 </code></pre>
 <p>Once you are done with that, just save it and close the editor and save it. Source the edited bashrc or open a fresh terminal and run <code>roscore</code> and you will see your ROS_MASTER_URI has been changed from local host to the IP of your master device. </p>
-<p>Once the master url has been exposed, your raspberry pi can connect to your device as a slave. To do so open the .bashrc file of raspberry pi and navigate to the botom.
+<p>Once the master url has been exposed, your raspberry pi can connect to your device as a slave. To do so open the <code>.bashrc</code> file of raspberry pi and navigate to the botom.
 You will find some similar lines. Change the IP adress of your devices accordingly and you are good to go...</p>
 </li>
 <li>
@@ -489,14 +508,8 @@ It is a high-level, general-purpose programming language known for its simple sy
 <p>Hey there, Welcome to the <strong>A.T.O.M</strong>'s wiki. This section contains information about <strong>2022's selection task</strong> for joining <strong>A.T.O.M</strong>, <em>the robotics society of MAIT</em>. </p>
 <p>Currently, As of now we are working on multiple projects and are need of skilled individuals who could help with the functioning of the society. The following positions are opened as of now.</p>
 <ul>
-<li>
-<p><strong>CAD designer</strong>		0/2<br>
-<em>You will be working on projects that require a model to be constructed in order to be used in real life or simulated environment. You will also be required to teach &amp; share your experience with the other fellow members. Head over to <a href="sel-task/./cad_sel.html">CAD Selection Tasks</a> for a detailed information related to the task.</em></p>
-</li>
-<li>
-<p><strong>Computer Vision</strong>		0/2<br>
-<em>For the OpenCV position your would be working on the perception based problems, that helps the bot to see &amp; visualize the environment around itself. You would be required to help indepth knowledge or enough to learn and troubleshoot as the problems arises. Information related to the OpenCV selection task could be found here <a href="sel-task/./cv_sel.html">Click here</a></em></p>
-</li>
+<li><strong>CAD designer</strong>		0/2<br>
+<em>You will be working on projects that require a model to be constructed in order to be used in real life or simulated environment. You will also be required to teach &amp; share your experience with the other fellow members. Head over to <a href="sel-task/./cad_sel.html">CAD Selection Tasks</a> for a detailed information related to the task.</em></li>
 </ul>
 <p><strong>Question</strong>: <em>What kind of students would fit perfect for these positions</em><br>
 <strong>Ans</strong>: <em>Somebody who has the following qualities:</em></p>
