@@ -8,11 +8,11 @@ The TASK provided here is the selection criteria for joining the **A.T.O.M** soc
 
 - You will be required to finish two task in the alloted time frame. Both of them are supposed to be in done in any 3d modeling software preferably fusion360.
 
-- If there are any design & 3d modelling (even sketches and artwork are fine) related stuff you have worked on earlier you are welcomed to share those while making your submission. It is optional but, this would help us see your creativity and skills.
+- If there are any design & 3d modelling (even 2d sketches are fine) related stuff you have worked on earlier you are welcomed to share those while making your submission. It is optional but, this would help us see your creativity and skills.
 
 
 > **Note:**Currently we only require students who are skilled in 3d modeling. So, only two students will be selected this time.
 
 
-> The deadline for completing the task: 28th August, 2022
+> The deadline for completing the task: 26th August, 2022
 Head to [Task 1](./cad_task1.md) to begin.
