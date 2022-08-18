@@ -6,7 +6,7 @@
 
 * You will be judged on the basis of your way of designing, so keep that in mind and make sure to follow proper practices(Like using constraints appropriately).
 
-<a href="https://ibb.co/PFjRcyY"><img src="https://i.ibb.co/fqFbkWS/Task-1.png" alt="Task-1" border="0"></a>
+    <img src="https://i.ibb.co/0m2kCLX/Task-1.png">
 
 >**Note:** You may use any software that you are familiar with but you are recommended to use **Fusion360**.
 
@@ -16,6 +16,6 @@ Once you are done with the Task 1 please submit it by heading over to [Submissio
 
 # Expected Output
 
-<a href="https://ibb.co/Vw3MhCJ"><img src="https://i.ibb.co/WVsBdzG/cad-task02-v1-v1.gif" alt="cad-task02-v1-v1" border="0" /></a>
+<img src="https://i.ibb.co/J3Crbpm/cad-task02-v1-v1.gif">
 
 
