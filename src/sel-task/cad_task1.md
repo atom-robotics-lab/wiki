@@ -4,7 +4,8 @@
 
 * To achieve this task you may use any method but the end result should be as close as possible to the origional drawing.
 
-* You will be judged on the basis of your 
+* You will be judged on the basis of your way of designing, so keep that in mind and make sure to follow proper practices and 
+apply use constraints appropriately.
 
 <a href="https://ibb.co/PFjRcyY"><img src="https://i.ibb.co/fqFbkWS/Task-1.png" alt="Task-1" border="0"></a>
 
