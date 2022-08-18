@@ -28,9 +28,8 @@ _Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information rel
 - ~~someone who has a good sense of humour?~~
 - _and yeah knowledge about the postitions they'll be applying for DUH_
 
-**Question**: _What are we gonna get after joining this yet another society related to tech n blah blah stuff?_
-**Ans**: _Buddy, a whole lotta experience related to "tech stuff" known as robotics. Robotics is a field which includes portion of every engineering branch. From programing to mechanical, electronics to electrical everything would be covered. Each every project would involve two stages: simulation and hardware. So from going all theory to more practical based approach would surely help you understand your enrolled courses more or even you may find other branches interesting with this method. We are sure you would be an all rounder by the end.<br>
-
+**Question**: _What are we gonna get after joining this yet another society related to tech n blah blah stuff?_<br>
+**Ans**: _Buddy, a whole lotta experience related to "tech stuff" known as robotics. Robotics is a field which includes portion of every engineering branch. From programing to mechanical, electronics to electrical everything would be covered. Each every project would involve two stages: simulation and hardware. So from going all theory to more practical based approach would surely help you understand your enrolled courses more or even you may find other branches interesting with this method. We are sure you would be an all rounder by the end._
 
 > **Note:** The tasks are not just only test your problem solving skills but see your diligence to learn new stuff the ablity to get the work done.<br>You could also showcase any of your projects while submission, this optional but would help us making the process a whole lot faster.
 
