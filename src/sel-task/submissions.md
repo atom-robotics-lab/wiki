@@ -1,4 +1,4 @@
-# Submission Instruction
+# Submission Instructions
 
 For Submissions of your work please refer to the following instructions
   
