@@ -19,4 +19,4 @@ For Submissions of your work please refer to the following instructions
     - Once we review your submission, we will be calling you for a personal interview based on your work.
     - We would be asking about some general question related to computers and your thought process & stuff related to the task that you have performed.
 
-> **Note:** Make sure you submit both of your task before the 21st of August. Both the submissions have to be done separately. Even if you are not able to complete entire the task you are requested to make the submission of the work that you have done anyway.
+> **Note:** Make sure you submit both of your task before the 26th of August. Both the submissions have to be done separately. Even if you are not able to complete entire the task you are requested to make the submission of the work that you have done anyway.
