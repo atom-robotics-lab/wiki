@@ -6,7 +6,7 @@
 
 * You will be judged on the basis of your way of designing, so keep that in mind and make sure to follow proper practices(Like using constraints appropriately).
 
-    <img src="https://i.ibb.co/CHmK3yV/task1.png">
+    <img src="https://i.ibb.co/sqB5GSG/task1-1.png">
 
 >**Note:** You may use any software that you are familiar with but you are recommended to use **Fusion360**.
 
