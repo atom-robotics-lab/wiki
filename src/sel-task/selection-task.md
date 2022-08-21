@@ -13,7 +13,7 @@ You will be responsbile for the following:
  
 _Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information related to the task._
 
-> The deadline for completing the task: **26th August, 2022**
+> The deadline for completing the task: **27th August, 2022**
 
 ## FAQs
 
