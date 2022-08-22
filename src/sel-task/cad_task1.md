@@ -12,6 +12,8 @@
 
 Once you are done with the Task 1 please submit it by heading over to [Submissions](./submissions.md)
 
+>**Note:** Head to [Task 2](./cad_task2.md) once you are done with task1.
+
 <br></br>
 
 # Expected Output

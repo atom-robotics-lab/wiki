@@ -13,8 +13,6 @@ You will be responsbile for the following:
  
 _Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information related to the task._
 
-> The deadline for completing the task: **27th August, 2022**
-
 ## FAQs
 
 **Question**: _What kind of students would fit perfect for these positions_<br>
@@ -34,5 +32,5 @@ _Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information rel
 > **Note:** The tasks are not just only test your problem solving skills but see your diligence to learn new stuff the ablity to get the work done.<br>You could also showcase any of your projects while submission, this optional but would help us making the process a whole lot faster.
 
 
-> The deadline for completing the task: **26th August, 2022**
+> The deadline for completing the task: **28th August, 2022**
 
