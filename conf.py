@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Wiki'
+project = 'A.T.O.M\'s Wiki'
 copyright = '2022, A.T.O.M'
 author = 'A.T.O.M'
 release = '0.0.1'
@@ -14,7 +14,7 @@ release = '0.0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser']
+extensions = ['sphinx.ext.githubpages', 'myst_parser']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -26,3 +26,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+# -- Aditional configuration -------------------------------------------------
+
+version = u'0.0.1'
+master_doc = 'index'
+pygments_style = 'sphinx'
