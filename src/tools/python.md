@@ -1,6 +1,10 @@
-# Python
+# <center><u>Python</u></center>
+<center><img src="https://cdn.dribbble.com/users/1103017/screenshots/4307976/ad-01-.jpg" width="400" height="300" alt="The GIT Logo" /></center>
 
-> What is Python ?
+## What is Python ?
+***
+
+<br>
 
 Python is a popular programming language created by Guido van Rossum, and released in 1991.
 It is a high-level, general-purpose programming language known for its simple syntax and high usability.
@@ -23,12 +27,6 @@ For installation of Python, refer the [Official Python Website](https://www.pyth
 <br>
 <br>
 
-<iframe
-    width="640"
-    height="480"
-    src="https://www.esparkinfo.com/wp-content/uploads/2020/10/Analyzing-The-Reasons-Why-Python-Programming-Language.jpg"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
+<p>
 
-</iframe>
+</p>
