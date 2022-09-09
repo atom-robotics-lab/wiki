@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation of virtualenvwrapper, OpenCV and cv_bridge package : &mdash; A.T.O.M&#39;s Wiki 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Git" href="../tools/git.html" />
+    <link rel="prev" title="Environment Setup" href="px4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tools Setup</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ros-pi.html">Ready to use image for Raspberry Pi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="px4.html">Environment Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation of virtualenvwrapper, OpenCV and cv_bridge package  :</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-of-virtualenvwrapper">Installation of virtualenvwrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-open-bashrc">To open .bashrc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#paste-these-lines-in-the-bashrc-file-which-you-opened-above">Paste these lines in the .bashrc file which you opened above:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-update-shell-environment">To update shell environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-source-from">Change source from</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to">to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#and-update-shell-environment-by">and update shell environment by</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#new-virtual-environment">New virtual environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-new-virtual-environment">Make  a new virtual environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-use-the-new-virtual-environment">To use the new virtual environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-deactivate-virtual-environment">To deactivate virtual environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#your-virtual-environment-is-now-installed">Your virtual environment is now installed</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#installation-of-opencv">Installation of opencv</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-python-interpreter-in-terminal-by">Open Python interpreter in terminal by :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-opencv-in-the-above-open-python-interpreter">Import opencv in the above open Python interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-your-import-statement-executes-error-free-you-are-good-to-go">If your import statement executes error-free, you are good to go</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#installation-of-cv-bridge">Installation of cv-bridge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-your-terminal-and-write">Open your terminal and write :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-check-if-cv-bridge-is-installed">To check if cv_bridge is installed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#note-cv-bridge-is-a-ros-package-so-make-sure-you-source-your-ros-before-running-the-command-below">Note : cv_bridge is a ros package, so make sure you source your ROS before running the command below</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Know your Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/linux/file-system.html">Linux File System Directories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/linux/basic-commands.html">Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/linux/file-permissions.html">Linux File Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/linux/shell-scripting.html">Shell Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/python.html">Python</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Selection Task</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task/selection-task.html">Selection Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task/cad_sel.html">CAD Selection Task: Standard Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task/cad_task1.html">Task 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task/cad_task1.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task/cad_task2.html">Task 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task/submissions.html">Submission Instructions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Intro to ROS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ros/ros.html">Intro To ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/installation.html">ROS installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/catkin_ws.html">Create Workspace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/package/package.html">ROS Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/package/create.html">Create a ROS package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/node/node.html">ROS Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/node/create.html">Creating a ROS Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/node/rosrun.html">Command: rosrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/node/rosnode.html">Command: rosnode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/master/master.html">ROS Master</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/master/master.html#start-the-ros-master">Start the ROS Master</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/master/param-server.html">ROS Parameter Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/examples/example.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/examples/eg1.html">Example #1: ROS Node to Get and Set Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/launch/launch.html">ROS Launch Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/launch/create.html">Create a ROS Launch file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/launch/eg1.html">Example 1: Launch two ROS Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/launch/eg2.html">Example 2: Launch turtle in forest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/launch/eg3.html">Example 3: Load YAML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/comm/comm.html">ROS Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/comm/topics/topics.html">ROS Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/comm/topics/rostopic.html">rostopic command</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using the Access Repo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Archives</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2022/selection-task.html">Selection Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2022/problem-statement.html">Problem Statement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2022/problem-statement.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2022/procedure.html">Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2022/hints.html">Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2022/submissions.html">Submission Instruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2021/selection-task.html">Selection Task 2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2021/problem-statement.html">Problem statement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2021/problem-statement.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2021/procedure.html">Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2021/hints.html">Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/sel-task2021/submissions.html">Submissions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Installation of virtualenvwrapper, OpenCV and cv_bridge package  :</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/markdown/setup/virtualenv.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-of-virtualenvwrapper-opencv-and-cv-bridge-package">
+<h1>Installation of virtualenvwrapper, OpenCV and cv_bridge package  :<a class="headerlink" href="#installation-of-virtualenvwrapper-opencv-and-cv-bridge-package" title="Permalink to this heading"></a></h1>
+<section id="installation-of-virtualenvwrapper">
+<h2>Installation of virtualenvwrapper<a class="headerlink" href="#installation-of-virtualenvwrapper" title="Permalink to this heading"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install virtualenvwrapper
+</pre></div>
+</div>
+</section>
+<section id="to-open-bashrc">
+<h2>To open .bashrc<a class="headerlink" href="#to-open-bashrc" title="Permalink to this heading"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nano ~/.bashrc
+</pre></div>
+</div>
+</section>
+<section id="paste-these-lines-in-the-bashrc-file-which-you-opened-above">
+<h2>Paste these lines in the .bashrc file which you opened above:<a class="headerlink" href="#paste-these-lines-in-the-bashrc-file-which-you-opened-above" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
+<span class="nb">export</span> <span class="nv">PROJECT_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Devel
+<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+</pre></div>
+</div>
+</section>
+<section id="to-update-shell-environment">
+<h2>To update shell environment<a class="headerlink" href="#to-update-shell-environment" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If you face an error here, then reopen the .bashrc file by :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano ~/.bashrc
+</pre></div>
+</div>
+</section>
+<section id="change-source-from">
+<h2>Change source from<a class="headerlink" href="#change-source-from" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+</pre></div>
+</div>
+</section>
+<section id="to">
+<h2>to<a class="headerlink" href="#to" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> <span class="nv">$HOME</span>/.local/bin/virtualenvwrapper.sh
+</pre></div>
+</div>
+</section>
+<section id="and-update-shell-environment-by">
+<h2>and update shell environment by<a class="headerlink" href="#and-update-shell-environment-by" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+</section>
+</section>
+<section id="new-virtual-environment">
+<h1>New virtual environment<a class="headerlink" href="#new-virtual-environment" title="Permalink to this heading"></a></h1>
+<section id="make-a-new-virtual-environment">
+<h2>Make  a new virtual environment<a class="headerlink" href="#make-a-new-virtual-environment" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkvirtualenv <span class="o">[</span>name of your virtual environment<span class="o">]</span>
+</pre></div>
+</div>
+</section>
+<section id="to-use-the-new-virtual-environment">
+<h2>To use the new virtual environment<a class="headerlink" href="#to-use-the-new-virtual-environment" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>workon <span class="o">[</span>name of your virtual environment<span class="o">]</span>
+</pre></div>
+</div>
+</section>
+<section id="to-deactivate-virtual-environment">
+<h2>To deactivate virtual environment<a class="headerlink" href="#to-deactivate-virtual-environment" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deactivate
+</pre></div>
+</div>
+</section>
+<section id="your-virtual-environment-is-now-installed">
+<h2>Your virtual environment is now installed<a class="headerlink" href="#your-virtual-environment-is-now-installed" title="Permalink to this heading"></a></h2>
+<p><br><br></p>
+</section>
+</section>
+<section id="installation-of-opencv">
+<h1>Installation of opencv<a class="headerlink" href="#installation-of-opencv" title="Permalink to this heading"></a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install opencv-python
+</pre></div>
+</div>
+<section id="open-python-interpreter-in-terminal-by">
+<h2>Open Python interpreter in terminal by :<a class="headerlink" href="#open-python-interpreter-in-terminal-by" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
+</pre></div>
+</div>
+</section>
+<section id="import-opencv-in-the-above-open-python-interpreter">
+<h2>Import opencv in the above open Python interpreter<a class="headerlink" href="#import-opencv-in-the-above-open-python-interpreter" title="Permalink to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
+</pre></div>
+</div>
+</section>
+<section id="if-your-import-statement-executes-error-free-you-are-good-to-go">
+<h2>If your import statement executes error-free, you are good to go<a class="headerlink" href="#if-your-import-statement-executes-error-free-you-are-good-to-go" title="Permalink to this heading"></a></h2>
+<p><br><br></p>
+</section>
+</section>
+<section id="installation-of-cv-bridge">
+<h1>Installation of cv-bridge<a class="headerlink" href="#installation-of-cv-bridge" title="Permalink to this heading"></a></h1>
+<section id="open-your-terminal-and-write">
+<h2>Open your terminal and write :<a class="headerlink" href="#open-your-terminal-and-write" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install ros-noetic-cv-bridge
+</pre></div>
+</div>
+</section>
+<section id="to-check-if-cv-bridge-is-installed">
+<h2>To check if cv_bridge is installed<a class="headerlink" href="#to-check-if-cv-bridge-is-installed" title="Permalink to this heading"></a></h2>
+<section id="note-cv-bridge-is-a-ros-package-so-make-sure-you-source-your-ros-before-running-the-command-below">
+<h3>Note : cv_bridge is a ros package, so make sure you source your ROS before running the command below<a class="headerlink" href="#note-cv-bridge-is-a-ros-package-so-make-sure-you-source-your-ros-before-running-the-command-below" title="Permalink to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rospack find cv_bridge
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="px4.html" class="btn btn-neutral float-left" title="Environment Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tools/git.html" class="btn btn-neutral float-right" title="Git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
