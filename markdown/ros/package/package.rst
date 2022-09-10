@@ -1,4 +1,5 @@
-# ROS Package
+ROS Package
+===========
 
 Software in ROS is organized in packages. A package might contain ROS nodes, a ROS-
 independent library, a dataset, conﬁguration ﬁles, a third-party piece of software, or
