@@ -12,21 +12,9 @@ Contents:
    :maxdepth: 2
    :caption: Tools Setup
 
-   markdown/setup/ros-pi.md
-   markdown/setup/px4.md
-   markdown/setup/virtualenv.md
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Know your Tools
-
-   markdown/tools/git.md
-   markdown/tools/linux/linux.md
-   markdown/tools/linux/file-system.md
-   markdown/tools/linux/basic-commands.md
-   markdown/tools/linux/file-permissions.md
-   markdown/tools/linux/shell-scripting.md
-   markdown/tools/python.md
+   markdown/setup/ros-pi.rst
+   markdown/setup/px4.rst
+   markdown/setup/virtualenv.rst
 
 .. toctree::
    :maxdepth: 2
