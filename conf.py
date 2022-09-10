@@ -9,7 +9,7 @@
 project = 'A.T.O.M\'s Wiki'
 copyright = '2022, A.T.O.M'
 author = 'A.T.O.M'
-release = '0.0.1'
+release = '0.0.3'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -35,5 +35,5 @@ pygments_style = 'sphinx'
 
 html_favicon = "https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"
 
-googleanalytics_id = '4051750239'
+googleanalytics_id = 'G-79B58JVRHB'
 googleanalytics_enabled = True
