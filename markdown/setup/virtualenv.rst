@@ -122,9 +122,8 @@ Open your terminal and write :
 To check if cv_bridge is installed
 ----------------------------------
 
-Note : cv_bridge is a ros package, so make sure you source your ROS before running the command below
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Note:: cv_bridge is a ros package, so make sure you source your ROS before running the command below.
 
-.. code:: bash
+.. code:: shell
 
    rospack find cv_bridge
