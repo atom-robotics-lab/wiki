@@ -35,15 +35,15 @@ Contents:
    markdown/ros/node/create.rst
    markdown/ros/node/rosrun.rst
    markdown/ros/node/rosnode.rst
-   markdown/ros/master/master.md
-   markdown/ros/master/param-server.md
+   markdown/ros/master/master.rst
+   markdown/ros/master/param-server.rst
    markdown/ros/examples/example.md
    markdown/ros/examples/eg1.md
-   markdown/ros/launch/launch.md
-   markdown/ros/launch/create.md
-   markdown/ros/launch/eg1.md
-   markdown/ros/launch/eg2.md
-   markdown/ros/launch/eg3.md
+   markdown/ros/launch/launch.rst
+   markdown/ros/launch/create.rst
+   markdown/ros/launch/eg1.rst
+   markdown/ros/launch/eg2.rst
+   markdown/ros/launch/eg3.rst
    markdown/ros/comm/comm.md
    markdown/ros/comm/topics/topics.md
    markdown/ros/comm/topics/rostopic.md
