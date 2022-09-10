@@ -118,7 +118,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Create a ROS package</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/markdown/ros/package/create.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/markdown/ros/package/create.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -128,23 +128,30 @@
              
   <section id="create-a-ros-package">
 <h1>Create a ROS package<a class="headerlink" href="#create-a-ros-package" title="Permalink to this heading"></a></h1>
-<p>This tutorial will demonstrate how to use the catkin_create_pkg script to create a new catkin
-package, and what you can do with it after it has been created.</p>
+<p>This tutorial will demonstrate how to use the catkin_create_pkg script
+to create a new catkin package, and what you can do with it after it has
+been created.</p>
 <ol class="arabic simple">
-<li><p>First, navigate to the source space directory of the catkin workspace you’ve created.</p></li>
+<li><p>First, navigate to the source space directory of the catkin workspace
+you’ve created.</p></li>
 </ol>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Now, use the catkin_create_pkg script to create a new package called pkg_ros_basics which depends on std_msgs, roscpp, and rospy:</p></li>
+<li><p>Now, use the catkin_create_pkg script to create a new package called
+pkg_ros_basics which depends on std_msgs, roscpp, and rospy:</p></li>
 </ol>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg pkg_ros_basics std_msgs rospy roscpp
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>This will create a beginner_tutorials folder which contains a package.xml and a CMakeLists.txt , which have been partially ﬁlled out with the information you gave catkin_create_pkg .</p></li>
-<li><p>catkin_create_pkg requires that you give it a package_name and optionally a list of dependencies on which that package depends: catkin_create_pkg &lt;package_name&gt; [depend1] [depend2] [depend3]</p></li>
+<li><p>This will create a beginner_tutorials folder which contains a
+package.xml and a CMakeLists.txt , which have been partially ﬁlled
+out with the information you gave catkin_create_pkg .</p></li>
+<li><p>catkin_create_pkg requires that you give it a package_name and
+optionally a list of dependencies on which that package depends:
+catkin_create_pkg [depend1] [depend2] [depend3]</p></li>
 </ul>
 <ol class="arabic simple" start="3">
 <li><p>Now, you need to build the packages in the catkin workspace</p></li>
@@ -154,11 +161,17 @@ catkin build
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Inside the package, there are src folder, package.xml , CMakeLists.txt , and the include folders.</p>
+<li><p>Inside the package, there are src folder, package.xml ,
+CMakeLists.txt , and the include folders.</p>
 <ul>
-<li><p>CMakeLists.txt: This ﬁle has all the commands to build the ROS source code inside the package and create the executable. For more information about CMakeLists visit here. package.xml: This is an XML ﬁle. It mainly contains the package dependencies information, and so forth.</p></li>
+<li><p>CMakeLists.txt: This ﬁle has all the commands to build the ROS
+source code inside the package and create the executable. For more
+information about CMakeLists visit here. package.xml: This is an
+XML ﬁle. It mainly contains the package dependencies information,
+and so forth.</p></li>
 <li><p>src: The source code of ROS packages are kept in this folder.</p></li>
-<li><p>package.xml : This file mainly contains the package dependencies ,information etc.</p></li>
+<li><p>package.xml : This file mainly contains the package dependencies
+,information etc.</p></li>
 </ul>
 </li>
 </ul>

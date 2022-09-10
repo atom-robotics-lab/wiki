@@ -61,12 +61,7 @@
 <li class="toctree-l1"><a class="reference internal" href="node.html">ROS Nodes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="create.html">Creating a ROS Node</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rosrun.html">Command: rosrun</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Command: rosnode</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#list">list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#info">info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#kill">kill</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command: rosnode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../master/master.html">ROS Master</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../master/master.html#start-the-ros-master">Start the ROS Master</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../master/param-server.html">ROS Parameter Server</a></li>
@@ -123,7 +118,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Command: rosnode</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/markdown/ros/node/rosnode.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/markdown/ros/node/rosnode.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -134,20 +129,20 @@
   <section id="command-rosnode">
 <h1>Command: rosnode<a class="headerlink" href="#command-rosnode" title="Permalink to this heading"></a></h1>
 <ul class="simple">
-<li><p>rosnode contains the rosnode command-line tool for displaying debug information about ROS Nodes.</p></li>
+<li><p>rosnode contains the rosnode command-line tool for displaying debug
+information about ROS Nodes.</p></li>
 </ul>
-<p><em>Note:</em> For quick information about any command, be that outside of ROS, simply type the
-command along with suﬃx –h or -help . This is a widely used concept among other Linux
-Command: rosrun commands for quick references. Here’s an example for rosnode –h command</p>
-<ul class="simple">
-<li></li>
+<p><em>Note:</em> For quick information about any command, be that outside of ROS,
+simply type the command along with suﬃx –h or -help . This is a widely
+used concept among other Linux Command: rosrun commands for quick
+references. Here’s an example for rosnode –h command</p>
+<ul>
+<li><p class="rubric" id="list">list</p>
+</li>
 </ul>
-<section id="list">
-<h2>list<a class="headerlink" href="#list" title="Permalink to this heading"></a></h2>
-</section>
 <p>rosnode list displays a list of all current nodes.</p>
-<p>Let’s ﬁgure out what argument the list sub-command needs. In a new terminal run start the
-rosmaster:</p>
+<p>Let’s ﬁgure out what argument the list sub-command needs. In a new
+terminal run start the rosmaster:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscore
 </pre></div>
 </div>
@@ -159,15 +154,16 @@ rosmaster:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode list
 </pre></div>
 </div>
-<p>Now the node named talker (node with word talker in it) will be printed on the terminal.</p>
-<ul class="simple">
-<li></li>
-<li><p>rosnode info /node_name displays information about a node, including publications and subscriptions.</p></li>
-<li><p>Let’s ﬁgure out what argument the info sub-command needs. In a new terminal run start the</p></li>
+<p>Now the node named talker (node with word talker in it) will be printed
+on the terminal.</p>
+<ul>
+<li><p class="rubric" id="info">info</p>
+</li>
+<li><p>rosnode info /node_name displays information about a node, including
+publications and subscriptions.</p></li>
+<li><p>Let’s ﬁgure out what argument the info sub-command needs. In a new
+terminal run start the</p></li>
 </ul>
-<section id="info">
-<h2>info<a class="headerlink" href="#info" title="Permalink to this heading"></a></h2>
-</section>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosmaster
 </pre></div>
 </div>
@@ -180,15 +176,14 @@ rosmaster:</p>
 </pre></div>
 </div>
 <p>This should give details of the particular node</p>
-<ul class="simple">
-<li></li>
+<ul>
+<li><p class="rubric" id="kill">kill</p>
+</li>
 </ul>
-<section id="kill">
-<h2>kill<a class="headerlink" href="#kill" title="Permalink to this heading"></a></h2>
-</section>
 <p><em>IMPORTANT:</em> rosnode kill is not guaranteed to succeed.</p>
 <ul class="simple">
-<li><p>Let’s ﬁgure out what argument the kill sub-command needs. In a new terminal run start the rosmaster:</p></li>
+<li><p>Let’s ﬁgure out what argument the kill sub-command needs. In a new
+terminal run start the rosmaster:</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscore
 </pre></div>

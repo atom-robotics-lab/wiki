@@ -29,12 +29,12 @@ Contents:
    markdown/ros/ros.rst
    markdown/ros/installation.rst
    markdown/ros/catkin_ws.rst
-   markdown/ros/package/package.md
-   markdown/ros/package/create.md
-   markdown/ros/node/node.md
-   markdown/ros/node/create.md
-   markdown/ros/node/rosrun.md
-   markdown/ros/node/rosnode.md
+   markdown/ros/package/package.rst
+   markdown/ros/package/create.rst
+   markdown/ros/node/node.rst
+   markdown/ros/node/create.rst
+   markdown/ros/node/rosrun.rst
+   markdown/ros/node/rosnode.rst
    markdown/ros/master/master.md
    markdown/ros/master/param-server.md
    markdown/ros/examples/example.md

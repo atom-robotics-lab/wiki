@@ -118,7 +118,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Creating a ROS Node</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/markdown/ros/node/create.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/markdown/ros/node/create.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -129,7 +129,8 @@
   <section id="creating-a-ros-node">
 <h1>Creating a ROS Node<a class="headerlink" href="#creating-a-ros-node" title="Permalink to this heading"></a></h1>
 <ul class="simple">
-<li><p>In this section we will learn how to create a ROS Node inside pkg_ros_basics ROS Package which we created in the previous section.</p></li>
+<li><p>In this section we will learn how to create a ROS Node inside
+pkg_ros_basics ROS Package which we created in the previous section.</p></li>
 <li><p>Navigate to pkg_ros_basics</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src/pkg_ros_basics
@@ -139,9 +140,11 @@
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscd pkg_ros_basics
 </pre></div>
 </div>
-<p><em>NOTE:</em> roscd will work only if you have sourced setup.bash of your catkin workspace.</p>
+<p><em>NOTE:</em> roscd will work only if you have sourced setup.bash of your
+catkin workspace.</p>
 <ul class="simple">
-<li><p>Create a scripts folder for your Python scripts and navigate into the folder.</p></li>
+<li><p>Create a scripts folder for your Python scripts and navigate into the
+folder.</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir scripts
 <span class="nb">cd</span> scripts
@@ -160,7 +163,8 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>First line of all your Python ROS scripts should be the following shebang</p></li>
+<li><p>First line of all your Python ROS scripts should be the following
+shebang</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 </pre></div>
@@ -191,7 +195,7 @@
 </pre></div>
 </div>
 <ul>
-<li><p>Now to run  your node</p>
+<li><p>Now to run your node</p>
 <ul class="simple">
 <li><p>Open the terminal and run ROS master</p></li>
 </ul>
@@ -199,12 +203,16 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Once the roscore is running open a new terminal and run the main node</p></li>
+<li><p>Once the roscore is running open a new terminal and run the main
+node</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun pkg_ros_basics node_hello_ros.py
 </pre></div>
 </div>
-<p><em>NOTE:</em> This command will work only if you have sourced setup.bash of your catkin workspace either manually or using .bashrc .</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command will work only if you have sourced setup.bash of your catkin workspace either manually or using .bashrc .</p>
+</div>
 </li>
 </ul>
 </section>
