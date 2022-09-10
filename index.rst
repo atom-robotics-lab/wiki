@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
    :caption: Tools Setup
 
-   markdown/setup/ros-pi.rst
+   markdown/setup/ros-pi.md
    markdown/setup/px4.md
    markdown/setup/virtualenv.md
 
@@ -42,9 +42,9 @@ Contents:
    :maxdepth: 2
    :caption: Intro to ROS
 
-   markdown/ros/ros.md
-   markdown/ros/installation.md
-   markdown/ros/catkin_ws.md
+   markdown/ros/ros.rst
+   markdown/ros/installation.rst
+   markdown/ros/catkin_ws.rst
    markdown/ros/package/package.md
    markdown/ros/package/create.md
    markdown/ros/node/node.md
