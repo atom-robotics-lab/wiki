@@ -9,6 +9,13 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest    
     steps:
+    - name: cleanup
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: .
+        clean: .
     - uses: actions/checkout@main
     - uses: actions/setup-python@v2 
     - name: Install dependencies
