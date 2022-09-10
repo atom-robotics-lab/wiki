@@ -34,3 +34,8 @@ _Head over to [CAD Selection Tasks](./cad_sel.md) for a detailed information rel
 
 > The deadline for completing the task: **28th August, 2022**
 
+.. toctree::
+    markdown/sel-task/cad_sel.md
+    markdown/sel-task/cad_task1.md
+    markdown/sel-task/cad_task2.md
+    markdown/sel-task/submissions.md
