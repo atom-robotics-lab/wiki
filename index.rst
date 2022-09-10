@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
    :caption: Tools Setup
 
-   markdown/setup/ros-pi.md
+   markdown/setup/ros-pi.rst
    markdown/setup/px4.md
    markdown/setup/virtualenv.md
 

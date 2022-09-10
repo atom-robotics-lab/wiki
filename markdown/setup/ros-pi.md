@@ -1,6 +1,6 @@
 # Ready to use image for Raspberry Pi
 
-> Custom 64 bit raspbian server image for raspberry pi 4/3b+ with pre-installed ROS noetic and many other useful packages for ready to use prototyping 
+Custom 64 bit raspbian server image for raspberry pi 4/3b+ with pre-installed ROS noetic and many other useful packages for ready to use prototyping 
 
 ## Download Link
 
