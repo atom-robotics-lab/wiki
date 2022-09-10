@@ -20,11 +20,7 @@ Contents:
    :maxdepth: 2
    :caption: Selection Task
 
-   markdown/sel-task/selection-task.md
-   markdown/sel-task/cad_sel.md
-   markdown/sel-task/cad_task1.md
-   markdown/sel-task/cad_task2.md
-   markdown/sel-task/submissions.md
+   
 
 .. toctree::
    :maxdepth: 2
@@ -62,6 +58,11 @@ Contents:
    :maxdepth: 2
    :caption: Archives  
 
+   markdown/archives/sel-task_cad_2022/selection-task.md
+   markdown/archives/sel-task_cad_2022/cad_sel.md
+   markdown/archives/sel-task_cad_2022/cad_task1.md
+   markdown/archives/sel-task_cad_2022/cad_task2.md
+   markdown/archives/sel-task_cad_2022/submissions.md
    markdown/archives/sel-task2022/selection-task.md
    markdown/archives/sel-task2022/problem-statement.md
    markdown/archives/sel-task2022/procedure.md
@@ -72,6 +73,7 @@ Contents:
    markdown/archives/sel-task2021/procedure.md
    markdown/archives/sel-task2021/hints.md
    markdown/archives/sel-task2021/submissions.md
+
 
 
 
