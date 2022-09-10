@@ -125,7 +125,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Create a ROS Launch file</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/markdown/ros/launch/create.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/markdown/ros/launch/create.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -138,35 +138,44 @@
 <section id="roslaunch-command">
 <h2>roslaunch Command<a class="headerlink" href="#roslaunch-command" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>roslaunch is a tool for easily launching multiple ROS nodes locally and remotely via SSH.</p></li>
-<li><p>It includes options to automatically respawn processes that have already died. roslaunch takes in one or more XML conﬁguration ﬁles (with the .launch extension) that specify the parameters to set and nodes to launch.</p></li>
+<li><p>roslaunch is a tool for easily launching multiple ROS nodes locally
+and remotely via SSH.</p></li>
+<li><p>It includes options to automatically respawn processes that have
+already died. roslaunch takes in one or more XML conﬁguration ﬁles
+(with the .launch extension) that specify the parameters to set and
+nodes to launch.</p></li>
 </ul>
 <p>Usage:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roslaunch &lt;package&gt; file.launch
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><package> is nothing but the package name which you have created using catkin_create_pkg command or used any other package</p></li>
+<li><p>is nothing but the package name which you have created using</p></li>
 </ul>
+<blockquote>
+<div><p>catkin_create_pkg command or used any other package</p>
+</div></blockquote>
 </section>
 <section id="steps-to-create-a-launch-file">
 <h2>Steps to create a launch file<a class="headerlink" href="#steps-to-create-a-launch-file" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>After creating a package, create a folder in the package names as a launch folder to store all the launch files in that folder.</p></li>
+<li><p>After creating a package, create a folder in the package names as a
+launch folder to store all the launch files in that folder.</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src/&lt;package&gt;
 mkdir launch
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Here we can create launch ﬁles by running this command by going into the launch directory, we can keep any name for the launch ﬁle</p></li>
+<li><p>Here we can create launch ﬁles by running this command by going into
+the launch directory, we can keep any name for the launch ﬁle</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> launch
 touch filename.launch
 </pre></div>
 </div>
-<p>Now you can edit your launch ﬁle by adding diﬀerent nodes that you have to run
-simultaneously.</p>
+<p>Now you can edit your launch ﬁle by adding diﬀerent nodes that you have
+to run simultaneously.</p>
 </section>
 <section id="steps-to-add-a-ros-node-in-the-launch-file">
 <h2>Steps to add a ROS node in the launch ﬁle<a class="headerlink" href="#steps-to-add-a-ros-node-in-the-launch-file" title="Permalink to this heading"></a></h2>
@@ -176,11 +185,10 @@ simultaneously.</p>
 </ol>
 </li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;launch&gt;</span></code>
-and end with
-<code class="docutils literal notranslate"><span class="pre">&lt;/launch&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;launch&gt;</span></code> and end with <code class="docutils literal notranslate"><span class="pre">&lt;/launch&gt;</span></code></p>
 <ul class="simple">
-<li><p>2.Now to add any executable ﬁle which we have seen in the rosrun_command section, we have to add this line</p></li>
+<li><p>2.Now to add any executable ﬁle which we have seen in the
+rosrun_command section, we have to add this line</p></li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;name_of_package&quot;</span> <span class="na">type=</span><span class="s">&quot;name_of_executable.py&quot;</span> <span class="na">name=</span><span class="s">&quot;name_of_executable&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
@@ -195,7 +203,6 @@ and end with
 <section id="steps-to-load-config-yaml-file-in-ros-parameter-server">
 <h2>Steps to load Conﬁg YAML ﬁle in ROS Parameter Server<a class="headerlink" href="#steps-to-load-config-yaml-file-in-ros-parameter-server" title="Permalink to this heading"></a></h2>
 <p>You can use rosparam tag to load the YAML ﬁle.</p>
-<rosparam file ="$(find name_of_package)/config/config.yaml"/>
 <ul class="simple">
 <li><p>type is the name of executable ﬁle</p></li>
 <li><p>pkg is the package name which you have created</p></li>
@@ -214,7 +221,8 @@ and end with
 <ul class="simple">
 <li><p>name_of_package is the name of your ROS package.</p></li>
 <li><p>shell_script.sh is the name of your conﬁguration ﬁle.</p></li>
-<li><p>/launch/shell_script.sh is the location of the shell script inside your ROS Package folder.</p></li>
+<li><p>/launch/shell_script.sh is the location of the shell script inside
+your ROS Package folder.</p></li>
 </ul>
 </section>
 </section>
