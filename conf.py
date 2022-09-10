@@ -14,7 +14,7 @@ release = '0.0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.githubpages', 'myst_parser']
+extensions = ['sphinx.ext.githubpages', 'myst_parser', 'sphinxcontrib.googleanalytics']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -34,3 +34,6 @@ master_doc = 'index'
 pygments_style = 'sphinx'
 
 html_favicon = "https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"
+
+googleanalytics_id = '4051750239'
+googleanalytics_enabled = True
