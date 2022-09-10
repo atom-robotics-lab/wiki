@@ -141,7 +141,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>ROS installation</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/markdown/ros/installation.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/markdown/ros/installation.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -152,10 +152,13 @@
   <section id="ros-installation">
 <h1>ROS installation<a class="headerlink" href="#ros-installation" title="Permalink to this heading"></a></h1>
 <ul class="simple">
-<li><p>This Document assumes that the reader has installed Ubuntu 18.04. However, if you haven’t
-installed Ubuntu 20.04 yet make sure to install it before proceeding.</p></li>
-<li><p>There are tons of resources available on the Internet to get this done.</p></li>
-<li><p>You can download Ubuntu 20.04 ISO ﬁle from <a class="reference external" href="https://ubuntu.com/download/desktop">here</a>.</p></li>
+<li><p>This Document assumes that the reader has installed Ubuntu 18.04.
+However, if you haven’t installed Ubuntu 20.04 yet make sure to
+install it before proceeding.</p></li>
+<li><p>There are tons of resources available on the Internet to get this
+done.</p></li>
+<li><p>You can download Ubuntu 20.04 ISO ﬁle from
+<a class="reference external" href="https://ubuntu.com/download/desktop">here</a>.</p></li>
 </ul>
 <section id="ros-noetic-installation">
 <h2>ROS Noetic Installation<a class="headerlink" href="#ros-noetic-installation" title="Permalink to this heading"></a></h2>
@@ -168,10 +171,10 @@ installed Ubuntu 20.04 yet make sure to install it before proceeding.</p></li>
 </section>
 <section id="setup-your-keys">
 <h3>Setup your keys<a class="headerlink" href="#setup-your-keys" title="Permalink to this heading"></a></h3>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    sudo apt install curl <span class="c1"># if you haven&#39;t already installed curl</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install curl <span class="c1"># if you haven&#39;t already installed curl</span>
 </pre></div>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc <span class="p">|</span> sudo apt-key add -
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc <span class="p">|</span> sudo apt-key add -
 </pre></div>
 </div>
 </section>
@@ -194,14 +197,20 @@ installed Ubuntu 20.04 yet make sure to install it before proceeding.</p></li>
 <section id="configuration-steps">
 <h2>Configuration steps<a class="headerlink" href="#configuration-steps" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Adding environment variables: To Automatically add ROS environment variables to your bash session every time a new shell (terminal) is launched, enter the following commands (this step is similar as adding environmental variable in windows):</p></li>
+<li><p>Adding environment variables: To Automatically add ROS environment
+variables to your bash session every time a new shell (terminal) is
+launched, enter the following commands (this step is similar as
+adding environmental variable in windows):</p></li>
 </ol>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;source /opt/ros/noetic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
 <span class="nb">source</span> ~/.bashrc
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Initialize rosdep: Before you can use many ROS tools, you will need to initialize rosdep. rosdep enables you to easily install system dependencies for source you want to compile and is required to run some core components in ROS.</p></li>
+<li><p>Initialize rosdep: Before you can use many ROS tools, you will need
+to initialize rosdep. rosdep enables you to easily install system
+dependencies for source you want to compile and is required to run
+some core components in ROS.</p></li>
 </ol>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 sudo rosdep init
