@@ -1,10 +1,3 @@
-# -- fix for sphinxcontrib-googleanalytics------------------------------------
-
-import sphinx.application
-import sphinx.errors
-
-sphinx.application.ExtensionError = sphinx.errors.ExtensionError
-
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -41,6 +34,3 @@ master_doc = 'index'
 pygments_style = 'sphinx'
 
 html_favicon = "https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"
-
-googleanalytics_id = 'G-79B58JVRHB'
-googleanalytics_enabled = True

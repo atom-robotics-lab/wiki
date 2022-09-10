@@ -13,7 +13,7 @@ jobs:
     - uses: actions/setup-python@v2 
     - name: Install dependencies
       run: |
-        pip install sphinx sphinx_rtd_theme myst_parser sphinxcontrib-googleanalytics
+        pip install sphinx sphinx_rtd_theme myst_parser
     - name: sphinx build
       run: |
         sphinx-build . docs
