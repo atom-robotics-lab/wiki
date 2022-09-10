@@ -37,16 +37,16 @@ Contents:
    markdown/ros/node/rosnode.rst
    markdown/ros/master/master.rst
    markdown/ros/master/param-server.rst
-   markdown/ros/examples/example.md
-   markdown/ros/examples/eg1.md
+   markdown/ros/examples/example.rst
+   markdown/ros/examples/eg1.rst
    markdown/ros/launch/launch.rst
    markdown/ros/launch/create.rst
    markdown/ros/launch/eg1.rst
    markdown/ros/launch/eg2.rst
    markdown/ros/launch/eg3.rst
-   markdown/ros/comm/comm.md
-   markdown/ros/comm/topics/topics.md
-   markdown/ros/comm/topics/rostopic.md
+   markdown/ros/comm/comm.rst
+   markdown/ros/comm/topics/topics.rst
+   markdown/ros/comm/topics/rostopic.rst
    
 .. toctree::
    :maxdepth: 2

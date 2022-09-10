@@ -122,7 +122,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Example #1: ROS Node to Get and Set Parameters</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/markdown/ros/examples/eg1.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/markdown/ros/examples/eg1.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -134,8 +134,8 @@
 <h1>Example #1: ROS Node to Get and Set Parameters<a class="headerlink" href="#example-1-ros-node-to-get-and-set-parameters" title="Permalink to this heading"></a></h1>
 <section id="aim">
 <h2>Aim<a class="headerlink" href="#aim" title="Permalink to this heading"></a></h2>
-<p>To write a ROS Node to read config_my.yaml ﬁle loaded in ROS Parameter Server (done here), print
-it on the console and modify the phone number.</p>
+<p>To write a ROS Node to read config_my.yaml ﬁle loaded in ROS Parameter
+Server (done here), print it on the console and modify the phone number.</p>
 </section>
 <section id="code">
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this heading"></a></h2>
@@ -151,19 +151,19 @@ it on the console and modify the phone number.</p>
 
     <span class="c1"># Get all the parameters inside &#39;details&#39;</span>
     <span class="c1"># Store the parameters in variables</span>
-    
+
     <span class="n">first_name</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">][</span><span class="s1">&#39;first&#39;</span><span class="p">]</span>
     <span class="n">last_name</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">][</span><span class="s1">&#39;last&#39;</span><span class="p">]</span>
     <span class="n">address</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;contact&#39;</span><span class="p">][</span><span class="s1">&#39;address&#39;</span><span class="p">]</span>
     <span class="n">phone</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;contact&#39;</span><span class="p">][</span><span class="s1">&#39;phone&#39;</span><span class="p">]</span>
-    
+
     <span class="c1"># Print the parameters</span>
 
     <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; First Name: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first_name</span><span class="p">))</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; Last Name: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">last_name</span><span class="p">))</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; Address: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">address</span><span class="p">))</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; Phone: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">phone</span><span class="p">))</span>
-    
+
     <span class="c1"># 3. Modify the Phone Number</span>
 
     <span class="n">rospy</span><span class="o">.</span><span class="n">set_param</span><span class="p">(</span><span class="s1">&#39;/details/contact/phone&#39;</span><span class="p">,</span> <span class="mi">55555</span><span class="p">)</span>
@@ -176,7 +176,8 @@ it on the console and modify the phone number.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>The code is self explainatory , please feel free to seek help if you don’t understand it</p></li>
+<li><p>The code is self explainatory , please feel free to seek help if you
+don’t understand it</p></li>
 </ul>
 </section>
 </section>
