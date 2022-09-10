@@ -45,7 +45,6 @@
               <p class="caption" role="heading"><span class="caption-text">Tools Setup</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Ready to use image for Raspberry Pi</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#download-link">Download Link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-need">The Need</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#initial-setup">Initial Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#featues-and-usage">Featues and usage</a></li>
@@ -137,7 +136,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Ready to use image for Raspberry Pi</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/markdown/setup/ros-pi.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/markdown/setup/ros-pi.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -147,72 +146,115 @@
              
   <section id="ready-to-use-image-for-raspberry-pi">
 <h1>Ready to use image for Raspberry Pi<a class="headerlink" href="#ready-to-use-image-for-raspberry-pi" title="Permalink to this heading"></a></h1>
-<blockquote>
-<div><p>Custom 64 bit raspbian server image for raspberry pi 4/3b+ with pre-installed ROS noetic and many other useful packages for ready to use prototyping</p>
-</div></blockquote>
-<section id="download-link">
-<h2>Download Link<a class="headerlink" href="#download-link" title="Permalink to this heading"></a></h2>
-</section>
+<p>Custom 64 bit raspbian server image for raspberry pi 4/3b+ with
+pre-installed ROS noetic and many other useful packages for ready to use
+prototyping</p>
+<p><a class="reference external" href="https://drive.google.com/u/0/uc?id=1LYr8p5FBA-MVOaV6yugyCXJ2T71vWfGg&amp;export=download&amp;confirm=t&amp;uuid=e87efbb1-d8e4-4c25-a82e-a93d25260810">Download Link</a></p>
 <section id="the-need">
 <h2>The Need<a class="headerlink" href="#the-need" title="Permalink to this heading"></a></h2>
-<p>Immagine the time you have completed your simulation and now you are ready to implement it on your awesome hardare. But to test that beautiful code you get through the boardem task of preping your sd card with a fresh flash of raspbian and go through the tedious job of installing ROS and other packages in it.</p>
-<p>So to avoid that we came up with the idea of creatig our own custom image with pre-installed ROS and many other packages for a user friendly experiance.</p>
-<p>So the next time you mess you mess up something big time, dont worry! Just get ready with a fresh flash of this image and you are good to go.</p>
+<p>Immagine the time you have completed your simulation and now you are
+ready to implement it on your awesome hardare. But to test that
+beautiful code you get through the boardem task of preping your sd card
+with a fresh flash of raspbian and go through the tedious job of
+installing ROS and other packages in it.</p>
+<p>So to avoid that we came up with the idea of creatig our own custom
+image with pre-installed ROS and many other packages for a user friendly
+experiance.</p>
+<p>So the next time you mess you mess up something big time, dont worry!
+Just get ready with a fresh flash of this image and you are good to go.</p>
 </section>
 <section id="initial-setup">
 <h2>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this heading"></a></h2>
 <p>To get started, download the image file using the link given above.
-Alright, once the download is complete, it’s time to flash it on your sd card. You could do that using various softwares like Balena Etcher, RUFUS or use the Official Raspberry Pi Imager.</p>
+Alright, once the download is complete, it’s time to flash it on your sd
+card. You could do that using various softwares like Balena Etcher,
+RUFUS or use the Official Raspberry Pi Imager.</p>
 <ul class="simple">
-<li><p><strong>WIFI and SSH</strong>: While working with ROS and robotics related projects you will be required to establish a ssh connection with your raspberry pi to avoid the hassle of connecting it to a display via HDMI.
-So in order to establish a ssh connection with your laptop both the devices needs to be on the same network.
-To do so, plug in your sd card in your computer and open the <code class="docutils literal notranslate"><span class="pre">wpa_suppicant.conf</span></code> file in a text editor and add your <em><strong>ssid</strong></em> and <em><strong>password</strong></em> accordingly. This will automatically connect your raspberry pi to the network on startup.</p></li>
+<li><p><strong>WIFI and SSH</strong>: While working with ROS and robotics related
+projects you will be required to establish a ssh connection with your
+raspberry pi to avoid the hassle of connecting it to a display via
+HDMI. So in order to establish a ssh connection with your laptop both
+the devices needs to be on the same network. To do so, plug in your
+sd card in your computer and open the <code class="docutils literal notranslate"><span class="pre">wpa_suppicant.conf</span></code> file in
+a text editor and add your <strong>ssid</strong> and <strong>password</strong> accordingly.
+This will automatically connect your raspberry pi to the network on
+startup.</p></li>
 </ul>
-<p>Ok, Once you pi is on the same network, we need to identify the ip address of for raspberry pi in order to ssh into it. You could use the following command to find all devices connected on the network</p>
+<p>Ok, Once you pi is on the same network, we need to identify the ip
+address of for raspberry pi in order to ssh into it. You could use the
+following command to find all devices connected on the network</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo nmap -sN &lt;IP of your device&gt;/24
 </pre></div>
 </div>
-<p>Find the IP of your raspberry in the list and ssh into using the command below.</p>
+<p>Find the IP of your raspberry in the list and ssh into using the command
+below.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ssh pi@&lt;IP of your Raspberry Pi&gt;
 </pre></div>
 </div>
 <p>alright! you’re all set up and good to go.</p>
-<blockquote>
-<div><p><strong>NOTE</strong>: Delault username: <em><strong>pi</strong></em>
-Default password: <em><strong>raspberry</strong></em></p>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Delault username: <strong>pi</strong> Default password: <strong>raspberry</strong></p>
+</div>
 </section>
 <section id="featues-and-usage">
 <h2>Featues and usage<a class="headerlink" href="#featues-and-usage" title="Permalink to this heading"></a></h2>
 <ul>
-<li><p><strong>ROS</strong>: The image comes with pre-installed ROS neotic and Nav stack packages. For installation and more info on ROS please visit our Intro to ROS section.</p>
+<li><p><strong>ROS</strong>: The image comes with pre-installed ROS neotic and Nav stack
+packages. For installation and more info on ROS please visit our
+Intro to ROS section.</p>
 <ul class="simple">
-<li><p><em><strong>ROS Master-Slave communication</strong></em>: ROS Master-Slave communication is essential when you are working with computational heavy packages which can can create a toll on your raspberry pi. To avoid that a Master-Slave communication is established so you can run differnet nodes on different devices accordingly. While using the above image, the raspberry pi is assumed to be a slave considering its master running on your host device (eg: your ROS running laptop).
-In order to do so, open your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file in your <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory and add the following lines in the end.</p></li>
+<li><p><strong>ROS Master-Slave communication</strong>: ROS Master-Slave communication
+is essential when you are working with computational heavy
+packages which can can create a toll on your raspberry pi. To
+avoid that a Master-Slave communication is established so you can
+run differnet nodes on different devices accordingly. While using
+the above image, the raspberry pi is assumed to be a slave
+considering its master running on your host device (eg: your ROS
+running laptop). In order to do so, open your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file in
+your <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory and add the following lines in the end.</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://localhost:11311/
 <span class="nb">export</span> <span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;ROS IP OF YOUR MASTER DEVICE&gt;
 <span class="nb">export</span> <span class="nv">ROS_IP</span><span class="o">=</span>&lt;ROS IP OF YOUR MASTER DEVICE&gt;
 </pre></div>
 </div>
-<p>Once you are done with that, just save it and close the editor and save it. Source the edited bashrc or open a fresh terminal and run <code class="docutils literal notranslate"><span class="pre">roscore</span></code> and you will see your ROS_MASTER_URI has been changed from local host to the IP of your master device.</p>
-<p>Once the master url has been exposed, your raspberry pi can connect to your device as a slave. To do so open the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file of raspberry pi and navigate to the botom.
-You will find some similar lines. Change the IP adress of your devices accordingly and you are good to go…</p>
+<p>Once you are done with that, just save it and close the editor and
+save it. Source the edited bashrc or open a fresh terminal and run
+<code class="docutils literal notranslate"><span class="pre">roscore</span></code> and you will see your ROS_MASTER_URI has been changed
+from local host to the IP of your master device.</p>
+<p>Once the master url has been exposed, your raspberry pi can connect
+to your device as a slave. To do so open the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file of
+raspberry pi and navigate to the botom. You will find some similar
+lines. Change the IP adress of your devices accordingly and you are
+good to go…</p>
 </li>
-<li><p><strong>virtualenvwrapper</strong>: virtual enviroment wrapper is a great tool for switching between diffenent python enviroments for diffent projects. The image comes pre-installed with it and has an existing enviroment named <em><strong>cv</strong></em> with OpenCV installed created in it. just type the below command and you are good to go.</p></li>
+<li><p><strong>virtualenvwrapper</strong>: virtual enviroment wrapper is a great tool for
+switching between diffenent python enviroments for diffent projects.
+The image comes pre-installed with it and has an existing enviroment
+named <strong>cv</strong> with OpenCV installed created in it. just type the below
+command and you are good to go.</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>workon cv
 </pre></div>
 </div>
-<p>For more info and its usage please visit our <a class="reference internal" href="virtualenv.html"><span class="doc std std-doc">Virtual Enviroment tutorial</span></a>.</p>
+<p>For more info and its usage please visit our <a class="reference external" href="./virtualenv.md">Virtual Enviroment
+tutorial</a>.</p>
 <ul class="simple">
-<li><p><strong>workon_ros</strong>: workon ros is an awsome tool to source and switch between different ros workspaces made by Jasmeet Singh. The workspace is needed to be created and built in a directory called ~/ros_workspace/. Once built, you can directly source the workspace using the <em><strong>workon_ros</strong></em> command. The image is already set up with the tool.
-To source with noetic workspace just paste the command below.</p></li>
+<li><p><strong>workon_ros</strong>: workon ros is an awsome tool to source and switch
+between different ros workspaces made by Jasmeet Singh. The workspace
+is needed to be created and built in a directory called
+~/ros_workspace/. Once built, you can directly source the workspace
+using the <strong>workon_ros</strong> command. The image is already set up with
+the tool. To source with noetic workspace just paste the command
+below.</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>workon_ros noetic
 </pre></div>
 </div>
-<p><a class="reference external" href="https://github.com/jasmeet0915/workon_ros">Github repo for the project</a>. Your inputs are always welcome.</p>
+<p><a class="reference external" href="https://github.com/jasmeet0915/workon_ros">Github repo for the
+project</a>. Your inputs are
+always welcome.</p>
 </section>
 </section>
 
