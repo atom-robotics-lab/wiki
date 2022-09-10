@@ -32,3 +32,5 @@ html_static_path = ['_static']
 version = u'0.0.1'
 master_doc = 'index'
 pygments_style = 'sphinx'
+
+html_favicon = "https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"
