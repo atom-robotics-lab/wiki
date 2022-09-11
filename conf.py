@@ -34,3 +34,11 @@ master_doc = 'index'
 pygments_style = 'sphinx'
 
 html_favicon = "https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"
+
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "atom-robotics-lab", # Username
+    "github_repo": "wiki", # Repo name
+    "github_version": "sphinx/editOnGithub", # Version
+    "conf_py_path": "/source/", # Path in the checkout to the docs root
+}
