@@ -4,7 +4,7 @@ Command: rosnode
 -  rosnode contains the rosnode command-line tool for displaying debug
    information about ROS Nodes.
 
-*Note:* For quick information about any command, be that outside of ROS,
+.. Note:: For quick information about any command, be that outside of ROS,
 simply type the command along with suﬃx –h or -help . This is a widely
 used concept among other Linux Command: rosrun commands for quick
 references. Here’s an example for rosnode –h command
@@ -66,7 +66,7 @@ This should give details of the particular node
 -  .. rubric:: kill
       :name: kill
 
-*IMPORTANT:* rosnode kill is not guaranteed to succeed.
+.. IMPORTANT:: rosnode kill is not guaranteed to succeed.
 
 -  Let’s ﬁgure out what argument the kill sub-command needs. In a new
    terminal run start the rosmaster:

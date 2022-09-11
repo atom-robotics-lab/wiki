@@ -16,7 +16,7 @@ OR
 
    roscd pkg_ros_basics
 
-*NOTE:* roscd will work only if you have sourced setup.bash of your
+.. NOTE:: roscd will work only if you have sourced setup.bash of your
 catkin workspace.
 
 -  Create a scripts folder for your Python scripts and navigate into the
