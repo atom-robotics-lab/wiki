@@ -10,7 +10,7 @@ Aim
 -  For this create a chatter.launch ﬁle and save it in the launch folder
    inside pkg_ros_basics package.
 
-*NOTE:* To install rospy_tutorials package in your system you can run
+.. NOTE:: To install rospy_tutorials package in your system you can run
 sudo apt-get install ros-noetic-ros-tutorials this command.
 
 -  Once installed, you can use listener python script and talker
