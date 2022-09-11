@@ -38,7 +38,7 @@ html_favicon = "https://github.com/atom-robotics-lab/assets/blob/main/logo_with_
 html_context = {
     "display_github": True, # Integrate GitHub
     "github_user": "atom-robotics-lab", # Username
-    "github_repo": "wiki", # Repo name
+    "github_repo": "wiki", # Repository name
     "github_version": "main", # Version
     "conf_py_path": "/", # Path in the checkout to the docs root
 }
