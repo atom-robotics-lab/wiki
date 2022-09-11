@@ -39,6 +39,6 @@ html_context = {
     "display_github": True, # Integrate GitHub
     "github_user": "atom-robotics-lab", # Username
     "github_repo": "wiki", # Repo name
-    "github_version": "sphinx/editOnGithub", # Version
-    "conf_py_path": "/source/", # Path in the checkout to the docs root
+    "github_version": "main", # Version
+    "conf_py_path": "/", # Path in the checkout to the docs root
 }
