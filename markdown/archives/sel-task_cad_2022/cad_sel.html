@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAD Selection Task: Standard Instructions &mdash; A.T.O.M&#39;s Wiki 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Task 1" href="cad_task1.html" />
+    <link rel="prev" title="Selection Task" href="selection-task.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+          </a>
+              <div class="version">
+                0.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tools Setup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/ros-pi.html">Ready to use image for Raspberry Pi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/px4.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/virtualenv.html">Installation of virtualenvwrapper, OpenCV and cv_bridge package :</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/virtualenv.html#new-virtual-environment">New virtual environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/virtualenv.html#installation-of-opencv">Installation of opencv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/virtualenv.html#installation-of-cv-bridge">Installation of cv-bridge</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Intro to ROS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/ros.html">Intro To ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/installation.html">ROS installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/catkin_ws.html">Create Workspace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/package/package.html">ROS Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/package/create.html">Create a ROS package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/node/node.html">ROS Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/node/create.html">Creating a ROS Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/node/rosrun.html">Command: rosrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/node/rosnode.html">Command: rosnode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/master/master.html">ROS Master</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/master/master.html#start-the-ros-master">Start the ROS Master</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/master/param-server.html">ROS Parameter Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/examples/example.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/examples/eg1.html">Example #1: ROS Node to Get and Set Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/launch/launch.html">ROS Launch Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/launch/create.html">Create a ROS Launch file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/launch/eg1.html">Example 1: Launch two ROS Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/launch/eg2.html">Example 2: Launch turtle in forest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/launch/eg3.html">Example 3: Load YAML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/comm/comm.html">ROS Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/comm/topics/topics.html">ROS Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ros/comm/topics/rostopic.html">rostopic command</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using the Access Repo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Archives</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="selection-task.html">Selection Task</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CAD Selection Task: Standard Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#head-to-task-1-to-begin">Head to <span class="xref myst">Task 1</span> to begin.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cad_task1.html">Task 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cad_task1.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cad_task2.html">Task 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="submissions.html">Submission Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2022/selection-task.html">Selection Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2022/problem-statement.html">Problem Statement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2022/problem-statement.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2022/procedure.html">Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2022/hints.html">Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2022/submissions.html">Submission Instruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2021/selection-task.html">Selection Task 2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2021/problem-statement.html">Problem statement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2021/problem-statement.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2021/procedure.html">Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2021/hints.html">Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sel-task2021/submissions.html">Submissions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>CAD Selection Task: Standard Instructions</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/archives/sel-task_cad_2022/cad_sel.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cad-selection-task-standard-instructions">
+<h1>CAD Selection Task: Standard Instructions<a class="headerlink" href="#cad-selection-task-standard-instructions" title="Permalink to this heading"></a></h1>
+<p>The TASK provided here is the selection criteria for joining the <strong>A.T.O.M</strong> society. Those who sucessfully finish the task within the given time frame will be eligible to give an interview and eventually become a member of the <strong>A.T.O.M</strong> society.</p>
+<ul class="simple">
+<li><p>The tasks are not only to test your problem solving skills but also to see your diligence to learn new stuff the ablity to get the work done.</p></li>
+<li><p>You will be required to finish <strong>Two</strong> tasks in the alloted time frame. Both of them are supposed to be done in any 3d modeling software preferably <strong>Fusion360</strong>.</p></li>
+<li><p>If there are any 3D Designs or any other previous works (even 2d sketches are fine) related to the stuff you have worked on, you are welcome to share those as well with your submissions. It is optional, but this would help us further see your creativity and skills.</p></li>
+</ul>
+<section id="head-to-task-1-to-begin">
+<h2>Head to <a class="reference internal" href="cad_task1.html"><span class="doc std std-doc">Task 1</span></a> to begin.<a class="headerlink" href="#head-to-task-1-to-begin" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="selection-task.html" class="btn btn-neutral float-left" title="Selection Task" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cad_task1.html" class="btn btn-neutral float-right" title="Task 1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

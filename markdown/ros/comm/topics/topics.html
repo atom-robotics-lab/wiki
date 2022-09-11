@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROS Topics &mdash; A.T.O.M&#39;s Wiki 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="rostopic command" href="rostopic.html" />
+    <link rel="prev" title="ROS Communication" href="../comm.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+          </a>
+              <div class="version">
+                0.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tools Setup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/ros-pi.html">Ready to use image for Raspberry Pi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/px4.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/virtualenv.html">Installation of virtualenvwrapper, OpenCV and cv_bridge package :</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/virtualenv.html#new-virtual-environment">New virtual environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/virtualenv.html#installation-of-opencv">Installation of opencv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/virtualenv.html#installation-of-cv-bridge">Installation of cv-bridge</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Intro to ROS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../ros.html">Intro To ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">ROS installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../catkin_ws.html">Create Workspace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../package/package.html">ROS Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../package/create.html">Create a ROS package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../node/node.html">ROS Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../node/create.html">Creating a ROS Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../node/rosrun.html">Command: rosrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../node/rosnode.html">Command: rosnode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../master/master.html">ROS Master</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../master/master.html#start-the-ros-master">Start the ROS Master</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../master/param-server.html">ROS Parameter Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/example.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/eg1.html">Example #1: ROS Node to Get and Set Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../launch/launch.html">ROS Launch Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../launch/create.html">Create a ROS Launch file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../launch/eg1.html">Example 1: Launch two ROS Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../launch/eg2.html">Example 2: Launch turtle in forest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../launch/eg3.html">Example 3: Load YAML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comm.html">ROS Communication</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ROS Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rostopic.html">rostopic command</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Using the Access Repo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Archives</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task_cad_2022/selection-task.html">Selection Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task_cad_2022/cad_sel.html">CAD Selection Task: Standard Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task_cad_2022/cad_task1.html">Task 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task_cad_2022/cad_task1.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task_cad_2022/cad_task2.html">Task 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task_cad_2022/submissions.html">Submission Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2022/selection-task.html">Selection Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2022/problem-statement.html">Problem Statement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2022/problem-statement.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2022/procedure.html">Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2022/hints.html">Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2022/submissions.html">Submission Instruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2021/selection-task.html">Selection Task 2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2021/problem-statement.html">Problem statement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2021/problem-statement.html#expected-output">Expected Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2021/procedure.html">Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2021/hints.html">Hints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/sel-task2021/submissions.html">Submissions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>ROS Topics</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/comm/topics/topics.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ros-topics">
+<h1>ROS Topics<a class="headerlink" href="#ros-topics" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p>ROS Topics allow unidirectional communication between ROS Nodes.</p></li>
+<li><p>When using ROS Topics a ROS Node can be a publisher, subscriber or
+both.</p></li>
+<li><p>A ROS Node acting as a publisher can publish data on a ROS Topic and
+a subscriber ROS Node can subscribe to a ROS Topic.</p></li>
+<li><p>Publisher and Subscriber Nodes will exchange ROS Messages over a ROS
+Topic.</p></li>
+<li><p>A ROS Message is a simple data structure, comprising typed ﬁelds
+(integer, ﬂoating point, boolean, etc.). So a ROS Message can hold
+data of various data-types.</p></li>
+<li><p>Consider this analogy,</p></li>
+<li><p>Let’s say you are subscribed to a newspaper called The Melodic
+published by a publishing house called OSRF.</p></li>
+<li><p>Every morning your paperboy Jon Doe will deliver this newspaper to
+you.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OSRF</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Publisher</span> <span class="pre">Node</span></code></p></li>
+<li><p>OSRF which is publishing the newspaper as a Publisher Node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">You</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Subscriber</span> <span class="pre">Node</span></code></p></li>
+<li><p>You along with your neighbours who are subscribed to this newspaper
+as Subscriber Nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Jon</span> <span class="pre">Doe</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Topic</span></code></p></li>
+<li><p>Your paperboy who is taking the newspaper from the publisher and
+delivering it to its subscribers as a ROS Topic</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Melodic</span> <span class="pre">Newspaper</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Message</span></code></p></li>
+<li><p>The physical newspaper is your ROS Message.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Sports</span> <span class="pre">and</span> <span class="pre">Robotics</span> <span class="pre">Sections</span> <span class="pre">of</span> <span class="pre">The</span> <span class="pre">Melodic</span> <span class="pre">&lt;--&gt;</span> <span class="pre">Data</span> <span class="pre">Fields</span> <span class="pre">defined</span> <span class="pre">in</span> <span class="pre">ROS</span> <span class="pre">Message</span></code></p></li>
+<li><p>The sections of the newspaper is the Data Fields deﬁned in the ROS
+Message.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../comm.html" class="btn btn-neutral float-left" title="ROS Communication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rostopic.html" class="btn btn-neutral float-right" title="rostopic command" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
