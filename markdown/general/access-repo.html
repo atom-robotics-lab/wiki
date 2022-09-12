@@ -131,7 +131,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Using the access repo</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/general/access-repo.md" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/general/access-repo.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -141,17 +141,24 @@
              
   <section id="using-the-access-repo">
 <h1>Using the access repo<a class="headerlink" href="#using-the-access-repo" title="Permalink to this heading"></a></h1>
-<p>All our passwords are stored in public gpg encrypted files in the <a class="reference external" href="https://github.com/atom-robotics-lab/access">access</a> repository.
-The access repo above utilizes something called <a class="reference external" href="https://gnupg.org/">gpg</a> to encrypt and decrypt the passwords.</p>
-<p>If you have already uploaded your gpg key to keys.openpgp.org then you can skip the primer section.</p>
+<p>All our passwords are stored in public gpg encrypted files in the
+<a class="reference external" href="https://github.com/atom-robotics-lab/access">access</a> repository. The
+access repo above utilizes something called <a class="reference external" href="https://gnupg.org/">gpg</a>
+to encrypt and decrypt the passwords.</p>
+<p>If you have already uploaded your gpg key to keys.openpgp.org then you
+can skip the primer section.</p>
 <section id="gpg-a-primer">
 <h2>GPG ,a primer<a class="headerlink" href="#gpg-a-primer" title="Permalink to this heading"></a></h2>
-<p>GPG stands for GNU Privacy Guard. It basically uses two set of keys, a public key and a private key. These two keys are linked together. If I encrypt something with your public key then only you would be able to decrypt it with your private key.
-As the name implies a public key is something that can be shared with the public, whereas the private key should be kept secret.</p>
+<p>GPG stands for GNU Privacy Guard. It basically uses two set of keys, a
+public key and a private key. These two keys are linked together. If I
+encrypt something with your public key then only you would be able to
+decrypt it with your private key. As the name implies a public key is
+something that can be shared with the public, whereas the private key
+should be kept secret.</p>
 <section id="how-to-get-yourself-a-gpg-key">
 <h3>How to get yourself a gpg key<a class="headerlink" href="#how-to-get-yourself-a-gpg-key" title="Permalink to this heading"></a></h3>
 <p>First install gpg</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt update 
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt update
 sudo apt install gnupg2
 </pre></div>
 </div>
@@ -159,7 +166,9 @@ sudo apt install gnupg2
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --gen-key
 </pre></div>
 </div>
-<p>After this command follow the prompts and answer all the questions it asks you. Post this, you will have generated a gpg private and public key.</p>
+<p>After this command follow the prompts and answer all the questions it
+asks you. Post this, you will have generated a gpg private and public
+key.</p>
 <p>Use</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --list-keys
 </pre></div>
@@ -167,25 +176,30 @@ sudo apt install gnupg2
 </section>
 <section id="uploading-this-key">
 <h3>Uploading this key<a class="headerlink" href="#uploading-this-key" title="Permalink to this heading"></a></h3>
-<p>Now that you have generated this key you need to upload it to a keyserver so others can discover and use it.</p>
+<p>Now that you have generated this key you need to upload it to a
+keyserver so others can discover and use it.</p>
 <section id="step-1">
 <h4>Step 1<a class="headerlink" href="#step-1" title="Permalink to this heading"></a></h4>
 <p>Export your public key</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
-gpg --export --armor &gt; public.txt 
+gpg --export --armor &gt; public.txt
 </pre></div>
 </div>
 </section>
 <section id="step-2">
 <h4>Step 2<a class="headerlink" href="#step-2" title="Permalink to this heading"></a></h4>
-<p>Now head <a class="reference external" href="https://keys.openpgp.org/upload">here</a> and upload the public.txt file which you just generated which must be in your home directory</p>
-<p>You will then be prompted to verify your email, complete this step and you’ll be done.</p>
+<p>Now head <a class="reference external" href="https://keys.openpgp.org/upload">here</a> and upload the
+public.txt file which you just generated which must be in your home
+directory</p>
+<p>You will then be prompted to verify your email, complete this step and
+you’ll be done.</p>
 </section>
 </section>
 </section>
 <section id="setting-up-gopass-and-access-repo">
 <h2>Setting up gopass and access repo<a class="headerlink" href="#setting-up-gopass-and-access-repo" title="Permalink to this heading"></a></h2>
-<p>gopass is the tool we use which further uses gpg to encrypt and decrypt the passwords</p>
+<p>gopass is the tool we use which further uses gpg to encrypt and decrypt
+the passwords</p>
 <ul class="simple">
 <li><p>Install and setup <a class="reference external" href="https://www.gopass.pw/#install">gopass</a></p></li>
 </ul>
@@ -195,13 +209,15 @@ gpg --export --armor &gt; public.txt
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gopass clone https://github.com/atom-robotics-lab/access
 </pre></div>
 </div>
-<p>Now that you have cloned the repository, run gopass list to see the various accounts.</p>
+<p>Now that you have cloned the repository, run gopass list to see the
+various accounts.</p>
 <p>To view a password in plain text, run</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gopass show &lt;name of secret&gt;
 </pre></div>
 </div>
-<p>Running this would ask you your gpg password which you entered while creating your gpg key.
-If you don’t have access to the secrets, then  you would get an error.</p>
+<p>Running this would ask you your gpg password which you entered while
+creating your gpg key. If you don’t have access to the secrets, then you
+would get an error.</p>
 </section>
 </section>
 
