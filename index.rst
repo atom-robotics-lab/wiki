@@ -52,27 +52,27 @@ Contents:
    :maxdepth: 2
    :caption: Using the Access Repo
 
-   markdown/general/access-repo.md
+   markdown/general/access-repo.rst
 
 .. toctree::
    :maxdepth: 2
    :caption: Archives  
 
-   markdown/archives/sel-task_cad_2022/selection-task.md
-   markdown/archives/sel-task_cad_2022/cad_sel.md
-   markdown/archives/sel-task_cad_2022/cad_task1.md
-   markdown/archives/sel-task_cad_2022/cad_task2.md
-   markdown/archives/sel-task_cad_2022/submissions.md
-   markdown/archives/sel-task2022/selection-task.md
-   markdown/archives/sel-task2022/problem-statement.md
-   markdown/archives/sel-task2022/procedure.md
-   markdown/archives/sel-task2022/hints.md
-   markdown/archives/sel-task2022/submissions.md
-   markdown/archives/sel-task2021/selection-task.md
-   markdown/archives/sel-task2021/problem-statement.md
-   markdown/archives/sel-task2021/procedure.md
-   markdown/archives/sel-task2021/hints.md
-   markdown/archives/sel-task2021/submissions.md
+   markdown/archives/sel-task_cad_2022/selection-task.rst
+   markdown/archives/sel-task_cad_2022/cad_sel.rst
+   markdown/archives/sel-task_cad_2022/cad_task1.rst
+   markdown/archives/sel-task_cad_2022/cad_task2.rst
+   markdown/archives/sel-task_cad_2022/submissions.rst
+   markdown/archives/sel-task2022/selection-task.rst
+   markdown/archives/sel-task2022/problem-statement.rst
+   markdown/archives/sel-task2022/procedure.rst
+   markdown/archives/sel-task2022/hints.rst
+   markdown/archives/sel-task2022/submissions.rst
+   markdown/archives/sel-task2021/selection-task.rst
+   markdown/archives/sel-task2021/problem-statement.rst
+   markdown/archives/sel-task2021/procedure.rst
+   markdown/archives/sel-task2021/hints.rst
+   markdown/archives/sel-task2021/submissions.rst
 
 
 
