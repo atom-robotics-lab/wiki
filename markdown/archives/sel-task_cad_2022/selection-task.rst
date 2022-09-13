@@ -20,7 +20,7 @@ Systems, Pulley Systems etc.) for robotic acutators like servo motors,
 steppar motors etc. \* Designing the above said while keeping 3D
 Printing in mind since we mostly for our fabrication.
 
-*Head over to*\ `CAD Selection Tasks <./cad_sel.md>`__\ *for a detailed
+*Head over to*\ `CAD Selection Tasks <./cad_sel.rst>`__\ *for a detailed
 information related to the task.*
 
 FAQs
