@@ -10,11 +10,8 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tools Setup
-
-   markdown/setup/ros-pi.rst
-   markdown/setup/px4.rst
-   markdown/setup/virtualenv.rst
+   
+   markdown/tool_setup/tool_setup.rst
 
 .. toctree::
    :maxdepth: 2
