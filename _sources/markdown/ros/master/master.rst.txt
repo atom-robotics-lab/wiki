@@ -1,5 +1,6 @@
+**********
 ROS Master
-==========
+**********
 
 -  As you know ROS Nodes are building blocks of any ROS Application. A
    single ROS Application may have multiple ROS Nodes which communicate
@@ -31,4 +32,13 @@ So roscore will start the following:
 2. ROS Parameter Server
 3. rosout Logging Node
 
-.
+
+ROS Parameter Server
+====================
+
+-  You can think Parameter Server as a space where all the necessary
+   data that needs to be shared among various ROS Nodes is stored.
+-  Parameter Server runs inside ROS Master.
+-  ROS Nodes can view and even modify data stored in the Parameter
+   Server.
+-  Typically Parameter Server is used to store conﬁguration parameters.
