@@ -24,26 +24,17 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Intro to ROS
 
    markdown/ros/ros.rst
    markdown/ros/installation.rst
    markdown/ros/catkin_ws.rst
    markdown/ros/package/package.rst
-   markdown/ros/package/create.rst
    markdown/ros/node/node.rst
-   markdown/ros/node/create.rst
-   markdown/ros/node/rosrun.rst
-   markdown/ros/node/rosnode.rst
    markdown/ros/master/master.rst
-   markdown/ros/master/param-server.rst
    markdown/ros/examples/example.rst
-   markdown/ros/examples/eg1.rst
    markdown/ros/launch/launch.rst
-   markdown/ros/launch/create.rst
-   markdown/ros/launch/eg1.rst
-   markdown/ros/launch/eg2.rst
-   markdown/ros/launch/eg3.rst
    markdown/ros/comm/comm.rst
    markdown/ros/comm/topics/topics.rst
    markdown/ros/comm/topics/rostopic.rst
