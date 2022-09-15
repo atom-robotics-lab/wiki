@@ -20,7 +20,7 @@ Task 1
       as Task1_Alex.stl
 
 Optional Submissions
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 -  Previous Works (Optional)
 
@@ -34,7 +34,7 @@ Optional Submissions
    .. Seealso:: Last date for submission is **26th of August**
 
 `Google Form for Task submission <https://forms.gle/MpB8P4WSqZW9TUXT9>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Task 2
 ------
@@ -59,8 +59,7 @@ Task 2
 .. _google-form-for-task-submission-1:
 
 `Google Form for Task submission <https://forms.gle/f4WS21dYYNHkuT1M8>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Interview
 ---------
 

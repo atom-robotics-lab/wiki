@@ -1,5 +1,6 @@
+**************
 Selection Task
-==============
+**************
 
 Hello there, Welcome to the **A.T.O.M**\ ’s wiki. This section contains
 information about **2022’s selection task** for joining **A.T.O.M**,
@@ -11,7 +12,7 @@ the society and contribute for the same. The following positions are
 open as of now:
 
 CAD DESIGNER
-------------
+============
 
 You will be responsbile for the following: \* Designing creative and
 efficient 3D CAD Models for Robotic Parts. \* Designing mechanisms (Gear
@@ -19,11 +20,11 @@ Systems, Pulley Systems etc.) for robotic acutators like servo motors,
 steppar motors etc. \* Designing the above said while keeping 3D
 Printing in mind since we mostly for our fabrication.
 
-*Head over to*\ `CAD Selection Tasks <./cad_sel.md>`__\ *for a detailed
+*Head over to*\ `CAD Selection Tasks <./cad_sel.rst>`__\ *for a detailed
 information related to the task.*
 
 FAQs
-----
+====
 
 **Question**: *What kind of students would fit perfect for these
 positions*\ 
@@ -59,5 +60,3 @@ would be an all rounder by the end.*
 
 .. seealso:: The deadline for completing the task: **28th August, 2022**
 
-.. toctree:: markdown/sel-task/cad_sel.md markdown/sel-task/cad_task1.md
-markdown/sel-task/cad_task2.md markdown/sel-task/submissions.md
