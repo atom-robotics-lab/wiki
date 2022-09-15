@@ -10,11 +10,8 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tools Setup
-
-   markdown/setup/ros-pi.rst
-   markdown/setup/px4.rst
-   markdown/setup/virtualenv.rst
+   
+   markdown/tool_setup/tool_setup.rst
 
 .. toctree::
    :maxdepth: 2
@@ -51,19 +48,9 @@ Contents:
 
    markdown/archives/sel-task_cad_2022/selection-task.rst
    markdown/archives/sel-task_cad_2022/cad_sel.rst
-   markdown/archives/sel-task_cad_2022/cad_task1.rst
-   markdown/archives/sel-task_cad_2022/cad_task2.rst
-   markdown/archives/sel-task_cad_2022/submissions.rst
-   markdown/archives/sel-task2022/selection-task.rst
-   markdown/archives/sel-task2022/problem-statement.rst
-   markdown/archives/sel-task2022/procedure.rst
-   markdown/archives/sel-task2022/hints.rst
-   markdown/archives/sel-task2022/submissions.rst
    markdown/archives/sel-task2021/selection-task.rst
-   markdown/archives/sel-task2021/problem-statement.rst
-   markdown/archives/sel-task2021/procedure.rst
-   markdown/archives/sel-task2021/hints.rst
-   markdown/archives/sel-task2021/submissions.rst
+   markdown/archives/sel-task2022/selection-task.rst
+
 
 
 
