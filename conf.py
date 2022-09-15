@@ -9,7 +9,7 @@
 project = 'A.T.O.M\'s Wiki'
 copyright = '2022, A.T.O.M'
 author = 'A.T.O.M'
-release = '0.0.3'
+release = '0.1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

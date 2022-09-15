@@ -4,7 +4,6 @@ Previous Tasks
 Here are the previous selection tasks.
 
 .. toctree::
-    :numbered:
     :maxdepth: 4
 
     ./sel-task_cad_2022/selection-task.rst
