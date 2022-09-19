@@ -2,7 +2,8 @@ Tool Setup
 ==========
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 4
+    
     
     ./ros-pi.rst
     ./virtualenv.rst

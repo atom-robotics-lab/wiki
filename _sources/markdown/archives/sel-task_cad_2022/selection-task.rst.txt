@@ -1,5 +1,5 @@
 **************
-Selection Task
+CAD Selection Task 2022
 **************
 
 Hello there, Welcome to the **A.T.O.M**\ ’s wiki. This section contains
@@ -9,10 +9,16 @@ information about **2022’s selection task** for joining **A.T.O.M**,
 Currently we are working on multiple projects and are on the lookout for
 skilled individuals with different technical backgrounds who could join
 the society and contribute for the same. The following positions are
-open as of now:
+open as of now:\
+
+.. toctree::
+   :maxdepth: 4
+   :hidden:
+
+   ./cad_sel.rst
 
 CAD DESIGNER
-============
+------------
 
 You will be responsbile for the following: \* Designing creative and
 efficient 3D CAD Models for Robotic Parts. \* Designing mechanisms (Gear
@@ -24,7 +30,7 @@ Printing in mind since we mostly for our fabrication.
 information related to the task.*
 
 FAQs
-====
+----
 
 **Question**: *What kind of students would fit perfect for these
 positions*\ 
@@ -59,4 +65,3 @@ would be an all rounder by the end.*
    whole lot faster.
 
 .. seealso:: The deadline for completing the task: **28th August, 2022**
-

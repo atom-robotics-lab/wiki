@@ -145,3 +145,12 @@ submission <https://forms.gle/PGfqF2ZmzSH3AY1D7>`__
 .. Note:: Even if you are not able to complete entire the task you
    are requested to make the submission of the work that you have done
    anyway.
+
+.. toctree:: 
+   :maxdepth: 4
+   :hidden:
+
+   ./problem-statement.rst
+   ./procedure.rst
+   ./Hints.rst
+   ./submissions.rst
