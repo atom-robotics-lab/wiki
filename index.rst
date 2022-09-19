@@ -9,47 +9,37 @@ A.T.O.M's Wiki !
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
+   :caption: Tool Setup
    
    markdown/tool_setup/tool_setup.rst
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Selection Task
+..
+   .. toctree::
+      :maxdepth: 4
+      
+      :caption: Selection Task
 
    
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
+   :maxdepth: 4
    :caption: Intro to ROS
 
    markdown/ros/ros.rst
-   markdown/ros/installation.rst
-   markdown/ros/catkin_ws.rst
-   markdown/ros/package/package.rst
-   markdown/ros/node/node.rst
-   markdown/ros/master/master.rst
-   markdown/ros/examples/example.rst
-   markdown/ros/launch/launch.rst
-   markdown/ros/comm/comm.rst
-   markdown/ros/comm/topics/topics.rst
-   markdown/ros/comm/topics/rostopic.rst
+
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Using the Access Repo
 
    markdown/general/access-repo.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Archives  
 
-   markdown/archives/sel-task_cad_2022/selection-task.rst
-   markdown/archives/sel-task_cad_2022/cad_sel.rst
-   markdown/archives/sel-task2021/selection-task.rst
-   markdown/archives/sel-task2022/selection-task.rst
+   markdown/archives/previous_tasks.rst
 
 
 
