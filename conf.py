@@ -29,7 +29,7 @@ html_static_path = ['_static']
 
 # -- Aditional configuration -------------------------------------------------
 
-version = u'0.0.3'
+version = u'0.1.0'
 master_doc = 'index'
 pygments_style = 'sphinx'
 
