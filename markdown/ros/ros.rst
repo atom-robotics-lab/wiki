@@ -28,16 +28,3 @@ package management.
 
 .. note:: For more info on ROS please visit the \ `Official ROS Website <https://www.ros.org>`__. It has got really interesting videos and resources about the functioning and projects based on ROS. To get started with learning ROS head over to `ROS Tutorials <http://wiki.ros.org/action/fullsearch/ROS/Tutorials?action=fullsearch&context=180&value=linkto%3A%22ROS%2FTutorials%22>`__
 
-.. raw:: html
-
-   <iframe width="640" height="480" src="https://www.ros.org/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-
-..
-
-   For more info on ROS or how to get started with it please visit
-   the\ `Official ROS Website <https://www.ros.org>`__. It has got
-   really interesting videos and resources.
-
-.. raw:: html
-
-   </iframe>
