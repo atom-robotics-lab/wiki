@@ -80,7 +80,7 @@
 ## About The Project
 
 This is the repo for the <a href="https://atom-robotics-lab.github.io">atom-robotics-lab</a> website, a documentation site for the our Projects. The wiki's purpose is to “Provide documentation for our project" - visit our <a href="https://atom-robotics-lab.github.io/wiki">wiki</a>.
-If you’re interested in helping to improve our <a href="https://atom-robotics-lab.github.io/wiki">wiki</a>, find out how to <a href="https://github.com/atom-robotics-lab/wiki/contributing.md">contribute<a>.  
+If you’re interested in helping to improve our <a href="https://atom-robotics-lab.github.io/wiki">wiki</a>, find out how to <a href="https://github.com/atom-robotics-lab/wiki/blob/main/contributing.md">contribute<a>.  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +88,7 @@ If you’re interested in helping to improve our <a href="https://atom-robotics-
 
 ### Built With
 
-* [![Sphinx](https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg)](https://www.sphinx-docs.org)
+* [![Sphinx](https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg)](https://www.sphinx-doc.org/)
 * [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
