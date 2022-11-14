@@ -1,8 +1,6 @@
 *******************
 Selection Task 2022
 *******************
-.. contents:: Table of Contents
-
 
 Hi there, Welcome to the Selection Task.
 
@@ -42,8 +40,6 @@ Problem Statement
       So we think two weeks time is enough so you guys can study for your
       exams freely and manage your time in order to complete the task.
 
-Once you have read the problem statement please visit the
-`Procedure <./procedure.md>`__ page to get started with the task.
 
 Expected Output
 ===============
