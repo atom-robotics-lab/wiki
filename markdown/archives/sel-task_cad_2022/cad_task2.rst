@@ -51,4 +51,4 @@ Task 2
    have a chance to get selected based on your submission.
 
 Once you are done with the Task 2 please submit it by heading over to
-`Submissions <./submissions.md>`__
+`Submissions <https://atom-robotics-lab.github.io/wiki/markdown/archives/sel-task_cad_2022/cad_sel.html#submission-instructions>`__
