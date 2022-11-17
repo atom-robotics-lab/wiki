@@ -2,8 +2,6 @@
 Selection Task 2021 
 ===================
 
-.. contents:: Table of Contents
-
 Hi there, Welcome to the Selection Task(2021).
 
 The TASK provided here is the selection criteria for joining the
@@ -16,10 +14,6 @@ diligence to learn new stuff the ablity to get the work done.
 
 .. Note:: the deadline has been extended New deadline for completing
    the task: 27th November, 2021
-
-Head to the `Problem
-statement <./archives/sel-task2021/problem-statement.md>`__ section to
-begin with the task.
 
 Problem statement
 -----------------
@@ -39,10 +33,6 @@ Problem statement
    amount of time as we also have our midterm exams during this time. So
    we think a week time is enough so you guys can give your exams freely
    and manage your time in order to complete the task
-
-Once you have read the problem statement please visit the
-`Procedure <./sel-task/procedure.md>`__ page to get started with the
-task.
 
 Expected Output
 ---------------
@@ -146,11 +136,4 @@ submission <https://forms.gle/PGfqF2ZmzSH3AY1D7>`__
    are requested to make the submission of the work that you have done
    anyway.
 
-.. toctree:: 
-   :maxdepth: 4
-   :hidden:
 
-   ./problem-statement.rst
-   ./procedure.rst
-   ./Hints.rst
-   ./submissions.rst

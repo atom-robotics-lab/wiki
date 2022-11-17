@@ -124,7 +124,10 @@ Aim
    inside pkg_ros_basics package.
 
 .. NOTE:: To install rospy_tutorials package in your system you can run
-sudo apt-get install ros-noetic-ros-tutorials this command.
+
+.. code:: shell
+
+   sudo apt-get install ros-noetic-ros-tutorials this command.
 
 -  Once installed, you can use listener python script and talker
    executable written in C++ present in rospy_tutorials package.
@@ -185,8 +188,7 @@ turtlesim.launch
    <param name="/background_g" value="139" />
    <param name="/background_b" value="34" />
    </node>
-   <node pkg="turtlesim" type="turtle_teleop_key" name="node_turtle_teleop_key" />
-   ❱
+   <node pkg="turtlesim" type="turtle_teleop_key" name="node_turtle_teleop_key" />   
    </launch>
 
 Run Command

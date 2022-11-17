@@ -60,7 +60,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../comm.html">ROS Communication</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ROS Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rostopic.html">rostopic command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ros.html#what-is-ros">What is ROS ?</a></li>
 </ul>
 </li>
 </ul>
@@ -86,9 +85,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../ros.html">Intro To ROS</a> &raquo;</li>
-      <li>ROS Topics</li>
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../ros.html">Intro To ROS</a></li>
+      <li class="breadcrumb-item active">ROS Topics</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/comm/topics/topics.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -102,33 +101,58 @@
 <h1>ROS Topics<a class="headerlink" href="#ros-topics" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>ROS Topics allow unidirectional communication between ROS Nodes.</p></li>
-<li><p>When using ROS Topics a ROS Node can be a publisher, subscriber or
+<li><p>When using ROS Topics a ROS Node can be a <strong>publisher</strong>, <strong>subscriber</strong> or
 both.</p></li>
-<li><p>A ROS Node acting as a publisher can publish data on a ROS Topic and
-a subscriber ROS Node can subscribe to a ROS Topic.</p></li>
-<li><p>Publisher and Subscriber Nodes will exchange ROS Messages over a ROS
-Topic.</p></li>
-<li><p>A ROS Message is a simple data structure, comprising typed ﬁelds
+<li><p>A <strong>ROS Node</strong> acting as a publisher can publish data on a <strong>ROS Topic</strong> and
+a subscriber <strong>ROS Node</strong> can subscribe to a <strong>ROS Topic</strong>.</p></li>
+<li><p>Publisher and Subscriber Nodes will exchange <strong>ROS Messages</strong> over a <strong>ROS
+Topic</strong>.</p></li>
+<li><p>A <strong>ROS Message</strong> is a simple data structure, comprising typed ﬁelds
 (integer, ﬂoating point, boolean, etc.). So a ROS Message can hold
 data of various data-types.</p></li>
-<li><p>Consider this analogy,</p></li>
+</ul>
+<blockquote>
+<div><p><em>Consider this analogy</em></p>
+</div></blockquote>
+<hr class="docutils" />
+<ul class="simple">
 <li><p>Let’s say you are subscribed to a newspaper called The Melodic
 published by a publishing house called OSRF.</p></li>
 <li><p>Every morning your paperboy Jon Doe will deliver this newspaper to
 you.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">OSRF</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Publisher</span> <span class="pre">Node</span></code></p></li>
-<li><p>OSRF which is publishing the newspaper as a Publisher Node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">You</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Subscriber</span> <span class="pre">Node</span></code></p></li>
+</ul>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">OSRF</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Publisher</span> <span class="pre">Node</span></code></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>OSRF which is publishing the newspaper as a <strong>Publisher Node</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">You</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Subscriber</span> <span class="pre">Node</span></code></p>
+</div></blockquote>
+<ul class="simple">
 <li><p>You along with your neighbours who are subscribed to this newspaper
-as Subscriber Nodes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Jon</span> <span class="pre">Doe</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Topic</span></code></p></li>
+as <strong>Subscriber Nodes</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Jon</span> <span class="pre">Doe</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Topic</span></code></p>
+</div></blockquote>
+<ul class="simple">
 <li><p>Your paperboy who is taking the newspaper from the publisher and
-delivering it to its subscribers as a ROS Topic</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Melodic</span> <span class="pre">Newspaper</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Message</span></code></p></li>
-<li><p>The physical newspaper is your ROS Message.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Sports</span> <span class="pre">and</span> <span class="pre">Robotics</span> <span class="pre">Sections</span> <span class="pre">of</span> <span class="pre">The</span> <span class="pre">Melodic</span> <span class="pre">&lt;--&gt;</span> <span class="pre">Data</span> <span class="pre">Fields</span> <span class="pre">defined</span> <span class="pre">in</span> <span class="pre">ROS</span> <span class="pre">Message</span></code></p></li>
-<li><p>The sections of the newspaper is the Data Fields deﬁned in the ROS
-Message.</p></li>
+delivering it to its subscribers as a <strong>ROS Topic</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Melodic</span> <span class="pre">Newspaper</span> <span class="pre">&lt;--&gt;</span> <span class="pre">ROS</span> <span class="pre">Message</span></code></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The physical newspaper is your <strong>ROS Message</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Sports</span> <span class="pre">and</span> <span class="pre">Robotics</span> <span class="pre">Sections</span> <span class="pre">of</span> <span class="pre">The</span> <span class="pre">Melodic</span> <span class="pre">&lt;--&gt;</span> <span class="pre">Data</span> <span class="pre">Fields</span> <span class="pre">defined</span> <span class="pre">in</span> <span class="pre">ROS</span> <span class="pre">Message</span></code></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The sections of the newspaper is the Data Fields deﬁned in the <strong>ROS
+Message</strong>.</p></li>
 </ul>
 </section>
 

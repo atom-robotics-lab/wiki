@@ -76,7 +76,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../comm/comm.html">ROS Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../comm/topics/topics.html">ROS Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">rostopic command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ros.html#what-is-ros">What is ROS ?</a></li>
 </ul>
 </li>
 </ul>
@@ -102,9 +101,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../ros.html">Intro To ROS</a> &raquo;</li>
-      <li>ROS Launch Files</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../ros.html">Intro To ROS</a></li>
+      <li class="breadcrumb-item active">ROS Launch Files</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/launch/launch.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -278,7 +277,9 @@ inside pkg_ros_basics package.</p></li>
 <p class="admonition-title">Note</p>
 <p>To install rospy_tutorials package in your system you can run</p>
 </div>
-<p>sudo apt-get install ros-noetic-ros-tutorials this command.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get install ros-noetic-ros-tutorials this command.
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>Once installed, you can use listener python script and talker
 executable written in C++ present in rospy_tutorials package.</p></li>
@@ -335,7 +336,6 @@ inside pkg_ros_basics package.</p></li>
 <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;/background_b&quot;</span> <span class="na">value=</span><span class="s">&quot;34&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/node&gt;</span>
 <span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;turtlesim&quot;</span> <span class="na">type=</span><span class="s">&quot;turtle_teleop_key&quot;</span> <span class="na">name=</span><span class="s">&quot;node_turtle_teleop_key&quot;</span> <span class="nt">/&gt;</span>
-❱
 <span class="nt">&lt;/launch&gt;</span>
 </pre></div>
 </div>

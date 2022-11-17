@@ -18,7 +18,7 @@ Problem statement
    and manage your time in order to complete the task
 
 Once you have read the problem statement please visit the
-`Procedure <./sel-task/procedure.md>`__ page to get started with the
+`Procedure <https://atom-robotics-lab.github.io/wiki/markdown/archives/sel-task2021/selection-task.html#procedure>`__ page to get started with the
 task.
 
 Expected Output
