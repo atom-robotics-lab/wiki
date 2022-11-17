@@ -77,7 +77,7 @@ Creating a catkin workspace
 .. code:: shell
 
    cd  ~/catkin_ws
-   catkin build
+   catkin_make
 
 -  Now to make your installation deetectable in ROS
 

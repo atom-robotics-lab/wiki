@@ -15,9 +15,9 @@ Task 1
    are recommended to use **Fusion360**.
 
 Once you are done with the Task 1 please submit it by heading over to
-`Submissions <./submissions.md>`__
+`Submissions <https://atom-robotics-lab.github.io/wiki/markdown/archives/sel-task_cad_2022/cad_sel.html#submission-instructions>`__
 
-.. Note:: Head to `Task 2 <./cad_task2.md>`__ once you are done with
+.. Note:: Head to `Task 2 <https://atom-robotics-lab.github.io/wiki/markdown/archives/sel-task_cad_2022/cad_sel.html#task-2>`__ once you are done with
    task1.
 
 Expected Output
