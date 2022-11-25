@@ -14,11 +14,6 @@ Contents:
    
    markdown/tool_setup/tool_setup.rst
 
-..
-   .. toctree::
-      :maxdepth: 4
-      
-      :caption: Selection Task
 
    
 
@@ -30,9 +25,10 @@ Contents:
 
 .. toctree::
    :maxdepth: 4
-   :caption: Selection Task   
+   :caption: Selection Task 2022 - 2023
 
-   markdown/selection_task_2022_2023.rst
+   markdown/selection_task/selection_task_2022_2023.rst
+   
 .. toctree::
    :maxdepth: 4
    :caption: Using the Access Repo
