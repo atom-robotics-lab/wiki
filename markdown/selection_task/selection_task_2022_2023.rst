@@ -45,11 +45,12 @@ Expected Output
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://youtu.be/lwI40jNR-D4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+   <iframe width="640" height="480" src="https://www.youtube.com/embed/lwI40jNR-D4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 
 .. raw:: html
 
    </iframe>
+
 .. Note:: THE TURTLE SHOULD STOP AT THE INITIAL POINT ONLY.
 
 Hints
@@ -63,6 +64,70 @@ Hints
 
 -  Keep tracking the distance travelled so as to know when to stop. You
    can refer to Overview of rospy for more hint
+
+Sample
+------
+
+.. code:: 
+
+   #! /usr/bin/env python3
+
+   import rospy
+   from geometry_msgs.msg import Twist
+   from turtlesim.msg import Pose
+   from nav_msgs.msg import Odometry
+   
+   my_X = 0 
+   my_Y = 0
+   
+   def pose_callback(pose): 
+   
+              global my_X, my_Y
+              rospy.loginfo("Robot X = %f: Robot Y=%f\n",pose.x,pose.y)
+              my_X = pose.x
+              my_Y = pose.y
+              
+   def move_turtle(lin_vel):  
+        
+       global my_X
+       rospy.init_node('move_turtle', anonymous=True)
+       pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+       rospy.Subscriber('/odom', Odometry, queue_size=10)
+       rospy.Subscriber('/turtle1/pose',Pose, pose_callback)
+   
+       rate = rospy.Rate(10) # 10hz    
+       vel = Twist()
+       while not rospy.is_shutdown():
+   
+           vel.linear.x = lin_vel
+           vel.linear.y = 0
+           vel.linear.z = 0
+           vel.angular.x = 0
+           vel.angular.y = 0
+           vel.angular.z = 0
+   
+           rospy.loginfo("Linear Vel = %f: ", lin_vel)
+   
+           if(6 < my_X ):
+                   rospy.loginfo("Robot Reached destination")
+                   rospy.logwarn("Stopping robot")
+                        
+                   break
+   
+           pub.publish(vel)
+           rate.sleep()
+   
+   move_turtle(2.0)
+
+- Output video:
+
+.. raw:: html
+
+   <iframe width="640" height="480" src="https://youtube.com/embed/qZ2wQTCKW0s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+
+.. raw:: html
+
+   </iframe>
 
 Procedure
 ---------
