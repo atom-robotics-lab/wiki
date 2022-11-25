@@ -1,6 +1,5 @@
-*****************************************
 CAD Selection Task: Standard Instructions
-*****************************************
+=========================================
 
 
 The TASK provided here is the selection criteria for joining the
