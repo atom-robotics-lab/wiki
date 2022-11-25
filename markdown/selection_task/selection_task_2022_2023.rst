@@ -75,11 +75,12 @@ Sample
    import rospy
    from geometry_msgs.msg import Twist
    from turtlesim.msg import Pose
-   from nav_msgs.msg import Odometry
    
    my_X = 0 
    my_Y = 0
+   x_dist = 6
    
+   # Subscriber Callback that gives position of the turtle (x & y)
    def pose_callback(pose): 
    
               global my_X, my_Y
@@ -92,7 +93,6 @@ Sample
        global my_X
        rospy.init_node('move_turtle', anonymous=True)
        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-       rospy.Subscriber('/odom', Odometry, queue_size=10)
        rospy.Subscriber('/turtle1/pose',Pose, pose_callback)
    
        rate = rospy.Rate(10) # 10hz    
@@ -108,9 +108,10 @@ Sample
    
            rospy.loginfo("Linear Vel = %f: ", lin_vel)
    
-           if(6 < my_X ):
-                   rospy.loginfo("Robot Reached destination")
-                   rospy.logwarn("Stopping robot")
+           # Stop the turtle when it reaches x_dist
+           if(x_dist < my_X ):
+                   rospy.loginfo("Turtle Reached destination")
+                   rospy.logwarn("Stopping Turtle")
                         
                    break
    
