@@ -35,17 +35,7 @@ Problem statement
 
 -  The given footage is taken from a camera mounted on top of a mobile base. The mobile base is 
    travelling across a warehouse inside a simulation world. There are several pipes of various 
-   sizes(small, medium and large) kept inside the warehouse. A snapshot of the warehouse has been given below : 
-
-   .. raw:: html
-
-    <img src="warehouse.png" alt="Warehouse" height="300">
-
-   .. raw:: html
-
-    
-   
-    <br><br>
+   sizes(small, medium and large) kept inside the warehouse. 
 
 -  There will be a penalty for each uncounted pipe.
 
