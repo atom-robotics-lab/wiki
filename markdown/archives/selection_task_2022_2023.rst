@@ -115,7 +115,8 @@ Hints
    to get this done.
 
 -  Keep tracking the distance travelled to know when to stop. But do not 
-   limit yourself to this. Feel free to use any methods as you wish, as far as it’s a valid submission.. You can refer to Overview of rospy for more hint
+   limit yourself to this. Feel free to use any methods as you wish, as far as it’s
+   a valid submission. You can refer to Overview of rospy for more hint
 
 Submission Instruction
 ======================
