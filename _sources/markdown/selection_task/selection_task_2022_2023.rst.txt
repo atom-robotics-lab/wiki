@@ -199,8 +199,7 @@ For Submissions of your work please refer to the following instructions
    -  Once we review your submission, we will be calling you for a
       personal interview based on your work.
 
-`Google Form for Task
-submission <https://forms.gle/PGfqF2ZmzSH3AY1D7>`__
+`Google Form for Task: To be updated`
 
 .. Note:: Even if you are not able to complete entire the task you
    are requested to make the submission of the work that you have done
