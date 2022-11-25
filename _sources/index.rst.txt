@@ -27,7 +27,8 @@ Contents:
    :maxdepth: 4
    :caption: Selection Task 2022 - 2023
 
-   markdown/selection_task/selection_task_2022_2023.rst
+   markdown/selection_task/ROS_Selection_Task.rst
+   markdown/selection_task/CV_Selection_Task.rst
    
 .. toctree::
    :maxdepth: 4

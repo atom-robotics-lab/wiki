@@ -55,7 +55,7 @@ edit the CMakeLists.txt ﬁle
 
 Add these few lines at the bottom of CMakeLists.txt ﬁle,
 
-.. code:: m
+.. code:: xml
 
    add_executable(filename src/filename.cpp)
    target_link_libraries(filename ${catkin_LIBRARIES})
