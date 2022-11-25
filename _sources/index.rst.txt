@@ -14,11 +14,6 @@ Contents:
    
    markdown/tool_setup/tool_setup.rst
 
-..
-   .. toctree::
-      :maxdepth: 4
-      
-      :caption: Selection Task
 
    
 
@@ -28,6 +23,11 @@ Contents:
 
    markdown/ros/ros.rst
 
+.. toctree::
+   :maxdepth: 4
+   :caption: Selection Task 2022 - 2023
+
+   markdown/selection_task/selection_task_2022_2023.rst
    
 .. toctree::
    :maxdepth: 4
