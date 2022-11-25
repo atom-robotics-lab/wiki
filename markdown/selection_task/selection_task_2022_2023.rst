@@ -5,7 +5,7 @@ Selection Task 2022-2023
 Hi there, Welcome to the Selection Task.
 
 The TASK provided here is the selection criteria for joining the
-**A.T.O.M** society. Those who sucessfully finish the task within the
+**A.T.O.M** society. Those who successfully finish the task within the
 given time frame will be given a chance to give an interview to become a
 member of the **A.T.O.M** society.
 
@@ -191,7 +191,7 @@ For Submissions of your work please refer to the following instructions
 
 -  Submissions
 
-   -  Once your have both of the above things ready, submit the YouTube
+   -  Once you have both of the above things ready, submit the YouTube
       link of the video and the script in the google form given below
 
 -  Interview
@@ -202,7 +202,7 @@ For Submissions of your work please refer to the following instructions
 `Google Form for Task: To be updated`
 
 .. Note:: Even if you are not able to complete entire the task you
-   are requested to make the submission of the work that you have done
+   are requested to make submission of the work that you have done
    anyway.
 
 

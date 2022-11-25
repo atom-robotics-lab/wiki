@@ -2,14 +2,14 @@
 Computer Vision Selection Task 2022-2023
 ************************
 
-Hi there, Welcome to the specialized selection task for all of you computer vision nerds.
+Hi there, Welcome to the specialized selection task for all of you Computer Vision nerds.
 
 The TASK provided here is for those people who have specialized in the field of Computer 
-Vision and are interested in joining **A.T.O.M** society. Those who sucessfully finish the 
+Vision and are interested in joining **A.T.O.M** society. Those who successfully finish the 
 task within the given time frame will be given a chance to give an interview to become a
 member of the **A.T.O.M** society.
 
-This task will put your computer vision skills to the test
+This task will put your computer vision and problem solving skills to the test.
 
 .. seealso::
    The deadline for completing the task: 11th December, 2022 Head to the
@@ -21,11 +21,13 @@ Problem statement
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://www.youtube.com/embed/v=3_r5Ag-iHZY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+   <iframe width="640" height="480" src="https://www.youtube.com/embed/3_r5Ag-iHZY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 
 .. raw:: html
 
     </iframe>
+
+
 
 
 -  The objective of the task is to count the number of small, medium and large pipes from the
@@ -35,8 +37,10 @@ Problem statement
    travelling across a warehouse inside a simulation world. There are several pipes of various 
    sizes(small, medium and large) kept inside the warehouse.
 
+-  There will be a penalty for each uncounted pipe.
+
 -  This task is based on a real-world application of computer vision in robotics, where robots are 
-   used in environments like warehouses for survillience and management of goods.
+   used in environments like warehouses for surveillience and management of goods.
 
 -  To achieve this task, you are supposed to devise a method to count the pipes belonging to various
    sizes.
@@ -48,7 +52,7 @@ Expected Output
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://www.youtube.com/embed/v=WrH8Uw5TGlc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+   <iframe width="640" height="480" src="https://www.youtube.com/embed/WrH8Uw5TGlc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 
 .. raw:: html
 
@@ -61,9 +65,10 @@ Expected Output
 Hints
 -----
 
--  Take a look at the shape of the pipes. Is there a method to detect all the circles in a given frame ?
+-  Take a look at the shape of the pipes. Is there a method to detect all the circles in a 
+   given frame ?
    
--  How can you differentiate between the pipes of different sizes? 
+-  How can you differentiate between pipes of different sizes? 
 
 
    
@@ -90,7 +95,7 @@ For Submissions of your work please refer to the following instructions
 
 -  **Submissions**
 
-   -  Once your have both of the above things ready, submit the YouTube
+   -  Once you have both of the above things ready, submit the YouTube
       link of the video and the script in the google form given below
 
 -  **Interview**
@@ -101,7 +106,7 @@ For Submissions of your work please refer to the following instructions
 `Google Form for Task: To be updated`
 
 .. Note:: Even if you are not able to complete entire the task you
-   are requested to make the submission of the work that you have done
+   are requested to make submission of the work that you have done
    anyway.
 
 
