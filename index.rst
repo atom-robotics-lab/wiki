@@ -28,7 +28,11 @@ Contents:
 
    markdown/ros/ros.rst
 
-   
+.. toctree::
+   :maxdepth: 4
+   :caption: Selection Task   
+
+   markdown/archives/selection_task_2022_2023.rst
 .. toctree::
    :maxdepth: 4
    :caption: Using the Access Repo
