@@ -32,7 +32,7 @@ Contents:
    :maxdepth: 4
    :caption: Selection Task   
 
-   markdown/archives/selection_task_2022_2023.rst
+   markdown/selection_task_2022_2023.rst
 .. toctree::
    :maxdepth: 4
    :caption: Using the Access Repo
