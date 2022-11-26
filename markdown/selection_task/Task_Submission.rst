@@ -1,6 +1,10 @@
 Task Submission
 ================
 
+.. Warning::
+   The deadline for all the Tasks is: 11th December, 2022 Head to the
+   Problem statement section to begin with the task.
+
 For Submissions of your work please refer to the following instructions
 
 -  **Video**
