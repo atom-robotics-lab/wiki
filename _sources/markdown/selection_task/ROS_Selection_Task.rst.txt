@@ -62,7 +62,7 @@ Sample Code Snippet
 **Question:** Write a python code to move ROS's turtlesim bot on a straight path 
 while bot's distance is less than 6.
 
-.. code:: python
+.. code-block:: python
 
    #! /usr/bin/env python3
 
@@ -126,6 +126,7 @@ Output video
    </iframe>
 
 .. code:: shell
+
    roscore
    rosrun turtlesim turtlesim_node
    rosrun package_name script_name
