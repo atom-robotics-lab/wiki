@@ -41,12 +41,12 @@ Resource Models
 - **Wheel**: https://grabcad.com/library/robot-wheel-70x20mm-1
 
 Things to keep in mind
-------------------
+-----------------------
 
 While designing the Robot there are some things that you should keep in mind.
 
 - The model should have proper mounts and spaces for motors and other mechanical parts. You free to use any type mechanical components like screws, bearings etc.
-- All components in the arm should be connected with proper joints.
+- All components in the bot should be connected with proper joints.
 - You will be judged on the basis of the following criteria:
     - Manufacturability of the links and mounts (Preferebly 3d Printable)
     - Adhering to the giving details and guidelines.
