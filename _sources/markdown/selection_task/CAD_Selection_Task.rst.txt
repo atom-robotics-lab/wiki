@@ -1,7 +1,7 @@
 CAD Selection Task
 ===================
 
-Greetings to all the passionate CAD designers out there , Do you think you got what it takes to get the job done ? 
+Greetings to all the passionate CAD designers out there. Do you think you got what it takes to get the job done ? 
 Then here is the task specially curated to test your skills and thought process to put your skills to the test.
 
 The TASK provided here is for those people who have specialized in the field of CAD designing 
@@ -20,12 +20,16 @@ member of the **A.T.O.M** society.
    but this would help us further see your creativity and skills.
 
 
+.. Note::
+    To achieve the above task, you are free to use any software that you are familiar with but you are recommended to use **Fusion360** as you will have to switch over to fusion360 if you join the society.
+
+
 Problem statement
 ------------------
 
 - The objective of this task is to design a 4 wheel differential drive robot
 - The robot should be powered only with 2 motors i.e. all 4 wheels should receive power from 2 motors while maximum number of motors that can be used are 2.
-- Size of robot should not exceed 30x30x20 ( length, breadth , height in cm) 
+- Size of robot should not exceed 30x30x20 (length, breadth , height in cm) 
 - All the refence cad models like battery , motors and wheels are provided below and only those parts are required to be used.
 - All the other parts can be used by the person at its own will but should be mounted correctly on the robot with proper brackets and mounts.
 
@@ -42,23 +46,19 @@ Things to keep in mind
 While designing the Robot there are some things that you should keep in mind.
 
 - The model should have proper mounts and spaces for motors and other mechanical parts. You free to use any type mechanical components like screws, bearings etc.
-
 - All components in the arm should be connected with proper joints.
-
 - You will be judged on the basis of the following criteria:
-
     - Manufacturability of the links and mounts (Preferebly 3d Printable)
     - Adhering to the giving details and guidelines.
     - Reusability and esay to modify in future if required.
     - You may use any methods and tools to achieve the task but make sure to follow proper 3d modeling practices like constraints, joints etc.
 
-   .. Note:: To achieve the above task, you are free to use any software that you are familiar with but you are recommended to use **Fusion360** as you will have to switch over to fusion360 if you join the society.
+.. Warning::
+    The last date to submit the task is **11 December, 2022**. 
 
-   .. seealso::   The last date to submit the task is **11 December, 2022**. 
-
-**Note**: We recommend you to manage your time properly and start with the task as
-soon as possible as it could get a bit lengthy. Even if you are not
-able to complete the whole task, we encourage you to still submit all
-the work you are able to complete till the deadline as you sill might
-have a chance to get selected based on your submission.
-
+.. Seealso::
+    We recommend you to manage your time properly and start with the task as
+    soon as possible as it could get a bit lengthy. Even if you are not
+    able to complete the whole task, we encourage you to still submit all
+    the work you are able to complete till the deadline as you sill might
+    have a chance to get selected based on your submission.
