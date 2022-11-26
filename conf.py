@@ -17,7 +17,7 @@ release = '0.1.0'
 extensions = ['sphinx.ext.githubpages', 'myst_parser', 'sphinx_copybutton']
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'readme.md', 'contributing.md']
 
 
 
