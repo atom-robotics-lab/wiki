@@ -20,8 +20,8 @@ There are currently two types of selection tasks which are:
    - All the resources to complete the said task are provided in
    the ROS section of ATOM WIKI. So make sure to check it out if you are
    new to ROS.
-   - **You are free to do multiple more than one tasks. It will only 
-   increase your chances of getting selected.**
+   - **We encourage you to attempt more than one task. It will 
+   improve your profile and increase your chances of getting selected.**
 
 .. Warning::
    The deadline for all the Tasks is: 11th December, 2022 Head to the
