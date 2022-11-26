@@ -50,7 +50,7 @@ While designing the Robot there are some things that you should keep in mind.
 
     - Manufacturability of the links and mounts (Preferebly 3d Printable)
     - Adhering to the giving details and guidelines.
-    - Reusability and esay to modify in future if required.
+    - Reusability and easy to modify in future if required.
     - You may use any methods and tools to achieve the task but make sure to follow proper 3d modeling practices like constraints, joints etc.
 
    .. Note:: To achieve the above task, you are free to use any software that you are familiar with but you are recommended to use **Fusion360** as you will have to switch over to fusion360 if you join the society.
