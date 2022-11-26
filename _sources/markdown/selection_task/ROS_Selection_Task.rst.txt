@@ -1,24 +1,5 @@
-************************
-Selection Task 2022-2023
-************************
-
-Hi there, Welcome to the Selection Task.
-
-The TASK provided here is the selection criteria for joining the
-**A.T.O.M** society. Those who successfully finish the task within the
-given time frame will be given a chance to give an interview to become a
-member of the **A.T.O.M** society.
-
-This task is not just only test your problem solving skills but see your
-diligence to learn new stuff the ablity to get the work done.
-
-.. Note:: All the resources to complete the said task are provided in
-   the ROS section of ATOM WIKI. So make sure to check it out if you are
-   new to ROS.
-
-.. seealso::
-   The deadline for completing the task: 11th December, 2022 Head to the
-   Problem statement section to begin with the task.
+ROS Selection Task
+========================
 
 
 Problem statement
@@ -27,11 +8,13 @@ Problem statement
 -  The objective of the task is to move the turtle inside the turtlesim 
    window in a vertical D shape of radius 1 unit.
 
--  To acheive this task you are supposed to create a node named  
-   /node_turtle_revolve   within a python script,
-    node_turtle_revolve.py  
+-  To acheive this task you are supposed to create a node named
+   /node_turtle_revolve within a python script,
+   node_turtle_revolve.py
 
-.. Note:: Dont worry if you are new to ROS or Linux(Ubuntu), the task
+
+
+   Dont worry if you are new to ROS or Linux(Ubuntu), the task
    is fairly simple and we have provided you with ample resource and
    tutorials in this WIKI to the complete this task so only a strong
    will and a little bit of brains is required to get the work done.
@@ -39,6 +22,14 @@ Problem statement
    amount of time as we also have our midterm exams during this time. So
    we think a week time is enough so you guys can give your exams freely
    and manage your time in order to complete the task
+
+.. Note:: All the resources to complete the said task are provided in
+   the ROS section of ATOM WIKI. So make sure to check it out if you are
+   new to ROS.
+
+.. seealso::
+   The deadline for completing the task: 11th December, 2022 Head to the
+   Problem statement section to begin with the task.
 
 Expected Output
 ---------------
@@ -65,10 +56,13 @@ Hints
 -  Keep tracking the distance travelled so as to know when to stop. You
    can refer to Overview of rospy for more hint
 
-Sample
-------
+Sample Code Snippet
+*******************
 
-.. code:: 
+**Question:** Write a python code to move ROS's turtlesim bot on a straight path 
+while bot's distance is less than 6.
+
+.. code:: python
 
    #! /usr/bin/env python3
 
@@ -120,7 +114,8 @@ Sample
    
    move_turtle(2.0)
 
-- Output video:
+Output video
+*************
 
 .. raw:: html
 
@@ -130,6 +125,11 @@ Sample
 
    </iframe>
 
+.. code:: shell
+   roscore
+   rosrun turtlesim turtlesim_node
+   rosrun package_name script_name
+
 Procedure
 ---------
 
@@ -138,11 +138,11 @@ Follow the instructions given below to get started with the task.
 -  First, you will need to create a package named selection_task within
    your ROS workspace. Once your package is created, source and build
    your workspace.
--  Within this package, you should have a ‘scripts’ folder inside which
-   you’ll create a python script, named node_turtle_revolve.py.
+-  Within this package, you should have a 'scripts' folder inside which
+   you'll create a python script, named node_turtle_revolve.py.
 -  Fill the script with proper programming ethics. Doing this will help
    us understand your code better and quicker than usual.
--  After completing the python script. Make it executable, if it isn’t
+-  After completing the python script. Make it executable, if it isn't
    already. To do that, enter the following code.
 
 .. code:: shell
@@ -169,42 +169,5 @@ Follow the instructions given below to get started with the task.
    Please refer to the tutorials and resouces given in the wiki or visit
    the official `ROSWIKI <http://wiki.ros.org/Documentation>`__ if you
    need help with anything regarding ROS.
-
-Submissions
------------
-
-For Submissions of your work please refer to the following instructions
-
--  Video
-
-   -  After completing the task, record a video of your work as shown in
-      the expected output in the problem statement page
-   -  Once the video is recorded, upload the video to Youtube as an
-      unlisted video
-
--  Code
-
-   -  Once your script is complete, add comments to your code to make it
-      more readable.
-   -  Create a copy of your script and rename it as task\_.py . Your
-      example if your name is ‘Alex’, then rename your script as
-      task_alex.py
-
--  Submissions
-
-   -  Once you have both of the above things ready, submit the YouTube
-      link of the video and the script in the google form given below
-
--  Interview
-
-   -  Once we review your submission, we will be calling you for a
-      personal interview based on your work.
-
-`Google Form for Task: To be updated`
-
-.. Note:: Even if you are not able to complete entire the task you
-   are requested to make submission of the work that you have done
-   anyway.
-
 
  

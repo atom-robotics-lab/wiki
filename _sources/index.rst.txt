@@ -25,10 +25,10 @@ Contents:
 
 .. toctree::
    :maxdepth: 4
-   :caption: Selection Task 2022 - 2023
+   :caption: Selection Tasks 2022 - 2023
 
-   markdown/selection_task/ROS_Selection_Task.rst
-   markdown/selection_task/CV_Selection_Task.rst
+   Selection Tasks 2022 - 2023 <markdown/selection_task/Selection_Tasks.rst>
+   markdown/selection_task/Task_Submission.rst
    
 .. toctree::
    :maxdepth: 4
@@ -52,3 +52,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+

@@ -1,6 +1,5 @@
-**************
 CAD Selection Task 2022
-**************
+=======================
 
 Hello there, Welcome to the **A.T.O.M**\ ’s wiki. This section contains
 information about **2022’s selection task** for joining **A.T.O.M**,

@@ -7,6 +7,7 @@
   <title>Selection Task 2022 &mdash; A.T.O.M&#39;s Wiki 0.1.0 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
     <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
@@ -18,6 +19,8 @@
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -51,10 +54,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ros/ros.html">Intro To ROS</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Selection Task 2022 - 2023</span></p>
+<p class="caption" role="heading"><span class="caption-text">Selection Tasks 2022 - 2023</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../selection_task/ROS_Selection_Task.html">Selection Task 2022-2023</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../selection_task/CV_Selection_Task.html">Computer Vision Selection Task 2022-2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selection_task/Selection_Tasks.html">Selection Tasks 2022 - 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selection_task/Task_Submission.html">Task Submission</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Using the Access Repo</span></p>
 <ul>
@@ -64,14 +67,12 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../previous_tasks.html">Previous Tasks</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../sel-task_cad_2022/selection-task.html">CAD Selection Task 2022</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Selection Task 2022</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#problem-statement">Problem Statement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#expected-output">Expected Output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#procedure">Procedure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hints">Hints</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#submission-instruction">Submission Instruction</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Selection Task 2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#problem-statement">Problem Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expected-output">Expected Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedure">Procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hints">Hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submission-instruction">Submission Instruction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sel-task2021/selection-task.html">Selection Task 2021</a></li>
 </ul>
 </li>
@@ -122,8 +123,9 @@ new to ROS.</p>
 <p>The deadline for completing the task: 25th March, 2022 Head to the
 Problem statement section to begin with the task.</p>
 </div>
+</section>
 <section id="problem-statement">
-<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this heading"></a></h2>
+<h1>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>The objective of the task is to move the turtle inside the turtlesim
 window in a inward or outward spiral motion and to stop it after 4
@@ -144,11 +146,11 @@ exams freely and manage your time in order to complete the task.</p>
 </div>
 </section>
 <section id="expected-output">
-<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this heading"></a></h2>
+<h1>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="https://youtu.be/5snhKotl48k">output video</a></p>
 <iframe width="640" height="480" src="https://www.youtube.com/embed/5snhKotl48k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></section>
 <section id="procedure">
-<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this heading"></a></h2>
+<h1>Procedure<a class="headerlink" href="#procedure" title="Permalink to this heading"></a></h1>
 <p>Follow the instructions given below to get started with the task.</p>
 <ul class="simple">
 <li><p>First, you will need to create a package named selection_task within
@@ -186,7 +188,7 @@ need help with anything regarding ROS.</p>
 </div>
 </section>
 <section id="hints">
-<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this heading"></a></h2>
+<h1>Hints<a class="headerlink" href="#hints" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>The turtle needs to move in a inward or outward spiral motion with a
 certain increasing or decreasing radius. This radius should be
@@ -200,7 +202,7 @@ stop. You can refer to Overview of rospy for more hint</p></li>
 </ul>
 </section>
 <section id="submission-instruction">
-<h2>Submission Instruction<a class="headerlink" href="#submission-instruction" title="Permalink to this heading"></a></h2>
+<h1>Submission Instruction<a class="headerlink" href="#submission-instruction" title="Permalink to this heading"></a></h1>
 <p>For Submissions of your work please refer to the following instructions</p>
 <ul class="simple">
 <li><p>Video</p>
@@ -241,7 +243,6 @@ submission</a></p>
 are requested to make the submission of the work that you have done
 anyway.</p>
 </div>
-</section>
 </section>
 
 
