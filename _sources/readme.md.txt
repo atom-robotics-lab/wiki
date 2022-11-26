@@ -104,9 +104,9 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* Sphinx
+* Sphinx and some dependencies
   ```sh
-  pip install sphinx
+  pip install sphinx sphinx_rtd_theme myst_parser sphinx-copybutton 
   ```
 
 ### Installation
@@ -118,7 +118,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 2. To generate html files
    ```sh
-   Make html
+   make html
    ```
 3. Open `_build/html/index.html` in your browser 
 
