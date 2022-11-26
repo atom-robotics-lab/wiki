@@ -36,6 +36,7 @@ For Submissions of your work please refer to the following instructions
 `Submit task here <https://forms.gle/NiFdXSd5YuHHuh3S6>`__
 ***********************************************************
 
-.. Note:: Even if you are not able to complete entire the task you
+.. Note::
+   Even if you are not able to complete entire the task you
    are requested to make submission of the work that you have done
    anyway.
