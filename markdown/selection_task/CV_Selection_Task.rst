@@ -10,9 +10,11 @@ member of the **A.T.O.M** society.
 
 This task will put your computer vision and problem solving skills to the test.
 
-.. seealso::
+.. Warning::
    The deadline for completing the task: 11th December, 2022 Head to the
    Problem statement section to begin with the task.
+
+
 
 
 Problem statement
@@ -20,11 +22,11 @@ Problem statement
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://www.youtube.com/embed/3_r5Ag-iHZY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+   <center><iframe width="540" height="380" src="https://www.youtube.com/embed/3_r5Ag-iHZY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 
 .. raw:: html
 
-    </iframe>
+    </iframe></center>
 
 
    <br><br>
@@ -51,11 +53,11 @@ Expected Output
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://www.youtube.com/embed/WrH8Uw5TGlc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+   <center><iframe width="540" height="380" src="https://www.youtube.com/embed/WrH8Uw5TGlc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 
 .. raw:: html
 
-   </iframe>
+   </iframe></center>
 
   
 
