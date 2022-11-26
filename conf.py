@@ -9,7 +9,7 @@
 project = 'A.T.O.M\'s Wiki'
 copyright = '2022, A.T.O.M'
 author = 'A.T.O.M'
-release = '0.1.0'
+release = '0.2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -29,7 +29,7 @@ html_static_path = ['_static']
 
 # -- Aditional configuration -------------------------------------------------
 
-version = u'0.1.0'
+version = u'0.3.0'
 master_doc = 'index'
 pygments_style = 'sphinx'
 
