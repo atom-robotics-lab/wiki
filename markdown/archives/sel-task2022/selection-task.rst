@@ -11,7 +11,8 @@ member of the **A.T.O.M** society.
 This task is not just only test your problem solving skills but see your
 diligence to learn new stuff the ablity to get the work done.
 
-.. Note:: All the resources to complete the said task are provided in
+.. Note::
+   All the resources to complete the said task are provided in
    the ROS section of ATOM WIKI. So make sure to check it out if you are
    new to ROS.
 
@@ -20,17 +21,17 @@ diligence to learn new stuff the ablity to get the work done.
    Problem statement section to begin with the task.
 
 Problem Statement
-=================
+-----------------
 
 -  The objective of the task is to move the turtle inside the turtlesim
    window in a inward or outward spiral motion and to stop it after 4
    turns in order to create a spiral as given in the expected output.
 
--  To acheive this task you are supposed to create a node named  
-   /node_turtle_spiral   within a python script,  node_turtle_spiral.py
-    
+-  To acheive this task you are supposed to create a node named
+   /node_turtle_spiral within a python script, node_turtle_spiral.py
 
-.. Note:: Dont worry if you are new to ROS or Linux(Ubuntu), the task
+.. Note::
+      Dont worry if you are new to ROS or Linux(Ubuntu), the task
       is fairly simple and we have provided you with ample resource and
       tutorials in this WIKI to the complete this task so only a strong
       will and a little bit of brains is required to get the work done.
@@ -41,7 +42,7 @@ Problem Statement
 
 
 Expected Output
-===============
+---------------
 
 `output video <https://youtu.be/5snhKotl48k>`__
 
@@ -54,7 +55,7 @@ Expected Output
    </iframe>
 
 Procedure
-=========
+----------
 
 Follow the instructions given below to get started with the task.
 
@@ -88,12 +89,13 @@ Follow the instructions given below to get started with the task.
 
 -  node_turtle_spiral.py
 
-.. seealso:: Please refer to the tutorials and resouces given in the wiki or visit
+.. seealso:: 
+   Please refer to the tutorials and resouces given in the wiki or visit
    the official `ROSWIKI <http://wiki.ros.org/Documentation>`__ if you
    need help with anything regarding ROS.
 
 Hints
-=====
+-----
 
 -  The turtle needs to move in a inward or outward spiral motion with a
    certain increasing or decreasing radius. This radius should be
@@ -108,7 +110,7 @@ Hints
    stop. You can refer to Overview of rospy for more hint
 
 Submission Instruction
-======================
+----------------------
 
 For Submissions of your work please refer to the following instructions
 
@@ -137,9 +139,9 @@ For Submissions of your work please refer to the following instructions
    -  Once we review your submission, we will be calling you for a
       personal interview based on your work.
 
-`Google Form for Task
-submission <https://forms.gle/PGfqF2ZmzSH3AY1D7>`__
+`Google Form for Task submission <https://forms.gle/PGfqF2ZmzSH3AY1D7>`__
 
-.. Note:: Even if you are not able to complete entire the task you
+.. Note::
+   Even if you are not able to complete entire the task you
    are requested to make the submission of the work that you have done
    anyway.

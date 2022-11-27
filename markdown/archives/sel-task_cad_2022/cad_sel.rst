@@ -95,12 +95,13 @@ Task 2
 
    .. Note:: To achieve the above task, you are free to use any software that you are familiar with but you are recommended to use **Fusion360** as you will have to switch over to fusion360 if you join the society.
 
-   .. seealso::   The last date to submit the task is **28 August, 2022**. **Note**: We
-   recommend you to manage your time properly and start with the task as
-   soon as possible as it could get a bit lengthy. Even if you are not
-   able to complete the whole task, we encourage you to still submit all
-   the work you are able to complete till the deadline as you sill might
-   have a chance to get selected based on your submission.
+   .. seealso::
+      The last date to submit the task is **28 August, 2022**. **Note**: We
+      recommend you to manage your time properly and start with the task as
+      soon as possible as it could get a bit lengthy. Even if you are not
+      able to complete the whole task, we encourage you to still submit all
+      the work you are able to complete till the deadline as you sill might
+      have a chance to get selected based on your submission.
 
 Once you are done with the Task 2 please submit it by heading over to
 `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/archives/sel-task_cad_2022/cad_sel.html#submission-instructions>`__
