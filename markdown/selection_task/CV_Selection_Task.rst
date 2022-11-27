@@ -11,8 +11,8 @@ member of the **A.T.O.M** society.
 This task will put your computer vision and problem solving skills to the test.
 
 .. Warning::
-   The deadline for completing the task: 11th December, 2022 Head to the
-   Problem statement section to begin with the task.
+   The *Deadline* for completing the task: *11th December, 2022* Head to the
+   :ref: `Problem statement section <Problem statement>` to begin with the task.
 
 
 

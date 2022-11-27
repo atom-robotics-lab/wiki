@@ -15,23 +15,31 @@ For Submissions of your work please refer to the following instructions
    -  Once the video is recorded, upload the video to Youtube as an
       unlisted video
 
--  **Code**
+-  **File**
 
    -  Once your script is complete, add comments to your code to make it
       more readable.
    -  Create a copy of your script and rename it as <task_your_name> . 
       For example if you worked on Computer vision task on a python file 
-      and your name is ‘Alex’, then rename your script to cvtask_alex.py
+      and your name is 'Alex', then rename your script to cvtask_alex.py
 
 -  **Submissions**
 
    -  Once you have both of the above things ready, submit the YouTube
       link of the video and the script in the google form given below
+   -  Previous Works (Optional): 
+      You are welcome to submit any of your previous work related to task.
+      It is optional but, this would help us see your skills. You have to
+      add it to drive and share the drive link in the submission form.
+   
+   .. Warning:: 
+      **Make sure to make the links accessible to everyone before sharing it.**
 
 -  **Interview**
 
-   -  Once we review your submission, we will be calling you for a
-      personal interview based on your work.
+   -  Once we review your submission, we will be sending you a confirmation and
+      will callyou for a personal interview based on your work.
+   -  Questions related to the task that you've performed will be asked.
 
 `Submit task here <https://forms.gle/NiFdXSd5YuHHuh3S6>`__
 ***********************************************************

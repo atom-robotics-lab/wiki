@@ -28,8 +28,8 @@ Contents:
    :caption: Selection Tasks 2022 - 2023
 
    Selection Tasks 2022 - 2023 <markdown/selection_task/Selection_Tasks.rst>
-   markdown/selection_task/Task_Submission.rst
-   
+   Task Submission <markdown/selection_task/Task_Submission.rst>
+
 .. toctree::
    :maxdepth: 4
    :caption: Using the Access Repo
