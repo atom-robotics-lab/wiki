@@ -27,16 +27,15 @@ Problem statement
    the ROS section of ATOM WIKI. So make sure to check it out if you are
    new to ROS.
 
-.. seealso::
-   The deadline for completing the task: 11th December, 2022 Head to the
-   Problem statement section to begin with the task.
+.. Warning::
+   The *Deadline* for completing the task: *11th December, 2022*
 
 Expected Output
 ---------------
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://www.youtube.com/embed/lwI40jNR-D4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+   <iframe width="640" height="480" src="https://youtu.be/TaMQco4vvIc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 
 .. raw:: html
 
@@ -119,12 +118,13 @@ Output video
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://youtube.com/embed/qZ2wQTCKW0s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+   <iframe width="640" height="480" src="https://youtu.be/tjGNhEe-S_k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 
 .. raw:: html
 
    </iframe>
 
+Commands used:
 .. code:: shell
 
    roscore

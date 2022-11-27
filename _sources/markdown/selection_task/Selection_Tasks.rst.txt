@@ -17,15 +17,11 @@ There are currently two types of selection tasks which are:
 
 
 .. Note::
-   - All the resources to complete the said task are provided in
-   the ROS section of ATOM WIKI. So make sure to check it out if you are
-   new to ROS.
-   - **We encourage you to attempt more than one task. It will 
+   **We encourage you to attempt more than one task. It will 
    improve your profile and increase your chances of getting selected.**
 
 .. Warning::
-   The deadline for all the Tasks is: 11th December, 2022 Head to the
-   Problem statement section to begin with the task.
+   The *Deadline* for all the Tasks is: *11th December, 2022*.
 
 .. toctree::
    :maxdepth: 4
@@ -41,4 +37,10 @@ There are currently two types of selection tasks which are:
    Electronics Selection Task <./Elec_Selection_Task.rst>
    CAD Selection Task <./CAD_Selection_Task.rst>
 
-   
+`Task submission <./Task_Submission.rst>`__
+++++++++++++++++++++++++++++++++++++++++++++
+
+.. Note::
+   Even if you are not able to complete entire the task you
+   are requested to make submission of the work that you have done
+   anyway.
