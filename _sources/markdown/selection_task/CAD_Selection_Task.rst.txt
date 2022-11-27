@@ -33,12 +33,16 @@ Problem statement
 - All the refence cad models like battery , motors and wheels are provided below and only those parts are required to be used.
 - All the other parts can be used by the person at its own will but should be mounted correctly on the robot with proper brackets and mounts.
 
+.. Warning::
+    The last date to submit the task is **11 December, 2022**.
+
 Resource Models
 ------------------
 
 - **Motors**: https://grabcad.com/library/jonson-geared-motor-1
 - **Battery**: https://grabcad.com/library/turnigy-2200mah-3s-20c-lipo-pack-1
 - **Wheel**: https://grabcad.com/library/robot-wheel-70x20mm-1 
+
 You may use bigger wheels if you like.
 
 Things to keep in mind
@@ -64,8 +68,6 @@ While designing the Robot there are some things that you should keep in mind.
 
 .. Note:: To achieve the above task, you are free to use any software that you are familiar with but you are recommended to use **Fusion360** as you will have to switch over to fusion360 if you join the society.
 
-.. Warning::
-    The last date to submit the task is **11 December, 2022**. 
 
 .. Seealso::
     We recommend you to manage your time properly and start with the task as
