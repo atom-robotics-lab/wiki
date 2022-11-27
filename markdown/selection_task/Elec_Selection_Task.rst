@@ -25,6 +25,7 @@ Stuff you will be needing :
 
 #. Microcontroller (Arduino, ESP32, or NodeMCU )
 #. LEDs ( min 4 )
+#. Breadboard
 #. Bunch of Jumper wires ( min 10 )
 #. Resistors (recommended 220 ohms , min 5  )
 #. Push Button ( min 1 ) or ( or any other form of input peripheral ) 
