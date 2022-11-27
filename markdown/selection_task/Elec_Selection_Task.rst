@@ -4,7 +4,7 @@ Electronics Selection Task
 Hi Everyone, 
 Welcome to the specialized selection task for electronics.
 
-This Selection Task is for those who previously have some background in electronics and are interested in joining the ATOM society.
+This Selection Task is for those who previously have some background in electronics and are interested in joining the **A.T.O.M** society.
 
 This task is going to be **offline**. 
 

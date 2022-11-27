@@ -2,8 +2,8 @@ Task Submission
 ================
 
 .. Warning::
-   The deadline for all the Tasks is: 11th December, 2022 Head to the
-   Problem statement section to begin with the task.
+   The **Deadline** for all the Tasks is: **11th December, 2022** Head to the
+   `Problem statement <https://atom-robotics-lab.github.io/wiki/markdown/selection_task/Selection_Tasks>`__ section to begin with the tasks.
 
 
 For Submissions of your work please refer to the following instructions

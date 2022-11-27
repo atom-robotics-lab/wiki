@@ -34,7 +34,7 @@ Problem statement
 - All the other parts can be used by the person at its own will but should be mounted correctly on the robot with proper brackets and mounts.
 
 .. Warning::
-    The last date to submit the task is **11 December, 2022**.
+    The **last date** to submit the task is **11 December, 2022**.
 
 Resource Models
 ------------------

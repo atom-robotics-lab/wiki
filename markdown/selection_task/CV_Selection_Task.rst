@@ -11,8 +11,8 @@ member of the **A.T.O.M** society.
 This task will put your computer vision and problem solving skills to the test.
 
 .. Warning::
-   The *Deadline* for completing the task: *11th December, 2022* Head to the
-   `Problem statement section <Problem statement>` to begin with the task.
+   The **Deadline** for completing the task: **11th December, 2022** Head to the
+   `Problem statement section <https://atom-robotics-lab.github.io/wiki/markdown/selection_task/CV_Selection_Task.html#problem-statement>`__ to begin with the task.
 
 
 Problem statement
@@ -60,7 +60,7 @@ Expected Output
   
 
     <br><br>
-    
+
 Hints
 -----
 
