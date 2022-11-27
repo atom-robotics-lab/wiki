@@ -1,7 +1,10 @@
 Previous Tasks
 ==============
 
-Here are the previous selection tasks.
+Welcome to the ARCHIVES section of our wiki. This folder mainly contains
+the previous selection tasks, projects etc.
+
+List of previous selection tasks:
 
 .. toctree::
     :maxdepth: 4
