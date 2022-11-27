@@ -28,18 +28,15 @@ Problem statement
    new to ROS.
 
 .. Warning::
-   The *Deadline* for completing the task: *11th December, 2022*
+   The **Deadline** for completing the task: **11th December, 2022**
 
 Expected Output
 ---------------
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://youtu.be/TaMQco4vvIc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/TaMQco4vvIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
-.. raw:: html
-
-   </iframe>
 
 .. Note:: THE TURTLE SHOULD STOP AT THE INITIAL POINT ONLY.
 
@@ -118,13 +115,10 @@ Output video
 
 .. raw:: html
 
-   <iframe width="640" height="480" src="https://youtu.be/tjGNhEe-S_k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-
-.. raw:: html
-
-   </iframe>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/tjGNhEe-S_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 Commands used:
+
 .. code:: shell
 
    roscore

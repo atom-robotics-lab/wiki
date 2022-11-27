@@ -42,6 +42,10 @@ Contents:
 
    markdown/archives/previous_tasks.rst
 
+.. toctree::
+   :caption: Socials
+
+   Linktree <https://linktr.ee/a.t.o.m_robotics_lab>
 
 
 
