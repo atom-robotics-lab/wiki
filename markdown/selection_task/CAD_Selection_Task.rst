@@ -20,10 +20,6 @@ member of the **A.T.O.M** society.
    but this would help us further see your creativity and skills.
 
 
-.. Note::
-    To achieve the above task, you are free to use any software that you are familiar with but you are recommended to use **Fusion360** as you will have to switch over to fusion360 if you join the society.
-
-
 Problem statement
 ------------------
 
@@ -42,20 +38,39 @@ Resource Models
 
 - **Motors**: https://grabcad.com/library/jonson-geared-motor-1
 - **Battery**: https://grabcad.com/library/turnigy-2200mah-3s-20c-lipo-pack-1
-- **Wheel**: https://grabcad.com/library/robot-wheel-70x20mm-1
+- **Wheel**: https://grabcad.com/library/robot-wheel-70x20mm-1 
+You may use bigger wheels if you like.
 
 Things to keep in mind
 -----------------------
 
 While designing the Robot there are some things that you should keep in mind.
 
-- The model should have proper mounts and spaces for motors and other mechanical parts. You free to use any type mechanical components like screws, bearings etc.
-- All components in the bot should be connected with proper joints.
-- You will be judged on the basis of the following criteria:
-    - Manufacturability of the links and mounts (Preferebly 3d Printable)
-    - Adhering to the giving details and guidelines.
-    - Reusability and esay to modify in future if required.
-    - You may use any methods and tools to achieve the task but make sure to follow proper 3d modeling practices like constraints, joints etc.
+-   The model should have proper mounts and spaces for motors and other mechanical
+    parts. You free to use any type mechanical components like screws, bearings etc.
+
+-   All components in the robot should be connected with proper joints.
+
+-   You will be judged on the basis of the following criteria:
+    -   Manufacturability of the links and mounts (Preferebly 3d Printable)
+    -   Adhering to the giving details and guidelines.
+    -   Reusability and easy to modify in future if required.
+    -   You may use any methods and tools to achieve the task but make sure to follow
+        proper 3d modeling practices like constraints, joints etc.
+
+-   **For Additional Points**: The robot you will be designing is for a 
+    **robo race challange** in which the robot is supposed to drive through rough
+    terrains. Keeping that in mind the robot should also have the following features:
+    -   The robot should be as small as possible.
+    -   Robot should be able to drive though rough and uneven terrains
+    -   The components should should be placed in such a way that the robot could 
+        also be drived in a upside down manner.
+
+
+.. Note:: 
+    To achieve the above task, you are free to use any software that you are
+    familiar with but you are recommended to use **Fusion360** as you will have to
+    switch over to fusion360 if you join the society.
 
 .. Seealso::
     We recommend you to manage your time properly and start with the task as
