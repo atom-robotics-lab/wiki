@@ -62,7 +62,7 @@ Follow the instructions given below to get started with the task.
 .. code:: shell
 
    cd ~/catkin_ws
-   catkin build
+   catkin_make
    source devel/setup.bash
    chmod +x ~/catkin_ws/src/selection_task/scripts/node_turtle_revolve.py
 

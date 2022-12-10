@@ -98,7 +98,7 @@ alternatively,
 
 .. code:: shell
 
-   catkin build
+   catkin_make
 
 **Step 7** : Make sure to use setup.bash
 
