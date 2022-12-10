@@ -69,5 +69,14 @@ Hints
    
 -  How can you differentiate between pipes of different sizes? 
 
+Resources 
+---------
+
+-  https://pyimagesearch.com/2014/07/21/detecting-circles-images-using-opencv-hough-circles/
+
+-  https://towardsdatascience.com/how-to-train-a-custom-object-detection-model-with-yolo-v5-917e9ce13208
+
+-  https://medium.com/mlearning-ai/detecting-objects-with-yolov5-opencv-python-and-c-c7cf13d1483c
+
 
  
