@@ -32,7 +32,7 @@ been created.
 .. code:: shell
 
    cd ~/catkin_ws
-   catkin build
+   catkin_make
 
 -  Inside the package, there are src folder, package.xml ,
    CMakeLists.txt , and the include folders.
