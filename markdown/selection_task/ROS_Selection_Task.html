@@ -179,40 +179,40 @@ while bot’s distance is less than 6.</p>
 <span class="c1"># Subscriber Callback that gives position of the turtle (x &amp; y)</span>
 <span class="k">def</span> <span class="nf">pose_callback</span><span class="p">(</span><span class="n">pose</span><span class="p">):</span>
 
-           <span class="k">global</span> <span class="n">my_X</span><span class="p">,</span> <span class="n">my_Y</span>
-           <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Robot X = </span><span class="si">%f</span><span class="s2">: Robot Y=</span><span class="si">%f</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">pose</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="n">pose</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
-           <span class="n">my_X</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">x</span>
-           <span class="n">my_Y</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">y</span>
+   <span class="k">global</span> <span class="n">my_X</span><span class="p">,</span> <span class="n">my_Y</span>
+   <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Robot X = </span><span class="si">%f</span><span class="s2">: Robot Y=</span><span class="si">%f</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">pose</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="n">pose</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+   <span class="n">my_X</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">x</span>
+   <span class="n">my_Y</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">y</span>
 
 <span class="k">def</span> <span class="nf">move_turtle</span><span class="p">(</span><span class="n">lin_vel</span><span class="p">):</span>
 
-    <span class="k">global</span> <span class="n">my_X</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;move_turtle&#39;</span><span class="p">,</span> <span class="n">anonymous</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/turtle1/cmd_vel&#39;</span><span class="p">,</span> <span class="n">Twist</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/turtle1/pose&#39;</span><span class="p">,</span><span class="n">Pose</span><span class="p">,</span> <span class="n">pose_callback</span><span class="p">)</span>
+   <span class="k">global</span> <span class="n">my_X</span>
+   <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;move_turtle&#39;</span><span class="p">,</span> <span class="n">anonymous</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+   <span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/turtle1/cmd_vel&#39;</span><span class="p">,</span> <span class="n">Twist</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+   <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/turtle1/pose&#39;</span><span class="p">,</span><span class="n">Pose</span><span class="p">,</span> <span class="n">pose_callback</span><span class="p">)</span>
 
-    <span class="n">rate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Rate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># 10hz</span>
-    <span class="n">vel</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
-    <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
+   <span class="n">rate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Rate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># 10hz</span>
+   <span class="n">vel</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
+   <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
 
-        <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">lin_vel</span>
-        <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">vel</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">vel</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">vel</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">lin_vel</span>
+      <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">vel</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">vel</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">vel</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
 
-        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Linear Vel = </span><span class="si">%f</span><span class="s2">: &quot;</span><span class="p">,</span> <span class="n">lin_vel</span><span class="p">)</span>
+      <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Linear Vel = </span><span class="si">%f</span><span class="s2">: &quot;</span><span class="p">,</span> <span class="n">lin_vel</span><span class="p">)</span>
 
-        <span class="c1"># Stop the turtle when it reaches x_dist</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">x_dist</span> <span class="o">&lt;</span> <span class="n">my_X</span> <span class="p">):</span>
-                <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Turtle Reached destination&quot;</span><span class="p">)</span>
-                <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn</span><span class="p">(</span><span class="s2">&quot;Stopping Turtle&quot;</span><span class="p">)</span>
+      <span class="c1"># Stop the turtle when it reaches x_dist</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">x_dist</span> <span class="o">&lt;</span> <span class="n">my_X</span> <span class="p">):</span>
+         <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Turtle Reached destination&quot;</span><span class="p">)</span>
+         <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn</span><span class="p">(</span><span class="s2">&quot;Stopping Turtle&quot;</span><span class="p">)</span>
 
-                <span class="k">break</span>
+         <span class="k">break</span>
 
-        <span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
-        <span class="n">rate</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
+         <span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
+         <span class="n">rate</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
 
 <span class="n">move_turtle</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
 </pre></div>
