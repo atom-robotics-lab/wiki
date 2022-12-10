@@ -21,7 +21,7 @@ There are currently two types of selection tasks which are:
    improve your profile and increase your chances of getting selected.**
 
 .. Warning::
-   The *Deadline* for all the Tasks is: *11th December, 2022*.
+   The **Deadline** for all the Tasks is: **11th December, 2022**.
 
 .. toctree::
    :maxdepth: 4
@@ -37,7 +37,7 @@ There are currently two types of selection tasks which are:
    Electronics Selection Task <./Elec_Selection_Task.rst>
    CAD Selection Task <./CAD_Selection_Task.rst>
 
-`Task submission <./Task_Submission.rst>`__
+`Task submission <https://atom-robotics-lab.github.io/wiki/markdown/selection_task/Task_Submission>`__
 ++++++++++++++++++++++++++++++++++++++++++++
 
 .. Note::

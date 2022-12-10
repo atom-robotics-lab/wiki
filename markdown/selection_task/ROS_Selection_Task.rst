@@ -73,40 +73,40 @@ while bot's distance is less than 6.
    # Subscriber Callback that gives position of the turtle (x & y)
    def pose_callback(pose): 
    
-              global my_X, my_Y
-              rospy.loginfo("Robot X = %f: Robot Y=%f\n",pose.x,pose.y)
-              my_X = pose.x
-              my_Y = pose.y
+      global my_X, my_Y
+      rospy.loginfo("Robot X = %f: Robot Y=%f\n",pose.x,pose.y)
+      my_X = pose.x
+      my_Y = pose.y
               
    def move_turtle(lin_vel):  
         
-       global my_X
-       rospy.init_node('move_turtle', anonymous=True)
-       pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-       rospy.Subscriber('/turtle1/pose',Pose, pose_callback)
+      global my_X
+      rospy.init_node('move_turtle', anonymous=True)
+      pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+      rospy.Subscriber('/turtle1/pose',Pose, pose_callback)
    
-       rate = rospy.Rate(10) # 10hz    
-       vel = Twist()
-       while not rospy.is_shutdown():
+      rate = rospy.Rate(10) # 10hz    
+      vel = Twist()
+      while not rospy.is_shutdown():
    
-           vel.linear.x = lin_vel
-           vel.linear.y = 0
-           vel.linear.z = 0
-           vel.angular.x = 0
-           vel.angular.y = 0
-           vel.angular.z = 0
+         vel.linear.x = lin_vel
+         vel.linear.y = 0
+         vel.linear.z = 0
+         vel.angular.x = 0
+         vel.angular.y = 0
+         vel.angular.z = 0
    
-           rospy.loginfo("Linear Vel = %f: ", lin_vel)
+         rospy.loginfo("Linear Vel = %f: ", lin_vel)
    
-           # Stop the turtle when it reaches x_dist
-           if(x_dist < my_X ):
-                   rospy.loginfo("Turtle Reached destination")
-                   rospy.logwarn("Stopping Turtle")
-                        
-                   break
+         # Stop the turtle when it reaches x_dist
+         if(x_dist < my_X ):
+            rospy.loginfo("Turtle Reached destination")
+            rospy.logwarn("Stopping Turtle")
+                 
+            break
    
-           pub.publish(vel)
-           rate.sleep()
+            pub.publish(vel)
+            rate.sleep()
    
    move_turtle(2.0)
 
