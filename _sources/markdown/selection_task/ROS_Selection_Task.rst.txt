@@ -105,8 +105,8 @@ while bot's distance is less than 6.
                  
             break
    
-            pub.publish(vel)
-            rate.sleep()
+         pub.publish(vel)
+         rate.sleep()
    
    move_turtle(2.0)
 
