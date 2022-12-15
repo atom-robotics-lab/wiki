@@ -42,7 +42,7 @@ Time and Venue
 
 **Date**: 16th December 2022
 
-**Time**: 11:10 AM onwards
+**Time**: 12:00 PM onwards
 
 .. seealso::
     If you are interested, do fill this `form <https://forms.gle/9P7yo4mMpEsVZ5gL9>`__
