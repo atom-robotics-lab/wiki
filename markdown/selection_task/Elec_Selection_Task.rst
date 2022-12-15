@@ -39,7 +39,9 @@ Time and Venue
 ---------------
 
 **Venue**: Room no.401A, 4th Block Basement
+
 **Date**: 15th December 2022
+
 **Time**: 11:10 AM onwards
 
 .. seealso::
