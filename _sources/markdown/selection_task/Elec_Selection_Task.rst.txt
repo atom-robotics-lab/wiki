@@ -40,7 +40,7 @@ Time and Venue
 
 **Venue**: Room no.401A, 4th Block Basement
 **Date**: 15th December 2022
-**Time**: 11:10 onwards
+**Time**: 11:10 AM onwards
 
 .. seealso::
     If you are interested, do fill this `form <https://forms.gle/9P7yo4mMpEsVZ5gL9>`__
