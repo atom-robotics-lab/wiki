@@ -177,7 +177,7 @@ Then run this command,
 .. code:: shell
 
    cd ~/catkin_ws
-   catkin build
+   catkin_make
 
 Command: rosnode
 ----------------
