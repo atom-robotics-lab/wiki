@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>rostopic command &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -33,14 +33,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -101,7 +105,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../ros.html">Intro To ROS</a></li>
       <li class="breadcrumb-item active">rostopic command</li>
       <li class="wy-breadcrumbs-aside">
@@ -121,7 +125,7 @@ information about ROS Topics, including publishers, subscribers,
 publishing rate, and ROS Messages.</p></li>
 <li><p>Use</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic --h
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>--h
 </pre></div>
 </div>
 <p>for getting the rostopic command help.</p>
@@ -138,7 +142,7 @@ and published.</p></li>
 <ul class="simple">
 <li><p>In the other one, run</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic list
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>list
 </pre></div>
 </div>
 <p>The above should give you a list of the default ROS topics</p>
@@ -146,7 +150,7 @@ and published.</p></li>
 <li><p>For this tutorial, we will also use turtlesim. Please run in a new
 terminal:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun turtlesim turtlesim_node
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
 </pre></div>
 </div>
 <p>You will see a small blue box with probably a diﬀerent turtle within it.</p>
@@ -163,7 +167,7 @@ To communicate, the publisher and subscriber must send and receive the
 same type of message. This means that a topic type is deﬁned by the
 message type published on it. The type of the message sent on a topic
 can be determined using rostopic type .</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic <span class="nb">type</span> <span class="o">[</span>topic_name<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">[</span>topic_name<span class="o">]</span>
 </pre></div>
 </div>
 <p>From the previous section, we know that the turtlesim node has 3 topics
@@ -175,7 +179,7 @@ being published/subscribed.</p>
 </ul>
 <p>Lets consider the topics /turtle1/cmd_vel . Enter the following command
 to get the message type.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic <span class="nb">type</span> /turtle1/cmd_vel
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">type</span><span class="w"> </span>/turtle1/cmd_vel
 </pre></div>
 </div>
 </section>
@@ -186,7 +190,7 @@ to get the message type.</p>
 /turtle1/cmd_vel is geometry_msgs/Twist . let’s look into more detail
 of te message, using</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosmsg show geometry_msgs/Twist
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosmsg<span class="w"> </span>show<span class="w"> </span>geometry_msgs/Twist
 </pre></div>
 </div>
 <ul>
@@ -205,7 +209,7 @@ angular velocities of all 3 axes.</p></li>
 <li><p>This command provides a little more detail about topics then type
 argument.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic info /turtle1/cmd_vel
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>info<span class="w"> </span>/turtle1/cmd_vel
 </pre></div>
 </div>
 <ul>
@@ -217,7 +221,7 @@ nodes which are publishing it or subscribing it.</p></li>
 advertised.</p></li>
 <li><p>Usage</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic pub <span class="o">[</span>topic<span class="o">]</span> <span class="o">[</span>msg_type<span class="o">]</span> <span class="o">[</span>args<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span><span class="o">[</span>topic<span class="o">]</span><span class="w"> </span><span class="o">[</span>msg_type<span class="o">]</span><span class="w"> </span><span class="o">[</span>args<span class="o">]</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -230,7 +234,7 @@ x: 0.0 y: 0.0 z: 0.0 angular: x: 0.0 y: 0.0 z: 0.0”</p>
 command for /turtle1 /cmd_vel , let’s rotate it about its z-axis
 (Yep! the Omega variable).</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic pub /turtle1/cmd_vel geometry_msgs/Twist <span class="s2">&quot;linear:</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/Twist<span class="w"> </span><span class="s2">&quot;linear:</span>
 <span class="s2">x: 0.0</span>
 <span class="s2">y: 0.0</span>
 <span class="s2">z: 0.0</span>
@@ -250,7 +254,7 @@ And to do so, we’ll use the -r argument with pub command.</p></li>
 <li><p>The following command is used to publish a steady stream of commands
 at a rate of 10Hz.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic pub -r <span class="m">10</span> /turtle1/cmd_vel geometry_msgs/Twist <span class="s2">&quot;linear:</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-r<span class="w"> </span><span class="m">10</span><span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/Twist<span class="w"> </span><span class="s2">&quot;linear:</span>
 <span class="s2">x: 0.0</span>
 <span class="s2">y: 0.0</span>
 <span class="s2">z: 0.0</span>
@@ -268,7 +272,7 @@ pub –help .</p></li>
 <li><p>rostopic echo shows the data published on a topic.</p></li>
 <li><p>Usage</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic <span class="nb">echo</span> <span class="o">[</span>topic<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="o">[</span>topic<span class="o">]</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -281,7 +285,7 @@ of the turtle’s x,y, and z values w.r.t to the world.</p></li>
 <li><p>But let’s see if there is any data being published by the turtlesim
 node in the ﬁrst place. To do so, we’ll use the following command…</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic list -p
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>list<span class="w"> </span>-p
 </pre></div>
 </div>
 <ul class="simple">
@@ -297,7 +301,7 @@ node in the ﬁrst place. To do so, we’ll use the following command…</p></li
 published on the topic /turtle1/pose</p></li>
 <li><p>To display the pose data, enter the following command…</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic <span class="nb">echo</span> /turtle1/pose
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/turtle1/pose
 </pre></div>
 </div>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create a ROS Launch file &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -31,14 +31,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -83,7 +87,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Create a ROS Launch file</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/launch/create.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -107,7 +111,7 @@ already died. roslaunch takes in one or more XML conﬁguration ﬁles
 nodes to launch.</p></li>
 </ul>
 <p>Usage:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roslaunch &lt;package&gt; file.launch
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>&lt;package&gt;<span class="w"> </span>file.launch
 </pre></div>
 </div>
 <ul class="simple">
@@ -123,16 +127,16 @@ nodes to launch.</p></li>
 <li><p>After creating a package, create a folder in the package names as a
 launch folder to store all the launch files in that folder.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src/&lt;package&gt;
-mkdir launch
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/&lt;package&gt;
+mkdir<span class="w"> </span>launch
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Here we can create launch ﬁles by running this command by going into
 the launch directory, we can keep any name for the launch ﬁle</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> launch
-touch filename.launch
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>launch
+touch<span class="w"> </span>filename.launch
 </pre></div>
 </div>
 <p>Now you can edit your launch ﬁle by adding diﬀerent nodes that you have
@@ -151,7 +155,7 @@ to run simultaneously.</p>
 <li><p>2.Now to add any executable ﬁle which we have seen in the
 rosrun_command section, we have to add this line</p></li>
 </ul>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;name_of_package&quot;</span> <span class="na">type=</span><span class="s">&quot;name_of_executable.py&quot;</span> <span class="na">name=</span><span class="s">&quot;name_of_executable&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;name_of_package&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;name_of_executable.py&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name_of_executable&quot;</span><span class="w"> </span><span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -174,8 +178,8 @@ rosrun_command section, we have to add this line</p></li>
 <section id="steps-to-add-a-shell-script-in-the-launch-file">
 <h2>Steps to add a shell script in the launch file<a class="headerlink" href="#steps-to-add-a-shell-script-in-the-launch-file" title="Permalink to this heading"></a></h2>
 <p>You can use node tag to run any shell script using launch ﬁle</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span> <span class="na">pkg=</span><span class="s">&quot;name_of_package&quot;</span> <span class="na">type=</span><span class="s">&quot;shell_script.sh&quot;</span> <span class="na">name=</span><span class="s">&quot;shell_script&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;cmd&quot;</span> <span class="na">value=</span><span class="s">&quot;$(find name_of_package)/launch/shell_script.sh&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;name_of_package&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;shell_script.sh&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;shell_script&quot;</span><span class="w"> </span><span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmd&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$(find name_of_package)/launch/shell_script.sh&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/node&gt;</span>
 </pre></div>
 </div>

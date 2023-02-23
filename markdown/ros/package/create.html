@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create a ROS package &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -31,14 +31,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -83,7 +87,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Create a ROS package</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/package/create.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -103,14 +107,14 @@ been created.</p>
 <li><p>First, navigate to the source space directory of the catkin workspace
 you’ve created.</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>Now, use the catkin_create_pkg script to create a new package called
 pkg_ros_basics which depends on std_msgs, roscpp, and rospy:</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg pkg_ros_basics std_msgs rospy roscpp
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg<span class="w"> </span>pkg_ros_basics<span class="w"> </span>std_msgs<span class="w"> </span>rospy<span class="w"> </span>roscpp
 </pre></div>
 </div>
 <ul class="simple">
@@ -124,7 +128,7 @@ catkin_create_pkg [depend1] [depend2] [depend3]</p></li>
 <ol class="arabic simple" start="3">
 <li><p>Now, you need to build the packages in the catkin workspace</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws
 catkin_make
 </pre></div>
 </div>

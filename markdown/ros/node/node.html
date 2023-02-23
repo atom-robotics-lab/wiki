@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROS Nodes &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -33,14 +33,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -105,7 +109,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../ros.html">Intro To ROS</a></li>
       <li class="breadcrumb-item active">ROS Nodes</li>
       <li class="wy-breadcrumbs-aside">
@@ -118,8 +122,8 @@
            <div itemprop="articleBody">
              
   <section id="ros-nodes">
-<h1><a class="toc-backref" href="#id1">ROS Nodes</a><a class="headerlink" href="#ros-nodes" title="Permalink to this heading"></a></h1>
-<div class="contents topic" id="table-of-contents">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">ROS Nodes</a><a class="headerlink" href="#ros-nodes" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ros-nodes" id="id1">ROS Nodes</a></p>
@@ -138,7 +142,7 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <ul class="simple">
 <li><p>A ROS Node is a piece of software/executable that uses ROS to
 communicate with other ROS Nodes.</p></li>
@@ -154,17 +158,17 @@ entire ROS application.</p></li>
 <li><p>Python and C++ are majorly used to write ROS Nodes.</p></li>
 </ul>
 <section id="creating-a-ros-node">
-<h2><a class="toc-backref" href="#id2">Creating a ROS Node</a><a class="headerlink" href="#creating-a-ros-node" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Creating a ROS Node</a><a class="headerlink" href="#creating-a-ros-node" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>In this section we will learn how to create a ROS Node inside
 pkg_ros_basics ROS Package which we created in the previous section.</p></li>
 <li><p>Navigate to pkg_ros_basics</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src/pkg_ros_basics
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/pkg_ros_basics
 </pre></div>
 </div>
 <p>OR</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscd pkg_ros_basics
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscd<span class="w"> </span>pkg_ros_basics
 </pre></div>
 </div>
 <div class="admonition note">
@@ -176,20 +180,20 @@ pkg_ros_basics ROS Package which we created in the previous section.</p></li>
 <li><p>Create a scripts folder for your Python scripts and navigate into the
 folder.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir scripts
-<span class="nb">cd</span> scripts
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>scripts
+<span class="nb">cd</span><span class="w"> </span>scripts
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Create a Python script called node_hello_ros.py .</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>touch node_hello_ros.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>node_hello_ros.py
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Open the script in any text-editor and start editing.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gedit node_hello_ros.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gedit<span class="w"> </span>node_hello_ros.py
 </pre></div>
 </div>
 <ul class="simple">
@@ -221,7 +225,7 @@ shebang</p></li>
 <ul class="simple">
 <li><p>Make your node executable</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo chmod +x node_hello_ros.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>node_hello_ros.py
 </pre></div>
 </div>
 <ul>
@@ -236,7 +240,7 @@ shebang</p></li>
 <li><p>Once the roscore is running open a new terminal and run the main
 node</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun pkg_ros_basics node_hello_ros.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>pkg_ros_basics<span class="w"> </span>node_hello_ros.py
 </pre></div>
 </div>
 <div class="admonition note">
@@ -247,68 +251,68 @@ node</p></li>
 </ul>
 </section>
 <section id="command">
-<h2><a class="toc-backref" href="#id3">Command</a><a class="headerlink" href="#command" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Command</a><a class="headerlink" href="#command" title="Permalink to this heading"></a></h2>
 <section id="command-rosrun">
-<h3><a class="toc-backref" href="#id4">Command: rosrun</a><a class="headerlink" href="#command-rosrun" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Command: rosrun</a><a class="headerlink" href="#command-rosrun" title="Permalink to this heading"></a></h3>
 <p>rosrun allows you to run an executable in an arbitrary package from
 anywhere without having to give its full path or cd/roscd there ﬁrst.</p>
 <p>Usage:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun &lt;package&gt; &lt;executable&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>&lt;package&gt;<span class="w"> </span>&lt;executable&gt;
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;package&gt;</span></code> is nothing but the package name which you have created
 using catkin_create_pkg command or used any other package.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;executable&gt;</span></code> is the python or cpp ﬁle.</p>
 <section id="to-create-an-executable-python-file">
-<h4><a class="toc-backref" href="#id5">To create an executable python file</a><a class="headerlink" href="#to-create-an-executable-python-file" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id5" role="doc-backlink">To create an executable python file</a><a class="headerlink" href="#to-create-an-executable-python-file" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p>After creating a package, create a folder in the package names as
 scripts folder to store all the python ﬁles in that folder.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src/&lt;package&gt;
-mkdir scripts
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/&lt;package&gt;
+mkdir<span class="w"> </span>scripts
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Here we can create python scripts by running this command by going
 into the scripts directory,</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> scripts
-touch filename.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>scripts
+touch<span class="w"> </span>filename.py
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Now you can edit your python ﬁle and before running you have to make
 it executable by running this command once,</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src/&lt;package&gt;/scripts
-chmod +x filename.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/&lt;package&gt;/scripts
+chmod<span class="w"> </span>+x<span class="w"> </span>filename.py
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Here we can create cpp ﬁles by running this command by going into the
 src directory,</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> src
-touch filename.cpp
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>src
+touch<span class="w"> </span>filename.cpp
 </pre></div>
 </div>
 <p>Now you can edit your cpp ﬁle , but for making it executable we have to
 edit the CMakeLists.txt ﬁle</p>
 <p>Add these few lines at the bottom of CMakeLists.txt ﬁle,</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>add_executable(filename src/filename.cpp)
-target_link_libraries(filename ${catkin_LIBRARIES})
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>add_executable(filename<span class="w"> </span>src/filename.cpp)
+target_link_libraries(filename<span class="w"> </span>${catkin_LIBRARIES})
 </pre></div>
 </div>
 <p>Then run this command,</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws
 catkin_make
 </pre></div>
 </div>
 </section>
 </section>
 <section id="command-rosnode">
-<h3><a class="toc-backref" href="#id6">Command: rosnode</a><a class="headerlink" href="#command-rosnode" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Command: rosnode</a><a class="headerlink" href="#command-rosnode" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>rosnode contains the rosnode command-line tool for displaying debug
 information about ROS Nodes.</p></li>
@@ -331,11 +335,11 @@ terminal run start the rosmaster:</p>
 </pre></div>
 </div>
 <p>And in another terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun rospy_tutorials talker
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>rospy_tutorials<span class="w"> </span>talker
 </pre></div>
 </div>
 <p>And in another terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode list
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode<span class="w"> </span>list
 </pre></div>
 </div>
 <p>Now the node named talker (node with word talker in it) will be printed
@@ -352,11 +356,11 @@ terminal run start the</p></li>
 </pre></div>
 </div>
 <p>And in another terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun rospy_tutorials talker
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>rospy_tutorials<span class="w"> </span>talker
 </pre></div>
 </div>
 <p>And in another terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode info &lt;talker_node&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode<span class="w"> </span>info<span class="w"> </span>&lt;talker_node&gt;
 </pre></div>
 </div>
 <p>This should give details of the particular node</p>
@@ -378,13 +382,13 @@ terminal run start the rosmaster:</p></li>
 <ul class="simple">
 <li><p>And in another terminal, run:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun rospy_tutorials talker
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>rospy_tutorials<span class="w"> </span>talker
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>And in another terminal, run:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode <span class="nb">kill</span> rosout &lt;talker_node&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>rosout<span class="w"> </span>&lt;talker_node&gt;
 </pre></div>
 </div>
 </section>

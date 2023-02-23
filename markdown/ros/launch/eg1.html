@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Example 1: Launch two ROS Nodes &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -31,14 +31,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -83,7 +87,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Example 1: Launch two ROS Nodes</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/launch/eg1.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -118,8 +122,8 @@ executable written in C++ present in rospy_tutorials package.</p></li>
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this heading"></a></h2>
 <p>chatter.launch</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;launch&gt;</span>
-<span class="nt">&lt;node</span> <span class="na">name=</span><span class="s">&quot;talker&quot;</span> <span class="na">pkg=</span><span class="s">&quot;rospy_tutorials&quot;</span> <span class="na">type=</span><span class="s">&quot;talker&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;node</span> <span class="na">name=</span><span class="s">&quot;listener&quot;</span> <span class="na">pkg=</span><span class="s">&quot;rospy_tutorials&quot;</span> <span class="na">type=</span><span class="s">&quot;listener.py&quot;</span> <span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;node</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;talker&quot;</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;rospy_tutorials&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;talker&quot;</span><span class="w"> </span><span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;node</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;listener&quot;</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;rospy_tutorials&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;listener.py&quot;</span><span class="w"> </span><span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/launch&gt;</span>
 </pre></div>
 </div>
@@ -134,7 +138,7 @@ here also we have set output as screen.</p></li>
 <section id="run-command">
 <h2>Run Command<a class="headerlink" href="#run-command" title="Permalink to this heading"></a></h2>
 <p>Now run these command to run the launch ﬁle,</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roslaunch pkg_ros_basics chatter.launch
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>pkg_ros_basics<span class="w"> </span>chatter.launch
 </pre></div>
 </div>
 </section>

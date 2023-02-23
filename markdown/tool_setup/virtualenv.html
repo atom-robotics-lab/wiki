@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation of virtualenvwrapper, OpenCV and cv_bridge package : &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
+  <title>Installation of Virtualenvwrapper, OpenCV and cv_bridge package : &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -33,14 +33,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -50,10 +54,11 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="tool_setup.html">Tool Setup</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ros-pi.html">Ready to use image for Raspberry Pi</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation of virtualenvwrapper, OpenCV and cv_bridge package :</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation of Virtualenvwrapper, OpenCV and cv_bridge package :</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-virtualenvwrapper">About Virtualenvwrapper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installation-of-virtualenvwrapper">Installation of virtualenvwrapper</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#new-virtual-environment">New virtual environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installation-of-opencv">Installation of opencv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-virtual-environment">Creating a New Virtual Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-opencv">Installation of OpenCV</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installation-of-cv-bridge">Installation of cv-bridge</a></li>
 </ul>
 </li>
@@ -96,9 +101,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="tool_setup.html">Tool Setup</a></li>
-      <li class="breadcrumb-item active">Installation of virtualenvwrapper, OpenCV and cv_bridge package :</li>
+      <li class="breadcrumb-item active">Installation of Virtualenvwrapper, OpenCV and cv_bridge package :</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/tool_setup/virtualenv.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -109,69 +114,84 @@
            <div itemprop="articleBody">
              
   <section id="installation-of-virtualenvwrapper-opencv-and-cv-bridge-package">
-<h1>Installation of virtualenvwrapper, OpenCV and cv_bridge package :<a class="headerlink" href="#installation-of-virtualenvwrapper-opencv-and-cv-bridge-package" title="Permalink to this heading"></a></h1>
+<h1>Installation of Virtualenvwrapper, OpenCV and cv_bridge package :<a class="headerlink" href="#installation-of-virtualenvwrapper-opencv-and-cv-bridge-package" title="Permalink to this heading"></a></h1>
+<p>We will go over the steps to install these tools step-by-step :</p>
+<ul class="simple">
+<li><p>Virtualenvwrapper</p></li>
+<li><p>OpenCV</p></li>
+<li><p>cv_bridge</p></li>
+</ul>
+<section id="about-virtualenvwrapper">
+<h2>About Virtualenvwrapper<a class="headerlink" href="#about-virtualenvwrapper" title="Permalink to this heading"></a></h2>
+<p>Virtualenvwrapper is a set of extensions and wrappers for creating, managing and deleting Python virtual environments.
+You can read more about it <a class="reference external" href="https://pypi.org/project/virtualenvwrapper/">here</a></p>
+</section>
 <section id="installation-of-virtualenvwrapper">
 <h2>Installation of virtualenvwrapper<a class="headerlink" href="#installation-of-virtualenvwrapper" title="Permalink to this heading"></a></h2>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install virtualenvwrapper
+<p>We will use Python’s Official package manager, Pip for installing virtualenvwrapper.
+Open a terminal and enter the following command :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>virtualenvwrapper
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>To open .bashrc</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nano ~/.bashrc
+<p>Now that we have virtualenvwrapper downloaded and installed, we need to add it’s path
+in to bashrc so that your Linux installation will be able to locate it.</p>
+<p>The bashrc is a script file containing terminal configurations, commands,
+environment variables etc. You can learn more about this <a class="reference external" href="https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux#defining-aliases-in-bashrc">here</a></p>
+<p>Follow the steps given below for the same :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Paste these lines in the .bashrc file which you opened above:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
-<span class="nb">export</span> <span class="nv">PROJECT_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Devel
-<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
+<span class="nb">export</span><span class="w"> </span><span class="nv">PROJECT_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Devel
+<span class="nb">source</span><span class="w"> </span>/usr/local/bin/virtualenvwrapper.sh
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>To update shell environment</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bashrc
+<p>Now that we have included the paths in the bashrc, we need to execute the given command to
+refresh the environment variables :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>If you face an error here, then reopen the .bashrc file by :</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano ~/.bashrc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Change source from</p></li>
+<li><p>Now change the source  :</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/usr/local/bin/virtualenvwrapper.sh
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>to</p></li>
+<li><p>to :</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> <span class="nv">$HOME</span>/.local/bin/virtualenvwrapper.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/.local/bin/virtualenvwrapper.sh
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>and update shell environment by</p></li>
+<li><p>Again refresh the environment variables by :</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bashrc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
 </section>
-<section id="new-virtual-environment">
-<h2>New virtual environment<a class="headerlink" href="#new-virtual-environment" title="Permalink to this heading"></a></h2>
+<section id="creating-a-new-virtual-environment">
+<h2>Creating a New Virtual Environment<a class="headerlink" href="#creating-a-new-virtual-environment" title="Permalink to this heading"></a></h2>
+<p>Now that we have virtualenvwrapper locked and loaded, let’s create a new virtual environment.</p>
 <ul class="simple">
-<li><p>Make a new virtual environment</p></li>
+<li><p>The command given below will be used to create a new virtual environment :</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkvirtualenv <span class="o">[</span>name of your virtual environment<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkvirtualenv<span class="w"> </span><span class="o">[</span>name<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>virtual<span class="w"> </span>environment<span class="o">]</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>To use the new virtual environment</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>workon <span class="o">[</span>name of your virtual environment<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>workon<span class="w"> </span><span class="o">[</span>name<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>virtual<span class="w"> </span>environment<span class="o">]</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -180,48 +200,51 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deactivate
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Your virtual environment is now installed</p></li>
-</ul>
 </section>
 <section id="installation-of-opencv">
-<h2>Installation of opencv<a class="headerlink" href="#installation-of-opencv" title="Permalink to this heading"></a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install opencv-python
+<h2>Installation of OpenCV<a class="headerlink" href="#installation-of-opencv" title="Permalink to this heading"></a></h2>
+<p>OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library.
+It is one of the most commonly used Computer Vision tool. You can learn more about it <a class="reference external" href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html">here</a></p>
+<p>Follow the steps given below to install OpenCV. We will again use pip for downloading and installing OpenCV.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>opencv-python
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Open Python interpreter in terminal by :</p></li>
+<li><p>To test our OpenCV installation, Open Python interpreter in terminal by :</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Import opencv in the above open Python interpreter</p></li>
+<li><p>Let’s try importing opencv in the above opened Python interpreter</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>If your import statement executes error-free, you are good to go</p></li>
+<li><p>If your import statement executes error-free, you are good to go 🎉</p></li>
 </ul>
 </section>
 <section id="installation-of-cv-bridge">
 <h2>Installation of cv-bridge<a class="headerlink" href="#installation-of-cv-bridge" title="Permalink to this heading"></a></h2>
+<p>CvBridge is a ROS library that provides an interface between ROS and OpenCV.
+You can learn more about it <a class="reference external" href="http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython">here</a></p>
+<p>Follow these steps to install cv_bridge :</p>
 <ul class="simple">
-<li><p>Open your terminal and write :</p></li>
+<li><p>Open a new terminal and execute the given command</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install ros-noetic-cv-bridge
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ros-noetic-cv-bridge
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>To check if cv_bridge is installed</p></li>
+<li><p>Execute the command given below to confirm your cv_bridge installation :</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rospack<span class="w"> </span>find<span class="w"> </span>cv_bridge
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>cv_bridge is a ros package, so make sure you source your ROS before running the command below.</p>
-</div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rospack find cv_bridge
-</pre></div>
 </div>
 </section>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ready to use image for Raspberry Pi &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -24,7 +24,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Installation of virtualenvwrapper, OpenCV and cv_bridge package :" href="virtualenv.html" />
+    <link rel="next" title="Installation of Virtualenvwrapper, OpenCV and cv_bridge package :" href="virtualenv.html" />
     <link rel="prev" title="Tool Setup" href="tool_setup.html" /> 
 </head>
 
@@ -33,14 +33,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -55,7 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#featues-and-usage">Featues and usage</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="virtualenv.html">Installation of virtualenvwrapper, OpenCV and cv_bridge package :</a></li>
+<li class="toctree-l2"><a class="reference internal" href="virtualenv.html">Installation of Virtualenvwrapper, OpenCV and cv_bridge package :</a></li>
 <li class="toctree-l2"><a class="reference internal" href="px4.html">Environment Setup</a></li>
 </ul>
 </li>
@@ -95,7 +99,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="tool_setup.html">Tool Setup</a></li>
       <li class="breadcrumb-item active">Ready to use image for Raspberry Pi</li>
       <li class="wy-breadcrumbs-aside">
@@ -149,19 +153,19 @@ to find devices on your network. Type in the following command to find
 all devices connected on the network.</p>
 <ul>
 <li><p>Installing nmap:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install nmap
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nmap
 </pre></div>
 </div>
 </li>
 <li><p>Checking all devices on the same network.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo nmap -sN &lt;IP of your device&gt;/24
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmap<span class="w"> </span>-sN<span class="w"> </span>&lt;IP<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>device&gt;/24
 </pre></div>
 </div>
 <p>You should be a able to find a result that says Raspberry pi.</p>
 </li>
 <li><p>Find the IP of your raspberry in the list and ssh into using the
 command below.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ssh pi@&lt;IP of your Raspberry Pi&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>pi@&lt;IP<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>Raspberry<span class="w"> </span>Pi&gt;
 </pre></div>
 </div>
 </li>
@@ -188,9 +192,9 @@ the above image, the raspberry pi is assumed to be a slave
 considering its master is running on your host device (eg: Your laptop
 running ROS). In order to do so, open your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file in
 your <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory and add the following lines in the end.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://localhost:11311/
-<span class="nb">export</span> <span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;ROS IP OF YOUR MASTER DEVICE&gt;
-<span class="nb">export</span> <span class="nv">ROS_IP</span><span class="o">=</span>&lt;ROS IP OF YOUR MASTER DEVICE&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://localhost:11311/
+<span class="nb">export</span><span class="w"> </span><span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;ROS<span class="w"> </span>IP<span class="w"> </span>OF<span class="w"> </span>YOUR<span class="w"> </span>MASTER<span class="w"> </span>DEVICE&gt;
+<span class="nb">export</span><span class="w"> </span><span class="nv">ROS_IP</span><span class="o">=</span>&lt;ROS<span class="w"> </span>IP<span class="w"> </span>OF<span class="w"> </span>YOUR<span class="w"> </span>MASTER<span class="w"> </span>DEVICE&gt;
 </pre></div>
 </div>
 </li>
@@ -210,7 +214,7 @@ switching between diffenent python enviroments for diffent projects.
 The image comes pre-installed with it and has an existing enviroment
 named <strong>cv</strong> with OpenCV installed created in it. just type the below
 command and you are good to go.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>workon cv
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>workon<span class="w"> </span>cv
 </pre></div>
 </div>
 <p>For more info and its usage please visit our <a class="reference external" href="./virtualenv.md">Virtual Enviroment
@@ -223,7 +227,7 @@ is needed to be created and built in a directory called
 using the <strong>workon_ros</strong> command. The image is already set up with
 the tool. To source with noetic workspace just paste the command
 below.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>workon_ros noetic
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>workon_ros<span class="w"> </span>noetic
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/jasmeet0915/workon_ros">Github repo for the project</a>. Your inputs are
@@ -238,7 +242,7 @@ always welcome.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="tool_setup.html" class="btn btn-neutral float-left" title="Tool Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="virtualenv.html" class="btn btn-neutral float-right" title="Installation of virtualenvwrapper, OpenCV and cv_bridge package :" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="virtualenv.html" class="btn btn-neutral float-right" title="Installation of Virtualenvwrapper, OpenCV and cv_bridge package :" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

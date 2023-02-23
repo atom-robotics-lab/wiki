@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Command: rosrun &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -31,14 +31,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -83,7 +87,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Command: rosrun</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/node/rosrun.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -99,7 +103,7 @@
 <p>rosrun allows you to run an executable in an arbitrary package from
 anywhere without having to give its full path or cd/roscd there ﬁrst.</p>
 <p>Usage:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun &lt;package&gt; &lt;executable&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>&lt;package&gt;<span class="w"> </span>&lt;executable&gt;
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;package&gt;</span></code> is nothing but the package name which you have created
@@ -111,43 +115,43 @@ using catkin_create_pkg command or used any other package.</p>
 <li><p>After creating a package, create a folder in the package names as
 scripts folder to store all the python ﬁles in that folder.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src/&lt;package&gt;
-mkdir scripts
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/&lt;package&gt;
+mkdir<span class="w"> </span>scripts
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Here we can create python scripts by running this command by going
 into the scripts directory,</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> scripts
-touch filename.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>scripts
+touch<span class="w"> </span>filename.py
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Now you can edit your python ﬁle and before running you have to make
 it executable by running this command once,</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws/src/&lt;package&gt;/scripts
-chmod +x filename.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/&lt;package&gt;/scripts
+chmod<span class="w"> </span>+x<span class="w"> </span>filename.py
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Here we can create cpp ﬁles by running this command by going into the
 src directory,</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> src
-touch filename.cpp
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>src
+touch<span class="w"> </span>filename.cpp
 </pre></div>
 </div>
 <p>Now you can edit your cpp ﬁle , but for making it executable we have to
 edit the CMakeLists.txt ﬁle</p>
 <p>Add these few lines at the bottom of CMakeLists.txt ﬁle,</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>add_executable(filename src/filename.cpp)
-target_link_libraries(filename ${catkin_LIBRARIES})
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>add_executable(filename<span class="w"> </span>src/filename.cpp)
+target_link_libraries(filename<span class="w"> </span>${catkin_LIBRARIES})
 </pre></div>
 </div>
 <p>Then run this command,</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/catkin_ws
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws
 catkin_make
 </pre></div>
 </div>

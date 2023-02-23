@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Using the access repo &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -33,14 +33,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -98,7 +102,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Using the access repo</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/general/access-repo.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -128,19 +132,19 @@ should be kept secret.</p>
 <section id="how-to-get-yourself-a-gpg-key">
 <h3>How to get yourself a gpg key<a class="headerlink" href="#how-to-get-yourself-a-gpg-key" title="Permalink to this heading"></a></h3>
 <p>First install gpg</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt update
-sudo apt install gnupg2
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gnupg2
 </pre></div>
 </div>
 <p>Now generate the key</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --gen-key
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg<span class="w"> </span>--gen-key
 </pre></div>
 </div>
 <p>After this command follow the prompts and answer all the questions it
 asks you. Post this, you will have generated a gpg private and public
 key.</p>
 <p>Use</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --list-keys
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg<span class="w"> </span>--list-keys
 </pre></div>
 </div>
 </section>
@@ -151,8 +155,8 @@ keyserver so others can discover and use it.</p>
 <section id="step-1">
 <h4>Step 1<a class="headerlink" href="#step-1" title="Permalink to this heading"></a></h4>
 <p>Export your public key</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
-gpg --export --armor &gt; public.txt
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~
+gpg<span class="w"> </span>--export<span class="w"> </span>--armor<span class="w"> </span>&gt;<span class="w"> </span>public.txt
 </pre></div>
 </div>
 </section>
@@ -176,13 +180,13 @@ the passwords</p>
 </section>
 <section id="cloning-the-access-repository">
 <h2>Cloning the access repository<a class="headerlink" href="#cloning-the-access-repository" title="Permalink to this heading"></a></h2>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gopass clone https://github.com/atom-robotics-lab/access
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gopass<span class="w"> </span>clone<span class="w"> </span>https://github.com/atom-robotics-lab/access
 </pre></div>
 </div>
 <p>Now that you have cloned the repository, run gopass list to see the
 various accounts.</p>
 <p>To view a password in plain text, run</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gopass show &lt;name of secret&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gopass<span class="w"> </span>show<span class="w"> </span>&lt;name<span class="w"> </span>of<span class="w"> </span>secret&gt;
 </pre></div>
 </div>
 <p>Running this would ask you your gpg password which you entered while

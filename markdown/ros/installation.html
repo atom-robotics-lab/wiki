@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROS installation &mdash; A.T.O.M&#39;s Wiki 0.2.0 documentation</title>
@@ -33,14 +33,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
           </a>
               <div class="version">
                 0.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -107,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="ros.html">Intro To ROS</a></li>
       <li class="breadcrumb-item active">ROS installation</li>
       <li class="wy-breadcrumbs-aside">
@@ -135,16 +139,16 @@ done.</p></li>
 <section id="setup-your-sources-list">
 <h3>Setup your sources.list<a class="headerlink" href="#setup-your-sources-list" title="Permalink to this heading"></a></h3>
 <p>Setup your computer to accept software from packages.ros.org.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo sh -c <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
 </pre></div>
 </div>
 </section>
 <section id="setup-your-keys">
 <h3>Setup your keys<a class="headerlink" href="#setup-your-keys" title="Permalink to this heading"></a></h3>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install curl <span class="c1"># if you haven&#39;t already installed curl</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span><span class="c1"># if you haven&#39;t already installed curl</span>
 </pre></div>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc <span class="p">|</span> sudo apt-key add -
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-s<span class="w"> </span>https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
 </pre></div>
 </div>
 </section>
@@ -153,13 +157,13 @@ done.</p></li>
 <ul class="simple">
 <li><p>Update package repositories</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt update
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Install ROS</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-noetic-desktop-full
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-noetic-desktop-full
 </pre></div>
 </div>
 </section>
@@ -172,8 +176,8 @@ variables to your bash session every time a new shell (terminal) is
 launched, enter the following commands (this step is similar as
 adding environmental variable in windows):</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;source /opt/ros/noetic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
-<span class="nb">source</span> ~/.bashrc
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source /opt/ros/noetic/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
@@ -182,9 +186,9 @@ to initialize rosdep. rosdep enables you to easily install system
 dependencies for source you want to compile and is required to run
 some core components in ROS.</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
-sudo rosdep init
-rosdep update
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-rosdep<span class="w"> </span>python3-rosinstall<span class="w"> </span>python3-rosinstall-generator<span class="w"> </span>python3-wstool<span class="w"> </span>build-essential
+sudo<span class="w"> </span>rosdep<span class="w"> </span>init
+rosdep<span class="w"> </span>update
 </pre></div>
 </div>
 </section>
@@ -193,19 +197,19 @@ rosdep update
 <ul class="simple">
 <li><p>Catkin tools</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get install ros-noetic-catkin python3-catkin-tools
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ros-noetic-catkin<span class="w"> </span>python3-catkin-tools
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>std_msg package</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-noetic-std-msgs
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-noetic-std-msgs
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>turtlesim</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get install ros-noetic-ros-tutorials
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ros-noetic-ros-tutorials
 </pre></div>
 </div>
 </section>
