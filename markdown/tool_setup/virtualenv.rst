@@ -1,21 +1,43 @@
-Installation of Virtualenvwrapper, OpenCV and cv_bridge package :
-=================================================================
+======================================
+Installation of Computer Vision tools
+======================================
 
-We will go over the steps to install these tools step-by-step :
+These are some of the most commonly used Computer Vision tools in Robotics :
 
-- Virtualenvwrapper
 
-- OpenCV
+virtualenvwrapper
+=================
 
-- cv_bridge
+Virtualenvwrapper is a set of extensions and wrappers used for creating, managing and deleting Python virtual environments using
+the terminal. Virtual environments are isolated Python installations that help in keeping dependencies required by different 
+projects seperated. They also help in keeping a track of the dependencies or packages required by a project during deployement.
 
-About Virtualenvwrapper
------------------------
-Virtualenvwrapper is a set of extensions and wrappers for creating, managing and deleting Python virtual environments.
 You can read more about it `here <https://pypi.org/project/virtualenvwrapper/>`_
 
+OpenCV
+=======
+
+OpenCV (Open Source Computer Vision Library) is an open source Computer Vision and Machine Learning software library, originally
+developed in C++. It is one of the most commonly used Computer Vision tool nowadays, with client libraries available in
+popular languages like Python, Java, MATLAB etc.
+
+You can learn more about it `here <https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html>`_
+
+
+cv_bridge
+==========
+
+
+The cv_bridge packages contains the CvBridge class which provides an interface between ROS and OpenCV. It helps in conversion from ROS Image messages
+to OpenCV images and vice-versa.
+You can learn more about it `here <http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython>`_
+
+Now let's go over the instructions to install these tools one-by-one :
+
+
 Installation of virtualenvwrapper
----------------------------------
+==================================
+
 
 We will use Python's Official package manager, Pip for installing virtualenvwrapper.
 Open a terminal and enter the following command :
@@ -105,10 +127,9 @@ Now that we have virtualenvwrapper locked and loaded, let's create a new virtual
 
    deactivate
 
+
 Installation of OpenCV
-----------------------
-OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library.
-It is one of the most commonly used Computer Vision tool. You can learn more about it `here <https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html>`_
+======================
 
 Follow the steps given below to install OpenCV. We will again use pip for downloading and installing OpenCV.
 
@@ -132,16 +153,12 @@ Follow the steps given below to install OpenCV. We will again use pip for downlo
 
 - If your import statement executes error-free, you are good to go 🎉
 
-
-Installation of cv-bridge
--------------------------
-CvBridge is a ROS library that provides an interface between ROS and OpenCV.
-You can learn more about it `here <http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython>`_
+Installation of cv_bridge
+==========================
 
 Follow these steps to install cv_bridge : 
 
 - Open a new terminal and execute the given command
-
 
 .. code:: bash
 
@@ -153,4 +170,4 @@ Follow these steps to install cv_bridge :
 
    rospack find cv_bridge
 
-.. Note:: cv_bridge is a ros package, so make sure you source your ROS before running the command below.
+.. Note:: cv_bridge is a ros package, so make sure you source your ROS installation before running the command below.
