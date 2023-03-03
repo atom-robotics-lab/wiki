@@ -1,3 +1,6 @@
+.. role:: python(code)
+   :language: python
+
 ======================================
 Installation of Computer Vision tools
 ======================================
@@ -27,8 +30,7 @@ You can learn more about it `here <https://docs.opencv.org/4.x/d6/d00/tutorial_p
 cv_bridge
 ==========
 
-
-The cv_bridge packages contains the CvBridge class which provides an interface between ROS and OpenCV. It helps in conversion from ROS Image messages
+The cv_bridge packages contains the :python:`CvBridge` class which provides an interface between ROS and OpenCV. It helps in conversion from ROS Image messages
 to OpenCV images and vice-versa.
 You can learn more about it `here <http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython>`_
 
@@ -39,7 +41,7 @@ Installation of virtualenvwrapper
 ==================================
 
 
-We will use Python's Official package manager, Pip for installing virtualenvwrapper.
+We will use Python's Official package manager, :python:`pip` for installing virtualenvwrapper.
 Open a terminal and enter the following command :
 
 .. code:: shell
@@ -47,9 +49,9 @@ Open a terminal and enter the following command :
    pip install virtualenvwrapper
 
 Now that we have virtualenvwrapper downloaded and installed, we need to add it's path 
-in to bashrc so that your Linux installation will be able to locate it.
+in the .bashrc file so that your Linux installation will be able to locate it.
 
-The bashrc is a script file containing terminal configurations, commands,
+The .bashrc file contains terminal configurations, commands,
 environment variables etc. You can learn more about this `here <https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux#defining-aliases-in-bashrc>`_
 
 Follow the steps given below for the same :
@@ -66,8 +68,8 @@ Follow the steps given below for the same :
    export PROJECT_HOME=$HOME/Devel
    source /usr/local/bin/virtualenvwrapper.sh
 
-Now that we have included the paths in the bashrc, we need to execute the given command to 
-refresh the environment variables : 
+Now that we have included the paths in the .bashrc file, we need to execute the given command to 
+load the new environment variables : 
 
 
 .. code:: bash
@@ -94,7 +96,7 @@ refresh the environment variables :
 
    source $HOME/.local/bin/virtualenvwrapper.sh
 
-- Again refresh the environment variables by :
+- Again try loading the new environment variables by :
 
 .. code:: bash
 
@@ -144,14 +146,14 @@ Follow the steps given below to install OpenCV. We will again use pip for downlo
 
    python
 
-- Let's try importing opencv in the above opened Python interpreter
+- Let's try importing OpenCV in the above opened Python interpreter
 
 
 .. code:: python
 
    import cv2
 
-- If your import statement executes error-free, you are good to go 🎉
+- If your import statement executes error-free, you are good to go !!
 
 Installation of cv_bridge
 ==========================
