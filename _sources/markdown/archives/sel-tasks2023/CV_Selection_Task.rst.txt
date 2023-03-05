@@ -1,4 +1,4 @@
-Computer Vision Selection Task
+Computer Vision Selection Task 2023
 ========================================
 
 Hi there, Welcome to the specialized selection task for all of you Computer Vision nerds.
