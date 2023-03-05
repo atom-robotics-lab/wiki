@@ -24,15 +24,15 @@ There are currently two types of selection tasks which are:
    The **Deadline** for all the Tasks is: **11th December, 2022**.
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Standard Task
 
-   ROS Selection Task <./ROS_Selection_Task.rst>
+   ./ROS_Selection_Task.rst
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Specialization Task
-
+   
    CV Selection Task <./CV_Selection_Task.rst>
    Electronics Selection Task <./Elec_Selection_Task.rst>
    CAD Selection Task <./CAD_Selection_Task.rst>

@@ -11,7 +11,7 @@ the society and contribute for the same. The following positions are
 open as of now:\
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :hidden:
 
    ./cad_sel.rst
