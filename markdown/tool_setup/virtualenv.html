@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation of Virtualenvwrapper, OpenCV and cv_bridge package : &mdash; A.T.O.M&#39;s Wiki 0.3.0 documentation</title>
+  <title>Installation of Computer Vision tools &mdash; A.T.O.M&#39;s Wiki 0.3.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -52,12 +52,16 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="tool_setup.html">Tool Setup</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ros-pi.html">Ready to use image for Raspberry Pi</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation of Virtualenvwrapper, OpenCV and cv_bridge package :</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#about-virtualenvwrapper">About Virtualenvwrapper</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installation-of-virtualenvwrapper">Installation of virtualenvwrapper</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-virtual-environment">Creating a New Virtual Environment</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation of Computer Vision tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#virtualenvwrapper">virtualenvwrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opencv">OpenCV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cv-bridge">cv_bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-virtualenvwrapper">Installation of virtualenvwrapper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-new-virtual-environment">Creating a New Virtual Environment</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#installation-of-opencv">Installation of OpenCV</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installation-of-cv-bridge">Installation of cv-bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-cv-bridge">Installation of cv_bridge</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="px4.html">Environment Setup</a></li>
@@ -92,7 +96,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="tool_setup.html">Tool Setup</a></li>
-      <li class="breadcrumb-item active">Installation of Virtualenvwrapper, OpenCV and cv_bridge package :</li>
+      <li class="breadcrumb-item active">Installation of Computer Vision tools</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/tool_setup/virtualenv.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -102,29 +106,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="installation-of-virtualenvwrapper-opencv-and-cv-bridge-package">
-<h1>Installation of Virtualenvwrapper, OpenCV and cv_bridge package :<a class="headerlink" href="#installation-of-virtualenvwrapper-opencv-and-cv-bridge-package" title="Permalink to this heading"></a></h1>
-<p>We will go over the steps to install these tools step-by-step :</p>
-<ul class="simple">
-<li><p>Virtualenvwrapper</p></li>
-<li><p>OpenCV</p></li>
-<li><p>cv_bridge</p></li>
-</ul>
-<section id="about-virtualenvwrapper">
-<h2>About Virtualenvwrapper<a class="headerlink" href="#about-virtualenvwrapper" title="Permalink to this heading"></a></h2>
-<p>Virtualenvwrapper is a set of extensions and wrappers for creating, managing and deleting Python virtual environments.
-You can read more about it <a class="reference external" href="https://pypi.org/project/virtualenvwrapper/">here</a></p>
+  <section id="installation-of-computer-vision-tools">
+<h1>Installation of Computer Vision tools<a class="headerlink" href="#installation-of-computer-vision-tools" title="Permalink to this heading"></a></h1>
+<p>These are some of the most commonly used Computer Vision tools in Robotics :</p>
+<section id="virtualenvwrapper">
+<h2>virtualenvwrapper<a class="headerlink" href="#virtualenvwrapper" title="Permalink to this heading"></a></h2>
+<p>Virtualenvwrapper is a set of extensions and wrappers used for creating, managing and deleting Python virtual environments using
+the terminal. Virtual environments are isolated Python installations that help in keeping dependencies required by different
+projects seperated. They also help in keeping a track of the dependencies or packages required by a project during deployement.</p>
+<p>You can read more about it <a class="reference external" href="https://pypi.org/project/virtualenvwrapper/">here</a></p>
+</section>
+<section id="opencv">
+<h2>OpenCV<a class="headerlink" href="#opencv" title="Permalink to this heading"></a></h2>
+<p>OpenCV (Open Source Computer Vision Library) is an open source Computer Vision and Machine Learning software library, originally
+developed in C++. It is one of the most commonly used Computer Vision tool nowadays, with client libraries available in
+popular languages like Python, Java, MATLAB etc.</p>
+<p>You can learn more about it <a class="reference external" href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html">here</a></p>
+</section>
+<section id="cv-bridge">
+<h2>cv_bridge<a class="headerlink" href="#cv-bridge" title="Permalink to this heading"></a></h2>
+<p>The cv_bridge packages contains the <code class="code highlight python docutils literal highlight-python"><span class="n">CvBridge</span></code> class which provides an interface between ROS and OpenCV. It helps in conversion from ROS Image messages
+to OpenCV images and vice-versa.
+You can learn more about it <a class="reference external" href="http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython">here</a></p>
+<p>Now let’s go over the instructions to install these tools one-by-one :</p>
 </section>
 <section id="installation-of-virtualenvwrapper">
 <h2>Installation of virtualenvwrapper<a class="headerlink" href="#installation-of-virtualenvwrapper" title="Permalink to this heading"></a></h2>
-<p>We will use Python’s Official package manager, Pip for installing virtualenvwrapper.
+<p>We will use Python’s Official package manager, <code class="code highlight python docutils literal highlight-python"><span class="n">pip</span></code> for installing virtualenvwrapper.
 Open a terminal and enter the following command :</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>virtualenvwrapper
 </pre></div>
 </div>
 <p>Now that we have virtualenvwrapper downloaded and installed, we need to add it’s path
-in to bashrc so that your Linux installation will be able to locate it.</p>
-<p>The bashrc is a script file containing terminal configurations, commands,
+in the .bashrc file so that your Linux installation will be able to locate it.</p>
+<p>The .bashrc file contains terminal configurations, commands,
 environment variables etc. You can learn more about this <a class="reference external" href="https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux#defining-aliases-in-bashrc">here</a></p>
 <p>Follow the steps given below for the same :</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>~/.bashrc
@@ -138,8 +153,8 @@ environment variables etc. You can learn more about this <a class="reference ext
 <span class="nb">source</span><span class="w"> </span>/usr/local/bin/virtualenvwrapper.sh
 </pre></div>
 </div>
-<p>Now that we have included the paths in the bashrc, we need to execute the given command to
-refresh the environment variables :</p>
+<p>Now that we have included the paths in the .bashrc file, we need to execute the given command to
+load the new environment variables :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
@@ -162,14 +177,13 @@ refresh the environment variables :</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Again refresh the environment variables by :</p></li>
+<li><p>Again try loading the new environment variables by :</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
-</section>
 <section id="creating-a-new-virtual-environment">
-<h2>Creating a New Virtual Environment<a class="headerlink" href="#creating-a-new-virtual-environment" title="Permalink to this heading"></a></h2>
+<h3>Creating a New Virtual Environment<a class="headerlink" href="#creating-a-new-virtual-environment" title="Permalink to this heading"></a></h3>
 <p>Now that we have virtualenvwrapper locked and loaded, let’s create a new virtual environment.</p>
 <ul class="simple">
 <li><p>The command given below will be used to create a new virtual environment :</p></li>
@@ -190,10 +204,9 @@ refresh the environment variables :</p>
 </pre></div>
 </div>
 </section>
+</section>
 <section id="installation-of-opencv">
 <h2>Installation of OpenCV<a class="headerlink" href="#installation-of-opencv" title="Permalink to this heading"></a></h2>
-<p>OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library.
-It is one of the most commonly used Computer Vision tool. You can learn more about it <a class="reference external" href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html">here</a></p>
 <p>Follow the steps given below to install OpenCV. We will again use pip for downloading and installing OpenCV.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>opencv-python
 </pre></div>
@@ -205,19 +218,17 @@ It is one of the most commonly used Computer Vision tool. You can learn more abo
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Let’s try importing opencv in the above opened Python interpreter</p></li>
+<li><p>Let’s try importing OpenCV in the above opened Python interpreter</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>If your import statement executes error-free, you are good to go 🎉</p></li>
+<li><p>If your import statement executes error-free, you are good to go !!</p></li>
 </ul>
 </section>
 <section id="installation-of-cv-bridge">
-<h2>Installation of cv-bridge<a class="headerlink" href="#installation-of-cv-bridge" title="Permalink to this heading"></a></h2>
-<p>CvBridge is a ROS library that provides an interface between ROS and OpenCV.
-You can learn more about it <a class="reference external" href="http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython">here</a></p>
+<h2>Installation of cv_bridge<a class="headerlink" href="#installation-of-cv-bridge" title="Permalink to this heading"></a></h2>
 <p>Follow these steps to install cv_bridge :</p>
 <ul class="simple">
 <li><p>Open a new terminal and execute the given command</p></li>
@@ -233,7 +244,7 @@ You can learn more about it <a class="reference external" href="http://wiki.ros.
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>cv_bridge is a ros package, so make sure you source your ROS before running the command below.</p>
+<p>cv_bridge is a ros package, so make sure you source your ROS installation before running the command below.</p>
 </div>
 </section>
 </section>
