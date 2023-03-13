@@ -9,7 +9,8 @@
 project = 'A.T.O.M\'s Wiki'
 copyright = '2022, A.T.O.M'
 author = 'A.T.O.M'
-release = '0.2.0'
+release = '0.3.0'
+html_logo = 'images/logo_bg.jpg'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

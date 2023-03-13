@@ -148,9 +148,15 @@ Use this space to show useful examples of how a project can be used. Additional 
     - [x] Fixing images sizes
     - [x] Shifting from .md to .rst
     - [x] Edit on wiki feature
-    - [ ] Collapsible sidebar menu
-    - [ ] Discarding use of Iframes
-    - [ ] Fixing local path links
+    - [x] Collapsible sidebar menu
+    - [x] Discarding use of Iframes
+    - [x] Fixing local path links
+- [ ] Wiki beautification
+    - [x] Adding Graphics
+    - [x] Discarding use of captions
+    - [ ] Switching theme
+    - [ ] Easy documentation navigation via sidebar
+    - [ ] Adding projects tab
 
 See the [open issues](https://github.com/atom-robotics-lab/wiki/issues) for a full list of proposed features (and known issues).
 
