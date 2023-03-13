@@ -106,7 +106,8 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 * Sphinx and some dependencies
   ```sh
-  pip install sphinx sphinx_rtd_theme myst_parser sphinx-copybutton 
+  cd ./wiki
+  pip install -r requirements.txt
   ```
 
 ### Installation
