@@ -25,9 +25,7 @@ The nodes launched in this file are:
 
 The launch file also sets various parameters and remaps topics to ensure that the nodes communicate correctly with each other.
 
-.. note::
-We need to specify machine name (master or slave) before every node on which node will run on **default it will run on master**.
-
+.. note:: Before every node, we must specify the name of the machine (master or slave), and by default, it will **run on the master**.
 
 
 2. X2L.launch
