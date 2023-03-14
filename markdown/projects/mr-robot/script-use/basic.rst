@@ -14,7 +14,7 @@ The MR-ROBOT is an exciting development in the field of autonomous robotics, as 
 a modular robot design. By leveraging these technologies, the MR-ROBOT project has the potential to revolutionize a wide range of household and medical applications, 
 from Cleaning and Sanitation to transportation. The only limit is your imagination of things that you could do with it.
 
-.. image:: CAD.jpeg
+.. image:: mr-robot.gif
 
 .. toctree::
    :maxdepth: 2

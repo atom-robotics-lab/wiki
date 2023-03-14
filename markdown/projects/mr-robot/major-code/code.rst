@@ -3,6 +3,8 @@ Code Explanation
 
 The main nodes participating in this project are explained in this section of the wiki.
 
+.. image:: MRDFD.png
+
 .. toctree::
    :maxdepth: 4
 
