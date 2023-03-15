@@ -4,7 +4,10 @@ Working Of MR Robot
 Hardware Working
 ----------------
 
-.. image:: MRCKT.png
+.. figure:: MRCKT.png
+
+    MR Robot Circuit Diagram
+
 
 
 MR Robot is a robot that is equipped with two encoder motors, an ESP32 microcontroller, a Raspberry Pi 4, an IMU, a LiDAR, a motor driver, and a 5V buck converter. The robot is designed to calculate the movement of the motors and send it to the microcontroller. The data is then published to a topic and used to calculate the odometer. The LiDAR and IMU are linked to the Raspberry Pi 4, and the motor driver is used to form an H-bridge for differential drive.
@@ -36,7 +39,9 @@ MR Robot is a sophisticated robot that is equipped with advanced sensors and com
 Software Working
 ----------------
 
-.. image:: MRDFD.png
+.. figure:: MRDFD.png
+
+    MR Robot DFD
 
 MR Robot is a robot that utilizes the ROS Serial protocol to communicate with its components. It uses Twist to PWM for motor control and ESP_Diff_TF for odom calculation. The robot has a LiDAR sensor connected to the Raspberry Pi 4, which is used for mapping and navigation.
 

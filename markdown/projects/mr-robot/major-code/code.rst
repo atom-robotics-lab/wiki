@@ -3,8 +3,10 @@ Code Explanation
 
 The main nodes participating in this project are explained in this section of the wiki.
 
-.. image:: MRDFD.png
+.. figure:: MRDFD.png
 
+   MR Robot DFD
+   
 .. toctree::
    :maxdepth: 4
 

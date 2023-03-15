@@ -4,7 +4,9 @@ MR-ROBOT
 
 MR Robot is autonomous navigation robot made by A.T.O.M Robotics capable of doing multiple day to day operations such as mapping, navigation for transportation, sanitaion etc. Various other operations can also be performed thanks to its modularity.
 
-.. image:: MRBACK.jpeg
+.. figure:: MRBACK.jpeg
+   
+   MR Robot Prototype 
 
 .. toctree::
    :maxdepth: 2
