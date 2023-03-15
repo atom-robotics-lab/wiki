@@ -10,7 +10,7 @@ Arduino
         if(pwm.data < 0)  { ledcWrite(ledChannel1, 0); ledcWrite(ledChannel2, abs(pwm.data));}
     }
 
-This code defines two callback functions, LpwmCb and RpwmCb, which take a std_msgs::Int32 object as input. The functions control the speed of four motors by writing PWM signals using the ledcWrite function.
+This code defines two callback functions, ``LpwmCb()`` and ``RpwmCb()``, which take a std_msgs::Int32 object as input. The functions control the speed of 2 motors by writing PWM signals using the ledcWrite function.
 
 - The if statements check the value of the input pwm.data and determine which PWM signal to write to each motor. 
 - If pwm.data is zero, then both PWM signals for the corresponding motor are set to zero, which stops the motor. 
@@ -61,17 +61,16 @@ This code defines two callback functions, LpwmCb and RpwmCb, which take a std_ms
 
     }
 
-This code snippet is used to set up the various peripherals and settings needed for the robot to operate, including the ROS node, PWM signals for the motors, encoder signals for the wheels, and interrupt service routines for updating the encoder counts. 
+This code snippet is used to set up the various settings needed for the robot to operate, including the ROS node, PWM signals for the motors, encoder signals for the wheels, and interrupt service routines for updating the encoder counts. 
 
-- The **nh.initNode()** function initializes a node in the ROS (Robot Operating System).
-- The **nh.advertise** functions advertise four topics in the ROS : **left_enc_pub, right_enc_pub, left_enc_error, and right_enc_error**. These topics are used to publish information about the state of the encoders on the left and right wheels of the robot.
-- The **nh.subscribe** functions subscribe to two topics in the ROS : **Lpwm_sub and Rpwm_sub**. These topics are used to receive PWM signals that control the speed and direction of the left and right motors.
-- The **ledcSetup** functions set up four LEDC (LED Control) channels with the specified frequency and resolution. These channels are used to generate **PWM signals for the left and right motors**.
-- The **pinMode** functions set the pins used for the encoder signals to input mode with pull-up resistors. These pins are used to read the **signals from the encoders on the left and right wheels** of the robot.
-- The **pinMode** function sets the **standby** pin to output mode. This pin is used to **enable/disable** the motor driver.
-- The **ledcAttachPin** functions attach each of the four LEDC channels to a specific pin on the Arduino. These pins are used to **output the PWM signals** to the left and right motors.
-- The **lastStateL and lastStateR** variables are initialized with the **initial state** of the encoder signals for the left and right wheels, respectively.
-- The **attachInterrupt** functions attach two interrupt service routines (updateEncoder_L and updateEncoder_R) to the encoder pins for the left and right wheels. These routines are called whenever the state of the encoder signals changes (i.e., when the wheel rotates). They are used to update the encoder counts and calculate the speed of the wheels.
+- The ``nh.initNode()`` function initializes a node in the ROS (Robot Operating System).
+- The ``nh.advertise`` functions advertise four topics in the ROS : ``left_enc_pub``, ``right_enc_pub``, ``left_enc_error``, and ``right_enc_error``. These topics are used to publish information about the state of the encoders on the left and right wheels of the robot.
+- The ``nh.subscribe` functions subscribe to two topics in the ROS : ``Lpwm_sub`` and ``Rpwm_sub``. These topics are used to receive PWM signals that control the speed and direction of the left and right motors.
+- The ``ledcSetup`` functions set up four LEDC (LED Control) channels with the specified frequency and resolution. These channels are used to generate **PWM signals for the left and right motors**.
+- The ``pinMode`` functions set the pins used for the encoder signals to input mode with pull-up resistors. These pins are used to read the **signals from the encoders on the left and right wheels** of the robot and also this function sets the **standby** pin to output mode. This pin is used to **enable/disable** the motor driver.
+- The ``ledcAttachPin`` functions attach each of the four LEDC channels to a specific pin on the Arduino. These pins are used to **output the PWM signals** to the left and right motors.
+- The ``lastStateL`` and ``lastStateR`` variables are initialized with the **initial state** of the encoder signals for the left and right wheels, respectively.
+- The ``attachInterrupt`` functions attach two interrupt service routines (``updateEncoder_L`` and ``updateEncoder_R``) to the encoder pins for the left and right wheels. These routines are called whenever the state of the encoder signals changes (i.e., when the wheel rotates). They are used to update the encoder counts and calculate the speed of the wheels.
 
 .. code:: C
     void publish_encoder_data()
@@ -89,7 +88,7 @@ This code snippet is used to set up the various peripherals and settings needed 
       right_enc_error.publish(&encoder_msg_right_error);
     }
 
-The function publish_encoder_data() is used to publish the encoder values and any associated errors to their respective ROS topics.
+The function ``publish_encoder_data()`` is used to publish the encoder values and any associated errors to their respective ROS topics.
 
 .. code:: C
 
@@ -108,6 +107,6 @@ The function publish_encoder_data() is used to publish the encoder values and an
 
     }
 
-- The **Lencoded** value is then combined with the previous encoded value of the left motor using the bitwise OR operator (|) and **stored in the Lsum variable**.
-- The function then **checks the value of Lsum** against a set of four possible values **(0b1101, 0b0100, 0b0010, 0b1011)** and increments the encoderValue_L variable if it matches any of them. Similarly, if Lsum matches one of the four possible values (0b1110, 0b0111, 0b0001, 0b1000), the function decrements the encoderValue_L variable.
-- Finally, the current encoded value (Lencoded) is stored in the **lastEncoded_L variable** for use in the next iteration of the function.
+- The **Lencoded** value is then combined with the previous encoded value of the left motor using the ``bitwise OR operator (|)`` and **stored in the Lsum variable**.
+- The function then **checks the value of Lsum** against a set of four possible values **(0b1101, 0b0100, 0b0010, 0b1011)** and increments the ``encoderValue_L`` variable if it matches any of them. Similarly, if Lsum matches one of the four possible values **(0b1110, 0b0111, 0b0001, 0b1000)**, the function decrements the ``encoderValue_L`` variable.
+- Finally, the current encoded value (Lencoded) is stored in the ``lastEncoded_L`` variable for use in the next iteration of the function.

@@ -4,7 +4,7 @@ Miscellaneous
 ASSIGNING PORT FOR LIDAR AND ESP
 --------------------------------
 
-It is crucial to assign ports for LIDAR and ESP because both of them receive random ports in ttyUSB format.
+It is crucial to assign ports for LIDAR and ESP because both of them receive random ports in ``ttyUSB`` format.
 
 Use This command to identify port and characters after "usb"
 
