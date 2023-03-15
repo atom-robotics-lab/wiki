@@ -63,7 +63,7 @@ In this part we specify basic parameter like **wheel encoder readings ,rate, bas
         self.y = data.pose.pose.position.y
         self.th = yaw
 
-Inside the update_pose method, the x, y, and z coordinates of the object's position are extracted from the data dictionary and stored in the self.position attribute of the PoseEstimator object. This attribute is a tuple that contains the x, y, and z coordinates of the object's position, respectively.
+Inside the ``update_pose()`` method, the x, y, and z coordinates of the object's position are extracted from the data dictionary and stored in the self.position attribute of the PoseEstimator object. This attribute is a tuple that contains the x, y, and z coordinates of the object's position, respectively.
 
 .. code:: python
     
@@ -107,7 +107,7 @@ Inside the update_pose method, the x, y, and z coordinates of the object's posit
     
 This code segment is checking whether the current time now is greater than the next time to update the pose t_next. If the condition is True, it proceeds to calculate the elapsed time elapsed since the last pose update, using the now and then times stored in the class.
 Then, the code calculates the odometry by determining the distance traveled by each wheel based on the change in encoder ticks since the last update. If the encoder ticks have not changed since the last update (i.e., enc_left is None), then the distance traveled by both wheels is set to 0.
-Finally, the code calculates the speed of each wheel based on the distance traveled and the elapsed time, and stores them in left_speed and right_speed variables respectively.
+Finally, the code calculates the speed of each wheel based on the distance traveled and the elapsed time, and stores them in ``left_speed`` and ``right_speed`` variables respectively.
 
 .. code:: python
 
@@ -150,13 +150,13 @@ Finally, the code calculates the speed of each wheel based on the distance trave
 
 This section of the code is responsible for calculating and publishing the odometry information of the robot.
 
-If the robot has traveled a nonzero distance (d != 0), it calculates the distance traveled in the x and y directions using the current angle of the robot (th) and the distance traveled (d). It then updates the position of the robot by adding this distance to the current position.
+If the robot has traveled a nonzero distance ``(d != 0)``, it calculates the distance traveled in the x and y directions using the current angle of the robot *(th)* and the distance traveled *(d)*. It then updates the position of the robot by adding this distance to the current position.
 
-If the robot has turned a nonzero angle (th != 0), it updates the current angle of the robot (self.th) by adding the angle turned (th).
+If the robot has turned a nonzero angle ``(th != 0)``, it updates the current angle of the robot *(self.th)* by adding the angle turned *(th)*.
 
 Next, it creates a Quaternion object to represent the orientation of the robot, and sets its values based on the current angle of the robot.
 
-Then, it publishes the odometry information as a transform from the base frame to the odometry frame, and as an Odometry message on the /odom topic, with the position, orientation, and linear/angular velocities of the robot.
+Then, it publishes the odometry information as a transform from the base frame to the odometry frame, and as an Odometry message on the ``/odom`` topic, with the position and orientation of the robot.
 
 .. code:: python
 
@@ -173,11 +173,11 @@ Then, it publishes the odometry information as a transform from the base frame t
 
 This is a callback function for the left wheel encoder subscriber. It receives a message from the topic to which it has subscribed, and extracts the data from it.
 
-- **enc = msg.data:** extracts the data from the message and stores it in the enc variable.
-- **if (enc < self.encoder_low_wrap and self.prev_lencoder > self.encoder_high_wrap):** checks if the encoder value has wrapped around the low end (underflow) and the previous value was above the high end (overflow). If true, increment the left encoder multiplier.
-- **if (enc > self.encoder_high_wrap and self.prev_lencoder < self.encoder_low_wrap):** checks if the encoder value has wrapped around the high end (overflow) and the previous value was below the low end (underflow). If true, decrement the left encoder multiplier.
-- **self.left = 1.0 * (enc + self.lmult * (self.encoder_max - self.encoder_min)):** calculates the left encoder count by adding the current encoder value to the left encoder multiplier times the range of the encoder values. The range is defined as the difference between the maximum and minimum encoder values.
-- **self.prev_lencoder = enc:** updates the previous encoder value with the current encoder value.
+- ``enc = msg.data``: extracts the data from the message and stores it in the enc variable.
+- ``if (enc < self.encoder_low_wrap and self.prev_lencoder > self.encoder_high_wrap)``: checks if the encoder value has wrapped around the low end (underflow) and the previous value was above the high end (overflow). If true, increment the left encoder multiplier.
+- ``if (enc > self.encoder_high_wrap and self.prev_lencoder < self.encoder_low_wrap)``: checks if the encoder value has wrapped around the high end (overflow) and the previous value was below the low end (underflow). If true, decrement the left encoder multiplier.
+- ``self.left = 1.0 * (enc + self.lmult * (self.encoder_max - self.encoder_min))``:** calculates the left encoder count by adding the current encoder value to the left encoder multiplier times the range of the encoder values. The range is defined as the difference between the maximum and minimum encoder values.
+- ``self.prev_lencoder = enc``: updates the previous encoder value with the current encoder value.
 
 
 

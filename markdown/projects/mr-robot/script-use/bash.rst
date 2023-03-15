@@ -1,18 +1,12 @@
-Master Slave Ros Communication
-===============================
+Machine Specification For MR Robot
+==================================
 
 Introduction
 ------------
 
 In ROS (Robot Operating System), communication between different nodes (e.g., sensors, controllers, and other agents) is established through the use of a Master-Slave connection. The Master node acts as a central hub that manages the communication between different nodes, while the Slave nodes communicate with each other through the Master node.
 
-The Master node is responsible for keeping track of all available Slave nodes and their published topics. It provides a directory service that allows Slave nodes to discover and communicate with each other. Slave nodes, on the other hand, communicate with the Master node to register their published topics and to subscribe to topics published by other Slave nodes.
-
-The Master-Slave connection in ROS is essential for enabling collaboration and coordination between different nodes. For example, a sensor node publishing data on its published topic can be subscribed to by a controller node, which can then use that data to control a robot or execute specific tasks. Additionally, different Slave nodes can communicate with each other to exchange data or coordinate their actions.
-
-The Master-Slave connection in ROS can be established over various communication protocols such as TCP/IP, UDP, or shared memory. ROS provides a set of standard tools and libraries that allow nodes to communicate with each other seamlessly, regardless of the underlying communication protocol.
-
-In summary, the Master-Slave connection in ROS enables communication between different nodes by establishing a central hub (Master node) that manages the communication between Slave nodes. This connection is crucial for enabling collaboration and coordination between different nodes in ROS and is established over various communication protocols.
+Implementation of the machine specifications for MR Robot are set up to launch various nodes in accordance with their desired locations. For instance, while rosserial is launched on the Raspberry Pi to obtain serial data from the microcontroller, RVIZ should run in the Master because visualisation is required. So, it is possible to use a single launch file by naming nodes.
 
 Master Bashrc file
 ------------------
@@ -66,3 +60,5 @@ ROS_NAMESPACE: This variable specifies the namespace for the node. Namespaces ar
 
 By setting these environment variables in the env.sh file, the slave node can properly communicate with the ROS master node and other nodes in the network. It is important to ensure that the values for these variables are correct and consistent across all nodes in the network to avoid communication errors.
 
+.. warning::
+    You are specifying the machine's name and password in the launch file, which is not saved because you are giving master, access to your machine.

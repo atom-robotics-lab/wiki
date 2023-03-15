@@ -1,7 +1,7 @@
 Twist To PWM
 ============
 
-This code is a Python script that implements a ROS node for a differential drive robot. The robot is controlled using velocity commands sent to the /cmd_vel topic and feedback on the actual wheel speeds is obtained from the /left_speed and /right_speed topics.
+This code is a Python script that implements a ROS node for a differential drive robot. The robot is controlled using velocity commands sent to the ``/cmd_vel`` topic and feedback on the actual wheel speeds is obtained from the ``/left_speed`` and ``/right_speed`` topics.
 
 The DifferentialDriver class is defined to encapsulate the functionality of the node. The constructor initializes the ROS node and sets up the necessary subscribers and publishers for the topics. It also reads various parameters related to the robot's physical properties and calculates the maximum speed that the robot can achieve.
 
@@ -29,7 +29,7 @@ The DifferentialDriver class is defined to encapsulate the functionality of the 
         self.kp = 0.5
 
 
-This is the constructor method of the DifferentialDriver class. This method is called when an object of the class is created. In this method, we initialize the ROS node, create subscribers and publishers for topics /cmd_vel, left_speed, right_speed, left_pwm and right_pwm. We also call the method params_setup() to read the parameter values from the ROS parameter server and set the instance variables of the class DifferentialDriver.
+This is the constructor method of the DifferentialDriver class. This method is called when an object of the class is created. In this method, we initialize the ROS node, create subscribers and publishers for topics ``/cmd_vel, left_speed, right_speed, left_pwm and right_pwm``. We also call the method ``params_setup()`` to read the parameter values from the ROS parameter server and set the instance variables of the class DifferentialDriver.
 
 .. code:: python
     
@@ -42,35 +42,40 @@ This is the constructor method of the DifferentialDriver class. This method is c
         self.max_pwm_val = rospy.get_param("mr_robot_firmware/twist_max_pwm")
         self.min_pwm_val = rospy.get_param("mr_robot_firmware/twist_min_pwm")
 
-This method reads the parameter values from the ROS parameter server and sets the instance variables of the class DifferentialDriver. The parameters read and their respective instance variables are:
+This method reads the parameter values from the ROS parameter server and sets the instance variables of the class DifferentialDriver. 
 
-mr_robot_firmware/motor_rpm: motor_rpm
-mr_robot_firmware/wheel_diameter: wheel_diameter
-mr_robot_firmware/wheel_separation: wheel_separation
-mr_robot_firmware/twist_max_pwm: max_pwm_val
-mr_robot_firmware/twist_min_pwm: min_pwm_val
-All the parameter values are read as float values and converted to the required units.
+.. note::
+    
+    The parameters read and their respective instance variables are:
+
+    mr_robot_firmware/motor_rpm: motor_rpm
+    mr_robot_firmware/wheel_diameter: wheel_diameter
+    mr_robot_firmware/wheel_separation: wheel_separation
+    mr_robot_firmware/twist_max_pwm: max_pwm_val
+    mr_robot_firmware/twist_min_pwm: min_pwm_val
+    
+    All the parameter values are read as float values and converted to the required units and are taken from ``mr_robot_firmware.yaml``
 
 .. code:: python
 
     def update_left(self, speed):
         self.left_vel_actual = speed.data
 
-This method is called whenever a new message is received on the topic left_speed. It updates the instance variable left_vel_actual with the received value of speed.
+This method is called whenever a new message is received on the topic ``/left_speed``. It updates the instance variable ``/left_vel_actual`` with the received value of speed.
 
 .. code:: python
 
     def update_right(self, speed):
         self.right_vel_actual = speed.data
 
-This method is called whenever a new message is received on the topic right_speed. It updates the instance variable right_vel_actual with the received value of speed.
+This method is called whenever a new message is received on the topic ``/right_speed``. It updates the instance variable ``/right_vel_actual`` with the received value of speed.
 
 .. code:: python
 
     def stop( self ):
         self.change_duty_cycle(0, 0 , 0 , 0)       
 
-This method sets the PWM values for both the motors to zero, effectively stopping the robot. It calls the change_duty_cycle() method with zero values for both left and right PWM values.
+This method sets the PWM values for both the motors to zero, effectively stopping the robot. It calls the ``change_duty_cycle()`` method with zero values for both left and right PWM values.
 
 .. code:: python
 
@@ -81,7 +86,7 @@ This method sets the PWM values for both the motors to zero, effectively stoppin
 
         return self.lspeedPWM, self.rspeedPWM
 
-This method calculates the required PWM values for both the motors based on the given linear and angular velocities of the robot. The formula used is (velocity / max_speed) * max_pwm_val, where velocity can be either left or right wheel velocity and max_speed is the maximum possible speed of the robot. The calculated PWM values are limited to be within the range of min_pwm_val and max_pwm_val.
+This method calculates the required PWM values for both the motors based on the given linear and angular velocities of the robot. The formula used is ``(velocity / max_speed) * max_pwm_val``, where velocity can be either left or right wheel velocity and max_speed is the maximum possible speed of the robot. The calculated PWM values are limited to be within the range of **min_pwm_val** and **max_pwm_val**.
 
 .. code:: python
 
@@ -94,7 +99,7 @@ This method calculates the required PWM values for both the motors based on the 
         except:
             pass
 
-This method is used to correct the calculated PWM values for the left and right motors based on the actual velocities of the motors as received from the topics left_speed and right_speed. The proportional gain kp is used to calculate the correction values. The corrected PWM values are returned by this method.
+This method is used to correct the calculated PWM values for the left and right motors based on the actual velocities of the motors as received from the topics ``/left_speed`` and ``/right_speed``. The proportional gain kp is used to calculate the correction values. The corrected PWM values are returned by this method.
 
 .. code:: python
 
@@ -124,4 +129,4 @@ This method is used to correct the calculated PWM values for the left and right 
         self.left_pwm_pub.publish(self.left_pwm)
         self.right_pwm_pub.publish(self.right_pwm)
 
-This method is called whenever a new message is received on the topic cmd_vel. It calculates the left and right wheel velocities based on the linear and angular velocities of the robot, and then calculates the PWM values for both the motors using the get_pwm() method. The PWM values are then corrected using the correct_pwm() method, and the corrected PWM values are published on the topics left_pwm and right_pwm using the left_pwm_pub and right_pwm_pub publishers, respectively. The method also prints the calculated and actual velocities of both the wheels for debugging purposes.
+This method is called whenever a new message is received on the topic ``/cmd_vel``. It calculates the left and right wheel velocities based on the linear and angular twist velocities, and then calculates the PWM values for both the motors using the ``get_pwm()`` method. The PWM values are then corrected using the ``correct_pwm()`` method, and the corrected PWM values are published on the topics ``/left_pwm`` and ``/right_pwm`` using the ``/left_pwm_pub`` and ``/right_pwm_pub`` publishers, respectively. The method also prints the calculated and actual velocities of both the wheels for debugging purposes.
