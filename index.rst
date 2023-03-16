@@ -32,6 +32,11 @@ Contents:
    markdown/archives/previous_tasks.rst
 
 .. toctree::
+   :maxdepth: 2
+
+   markdown/projects/projects.rst
+
+.. toctree::
 
    Socials <https://linktr.ee/a.t.o.m_robotics_lab>
 
