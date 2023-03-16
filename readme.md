@@ -151,12 +151,17 @@ Use this space to show useful examples of how a project can be used. Additional 
     - [x] Collapsible sidebar menu
     - [x] Discarding use of Iframes
     - [x] Fixing local path links
-- [ ] Wiki beautification
+- [x] Wiki beautification
     - [x] Adding Graphics
     - [x] Discarding use of captions
     - [ ] Switching theme
-    - [ ] Easy documentation navigation via sidebar
-    - [ ] Adding projects tab
+    - [x] Easy documentation navigation via sidebar
+    - [x] Adding projects tab
+- [ ] Documentation
+    - [x] Mr robot
+    - [ ] Curve Tracer
+    - [ ] Obstacle avoidance
+    - [ ] Open Cv projects
 
 See the [open issues](https://github.com/atom-robotics-lab/wiki/issues) for a full list of proposed features (and known issues).
 
