@@ -78,3 +78,17 @@ http://wiki.ros.org/gmapping
 
 **Conclusion** :-
 MR Robot is a powerful and sophisticated robot that utilizes ROS Serial, Twist to PWM, and ESP_Diff_TF for motor control and odometry calculation. The Navigation Stack, which includes AMCL and Move Base, is used for robot navigation and localization. The LiDAR data from the Raspberry Pi 4 is used for mapping and navigation by the Navigation Stack, and can also be used for mapping using GMapping. Overall, Mr. Robot is a versatile and capable robot that is suitable for a wide range of tasks.
+
+TF TREE
+--------
+
+.. figure:: tf.png
+
+    TF TREE
+
+Node Graph
+-----------
+
+.. figure:: node.png
+
+    Node Graph
