@@ -9,8 +9,9 @@ List of previous selection tasks:
 .. toctree::
     :maxdepth: 2
     
-    ./sel-tasks2023/Selection_Tasks.rst
+    ./sel-tasks2023/cad-sel.rst
     ./sel-task_cad_2022/selection-task.rst
     ./sel-task2022/selection-task.rst
     ./sel-task2021/selection-task.rst
+    
     
