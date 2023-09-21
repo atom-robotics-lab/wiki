@@ -2,10 +2,6 @@ ROS Selection Task 2023-2024
 ============================
 
 
-Level-1
-^^^^^^^^
-
-
 Problem statement
 -----------------
 
