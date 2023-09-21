@@ -13,11 +13,13 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
-        <script src="../../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../../_static/clipboard.min.js"></script>
-        <script src="../../../../_static/copybutton.js"></script>
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -53,6 +55,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2023-2024</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
@@ -108,7 +113,7 @@
            <div itemprop="articleBody">
              
   <section id="twist-to-pwm">
-<h1>Twist To PWM<a class="headerlink" href="#twist-to-pwm" title="Permalink to this heading"></a></h1>
+<h1>Twist To PWM<a class="headerlink" href="#twist-to-pwm" title="Link to this heading"></a></h1>
 <p>This code is a Python script that implements a ROS node for a differential drive robot. The robot is controlled using velocity commands sent to the <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> topic and feedback on the actual wheel speeds is obtained from the <code class="docutils literal notranslate"><span class="pre">/left_speed</span></code> and <code class="docutils literal notranslate"><span class="pre">/right_speed</span></code> topics.</p>
 <p>The DifferentialDriver class is defined to encapsulate the functionality of the node. The constructor initializes the ROS node and sets up the necessary subscribers and publishers for the topics. It also reads various parameters related to the robot’s physical properties and calculates the maximum speed that the robot can achieve.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

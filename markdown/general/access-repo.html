@@ -13,16 +13,18 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Previous Tasks" href="../archives/previous_tasks.html" />
-    <link rel="prev" title="rostopic command" href="../ros/comm/topics/rostopic.html" /> 
+    <link rel="prev" title="ROS Selection Task 2023-2024" href="../selectiontask24/ROS_selection_task24.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,6 +55,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ros/ros.html">Intro To ROS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../selectiontask24/selection_task24.html">Selection Task 2023-2024</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using the access repo</a><ul>
@@ -105,7 +110,7 @@
            <div itemprop="articleBody">
              
   <section id="using-the-access-repo">
-<h1>Using the access repo<a class="headerlink" href="#using-the-access-repo" title="Permalink to this heading"></a></h1>
+<h1>Using the access repo<a class="headerlink" href="#using-the-access-repo" title="Link to this heading"></a></h1>
 <p>All our passwords are stored in public gpg encrypted files in the
 <a class="reference external" href="https://github.com/atom-robotics-lab/access">access</a> repository. The
 access repo above utilizes something called <a class="reference external" href="https://gnupg.org/">gpg</a>
@@ -113,7 +118,7 @@ to encrypt and decrypt the passwords.</p>
 <p>If you have already uploaded your gpg key to keys.openpgp.org then you
 can skip the primer section.</p>
 <section id="gpg-a-primer">
-<h2>GPG ,a primer<a class="headerlink" href="#gpg-a-primer" title="Permalink to this heading"></a></h2>
+<h2>GPG ,a primer<a class="headerlink" href="#gpg-a-primer" title="Link to this heading"></a></h2>
 <p>GPG stands for GNU Privacy Guard. It basically uses two set of keys, a
 public key and a private key. These two keys are linked together. If I
 encrypt something with your public key then only you would be able to
@@ -121,7 +126,7 @@ decrypt it with your private key. As the name implies a public key is
 something that can be shared with the public, whereas the private key
 should be kept secret.</p>
 <section id="how-to-get-yourself-a-gpg-key">
-<h3>How to get yourself a gpg key<a class="headerlink" href="#how-to-get-yourself-a-gpg-key" title="Permalink to this heading"></a></h3>
+<h3>How to get yourself a gpg key<a class="headerlink" href="#how-to-get-yourself-a-gpg-key" title="Link to this heading"></a></h3>
 <p>First install gpg</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gnupg2
@@ -140,11 +145,11 @@ key.</p>
 </div>
 </section>
 <section id="uploading-this-key">
-<h3>Uploading this key<a class="headerlink" href="#uploading-this-key" title="Permalink to this heading"></a></h3>
+<h3>Uploading this key<a class="headerlink" href="#uploading-this-key" title="Link to this heading"></a></h3>
 <p>Now that you have generated this key you need to upload it to a
 keyserver so others can discover and use it.</p>
 <section id="step-1">
-<h4>Step 1<a class="headerlink" href="#step-1" title="Permalink to this heading"></a></h4>
+<h4>Step 1<a class="headerlink" href="#step-1" title="Link to this heading"></a></h4>
 <p>Export your public key</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~
 gpg<span class="w"> </span>--export<span class="w"> </span>--armor<span class="w"> </span>&gt;<span class="w"> </span>public.txt
@@ -152,7 +157,7 @@ gpg<span class="w"> </span>--export<span class="w"> </span>--armor<span class="w
 </div>
 </section>
 <section id="step-2">
-<h4>Step 2<a class="headerlink" href="#step-2" title="Permalink to this heading"></a></h4>
+<h4>Step 2<a class="headerlink" href="#step-2" title="Link to this heading"></a></h4>
 <p>Now head <a class="reference external" href="https://keys.openpgp.org/upload">here</a> and upload the
 public.txt file which you just generated which must be in your home
 directory</p>
@@ -162,7 +167,7 @@ you’ll be done.</p>
 </section>
 </section>
 <section id="setting-up-gopass-and-access-repo">
-<h2>Setting up gopass and access repo<a class="headerlink" href="#setting-up-gopass-and-access-repo" title="Permalink to this heading"></a></h2>
+<h2>Setting up gopass and access repo<a class="headerlink" href="#setting-up-gopass-and-access-repo" title="Link to this heading"></a></h2>
 <p>gopass is the tool we use which further uses gpg to encrypt and decrypt
 the passwords</p>
 <ul class="simple">
@@ -170,7 +175,7 @@ the passwords</p>
 </ul>
 </section>
 <section id="cloning-the-access-repository">
-<h2>Cloning the access repository<a class="headerlink" href="#cloning-the-access-repository" title="Permalink to this heading"></a></h2>
+<h2>Cloning the access repository<a class="headerlink" href="#cloning-the-access-repository" title="Link to this heading"></a></h2>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gopass<span class="w"> </span>clone<span class="w"> </span>https://github.com/atom-robotics-lab/access
 </pre></div>
 </div>
@@ -190,7 +195,7 @@ would get an error.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../ros/comm/topics/rostopic.html" class="btn btn-neutral float-left" title="rostopic command" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../selectiontask24/ROS_selection_task24.html" class="btn btn-neutral float-left" title="ROS Selection Task 2023-2024" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../archives/previous_tasks.html" class="btn btn-neutral float-right" title="Previous Tasks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

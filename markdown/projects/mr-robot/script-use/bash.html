@@ -13,11 +13,13 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
-        <script src="../../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../../_static/clipboard.min.js"></script>
-        <script src="../../../../_static/copybutton.js"></script>
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -53,6 +55,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2023-2024</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
@@ -108,14 +113,14 @@
            <div itemprop="articleBody">
              
   <section id="machine-specification-for-mr-robot">
-<h1>Machine Specification For MR Robot<a class="headerlink" href="#machine-specification-for-mr-robot" title="Permalink to this heading"></a></h1>
+<h1>Machine Specification For MR Robot<a class="headerlink" href="#machine-specification-for-mr-robot" title="Link to this heading"></a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>In ROS (Robot Operating System), communication between different nodes (e.g., sensors, controllers, and other agents) is established through the use of a Master-Slave connection. The Master node acts as a central hub that manages the communication between different nodes, while the Slave nodes communicate with each other through the Master node.</p>
 <p>Implementation of the machine specifications for MR Robot are set up to launch various nodes in accordance with their desired locations. For instance, while rosserial is launched on the Raspberry Pi to obtain serial data from the microcontroller, RVIZ should run in the Master because visualisation is required. So, it is possible to use a single launch file by naming nodes.</p>
 </section>
 <section id="master-bashrc-file">
-<h2>Master Bashrc file<a class="headerlink" href="#master-bashrc-file" title="Permalink to this heading"></a></h2>
+<h2>Master Bashrc file<a class="headerlink" href="#master-bashrc-file" title="Link to this heading"></a></h2>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://localhost:11311/
 </pre></div>
 </div>
@@ -130,7 +135,7 @@
 <p>This line sets the environment variable <cite>ROS_IP</cite>, which specifies the IP address of the current node. In this case, the IP address should be set to the IP address of the machine running the current node. This variable is used by other nodes in ROS to connect to the current node.</p>
 </section>
 <section id="environment-loader">
-<h2>Environment Loader<a class="headerlink" href="#environment-loader" title="Permalink to this heading"></a></h2>
+<h2>Environment Loader<a class="headerlink" href="#environment-loader" title="Link to this heading"></a></h2>
 <p>In ROS, the env.sh file is used to set environment variables for a specific workspace. This file is typically located in the devel folder of the workspace, and it is sourced before running any ROS commands in that workspace.</p>
 <p>In the case of a slave node in a ROS network, the env.sh file can be used to set the environment variables necessary for the node to communicate with the master node and other nodes in the network.</p>
 <p>Here are some common environment variables that can be set in the env.sh file for a slave node:</p>

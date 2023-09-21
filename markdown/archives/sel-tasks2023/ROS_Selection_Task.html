@@ -13,11 +13,13 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -53,6 +55,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../ros/ros.html">Intro To ROS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../selectiontask24/selection_task24.html">Selection Task 2023-2024</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/access-repo.html">Using the access repo</a></li>
@@ -113,9 +118,9 @@
            <div itemprop="articleBody">
              
   <section id="ros-selection-task-2023">
-<h1>ROS Selection Task 2023<a class="headerlink" href="#ros-selection-task-2023" title="Permalink to this heading"></a></h1>
+<h1>ROS Selection Task 2023<a class="headerlink" href="#ros-selection-task-2023" title="Link to this heading"></a></h1>
 <section id="problem-statement">
-<h2>Problem statement<a class="headerlink" href="#problem-statement" title="Permalink to this heading"></a></h2>
+<h2>Problem statement<a class="headerlink" href="#problem-statement" title="Link to this heading"></a></h2>
 <ul>
 <li><p>The objective of the task is to move the turtle inside the turtlesim
 window in a vertical D shape of radius 1 unit.</p></li>
@@ -144,14 +149,14 @@ new to ROS.</p>
 </div>
 </section>
 <section id="expected-output">
-<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this heading"></a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading"></a></h2>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/TaMQco4vvIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>THE TURTLE SHOULD STOP AT THE INITIAL POINT ONLY.</p>
 </div>
 </section>
 <section id="hints">
-<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this heading"></a></h2>
+<h2>Hints<a class="headerlink" href="#hints" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>The turtle needs to move in a vertical ‘D’ shape with a radius of 1 unit
 during its sem-circular motion.</p></li>
@@ -161,7 +166,7 @@ to get this done.</p></li>
 can refer to Overview of rospy for more hint</p></li>
 </ul>
 <section id="sample-code-snippet">
-<h3>Sample Code Snippet<a class="headerlink" href="#sample-code-snippet" title="Permalink to this heading"></a></h3>
+<h3>Sample Code Snippet<a class="headerlink" href="#sample-code-snippet" title="Link to this heading"></a></h3>
 <p><strong>Question:</strong> Write a python code to move ROS’s turtlesim bot on a straight path
 while bot’s distance is less than 6.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/env python3</span>
@@ -217,7 +222,7 @@ while bot’s distance is less than 6.</p>
 </div>
 </section>
 <section id="output-video">
-<h3>Output video<a class="headerlink" href="#output-video" title="Permalink to this heading"></a></h3>
+<h3>Output video<a class="headerlink" href="#output-video" title="Link to this heading"></a></h3>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/tjGNhEe-S_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br><p>Commands used:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscore
 rosrun<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
@@ -227,7 +232,7 @@ rosrun<span class="w"> </span>package_name<span class="w"> </span>script_name
 </section>
 </section>
 <section id="procedure">
-<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this heading"></a></h2>
+<h2>Procedure<a class="headerlink" href="#procedure" title="Link to this heading"></a></h2>
 <p>Follow the instructions given below to get started with the task.</p>
 <ul class="simple">
 <li><p>First, you will need to create a package named selection_task within

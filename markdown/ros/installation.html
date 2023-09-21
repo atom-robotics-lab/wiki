@@ -13,11 +13,13 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -77,6 +79,9 @@
 </li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../selectiontask24/selection_task24.html">Selection Task 2023-2024</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../general/access-repo.html">Using the access repo</a></li>
 </ul>
 <ul>
@@ -115,7 +120,7 @@
            <div itemprop="articleBody">
              
   <section id="ros-installation">
-<h1>ROS installation<a class="headerlink" href="#ros-installation" title="Permalink to this heading"></a></h1>
+<h1>ROS installation<a class="headerlink" href="#ros-installation" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p>This Document assumes that the reader has installed Ubuntu 18.04.
 However, if you haven’t installed Ubuntu 20.04 yet make sure to
@@ -126,16 +131,16 @@ done.</p></li>
 <a class="reference external" href="https://ubuntu.com/download/desktop">here</a>.</p></li>
 </ul>
 <section id="ros-noetic-installation">
-<h2>ROS Noetic Installation<a class="headerlink" href="#ros-noetic-installation" title="Permalink to this heading"></a></h2>
+<h2>ROS Noetic Installation<a class="headerlink" href="#ros-noetic-installation" title="Link to this heading"></a></h2>
 <section id="setup-your-sources-list">
-<h3>Setup your sources.list<a class="headerlink" href="#setup-your-sources-list" title="Permalink to this heading"></a></h3>
+<h3>Setup your sources.list<a class="headerlink" href="#setup-your-sources-list" title="Link to this heading"></a></h3>
 <p>Setup your computer to accept software from packages.ros.org.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
 </pre></div>
 </div>
 </section>
 <section id="setup-your-keys">
-<h3>Setup your keys<a class="headerlink" href="#setup-your-keys" title="Permalink to this heading"></a></h3>
+<h3>Setup your keys<a class="headerlink" href="#setup-your-keys" title="Link to this heading"></a></h3>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span><span class="c1"># if you haven&#39;t already installed curl</span>
 </pre></div>
 </div>
@@ -144,7 +149,7 @@ done.</p></li>
 </div>
 </section>
 <section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h3>
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Update package repositories</p></li>
 </ul>
@@ -160,7 +165,7 @@ done.</p></li>
 </section>
 </section>
 <section id="configuration-steps">
-<h2>Configuration steps<a class="headerlink" href="#configuration-steps" title="Permalink to this heading"></a></h2>
+<h2>Configuration steps<a class="headerlink" href="#configuration-steps" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Adding environment variables: To Automatically add ROS environment
 variables to your bash session every time a new shell (terminal) is
@@ -184,7 +189,7 @@ rosdep<span class="w"> </span>update
 </div>
 </section>
 <section id="more-packages-to-install">
-<h2>More packages to install<a class="headerlink" href="#more-packages-to-install" title="Permalink to this heading"></a></h2>
+<h2>More packages to install<a class="headerlink" href="#more-packages-to-install" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Catkin tools</p></li>
 </ul>

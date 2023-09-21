@@ -13,11 +13,13 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
-        <script src="../../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../../_static/clipboard.min.js"></script>
-        <script src="../../../../_static/copybutton.js"></script>
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -53,6 +55,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2023-2024</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
@@ -108,13 +113,13 @@
            <div itemprop="articleBody">
              
   <section id="launch-files">
-<h1>Launch files<a class="headerlink" href="#launch-files" title="Permalink to this heading"></a></h1>
+<h1>Launch files<a class="headerlink" href="#launch-files" title="Link to this heading"></a></h1>
 <p><strong>Their are 2 major launch files that we need to run:</strong></p>
 <section id="bringup-launch">
-<h2>1. bringup.launch<a class="headerlink" href="#bringup-launch" title="Permalink to this heading"></a></h2>
+<h2>1. bringup.launch<a class="headerlink" href="#bringup-launch" title="Link to this heading"></a></h2>
 <p>This launch file is configuring and launching a set of nodes for a robotic system running on ROS (Robot Operating System).</p>
 <section id="the-nodes-launched-in-this-file-are">
-<h3>The nodes launched in this file are:<a class="headerlink" href="#the-nodes-launched-in-this-file-are" title="Permalink to this heading"></a></h3>
+<h3>The nodes launched in this file are:<a class="headerlink" href="#the-nodes-launched-in-this-file-are" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><strong>ydlidar_ros/X2L.launch</strong>: Launches the driver for a YDLIDAR X2L lidar sensor. (Raspberry Pi)</p></li>
 <li><p><strong>joint_state_publisher</strong>: Publishes joint states for the robot. (Master)</p></li>
@@ -136,7 +141,7 @@
 </section>
 </section>
 <section id="x2l-launch">
-<h2>2. X2L.launch<a class="headerlink" href="#x2l-launch" title="Permalink to this heading"></a></h2>
+<h2>2. X2L.launch<a class="headerlink" href="#x2l-launch" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>This is a ROS launch file that launches the <strong>ydlidar_node</strong> node from the <strong>ydlidar_ros</strong> package on a remote machine with IP address <strong>ip_of_machine</strong> and username <strong>username_of_machine(pi)</strong>.</p></li>
 <li><p>The launch file sets several parameters for the LIDAR sensor, such as the <strong>serial port and baudrate</strong> used to communicate with it, the frame ID to use for publishing data, and the angle and range limits of the sensor.</p></li>

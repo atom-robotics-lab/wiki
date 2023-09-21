@@ -13,11 +13,13 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -51,6 +53,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ros.html">Intro To ROS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../selectiontask24/selection_task24.html">Selection Task 2023-2024</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/access-repo.html">Using the access repo</a></li>
@@ -90,9 +95,9 @@
            <div itemprop="articleBody">
              
   <section id="create-a-ros-launch-file">
-<h1>Create a ROS Launch file<a class="headerlink" href="#create-a-ros-launch-file" title="Permalink to this heading"></a></h1>
+<h1>Create a ROS Launch file<a class="headerlink" href="#create-a-ros-launch-file" title="Link to this heading"></a></h1>
 <section id="roslaunch-command">
-<h2>roslaunch Command<a class="headerlink" href="#roslaunch-command" title="Permalink to this heading"></a></h2>
+<h2>roslaunch Command<a class="headerlink" href="#roslaunch-command" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>roslaunch is a tool for easily launching multiple ROS nodes locally
 and remotely via SSH.</p></li>
@@ -113,7 +118,7 @@ nodes to launch.</p></li>
 </div></blockquote>
 </section>
 <section id="steps-to-create-a-launch-file">
-<h2>Steps to create a launch file<a class="headerlink" href="#steps-to-create-a-launch-file" title="Permalink to this heading"></a></h2>
+<h2>Steps to create a launch file<a class="headerlink" href="#steps-to-create-a-launch-file" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>After creating a package, create a folder in the package names as a
 launch folder to store all the launch files in that folder.</p></li>
@@ -134,7 +139,7 @@ touch<span class="w"> </span>filename.launch
 to run simultaneously.</p>
 </section>
 <section id="steps-to-add-a-ros-node-in-the-launch-file">
-<h2>Steps to add a ROS node in the launch ﬁle<a class="headerlink" href="#steps-to-add-a-ros-node-in-the-launch-file" title="Permalink to this heading"></a></h2>
+<h2>Steps to add a ROS node in the launch ﬁle<a class="headerlink" href="#steps-to-add-a-ros-node-in-the-launch-file" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><ol class="arabic simple">
 <li><p>Launch ﬁles always starts with</p></li>
@@ -157,7 +162,7 @@ rosrun_command section, we have to add this line</p></li>
 </ul>
 </section>
 <section id="steps-to-load-config-yaml-file-in-ros-parameter-server">
-<h2>Steps to load Conﬁg YAML ﬁle in ROS Parameter Server<a class="headerlink" href="#steps-to-load-config-yaml-file-in-ros-parameter-server" title="Permalink to this heading"></a></h2>
+<h2>Steps to load Conﬁg YAML ﬁle in ROS Parameter Server<a class="headerlink" href="#steps-to-load-config-yaml-file-in-ros-parameter-server" title="Link to this heading"></a></h2>
 <p>You can use rosparam tag to load the YAML ﬁle.</p>
 <ul class="simple">
 <li><p>type is the name of executable ﬁle</p></li>
@@ -167,7 +172,7 @@ rosrun_command section, we have to add this line</p></li>
 </ul>
 </section>
 <section id="steps-to-add-a-shell-script-in-the-launch-file">
-<h2>Steps to add a shell script in the launch file<a class="headerlink" href="#steps-to-add-a-shell-script-in-the-launch-file" title="Permalink to this heading"></a></h2>
+<h2>Steps to add a shell script in the launch file<a class="headerlink" href="#steps-to-add-a-shell-script-in-the-launch-file" title="Link to this heading"></a></h2>
 <p>You can use node tag to run any shell script using launch ﬁle</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;node</span><span class="w"> </span><span class="na">pkg=</span><span class="s">&quot;name_of_package&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;shell_script.sh&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;shell_script&quot;</span><span class="w"> </span><span class="na">output=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;cmd&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$(find name_of_package)/launch/shell_script.sh&quot;</span><span class="nt">/&gt;</span>

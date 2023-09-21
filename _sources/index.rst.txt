@@ -20,6 +20,11 @@ Contents:
 
    markdown/ros/ros.rst
 
+.. toctree::
+   :maxdepth: 2
+
+   markdown/selectiontask24/selection_task24.rst
+
 
 .. toctree::
    :maxdepth: 2

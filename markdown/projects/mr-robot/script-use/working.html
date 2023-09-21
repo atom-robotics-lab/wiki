@@ -13,11 +13,13 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
-        <script src="../../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../../_static/clipboard.min.js"></script>
-        <script src="../../../../_static/copybutton.js"></script>
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -53,6 +55,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2023-2024</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
@@ -108,13 +113,13 @@
            <div itemprop="articleBody">
              
   <section id="working-of-mr-robot">
-<h1>Working Of MR Robot<a class="headerlink" href="#working-of-mr-robot" title="Permalink to this heading"></a></h1>
+<h1>Working Of MR Robot<a class="headerlink" href="#working-of-mr-robot" title="Link to this heading"></a></h1>
 <section id="hardware-working">
-<h2>Hardware Working<a class="headerlink" href="#hardware-working" title="Permalink to this heading"></a></h2>
+<h2>Hardware Working<a class="headerlink" href="#hardware-working" title="Link to this heading"></a></h2>
 <figure class="align-default" id="id1">
 <img alt="../../../../_images/MRCKT.png" src="../../../../_images/MRCKT.png" />
 <figcaption>
-<p><span class="caption-text">MR Robot Circuit Diagram</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">MR Robot Circuit Diagram</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>MR Robot is a robot that is equipped with two encoder motors, an ESP32 microcontroller, a Raspberry Pi 4, an IMU, a LiDAR, a motor driver, and a 5V buck converter. The robot is designed to calculate the movement of the motors and send it to the microcontroller. The data is then published to a topic and used to calculate the odometer. The LiDAR and IMU are linked to the Raspberry Pi 4, and the motor driver is used to form an H-bridge for differential drive.</p>
@@ -136,11 +141,11 @@ The 5V Buck Converter is used to convert the voltage from the battery to 5V.</p>
 MR Robot is a sophisticated robot that is equipped with advanced sensors and components. The robot is designed to navigate the environment using the LiDAR, IMU and Encoder Motor. The motor driver is used to control the movement of the robot, and the microcontroller is used to process the data from the sensors. Overall, Mr. Robot is a powerful and versatile robot that is capable of performing a wide range of tasks.</p>
 </section>
 <section id="software-working">
-<h2>Software Working<a class="headerlink" href="#software-working" title="Permalink to this heading"></a></h2>
+<h2>Software Working<a class="headerlink" href="#software-working" title="Link to this heading"></a></h2>
 <figure class="align-default" id="id2">
 <img alt="../../../../_images/MRDFD1.png" src="../../../../_images/MRDFD1.png" />
 <figcaption>
-<p><span class="caption-text">MR Robot DFD</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">MR Robot DFD</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>MR Robot is a robot that utilizes the ROS Serial protocol to communicate with its components. It uses Twist to PWM for motor control and ESP_Diff_TF for odom calculation. The robot has a LiDAR sensor connected to the Raspberry Pi 4, which is used for mapping and navigation.</p>
@@ -167,20 +172,20 @@ The LiDAR data from the Raspberry Pi 4 can also be used for mapping using the GM
 MR Robot is a powerful and sophisticated robot that utilizes ROS Serial, Twist to PWM, and ESP_Diff_TF for motor control and odometry calculation. The Navigation Stack, which includes AMCL and Move Base, is used for robot navigation and localization. The LiDAR data from the Raspberry Pi 4 is used for mapping and navigation by the Navigation Stack, and can also be used for mapping using GMapping. Overall, Mr. Robot is a versatile and capable robot that is suitable for a wide range of tasks.</p>
 </section>
 <section id="tf-tree">
-<h2>TF TREE<a class="headerlink" href="#tf-tree" title="Permalink to this heading"></a></h2>
+<h2>TF TREE<a class="headerlink" href="#tf-tree" title="Link to this heading"></a></h2>
 <figure class="align-default" id="id3">
 <img alt="../../../../_images/tf.png" src="../../../../_images/tf.png" />
 <figcaption>
-<p><span class="caption-text">TF TREE</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">TF TREE</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="node-graph">
-<h2>Node Graph<a class="headerlink" href="#node-graph" title="Permalink to this heading"></a></h2>
+<h2>Node Graph<a class="headerlink" href="#node-graph" title="Link to this heading"></a></h2>
 <figure class="align-default" id="id4">
 <img alt="../../../../_images/node.png" src="../../../../_images/node.png" />
 <figcaption>
-<p><span class="caption-text">Node Graph</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Node Graph</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
