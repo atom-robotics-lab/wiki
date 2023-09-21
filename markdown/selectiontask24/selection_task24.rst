@@ -12,8 +12,8 @@ The tasks are not only to test your problem solving skills but to also see your
 diligence to learn new stuff, the ablity to get the work done.
 
 There are currently two types of selection tasks which are:
-   #. **Standard Task:** Begineer friendly task which can easly be performed with the help of some interest and logical reasoning.
-   #. **Specialized Task:** A little advanced task requiring prior knowledge of the tech stack to create a successful solution.
+   #. **Standard Task:** In this beginner-friendly ROS (Robot Operating System) task, you'll get hands-on experience with TurtleSim, a simple robot simulator in ROS. This task is designed for those who are new to ROS and want to learn the basics of controlling a robot.
+   #. **Specialized Task:** This specialized task consists of two subtasks : one focused on CAD design and the other on electronics. Participants can choose to complete either subtask based on their expertise or interest . A little advanced task, requiring prior knowledge of the tech stacks to create a successful solution.
 
 
 .. Note::
@@ -40,7 +40,10 @@ There are currently two types of selection tasks which are:
 `Task submission <https://atom-robotics-lab.github.io/wiki/markdown/selection_task/Task_Submission>`__
 ++++++++++++++++++++++++++++++++++++++++++++
 
+`Google Form link <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. Note::
    Even if you are not able to complete entire the task you
    are requested to make submission of the work that you have done
-   anyway.
+   anyway. Submit your task here `Google Form link <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
