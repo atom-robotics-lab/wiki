@@ -1,5 +1,5 @@
 Electronics Selection Task 2023-2024
-============================
+====================================
 This year, we've introduced a three-tiered Electronic Selection Task. Here's a brief summary:
 
 
@@ -53,7 +53,7 @@ Expected Output
 
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/watch?v=iGsrljodarg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/iGsrljodarg?si=yT71m29KUxcqli4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
 
 
 2. Analyze the provided code and submit the output as demonstrated in the video.                                 5 pts
@@ -68,7 +68,8 @@ Sample Code Snippets
 Video Reference
 ----------------
 .. raw:: html
-.. figure:: https://youtube.com/embed/watch?v=xbvqrmQqz08?feature=share
+
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/xbvqrmQqz08?si=lsaT3T-PH7GDGIv3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
 
 Level 2 - Expert Territory
 --------------------------
@@ -102,7 +103,3 @@ you may still submit it. Points will be allocated accordingly.
 
 .. Warning::
    The **Deadline** for completing the task: **16th October, 2023**
-
-
-
-

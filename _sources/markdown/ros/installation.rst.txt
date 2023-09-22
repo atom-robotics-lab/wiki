@@ -1,7 +1,7 @@
 ROS installation
 ================
 
--  This Document assumes that the reader has installed Ubuntu 18.04.
+-  This Document assumes that the reader has installed Ubuntu 20.04.
    However, if you haven’t installed Ubuntu 20.04 yet make sure to
    install it before proceeding.
 -  There are tons of resources available on the Internet to get this
