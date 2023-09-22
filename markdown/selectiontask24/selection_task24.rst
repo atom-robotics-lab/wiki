@@ -22,28 +22,9 @@ There are currently two types of selection tasks which are:
 
 .. Warning::
    The **Deadline** for all the Tasks is: **16th October, 2023**.
-
 .. toctree::
-   :maxdepth: 2
-   :caption: Standard Task
+   :maxdepth: 4
 
    ./ROS_selection_task24.rst
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Specialization Task
-   
-   CV Selection Task <./CV_Selection_Task.rst>
-   Electronics Selection Task <./Elec_Selection_Task.rst>
-   CAD Selection Task <./CAD_Selection_Task.rst>
-
-`Task submission <https://atom-robotics-lab.github.io/wiki/markdown/selection_task/Task_Submission>`__
-++++++++++++++++++++++++++++++++++++++++++++
-
-`Google Form link <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. Note::
-   Even if you are not able to complete entire the task you
-   are requested to make submission of the work that you have done
-   anyway. Submit your task here `Google Form link <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
+   ./cad_sel.rst
+   ./submissions.rst

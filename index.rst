@@ -25,7 +25,6 @@ Contents:
 
    markdown/selectiontask24/selection_task24.rst
 
-
 .. toctree::
    :maxdepth: 2
 
