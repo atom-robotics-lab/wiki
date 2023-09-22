@@ -23,6 +23,15 @@ become a member of the **A.T.O.M** society.
 
 ---------------------------------------------
 
+Hints / Reference 
+-----------------
+.. raw:: html
+
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Ha6Ph8siaNc?si=gpTC5cUOt2XAEKaa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
+
+---------------------------------------------
+
+
 Task 1
 ------
 
