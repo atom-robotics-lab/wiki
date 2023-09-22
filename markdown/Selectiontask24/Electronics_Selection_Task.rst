@@ -23,7 +23,7 @@ points will be awarded after evaluating your submissions. Therefore, ensure you 
 
 
 Level 0 - Getting Started
--------------------------
+--------------------------
 
 Level 0 serves as the foundation and includes tasks such as:
 
@@ -39,8 +39,7 @@ Level 0 serves as the foundation and includes tasks such as:
 
 
 Level 1 - Advanced Challenges
-------------------------------
-
+-----------------------------
 Level 1 elevates the complexity with more intricate problems and higher point allocations. Stay tuned for the list of tasks!
 
 Task Description: 
@@ -49,9 +48,12 @@ Task Description:
 
 Expected Output
 ---------------
+`video link <https://www.youtube.com/watch?v=iGsrljodarg>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
-    <center><iframe width="560" height="315" src="https://www.youtube.com/watch?v=iGsrljodarg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+
+   <center><iframe width="560" height="315" src="https://www.youtube.com/watch?v=iGsrljodarg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
 2. Analyze the provided code and submit the output as demonstrated in the video.                                 5 pts
@@ -59,12 +61,14 @@ Expected Output
 
 Sample Code Snippets
 --------------------
-.. _google-drive-link: https://drive.google.com/file/d/1ceXvCn3g2x0-FCjp3gmtyL73ffSguHz-/view?usp=sharing
+
+`Code link <https://drive.google.com/file/d/1ceXvCn3g2x0-FCjp3gmtyL73ffSguHz-/view?usp=sharing>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Video Reference
 ----------------
 .. raw:: html
-    <center><iframe width="560" height="315" src="https://youtube.com/watch?v=xbvqrmQqz08?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+.. figure:: https://youtube.com/embed/watch?v=xbvqrmQqz08?feature=share
 
 Level 2 - Expert Territory
 --------------------------

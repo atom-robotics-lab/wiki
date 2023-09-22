@@ -29,6 +29,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   markdown/Selectiontask24/Electronics_Selection_Task.rst
+.. toctree::
+   :maxdepth: 2
+
    markdown/archives/previous_tasks.rst
 
 .. toctree::
