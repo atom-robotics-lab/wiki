@@ -33,7 +33,7 @@ Optional Submissions
 
    .. Seealso:: Last date for submission is **16th of October**
 
-`Google Form for Task submission <https://forms.gle/MpB8P4WSqZW9TUXT9>`__
+`Google Form for Task submission <https://forms.gle/o8mdDZ4YfW4SN9ui7>`__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Task 2
@@ -58,8 +58,6 @@ Task 2
 
 .. _google-form-for-task-submission-1:
 
-`Google Form for Task progress <https://forms.gle/o8mdDZ4YfW4SN9ui7>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Google Form for Task submission <https://forms.gle/o8mdDZ4YfW4SN9ui7>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
