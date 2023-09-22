@@ -26,5 +26,6 @@ There are currently two types of selection tasks which are:
    :maxdepth: 4
 
    ./ROS_selection_task24.rst
+   ./Electronics_selection.rst
    ./cad_sel.rst
    ./submissions.rst
