@@ -78,8 +78,9 @@ Description
 
 - You will be judged on the basis of the following criteria:
 
-   **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
 
+   **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
+   
    - The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.
    - Manufacturability of the links and mounts (Preferebly 3d Printable)
    
