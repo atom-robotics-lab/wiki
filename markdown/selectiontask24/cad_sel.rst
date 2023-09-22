@@ -42,9 +42,9 @@ Problem statement
    are recommended to use **Fusion360**.
 
 Once you are done with the Task 1 please submit it by heading over to
-`[Submissions <https://atom-robotics-lab.github.io/wiki/markdown/cad_sel.html#submission-instructions>`__
+`Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/cad_sel.html#submission-instructions>`__
 
-.. Note:: Head to `Task 2 <https://atom-robotics-lab.github.io/wiki/markdown/cad_sel.html#task-2>`__ once you are done with
+.. Note:: Head to `Task 2 <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/cad_sel.html#task-2>`__ once you are done with
    task1.
 
 Expected Output
@@ -78,6 +78,9 @@ Description
 
 - You will be judged on the basis of the following criteria:
 
+   **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
+
+   - The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.
    - Manufacturability of the links and mounts (Preferebly 3d Printable)
    
    - Adhering to the giving details and guidelines.
@@ -142,8 +145,8 @@ Optional Submissions
 
    .. Seealso:: Last date for submission is **16th of October**
 
-`Google Form for Task submission <https://forms.gle/MpB8P4WSqZW9TUXT9>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`Google Form for Task submission <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Task 2
 ------
