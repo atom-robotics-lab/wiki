@@ -48,14 +48,14 @@ Hints
 -  You can refer `POSE <https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Pose.html>`__ to learn more about pose function.
 
 -  You can refer `TWIST <https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Twist.html>`__ to learn more about twist function.
- 
+
 -  Use linear velocity and angular velocity to get this done.
 
 -  Keep tracking the distance travelled so as to know when to stop. You
    can refer to Overview of rospy for more hint
 
 Sample Code Snippet
-*******************
+-----------------------
 
 **Question:** Write a python code to move ROS's turtlesim bot on a straight path 
 while bot's distance is less than 6.
@@ -79,9 +79,9 @@ while bot's distance is less than 6.
       rospy.loginfo("Robot X = %f: Robot Y=%f\n",pose.x,pose.y)
       my_X = pose.x
       my_Y = pose.y
-              
+            
    def move_turtle(lin_vel):  
-        
+      
       global my_X
       rospy.init_node('move_turtle', anonymous=True)
       pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
@@ -104,7 +104,7 @@ while bot's distance is less than 6.
          if(x_dist < my_X ):
             rospy.loginfo("Turtle Reached destination")
             rospy.logwarn("Stopping Turtle")
-                 
+               
             break
    
          pub.publish(vel)
@@ -113,7 +113,7 @@ while bot's distance is less than 6.
    move_turtle(2.0)
 
 Output video
-*************
+-----------------------
 
 .. raw:: html
 

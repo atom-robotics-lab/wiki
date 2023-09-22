@@ -3,7 +3,7 @@ Code Explanation
 
 The main nodes participating in this project are explained in this section of the wiki.
 
-.. figure:: MRDFD.png
+MRDFD.png
 
    MR Robot DFD
    
