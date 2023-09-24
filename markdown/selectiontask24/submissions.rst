@@ -3,6 +3,10 @@ Submission Instructions
 
 For Submissions of your work please refer to the following instructions
 
+.. Warning::
+   The **Deadline** for all the Tasks is: **16th October 2023**
+
+
 CAD Task
 --------
 
@@ -44,11 +48,6 @@ TASK 1
       and accessible by anyone.**
 
 
-   .. Seealso:: Last date for submission is **16th of October**
-
-`Google Form for Task submission <https://forms.gle/o8mdDZ4YfW4SN9ui7>`__
-
-
 Task 2
 ^^^^^^^
 
@@ -67,20 +66,10 @@ Task 2
       sure to give viewing acess while creating the shareable link for
       the google drive.
 
-.. Seealso:: Last date for submission is **16th October, 2023**
 
-.. _google-form-for-task-submission-1:
-
-
-`Google Form for Task submission <https://forms.gle/o8mdDZ4YfW4SN9ui7>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ROS Task
 --------
-
-.. Warning::
-   The **Deadline** for all the Tasks is: **11th December, 2022** Head to the
-   `Problem statement <https://atom-robotics-lab.github.io/wiki/markdown/selection_task/Selection_Tasks>`__ section to begin with the tasks.
 
 
 For Submissions of your work please refer to the following instructions
@@ -110,11 +99,9 @@ For Submissions of your work please refer to the following instructions
       It is optional but, this would help us see your skills. You have to
       add it to drive and share the drive link in the submission form.
    
-   .. Warning:: 
+   .. Note:: 
       **Make sure to make the links accessible to everyone before sharing it.**
 
-
-`Submit task here <https://forms.gle/NiFdXSd5YuHHuh3S6>`__
 
 
 .. Note::
@@ -132,6 +119,12 @@ ELECTRONICS TASK
 - you may still submit it. Points will be allocated accordingly.
 
 
+`Google Form for Task submission <https://forms.gle/o8mdDZ4YfW4SN9ui7>`__
+-----------------
+
+.. Note:: This google form is common for all the tasks.
+   You can make multiple submissions if you are performing more than 1 selection task.
+
 
 Interview
 ---------
@@ -142,7 +135,7 @@ Interview
    - We would be asking about some general question related to computers and your thought process & stuff related to the task that you have performed.
 
 
-.. Note:: Make sure you submit both of your task before the 27th of
-   August. Both the submissions have to be done separately. Even if you
+.. Note:: Make sure you submit both of your task before the deadline. 
+   Both the submissions have to be done separately. Even if you
    are not able to complete entire the task you are requested to make
    the submission of the work that you have done anyway.
