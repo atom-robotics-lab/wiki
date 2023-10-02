@@ -38,7 +38,7 @@ There are currently two types of selection tasks which are:
    CAD Selection Task <./CAD_Selection_Task.rst>
 
 `Task submission <https://atom-robotics-lab.github.io/wiki/markdown/selection_task/Task_Submission>`__
-++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. Note::
    Even if you are not able to complete entire the task you

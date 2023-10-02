@@ -61,6 +61,12 @@ Expected Output
 
 .. raw:: html
 
+   <center>
+
+.. raw:: html
+
+   </center>
+
 .. figure:: tas1.png
 
 
@@ -114,6 +120,13 @@ Expected Output
 
 
 .. raw:: html
+
+   <center>
+
+.. raw:: html
+
+   </center>
+
  
 .. figure:: mechanism.png
 
