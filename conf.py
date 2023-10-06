@@ -9,7 +9,7 @@
 project = 'A.T.O.M\'s Wiki'
 copyright = '2022, A.T.O.M'
 author = 'A.T.O.M'
-release = '0.3.1'
+release = '0.3.2'
 html_logo = 'images/logo_bg.jpg'
 
 # -- General configuration ---------------------------------------------------

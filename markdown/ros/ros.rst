@@ -17,6 +17,7 @@ package management.
    :hidden:
    
    ./installation.rst
+   ./installation_on_mac(under_dev)
    ./catkin_ws.rst
    ./package/package.rst
    ./node/node.rst
