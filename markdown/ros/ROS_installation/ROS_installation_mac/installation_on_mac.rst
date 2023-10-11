@@ -94,7 +94,7 @@ If you've found what you were looking for then run this command and replace the 
 
    conda install ros-noetic-"package name here"
 
-notes 
+Notes 
 ~~~~~
 1. The ROS commands only work while you are in the ROS environment. 
 2. The packages available are a bit limited.
