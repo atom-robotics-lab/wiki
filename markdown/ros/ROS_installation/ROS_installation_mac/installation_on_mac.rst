@@ -14,7 +14,7 @@ ROS Noetic Installation
 setup your ROS environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Make an environment on your computer names ROS
+Make an environment on your computer named ROS
 you can use any name but since we are makeing it to run ros we'll name it  ROS
 
 .. code:: shell
@@ -46,7 +46,7 @@ you can use any name but since we are makeing it to run ros we'll name it  ROS
 With this our initial setup is done
 
 Installation 
-~~~~~~~~~~~~
+------------
 
 1. Install ros-noetic into the environment 
 
@@ -62,5 +62,18 @@ Installation
 
 With this we are all set
 
+Getting into the ROS environment
+--------------------------------
+To get into the ROS environment you'll need to run the commands
+.. code:: shell
+
+   conda activate ROS
+
+or 
+.. code:: shell
+
+   conda activate ros
+
 Note- All the ROS commands only work while you are in the ROS environment. 
+      and the ros we just installed is the full desktop version
  
