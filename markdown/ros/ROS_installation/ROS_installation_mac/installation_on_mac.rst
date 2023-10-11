@@ -65,11 +65,13 @@ With this we are all set
 Getting into the ROS environment
 --------------------------------
 To get into the ROS environment you'll need to run the commands
+
 .. code:: shell
 
    conda activate ROS
 
 or 
+
 .. code:: shell
 
    conda activate ros
