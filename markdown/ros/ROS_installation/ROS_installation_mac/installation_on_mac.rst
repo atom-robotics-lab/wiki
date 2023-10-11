@@ -27,7 +27,7 @@ you can use any name but since we are makeing it to run ros we'll name it  ROS
 
    conda activate ROS
 
-- Now we'll add channels to our environment that is conda-forge and robostack
+- Now we'll add channels to our environment that is conda-forge and robostack, we are adding conda forge for the packag 
 
 .. code:: shell
 
@@ -60,22 +60,42 @@ Installation
 
     conda install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools
 
-With this we are all set
+With this we are all set.
 
-Getting into the ROS environment
---------------------------------
-To get into the ROS environment you'll need to run the commands
+Testing the installation
+------------------------
+
+After installation you are able to run rviz and other ros tools.
+
+In the conda environment activation is the ROS activation included. There is no need to add a source command in the ~/.bashrc. But there is a catch, that you'll have to run "conda activate ROS" command eaach time you want to open a new terminal.
+
+First terminal
 
 .. code:: shell
 
    conda activate ROS
+   roscore
 
-or 
+Second terminal
 
 .. code:: shell
 
-   conda activate ros
+   conda activate ROS
+   rviz
 
-Note- All the ROS commands only work while you are in the ROS environment. 
-      and the ros we just installed is the full desktop version
+How to installing packages for ROS on mac
+-----------------------------------------
+
+Though we have installed the ros-noetic-desktop-full --version which comes with common built in packages like rviz, turtlesim and many more. There might be something specific you need so you'll need to search up the packag you're looking for `here <https://robostack.github.io/noetic.html>`__
+
+If you've found what you were looking for then run this command and replace the package name with the one you want to install.
+
+.. code:: shell
+
+   conda install ros-noetic-"package name here"
+
+notes 
+~~~~~
+1. The ROS commands only work while you are in the ROS environment. 
+2. The packages available are a bit limited.
  
