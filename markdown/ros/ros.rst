@@ -16,8 +16,7 @@ package management.
    :maxdepth: 4
    :hidden:
    
-   ./installation.rst
-   ./installation_on_mac(under_dev)
+   ./ROS_installation/ROS_installation.rst
    ./catkin_ws.rst
    ./package/package.rst
    ./node/node.rst
