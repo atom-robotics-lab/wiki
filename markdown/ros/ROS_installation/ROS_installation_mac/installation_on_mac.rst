@@ -6,7 +6,7 @@ ROS installation on mac
 -  There are tons of resources available on the Internet to get this
    done.
 -  You can visit the anaconda website from
-   `here <https://docs.anaconda.com/free/anaconda/install/mac-os.html`__.
+   `here <https://docs.anaconda.com/free/anaconda/install/mac-os.html>`__.
 
 ROS Noetic Installation
 -----------------------
