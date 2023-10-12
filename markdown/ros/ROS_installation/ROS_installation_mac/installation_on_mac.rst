@@ -50,7 +50,7 @@ Installation
 
     conda install ros-noetic-desktop-full
 
-2. Now we'll install compilers for our ros
+#. Now we'll install compilers for our ``ros``
 
 .. code:: shell
 
