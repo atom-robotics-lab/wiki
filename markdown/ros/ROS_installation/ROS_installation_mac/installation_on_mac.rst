@@ -8,11 +8,8 @@ ROS installation on mac
 -  You can visit the anaconda website from
    `here <https://docs.anaconda.com/free/anaconda/install/mac-os.html>`__.
 
-ROS Noetic Installation
+Setting up ROS environment
 -----------------------
-
-setup your ROS environment
-~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Make an environment on your computer named ROS
 you can use any name but since we are makeing it to run ros we'll name it  ROS
