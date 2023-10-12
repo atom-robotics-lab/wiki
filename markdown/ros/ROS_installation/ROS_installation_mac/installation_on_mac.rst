@@ -5,8 +5,7 @@ ROS installation on mac
    make sure to install it before proceeding.
 -  There are tons of resources available on the Internet to get this
    done.
--  You can visit the anaconda website from
-   `here <https://docs.anaconda.com/free/anaconda/install/mac-os.html>`__.
+-  You can visit the `anaconda website <https://docs.anaconda.com/free/anaconda/install/mac-os.html>`__ for more details on anaconda installation.
 
 Setting up ROS environment
 -----------------------
