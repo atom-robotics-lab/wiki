@@ -1,7 +1,7 @@
 ROS installation on mac
 ================
 
--  This Document assumes that the reader has installed anaconda3 
+-  This Document assumes that the reader has installed ``anaconda3``
    make sure to install it before proceeding.
 -  There are tons of resources available on the Internet to get this
    done.
