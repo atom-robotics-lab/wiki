@@ -23,7 +23,7 @@ you can use any name but since we are makeing it to run ros we'll name it  ``ROS
 
    conda activate ROS
 
-- Now we'll add channels to our environment that is conda-forge and robostack, we are adding conda forge for the packag 
+- Now we'll add channels to our environment that is ``conda-forge`` and ``robostack``, we are adding conda forge for the package 
 
 .. code:: shell
 
