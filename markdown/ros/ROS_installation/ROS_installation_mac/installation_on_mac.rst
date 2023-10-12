@@ -10,8 +10,8 @@ ROS installation on mac
 Setting up ROS environment
 -----------------------
 
-Make an environment on your computer named ROS
-you can use any name but since we are makeing it to run ros we'll name it  ROS
+Make an environment on your computer named ``ROS``
+you can use any name but since we are makeing it to run ros we'll name it  ``ROS``
 
 .. code:: shell
 
