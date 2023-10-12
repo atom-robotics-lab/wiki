@@ -17,7 +17,7 @@ you can use any name but since we are makeing it to run ros we'll name it  ``ROS
 
    conda create -n ROS python=3.9
 
-- Now enter your ROS environment
+- Now enter your ``ROS`` environment
 
 .. code:: shell
 
