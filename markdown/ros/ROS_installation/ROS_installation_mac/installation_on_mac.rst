@@ -33,7 +33,7 @@ you can use any name but since we are makeing it to run ros we'll name it  ``ROS
 
    conda config --add channels robostack
 
-- Set the conda channel priority to strict
+- Set the ``conda`` channel priority to **strict**
 
 .. code:: shell
 
