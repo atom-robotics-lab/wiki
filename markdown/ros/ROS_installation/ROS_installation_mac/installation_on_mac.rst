@@ -63,7 +63,7 @@ Testing the installation
 
 After installation you are able to run rviz and other ros tools.
 
-In the conda environment activation is the ROS activation included. There is no need to add a source command in the ~/.bashrc. But there is a catch, that you'll have to run "conda activate ROS" command eaach time you want to open a new terminal.
+In the ``conda`` environment activation is the ``ROS`` activation included. There is no need to add a source command in the ``~/.bashrc``. But there is a catch, that you'll have to run ``conda activate ROS`` command in every new instance of terminal.
 
 First terminal
 
