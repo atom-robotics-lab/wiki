@@ -79,7 +79,7 @@ Second terminal
    conda activate ROS
    rviz
 
-How to installing packages for ROS on mac
+How to install ``ROS`` packages on mac
 -----------------------------------------
 
 Though we have installed the ros-noetic-desktop-full --version which comes with common built in packages like rviz, turtlesim and many more. There might be something specific you need so you'll need to search up the packag you're looking for `here <https://robostack.github.io/noetic.html>`__
