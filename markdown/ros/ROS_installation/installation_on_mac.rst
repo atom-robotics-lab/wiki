@@ -44,7 +44,7 @@ With this our initial setup is done
 Installation 
 ------------
 
-1. Install ros-noetic into the environment 
+#. Install ros-noetic into the environment 
 
 .. code:: shell
 
