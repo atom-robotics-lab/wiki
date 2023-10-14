@@ -44,13 +44,13 @@ With this our initial setup is done
 Installation 
 ------------
 
-#. Install ros-noetic into the environment 
+1. Install ros-noetic into the environment 
 
 .. code:: shell
 
     conda install ros-noetic-desktop-full
 
-#. Now we'll install compilers for our ``ros``
+2. Now we'll install compilers for our ``ros``
 
 .. code:: shell
 
