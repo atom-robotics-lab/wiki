@@ -87,8 +87,8 @@ For Submissions of your work please refer to the following instructions
    -  Once your script is complete, add comments to your code to make it
       more readable.
    -  Create a copy of your script and rename it as <task_your_name> . 
-      For example if you worked on Computer vision task on a python file 
-      and your name is 'Alex', then rename your script to cvtask_alex.py
+      For example if you worked on ROS task on a python file 
+      and your name is 'Alex', then rename your script to rostask_alex.py
 
 -  **Submissions**
 
