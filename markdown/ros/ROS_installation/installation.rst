@@ -50,7 +50,7 @@ Installation
 Configuration steps
 -------------------
 
-1. Adding environment variables: To Automatically add ROS environment
+#. Adding environment variables: To Automatically add ROS environment
    variables to your bash session every time a new shell (terminal) is
    launched, enter the following commands (this step is similar as
    adding environmental variable in windows):
@@ -60,7 +60,7 @@ Configuration steps
    echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
    source ~/.bashrc
 
-2. Initialize rosdep: Before you can use many ROS tools, you will need
+#. Initialize rosdep: Before you can use many ROS tools, you will need
    to initialize rosdep. rosdep enables you to easily install system
    dependencies for source you want to compile and is required to run
    some core components in ROS.
