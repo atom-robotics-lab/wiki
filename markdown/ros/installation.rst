@@ -7,7 +7,7 @@ ROS installation
 -  There are tons of resources available on the Internet to get this
    done.
 -  You can download Ubuntu 20.04 ISO ﬁle from
-   `here <https://ubuntu.com/download/desktop>`__.
+   `here <https://releases.ubuntu.com/focal/>`__.
 
 ROS Noetic Installation
 -----------------------
