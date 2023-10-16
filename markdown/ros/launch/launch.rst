@@ -34,7 +34,7 @@ Usage:
    roslaunch <package> file.launch
 
 -   is nothing but the package name which you have created using
-   catkin_create_pkg command or used any other package
+    catkin_create_pkg command or used any other package
 
 Steps to create a launch file
 -----------------------------

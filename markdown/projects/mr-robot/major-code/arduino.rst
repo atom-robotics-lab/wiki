@@ -73,6 +73,7 @@ This code snippet is used to set up the various settings needed for the robot to
 - The ``attachInterrupt`` functions attach two interrupt service routines (``updateEncoder_L`` and ``updateEncoder_R``) to the encoder pins for the left and right wheels. These routines are called whenever the state of the encoder signals changes (i.e., when the wheel rotates). They are used to update the encoder counts and calculate the speed of the wheels.
 
 .. code:: C
+    
     void publish_encoder_data()
     {
       encoder_msg_left.data = encoderValue_L;

@@ -17,6 +17,7 @@ ROS Topics
    data of various data-types.
 
  *Consider this analogy*
+ 
 ----------------------
 
 -  Let’s say you are subscribed to a newspaper called The Melodic

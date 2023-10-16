@@ -15,7 +15,7 @@ Virtualenvwrapper is a set of extensions and wrappers used for creating, managin
 the terminal. Virtual environments are isolated Python installations that help in keeping dependencies required by different 
 projects seperated. They also help in keeping a track of the dependencies or packages required by a project during deployement.
 
-You can read more about it `here <https://pypi.org/project/virtualenvwrapper/>`_
+You can read more about it `here(1) <https://pypi.org/project/virtualenvwrapper/>`_
 
 OpenCV
 =======
@@ -24,7 +24,7 @@ OpenCV (Open Source Computer Vision Library) is an open source Computer Vision a
 developed in C++. It is one of the most commonly used Computer Vision tool nowadays, with client libraries available in
 popular languages like Python, Java, MATLAB etc.
 
-You can learn more about it `here <https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html>`_
+You can learn more about it `here(2) <https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html>`_
 
 
 cv_bridge
@@ -32,7 +32,7 @@ cv_bridge
 
 The cv_bridge packages contains the :python:`CvBridge` class which provides an interface between ROS and OpenCV. It helps in conversion from ROS Image messages
 to OpenCV images and vice-versa.
-You can learn more about it `here <http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython>`_
+You can learn more about it `here(3) <http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython>`_
 
 Now let's go over the instructions to install these tools one-by-one :
 
@@ -103,7 +103,7 @@ load the new environment variables :
    source ~/.bashrc
 
 Creating a New Virtual Environment
------------------------
+-----------------------------------
 
 Now that we have virtualenvwrapper locked and loaded, let's create a new virtual environment.
 
