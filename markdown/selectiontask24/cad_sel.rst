@@ -36,7 +36,7 @@ Task 1
 ------
 
 Problem statement
------------------------
+^^^^^^^^^^^^^^^^^^
 -  The objective of the task is to make a 3D model of a part using the
    given engineering drawing.
 
@@ -57,7 +57,7 @@ Once you are done with the Task 1 please submit it by heading over to
    task1.
 
 Expected Output
------------------------
+^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
@@ -75,14 +75,14 @@ Task 2
    </center>
 
 Problem statement
------------------------
+^^^^^^^^^^^^^^^^^^^
 
 -  The objective of the task is to create or draw an eg/cad drawing for the following displayed below.
 
 -  To acheive this task you are supposed to create a project in autocad and and make the desired output.
 
 Description
------------------------
+^^^^^^^^^^^^^
 - The slider-crank mechanism is indeed a fundamental mechanical linkage used in various machines and mechanisms. It consists of four main components: a crank, a slider, a connecting rod, and a pivot joint. 
 
 - You will be judged on the basis of the following criteria:
@@ -105,7 +105,7 @@ Description
    The **Deadline** for completing the task: **16th October, 2023**
 
 Expected Output
------------------------
+^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/bPP_lZJG9qI?si=7Cp8L7nPP39KoWYW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
@@ -126,7 +126,7 @@ Submission Instructions
 For Submissions of your work please refer to the following instructions
 
 Task 1
-------
+^^^^^^^^
 
 -  Video
 
@@ -159,7 +159,7 @@ Optional Submissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Task 2
-------
+^^^^^^^
 
 -  Video
 
