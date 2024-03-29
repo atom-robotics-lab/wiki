@@ -120,7 +120,7 @@ ELECTRONICS TASK
 
 
 `Google Form for Task submission <https://forms.gle/o8mdDZ4YfW4SN9ui7>`__
------------------
+----------------------------------------------------------------------------
 
 .. Note:: This google form is common for all the tasks.
    You can make multiple submissions if you are performing more than 1 selection task.

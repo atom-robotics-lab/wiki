@@ -164,7 +164,7 @@ Task 2
 
 .. Seealso:: Last date for submission is **27th of August**
 
-.. _google-form-for-task-submission-1:
+.. _google-form-for-task-submission:
 
 `Google Form for Task submission <https://forms.gle/f4WS21dYYNHkuT1M8>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

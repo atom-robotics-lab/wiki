@@ -36,6 +36,7 @@ OR
    roscd pkg_ros_basics
 
 .. NOTE:: roscd will work only if you have sourced setup.bash of your
+
 catkin workspace.
 
 -  Create a scripts folder for your Python scripts and navigate into the
@@ -186,6 +187,7 @@ Command: rosnode
    information about ROS Nodes.
 
 .. Note:: For quick information about any command, be that outside of ROS,
+   
 simply type the command along with suﬃx –h or -help . This is a widely
 used concept among other Linux Command: rosrun commands for quick
 references. Here’s an example for rosnode –h command

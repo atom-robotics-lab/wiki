@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arduino &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
-      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+
+  
     <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
@@ -183,6 +185,22 @@
 <li><p>The <code class="docutils literal notranslate"><span class="pre">lastStateL</span></code> and <code class="docutils literal notranslate"><span class="pre">lastStateR</span></code> variables are initialized with the <strong>initial state</strong> of the encoder signals for the left and right wheels, respectively.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">attachInterrupt</span></code> functions attach two interrupt service routines (<code class="docutils literal notranslate"><span class="pre">updateEncoder_L</span></code> and <code class="docutils literal notranslate"><span class="pre">updateEncoder_R</span></code>) to the encoder pins for the left and right wheels. These routines are called whenever the state of the encoder signals changes (i.e., when the wheel rotates). They are used to update the encoder counts and calculate the speed of the wheels.</p></li>
 </ul>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">publish_encoder_data</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">encoder_msg_left</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encoderValue_L</span><span class="p">;</span>
+<span class="w">  </span><span class="n">left_enc_pub</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder_msg_left</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">encoder_msg_right</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encoderValue_R</span><span class="p">;</span>
+<span class="w">  </span><span class="n">right_enc_pub</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder_msg_right</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">encoder_msg_left_error</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rpmL_error</span><span class="p">;</span>
+<span class="w">  </span><span class="n">left_enc_error</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder_msg_left_error</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">encoder_msg_right_error</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rpmR_error</span><span class="p">;</span>
+<span class="w">  </span><span class="n">right_enc_error</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder_msg_right_error</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>The function <code class="docutils literal notranslate"><span class="pre">publish_encoder_data()</span></code> is used to publish the encoder values and any associated errors to their respective ROS topics.</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">updateEncoder_L</span><span class="p">(){</span>
 
