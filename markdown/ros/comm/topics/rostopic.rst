@@ -13,8 +13,8 @@ rostopic command
 
 for getting the rostopic command help.
 
--  .. rubric:: list
-      :name: list
+-  .. rubric:: rostopic-list
+      :name: rostopic-list
 
 -  rostopic list returns a list of all topics currently subscribed to
    and published.
@@ -99,8 +99,8 @@ rosmsg
 -  ``geometry_msgs/Vector3 angular`` : While this header describes,
    angular velocities of all 3 axes.
 
--  .. rubric:: info
-      :name: info
+-  .. rubric:: rostopic-info
+      :name: rostopic-info
 
 -  This command provides a little more detail about topics then type
    argument.
