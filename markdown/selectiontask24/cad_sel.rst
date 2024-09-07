@@ -89,8 +89,7 @@ Problem statement
 
 Description
 -----------------------
-- The slider-crank mechanism is indeed a fundamental mechanical linkage used in various machines and mechanisms. It consists of four main components: a crank, a slider, a connecting rod, and a pivot joint. 
-
+- The 3-DOF arm with simple joints is a versatile mechanical system featuring three degrees of freedom, allowing for a wide range of motion. This design focuses on fundamental movement capabilities, simplifying control and design while offering flexibility for various introductory robotic applications.
 - You will be judged on the basis of the following criteria:
 
 
@@ -108,7 +107,7 @@ Description
 
 
 .. Warning::
-   The **Deadline** for completing the task: **16th October, 2023**
+   The **Deadline** for completing the task: **9th October, 2024**
 
 Expected Output
 -----------------------
@@ -166,7 +165,7 @@ Optional Submissions
       and accessible by anyone.**
 
 
-   .. Seealso:: Last date for submission is **16th of October**
+   .. Seealso:: Last date for submission is **9th of October**
 
 `Google Form for Task submission <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -189,7 +188,7 @@ Task 2
       sure to give viewing acess while creating the shareable link for
       the google drive.
 
-.. Seealso:: Last date for submission is **16th of October**
+.. Seealso:: Last date for submission is **9th of October**
 
 .. _google-form-for-task-submission-1:
 
@@ -204,7 +203,7 @@ Interview
    - We would be asking about some general question related to computers and your thought process & stuff related to the task that you have performed.
 
 
-.. Note:: Make sure you submit both of your task before the 16th of
+.. Note:: Make sure you submit both of your task before the 9th of
    October. Both the submissions have to be done separately. Even if you
    are not able to complete entire the task you are requested to make
    the submission of the work that you have done anyway.

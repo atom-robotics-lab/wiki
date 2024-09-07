@@ -1,4 +1,4 @@
-ROS Selection Task 2023-2024
+ROS Selection Task 2024-2025
 ============================
 
 
@@ -6,7 +6,7 @@ Problem statement
 -----------------
 
 -  The objective of the task is to move the turtle inside the turtlesim 
-   window in a vertical Z shape 
+   window in a vertical Candy shape 
 
 -  To acheive this task you are supposed to create a node named
    /node_turtle_move within a python script,
@@ -25,10 +25,10 @@ Problem statement
 
 .. Note:: All the resources to complete the said task are provided in
    the ROS section of ATOM WIKI. So make sure to check it out if you are
-   new to ROS.
+   new to ROS2.
 
 .. Warning::
-   The **Deadline** for completing the task: **16th October, 2023**
+   The **Deadline** for completing the task: **9th October, 2024**
 
 Expected Output
 ---------------
@@ -38,12 +38,12 @@ Expected Output
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ja-QRX4gu6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
-.. Note:: THE Z SHOULD BE VERTICAL .
+.. Note:: THE Candy SHOULD BE VERTICAL .
 
 Hints
 -----
 
--  The turtle needs to move in a vertical ‘Z’ shape .
+-  The turtle needs to move in a vertical Candy shape .
 
 -  You can refer `POSE <https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Pose.html>`__ to learn more about pose function.
 
@@ -144,19 +144,15 @@ Follow the instructions given below to get started with the task.
 
 .. code:: shell
 
-   cd ~/catkin_ws
-   catkin_make
-   source devel/setup.bash
-   chmod +x ~/catkin_ws/src/selection_task/scripts/node_turtle_move.py
+   cd ~/turtle_ws
+   colcon_build
+   source install/setup.bash
 
--  Before executing make sure that roscore is running along with
-   turtlesim_node. You can either run them in separate terminals or
+-  You can either run them in separate terminals or
    simply create a selection_task.launch file inside the
-   ``~/catkin_ws/src/selection_task/launch/`` folder. Launch file can
+   ``~/turtle_ws/src/selection_task/launch/`` folder. Launch file can
    run multiple nodes unlike a python/cpp script. Run the launch file,
    enter, This should run three processes in parallel.
-
--  roscore
 
 -  turtlesim_node
 
@@ -165,6 +161,6 @@ Follow the instructions given below to get started with the task.
 .. seealso::
    Please refer to the tutorials and resouces given in the wiki or visit
    the official `ROSWIKI <http://wiki.ros.org/Documentation>`__ if you
-   need help with anything regarding ROS.
+   need help with anything regarding ROS2.
 
  
