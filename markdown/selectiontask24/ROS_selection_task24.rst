@@ -23,6 +23,8 @@ Problem statement
    we think a week time is enough so you guys can give your exams freely
    and manage your time in order to complete the task
 
+.. figure:: ros.jpg   
+
 .. Note:: All the resources to complete the said task are provided in
    the ROS section of ATOM WIKI. So make sure to check it out if you are
    new to ROS2.
