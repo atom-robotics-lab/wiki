@@ -67,7 +67,7 @@ Expected Output
 
    </center>
 
-.. figure:: tas1.png
+.. figure:: Task1.png
 
 
 Task 2
@@ -127,7 +127,7 @@ Expected Output
    </center>
 
  
-.. figure:: mechanism.png
+.. figure:: task2.png
 
 ..  Note:: THE DRAWING SHOULD BE DONE ACCURATELY AND AS EXPECTED .
    
