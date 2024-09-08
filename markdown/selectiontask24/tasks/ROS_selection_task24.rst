@@ -1,4 +1,4 @@
-ROS Selection Task 2023-2024
+ROS Selection Task 2024-2025
 ============================
 
 
@@ -28,7 +28,7 @@ Problem statement
    new to ROS.
 
 .. Warning::
-   The **Deadline** for completing the task: **16th October, 2023**
+   The **Deadline** for completing the task: **15th October, 2024**
 
 Expected Output
 ---------------

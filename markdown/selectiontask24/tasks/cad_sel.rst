@@ -12,7 +12,7 @@ become a member of the **A.T.O.M** society.
    done.
 
 -  You will be required to finish **Two** tasks in the alloted time
-   frame. Both of them are supposed to be done in any 3D modeling
+   frame. Both of them are supposed to be done in any 3d modeling
    software preferably **Fusion360**.
 
 -  If there are any 3D Designs or any other previous works (even 2d
@@ -21,19 +21,21 @@ become a member of the **A.T.O.M** society.
    but this would help us further see your creativity and skills.
 
 
+---------------------------------------------
 
-Hints / Reference
+Hints / Reference 
 -----------------
 .. raw:: html
 
-
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Ha6Ph8siaNc?si=gpTC5cUOt2XAEKaa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
 
+---------------------------------------------
 
+.. Warning::
+   The **Deadline** for completing all the tasks is **15th October, 2024**
 
-
-Task 1
-------
+Task 1 : 5pts
+-------------
 
 Problem statement
 ^^^^^^^^^^^^^^^^^
@@ -50,11 +52,9 @@ Problem statement
 .. Note:: You may use any software that you are familiar with but you
    are recommended to use **Fusion360**.
 
-Once you are done with the Task 1 please submit it by heading over to
-`Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/cad_sel.html#submission-instructions>`__
+.. Once you are done with the Task 1 please submit it by heading over to
+.. `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/cad_sel.html#submission-instructions>`__
 
-.. Note:: Head to `Task 2 <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/cad_sel.html#task-2>`__ once you are done with
-   task1.
 
 Expected Output
 ^^^^^^^^^^^^^^^
@@ -67,11 +67,29 @@ Expected Output
 
    </center>
 
-.. figure:: tas1.png
+.. figure:: ./tas1.png
 
 
-Task 2
-------
+Submission for Task 1
+^^^^^^^^^^^^^^^^^^^^^
+-  Video
+
+   -  Once you are done with the modelling, you have to record a video
+      of your screen where show the model from different angles in the
+      software you used. Then you have to upload the video on YouTube
+      and share a link to the video in the submission form.
+
+-  Model file
+
+   -  Once your Model is complete, export it as a stl file and rename it
+      as .stl. For example if your name is ‘Alex’, then rename your file
+      as Task1_Alex.stl
+
+
+
+
+Task 2: 8pts
+------------
 .. raw:: html
 
    <center>
@@ -88,27 +106,24 @@ Problem statement
 -  To acheive this task you are supposed to create a project in autocad and and make the desired output.
 
 Description
------------------------
-- The slider-crank mechanism is indeed a fundamental mechanical linkage used in various machines and mechanisms. It consists of four main components: a crank, a slider, a connecting rod, and a pivot joint. 
-
+^^^^^^^^^^^^^^^^^
+- The 3-DOF arm with simple joints is a versatile mechanical system featuring three degrees of freedom, allowing for a wide range of motion. This design focuses on fundamental movement capabilities, simplifying control and design while offering flexibility for various introductory robotic applications.
 - You will be judged on the basis of the following criteria:
 
 
    **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
    
    - The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.
-   - Manufacturability of the links and mounts (Preferebly 3D Printable)
+   - Manufacturability of the links and mounts (Preferebly 3d Printable)
    
    - Adhering to the giving details and guidelines.
    
    - Reusability and esay to modify in future if required.
    
-   - You may use any methods and tools to achieve the task buy make sure to follow proper 3D modeling practices like constraints, joints etc.
+   - You may use any methods and tools to achieve the task buy make sure to follow proper 3d modeling practices like constraints, joints etc.
 
 
 
-.. Warning::
-   The **Deadline** for completing the task: **16th October, 2023**
 
 Expected Output
 ^^^^^^^^^^^^^^^
@@ -128,51 +143,14 @@ Expected Output
    </center>
 
  
-.. figure:: mechanism.png
+.. figure:: task2.png
 
-..  Note:: THE DRAWING SHOULD BE DONE ACCURATELY AND AS EXPECTED .
+..  caution:: THE DRAWING SHOULD BE DONE ACCURATELY AND AS EXPECTED .
    
 
-Submission Instructions
------------------------
 
-For Submissions of your work please refer to the following instructions
-
-Task 1
-------
-
--  Video
-
-   -  Once you are done with the modelling, you have to record a video
-      of your screen where show the model from different angles in the
-      software you used. Then you have to upload the video on YouTube
-      and share a link to the video in the submission form.
-
--  Model file
-
-   -  Once your Model is complete, export it as a stl file and rename it
-      as .stl. For example if your name is ‘Alex’, then rename your file
-      as Task1_Alex.stl
-
-Optional Submissions
-^^^^^^^^^^^^^^^^^^^^
-
--  Previous Works (Optional)
-
-   -  You are welcome to submit any of your previous work related to 3D
-      modeling. It is optional but, this would help us see your
-      creativity and skills. You have to add it to drive and share the
-      drive link in the submission form. **Make sure the link is public
-      and accessible by anyone.**
-
-
-   .. Seealso:: Last date for submission is **16th of October**
-
-`Google Form for Task submission <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Task 2
-------
+Submission for Task 2
+^^^^^^^^^^^^^^^^^^^^^
 
 -  Video
 
@@ -189,12 +167,6 @@ Task 2
       sure to give viewing acess while creating the shareable link for
       the google drive.
 
-.. Seealso:: Last date for submission is **16th of October**
-
-.. _google-form-for-task-submission-1:
-
-`Google Form for Task submission <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Interview
 ---------
 
@@ -204,7 +176,24 @@ Interview
    - We would be asking about some general question related to computers and your thought process & stuff related to the task that you have performed.
 
 
-.. Note:: Make sure you submit both of your task before the 16th of
+.. Note:: Make sure you submit both of your tasks before the 15th of
    October. Both the submissions have to be done separately. Even if you
-   are not able to complete entire the task you are requested to make
-   the submission of the work that you have done anyway.
+   are not able to submit both of the tasks then you are requested to make
+   the submission of the work that you have done till the date anyway.
+
+Additional Submissions (Optional)
+---------------------------------
+
+-  Previous Works 
+
+   -  You are welcome to submit any of your previous work related to 3D
+      modeling. It is optional but, this would help us see your
+      creativity and skills. You have to add it to drive and share the
+      drive link in the submission form. **Make sure the link is public
+      and accessible by anyone.**
+
+
+   .. Seealso:: Last date for additional submissions is **15th of October**.
+
+`Google Form for All Task submission <https://docs.google.com/forms/d/e/1FAIpQLSfRqjmEOKQOZsRVqVBxTsB-w8MFzFunv0gutS7yq3fs-28t8g/formResponse?pli=1>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
