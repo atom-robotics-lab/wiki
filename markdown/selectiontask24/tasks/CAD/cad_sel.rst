@@ -12,7 +12,7 @@ become a member of the **A.T.O.M** society.
    done.
 
 -  You will be required to finish **Two** tasks in the alloted time
-   frame. Both of them are supposed to be done in any 3d modeling
+   frame. Both of them are supposed to be done in any 3D modeling
    software preferably **Fusion360**.
 
 -  If there are any 3D Designs or any other previous works (even 2d
@@ -21,22 +21,22 @@ become a member of the **A.T.O.M** society.
    but this would help us further see your creativity and skills.
 
 
----------------------------------------------
 
-Hints / Reference 
+Hints / Reference
 -----------------
 .. raw:: html
 
+
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Ha6Ph8siaNc?si=gpTC5cUOt2XAEKaa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
 
----------------------------------------------
+
 
 
 Task 1
 ------
 
 Problem statement
------------------------
+^^^^^^^^^^^^^^^^^
 -  The objective of the task is to make a 3D model of a part using the
    given engineering drawing.
 
@@ -57,7 +57,7 @@ Once you are done with the Task 1 please submit it by heading over to
    task1.
 
 Expected Output
------------------------
+^^^^^^^^^^^^^^^
 
 .. raw:: html
 
@@ -71,7 +71,7 @@ Expected Output
 
 
 Task 2
------------------------
+------
 .. raw:: html
 
    <center>
@@ -81,7 +81,7 @@ Task 2
    </center>
 
 Problem statement
------------------------
+^^^^^^^^^^^^^^^^^
 
 -  The objective of the task is to create or draw an eg/cad drawing for the following displayed below.
 
@@ -97,13 +97,13 @@ Description
    **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
    
    - The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.
-   - Manufacturability of the links and mounts (Preferebly 3d Printable)
+   - Manufacturability of the links and mounts (Preferebly 3D Printable)
    
    - Adhering to the giving details and guidelines.
    
    - Reusability and esay to modify in future if required.
    
-   - You may use any methods and tools to achieve the task buy make sure to follow proper 3d modeling practices like constraints, joints etc.
+   - You may use any methods and tools to achieve the task buy make sure to follow proper 3D modeling practices like constraints, joints etc.
 
 
 
@@ -111,7 +111,7 @@ Description
    The **Deadline** for completing the task: **16th October, 2023**
 
 Expected Output
------------------------
+^^^^^^^^^^^^^^^
 .. raw:: html
 
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/bPP_lZJG9qI?si=7Cp8L7nPP39KoWYW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>

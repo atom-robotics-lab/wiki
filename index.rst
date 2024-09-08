@@ -44,8 +44,12 @@ Contents:
 
    Socials <https://linktr.ee/a.t.o.m_robotics_lab>
 
-
-
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+   
+   CAD Selection Task <markdown/selectiontask24/cad_sel.rst>
+   Submission Task <markdown/selectiontask24/submissions.rst>
 
 Indices and tables
 ==================
