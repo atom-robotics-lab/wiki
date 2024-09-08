@@ -1,4 +1,4 @@
-Electronics Selection Task 2023-2024
+Electronics Selection Task 2024-2025
 ====================================
 This year, we've introduced a three-tiered Electronic Selection Task. Here's a brief summary:
 
@@ -27,24 +27,22 @@ Level 0 - Getting Started
 
 Level 0 serves as the foundation and includes tasks such as:
 
-1. Blinking an LED with Arduino                                                                             1 point
-2. Scrolling text on an OLED display                                                                        1 point
-3. Playing a tune on a buzzer                                                                               1 point
-4. Adjusting LED intensity using a potentiometer                                                            1 point
-5. Controlling a servo motor                                                                                1 point
+1. Blink an RGB light using three different buttons, where each button controls a specific color of the light.
+2. The challenge is to ensure that pressing each button makes the corresponding color blink while the other colors remain unaffected.
+                                                                               
 
 
-.. Note:: You will earn 1 point for each successfully completed task in Level 0. It's the ideal starting point for 
-   those new to the world of electronics!
+
 
 
 Level 1 - Advanced Challenges
 -----------------------------
 Level 1 elevates the complexity with more intricate problems and higher point allocations. Stay tuned for the list of tasks!
 
-Task Description: 
+Task Description:
 
-1. Light up six LEDs using only three GPIO pins of Arduino/ESP32/Microcontroller.                               5 pts
+   1. Servo Motor Control: Rotate a servo motor based on the input from a potentiometer. The servo should move proportionally to the potentiometer's position.
+   2. Angle Display: Print the current angle of the servo motor on an OLED screen. Ensure that the displayed angle accurately reflects the servo's position. 
 
 Expected Output
 ---------------
@@ -56,7 +54,7 @@ Expected Output
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/iGsrljodarg?si=yT71m29KUxcqli4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
 
 
-2. Analyze the provided code and submit the output as demonstrated in the video.                                 5 pts
+3. Analyze the provided code and submit the output as demonstrated in the video.                                 5 pts
 
 
 Sample Code Snippets
@@ -88,7 +86,7 @@ Create a basic PCB capable of accepting battery input and producing different ou
 track size to handle output currents of up to 2 Amps accordingly.
 
 .. Warning::
-   The **Deadline** for completing the task: **16th October, 2023**
+   The **Deadline** for completing the task: **9th October, 2024**
 
 submissions
 +++++++++++
@@ -102,4 +100,4 @@ you may still submit it. Points will be allocated accordingly.
 
 
 .. Warning::
-   The **Deadline** for completing the task: **16th October, 2023**
+   The **Deadline** for completing the task: **9th October, 2024**
