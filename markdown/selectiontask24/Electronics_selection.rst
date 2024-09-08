@@ -25,17 +25,17 @@ points will be awarded after evaluating your submissions. Therefore, ensure you 
 Level 0 - Getting Started
 --------------------------
 
-Level 0 serves as the foundation and includes tasks such as:
+Level 0 serves as the foundation and includes a task: 5pts
 
-1. Blink an RGB light using three different buttons, where each button controls a specific color of the light.
-2. The challenge is to ensure that pressing each button makes the corresponding color blink while the other colors remain unaffected.
+ 1. Blink an RGB light using three different buttons, where each button controls a specific color of the light.
+ 2. The challenge is to ensure that pressing each button makes the corresponding color blink while the other colors remain unaffected.
                                                                                
 
 
 
 
 
-Level 1 - Advanced Challenges
+Level 1 - Advanced Challenges 8pts
 -----------------------------
 Level 1 elevates the complexity with more intricate problems and higher point allocations. Stay tuned for the list of tasks!
 

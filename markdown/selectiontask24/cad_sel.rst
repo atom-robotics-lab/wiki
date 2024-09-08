@@ -32,7 +32,7 @@ Hints / Reference
 ---------------------------------------------
 
 
-Task 1
+Task 1 : 5pts
 ------
 
 Problem statement
@@ -70,7 +70,7 @@ Expected Output
 .. figure:: Task1.png
 
 
-Task 2
+Task 2: 8pts
 -----------------------
 .. raw:: html
 
