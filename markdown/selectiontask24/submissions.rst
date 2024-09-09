@@ -4,7 +4,7 @@ Submission Instructions
 For Submissions of your work please refer to the following instructions
 
 .. Warning::
-   The **Deadline** for all the Tasks is: **15th October 2023**
+   The **Deadline** for all the Tasks is: **16th October 2023**
 
 
 CAD Task
@@ -119,7 +119,7 @@ ELECTRONICS TASK
 - you may still submit it. Points will be allocated accordingly.
 
 
-`Google Form for Task submission <https://docs.google.com/forms/d/e/1FAIpQLSfRqjmEOKQOZsRVqVBxTsB-w8MFzFunv0gutS7yq3fs-28t8g/viewform?usp=sf_link>`__
+`Google Form for Task submission <https://forms.gle/o8mdDZ4YfW4SN9ui7>`__
 ----------------------------------------------------------------------------
 
 .. Note:: This google form is common for all the tasks.
