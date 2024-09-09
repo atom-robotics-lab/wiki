@@ -1,7 +1,7 @@
-Selection Task 2024-25
+Selection Task 2023-2024
 ========================
 
-Hi there, Welcome to the **A.T.O.M**'s Selection Task of 2024-2025.
+Hi there, Welcome to the **A.T.O.M**'s Selection Task of 2023-2024.
 
 The TASK provided here are the selection criteria for joining the
 **A.T.O.M** society. Those who successfully finish the tasks within the
@@ -21,12 +21,11 @@ There are currently two types of selection tasks which are:
    improve your profile and increase your chances of getting selected.**
 
 .. Warning::
-   The **Deadline** for all the Tasks is **15th October, 2024**.
-
+   The **Deadline** for all the Tasks is: **16th October, 2023**.
 .. toctree::
    :maxdepth: 4
 
-   ROS Selection Task <ROS_selection_task24.rst>
-   Electronics Selection Task <Electronics_selection.rst>
-   CAD Selection Task <cad_sel.rst>
-   submissions.rst
+   ./ROS_selection_task24.rst
+   ./Electronics_selection.rst
+   ./cad_sel.rst
+   ./submissions.rst
