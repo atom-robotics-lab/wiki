@@ -30,7 +30,7 @@ Problem statement
    new to ROS2.
 
 .. Warning::
-   The **Deadline** for completing the task: **9th October, 2024**
+   The **Deadline** for completing the task: **15th October, 2024**
 
 Expected Output
 ---------------

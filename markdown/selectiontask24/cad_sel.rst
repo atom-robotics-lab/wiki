@@ -107,7 +107,7 @@ Description
 
 
 .. Warning::
-   The **Deadline** for completing the task: **9th October, 2024**
+   The **Deadline** for completing the task: **15th October, 2024**
 
 Expected Output
 -----------------------
@@ -165,9 +165,8 @@ Optional Submissions
       and accessible by anyone.**
 
 
-   .. Seealso:: Last date for submission is **9th of October**
+   .. Seealso:: Last date for submission is **15th of October**
 
-`Google Form for Task submission <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Task 2
@@ -188,11 +187,11 @@ Task 2
       sure to give viewing acess while creating the shareable link for
       the google drive.
 
-.. Seealso:: Last date for submission is **9th of October**
+.. Seealso:: Last date for submission is **15th of October**
 
 .. _google-form-for-task-submission-1:
 
-`Google Form for Task submission <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
+`Google Form for Task submission <https://docs.google.com/forms/d/e/1FAIpQLSfRqjmEOKQOZsRVqVBxTsB-w8MFzFunv0gutS7yq3fs-28t8g/viewform?usp=sf_link>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Interview
 ---------
@@ -203,7 +202,7 @@ Interview
    - We would be asking about some general question related to computers and your thought process & stuff related to the task that you have performed.
 
 
-.. Note:: Make sure you submit both of your task before the 9th of
+.. Note:: Make sure you submit both of your task before the 15th of
    October. Both the submissions have to be done separately. Even if you
    are not able to complete entire the task you are requested to make
    the submission of the work that you have done anyway.

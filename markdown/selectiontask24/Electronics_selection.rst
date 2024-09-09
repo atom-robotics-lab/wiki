@@ -86,7 +86,7 @@ Create a basic PCB capable of accepting battery input and producing different ou
 track size to handle output currents of up to 2 Amps accordingly.
 
 .. Warning::
-   The **Deadline** for completing the task: **9th October, 2024**
+   The **Deadline** for completing the task: **15th October, 2024**
 
 submissions
 +++++++++++
@@ -95,9 +95,9 @@ you can use online simulators like TinkerCad and screen record your task, then s
 the task, we will also consider the effort you have put into performing this task. Even if you are not able to complete the task, 
 you may still submit it. Points will be allocated accordingly.
 
-`Google Form link <https://forms.gle/4c7ep5HaYt8mJY7i9>`__
+`Google Form link <https://docs.google.com/forms/d/e/1FAIpQLSfRqjmEOKQOZsRVqVBxTsB-w8MFzFunv0gutS7yq3fs-28t8g/viewform?usp=sf_link>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 .. Warning::
-   The **Deadline** for completing the task: **9th October, 2024**
+   The **Deadline** for completing the task: **15th October, 2024**
