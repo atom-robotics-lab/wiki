@@ -146,9 +146,8 @@ Commands used:
 
 .. code:: shell
 
-   roscore
-   rosrun turtlesim turtlesim_node
-   rosrun package_name script_name
+   ros2 run turtlesim turtlesim_node
+   ros2 run package_name script_name
 
 Procedure
 ---------
