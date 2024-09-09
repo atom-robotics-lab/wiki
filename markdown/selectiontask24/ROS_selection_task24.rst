@@ -135,12 +135,6 @@ while bot's distance is less than 6.
    if __name__ == '__main__':
       main()
 
-Output video
------------------------
-
-.. raw:: html
-
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/tjGNhEe-S_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 Commands used:
 
