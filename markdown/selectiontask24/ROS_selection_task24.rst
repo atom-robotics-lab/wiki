@@ -146,9 +146,8 @@ Commands used:
 
 .. code:: shell
 
-   roscore
-   rosrun turtlesim turtlesim_node
-   rosrun package_name script_name
+   ros2 run turtlesim turtlesim_node
+   ros2 run package_name script_name
 
 Procedure
 ---------
@@ -183,7 +182,7 @@ Follow the instructions given below to get started with the task.
 
 .. seealso::
    Please refer to the tutorials and resouces given in the wiki or visit
-   the official `ROSWIKI <http://wiki.ros.org/Documentation>`__ if you
+   the official `ROSWIKI <https://docs.ros.org/en/humble/index.html>`__ if you
    need help with anything regarding ROS2.
 
 Head over to `Submissions <./submissions.rst>`__ to submit your work 
