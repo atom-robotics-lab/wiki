@@ -26,7 +26,7 @@ There are currently two types of selection tasks which are:
 .. toctree::
    :maxdepth: 4
 
-   ROS Selection Task <tasks/ROS_selection_task24.rst>
-   Electronics Selection Task <tasks/Electronics_selection.rst>
-   CAD Selection Task <tasks/cad_sel.rst>
-   tasks/submissions.rst
+   ROS Selection Task <ROS_selection_task24.rst>
+   Electronics Selection Task <Electronics_selection.rst>
+   CAD Selection Task <cad_sel.rst>
+   submissions.rst
