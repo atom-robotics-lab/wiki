@@ -1,4 +1,4 @@
-ROS Selection Task 2023-2024
+ROS Selection Task 2024-2025
 ============================
 
 
@@ -6,7 +6,7 @@ Problem statement
 -----------------
 
 -  The objective of the task is to move the turtle inside the turtlesim 
-   window in a vertical Z shape 
+   window in a vertical Candy shape 
 
 -  To acheive this task you are supposed to create a node named
    /node_turtle_move within a python script,
@@ -23,27 +23,30 @@ Problem statement
    we think a week time is enough so you guys can give your exams freely
    and manage your time in order to complete the task
 
+.. figure:: ros.jpg   
+
 .. Note:: All the resources to complete the said task are provided in
    the ROS section of ATOM WIKI. So make sure to check it out if you are
-   new to ROS.
+   new to ROS2.
 
 .. Warning::
-   The **Deadline** for completing the task: **16th October, 2023**
+   The **Deadline** for completing the task is **15th October, 2024**.
 
 Expected Output
 ---------------
+`video link <https://www.youtube.com/shorts/R6udlXtyplk>`__
 
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ja-QRX4gu6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/R6udlXtyplk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
-.. Note:: THE Z SHOULD BE VERTICAL .
+.. caution:: THE Candy SHOULD BE VERTICAL .
 
 Hints
 -----
 
--  The turtle needs to move in a vertical ‘Z’ shape .
+-  The turtle needs to move in a vertical Candy shape .
 
 -  You can refer `POSE <https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Pose.html>`__ to learn more about pose function.
 
@@ -62,55 +65,75 @@ while bot's distance is less than 6.
 
 .. code-block:: python
 
-   #! /usr/bin/env python3
+   #!/usr/bin/env python3
 
-   import rospy
+   import rclpy
+   from rclpy.node import Node
    from geometry_msgs.msg import Twist
    from turtlesim.msg import Pose
-   
-   my_X = 0 
-   my_Y = 0
-   x_dist = 6
-   
-   # Subscriber Callback that gives position of the turtle (x & y)
-   def pose_callback(pose): 
-   
+
+   my_X = 0.0
+   my_Y = 0.0
+   x_dist = 8.0
+
+   # Subscriber callback that gives the position of the turtle (x & y)
+   def pose_callback(pose):
       global my_X, my_Y
-      rospy.loginfo("Robot X = %f: Robot Y=%f\n",pose.x,pose.y)
       my_X = pose.x
       my_Y = pose.y
-            
-   def move_turtle(lin_vel):  
-      
-      global my_X
-      rospy.init_node('move_turtle', anonymous=True)
-      pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-      rospy.Subscriber('/turtle1/pose',Pose, pose_callback)
-   
-      rate = rospy.Rate(10) # 10hz    
-      vel = Twist()
-      while not rospy.is_shutdown():
-   
-         vel.linear.x = lin_vel
-         vel.linear.y = 0
-         vel.linear.z = 0
-         vel.angular.x = 0
-         vel.angular.y = 0
-         vel.angular.z = 0
-   
-         rospy.loginfo("Linear Vel = %f: ", lin_vel)
-   
+      node.get_logger().info(f"Robot X = {pose.x}: Robot Y = {pose.y}")
+
+   class MoveTurtle(Node):
+      def __init__(self, lin_vel):
+         super().__init__('move_turtle')
+         self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
+         self.subscriber_ = self.create_subscription(Pose, '/turtle1/pose', pose_callback, 10)
+         self.lin_vel = lin_vel
+         self.timer = self.create_timer(0.1, self.move_callback)  # 10hz
+         self.vel_msg = Twist()
+
+      def move_callback(self):
+         global my_X, x_dist
+
+         # Set the linear velocity
+         self.vel_msg.linear.x = self.lin_vel
+         self.vel_msg.linear.y = 0.0  # Ensure this is a float
+         self.vel_msg.linear.z = 0.0  # Ensure this is a float
+         self.vel_msg.angular.x = 0.0
+         self.vel_msg.angular.y = 0.0
+         self.vel_msg.angular.z = 0.0
+
+         self.get_logger().info(f"Linear Vel = {self.lin_vel}")
+
          # Stop the turtle when it reaches x_dist
-         if(x_dist < my_X ):
-            rospy.loginfo("Turtle Reached destination")
-            rospy.logwarn("Stopping Turtle")
-               
-            break
-   
-         pub.publish(vel)
-         rate.sleep()
-   
-   move_turtle(2.0)
+         if my_X >= x_dist:
+               self.get_logger().info("Turtle Reached destination")
+               self.get_logger().warn("Stopping Turtle")
+
+               # Set the velocity to zero to stop the turtle
+               self.vel_msg.linear.x = 0.0
+               self.publisher_.publish(self.vel_msg)
+               rclpy.shutdown()
+         else:
+               self.publisher_.publish(self.vel_msg)
+
+   def main(args=None):
+      rclpy.init(args=args)
+
+      lin_vel = 2.0  # Set linear velocity
+      global node
+      node = MoveTurtle(lin_vel)
+
+      try:
+         rclpy.spin(node)
+      except KeyboardInterrupt:
+         pass
+      finally:
+         node.destroy_node()
+         rclpy.shutdown()
+
+   if __name__ == '__main__':
+      main()
 
 Output video
 -----------------------
@@ -144,19 +167,15 @@ Follow the instructions given below to get started with the task.
 
 .. code:: shell
 
-   cd ~/catkin_ws
-   catkin_make
-   source devel/setup.bash
-   chmod +x ~/catkin_ws/src/selection_task/scripts/node_turtle_move.py
+   cd ~/turtle_ws
+   colcon_build
+   source install/setup.bash
 
--  Before executing make sure that roscore is running along with
-   turtlesim_node. You can either run them in separate terminals or
+-  You can either run them in separate terminals or
    simply create a selection_task.launch file inside the
-   ``~/catkin_ws/src/selection_task/launch/`` folder. Launch file can
+   ``~/turtle_ws/src/selection_task/launch/`` folder. Launch file can
    run multiple nodes unlike a python/cpp script. Run the launch file,
    enter, This should run three processes in parallel.
-
--  roscore
 
 -  turtlesim_node
 
@@ -165,6 +184,6 @@ Follow the instructions given below to get started with the task.
 .. seealso::
    Please refer to the tutorials and resouces given in the wiki or visit
    the official `ROSWIKI <http://wiki.ros.org/Documentation>`__ if you
-   need help with anything regarding ROS.
+   need help with anything regarding ROS2.
 
- 
+Head over to `Submissions <./submissions.rst>`__ to submit your work 
