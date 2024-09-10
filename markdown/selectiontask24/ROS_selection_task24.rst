@@ -55,7 +55,7 @@ Hints
 -  Use linear velocity and angular velocity to get this done.
 
 -  Keep tracking the distance travelled so as to know when to stop. You
-   can refer to Overview of rospy for more hint
+   can refer to an overview of rclpy for more hints
 
 Sample Code Snippet
 -----------------------
