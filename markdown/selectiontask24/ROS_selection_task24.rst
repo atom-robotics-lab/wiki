@@ -41,7 +41,7 @@ Expected Output
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/R6udlXtyplk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
-.. caution:: THE Candy SHOULD BE VERTICAL .
+.. caution:: The CANDY should be VERTICAL. Also the max number of spirals can be of your choice but 3 spirals are required.
 
 Hints
 -----
@@ -55,86 +55,86 @@ Hints
 -  Use linear velocity and angular velocity to get this done.
 
 -  Keep tracking the distance travelled so as to know when to stop. You
-   can refer to an overview of rclpy for more hints
+   can refer to Overview of rclpy for more hint
 
 Sample Code Snippet
 -----------------------
 
 **Question:** Write a python code to move ROS's turtlesim bot on a straight path 
-while bot's distance is less than 6.
+while bot's distance is less than 3.
 
 .. code-block:: python
+      
+      #!/usr/bin/env python3
 
-   #!/usr/bin/env python3
+      import rclpy
+      from rclpy.node import Node
+      from geometry_msgs.msg import Twist
+      from turtlesim.msg import Pose
+      import math
 
-   import rclpy
-   from rclpy.node import Node
-   from geometry_msgs.msg import Twist
-   from turtlesim.msg import Pose
+      class MoveTurtle(Node):
 
-   my_X = 0.0
-   my_Y = 0.0
-   x_dist = 8.0
+         def __init__(self):
+            super().__init__('move_turtle')
+            self.start_x = None
+            self.start_y = None
+            self.target_distance = 3.0  # Distance to move in pixels
+            self.lin_vel = 2.0  # Linear velocity
 
-   # Subscriber callback that gives the position of the turtle (x & y)
-   def pose_callback(pose):
-      global my_X, my_Y
-      my_X = pose.x
-      my_Y = pose.y
-      node.get_logger().info(f"Robot X = {pose.x}: Robot Y = {pose.y}")
+            # Create a publisher for controlling the turtle's velocity
+            self.pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
+            # Create a subscriber for getting the turtle's position
+            self.sub = self.create_subscription(Pose, '/turtle1/pose', self.pose_callback, 10)
 
-   class MoveTurtle(Node):
-      def __init__(self, lin_vel):
-         super().__init__('move_turtle')
-         self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-         self.subscriber_ = self.create_subscription(Pose, '/turtle1/pose', pose_callback, 10)
-         self.lin_vel = lin_vel
-         self.timer = self.create_timer(0.1, self.move_callback)  # 10hz
-         self.vel_msg = Twist()
+         def pose_callback(self, pose):
+            if self.start_x is None and self.start_y is None:
+                  # Set the starting position when the first pose message is received
+                  self.start_x = pose.x
+                  self.start_y = pose.y
+                  self.get_logger().info(f"Starting position set to X = {self.start_x:.2f}, Y = {self.start_y:.2f}")
+            
+            # Calculate the distance from the starting position
+            distance = math.sqrt((pose.x - self.start_x) ** 2 + (pose.y - self.start_y) ** 2)
+            self.get_logger().info(f"Distance from start = {distance:.2f}")
 
-      def move_callback(self):
-         global my_X, x_dist
+            # Create a Twist message to set the turtle's velocity
+            vel = Twist()
+            vel.linear.x = self.lin_vel
+            vel.linear.y = 0.0
+            vel.linear.z = 0.0
+            vel.angular.x = 0.0
+            vel.angular.y = 0.0
+            vel.angular.z = 0.0
 
-         # Set the linear velocity
-         self.vel_msg.linear.x = self.lin_vel
-         self.vel_msg.linear.y = 0.0  # Ensure this is a float
-         self.vel_msg.linear.z = 0.0  # Ensure this is a float
-         self.vel_msg.angular.x = 0.0
-         self.vel_msg.angular.y = 0.0
-         self.vel_msg.angular.z = 0.0
+            if distance >= self.target_distance:
+                  self.get_logger().info("Turtle reached the target distance")
+                  vel.linear.x = 0.0  # Stop the turtle
+                  self.get_logger().warn("Stopping Turtle")
+                  self.pub.publish(vel)
+                  rclpy.shutdown()
+            else:
+                  self.pub.publish(vel)
 
-         self.get_logger().info(f"Linear Vel = {self.lin_vel}")
-
-         # Stop the turtle when it reaches x_dist
-         if my_X >= x_dist:
-               self.get_logger().info("Turtle Reached destination")
-               self.get_logger().warn("Stopping Turtle")
-
-               # Set the velocity to zero to stop the turtle
-               self.vel_msg.linear.x = 0.0
-               self.publisher_.publish(self.vel_msg)
-               rclpy.shutdown()
-         else:
-               self.publisher_.publish(self.vel_msg)
-
-   def main(args=None):
-      rclpy.init(args=args)
-
-      lin_vel = 2.0  # Set linear velocity
-      global node
-      node = MoveTurtle(lin_vel)
-
-      try:
-         rclpy.spin(node)
-      except KeyboardInterrupt:
-         pass
-      finally:
-         node.destroy_node()
+      def main(args=None):
+         rclpy.init(args=args)
+         move_turtle_node = MoveTurtle()
+         rclpy.spin(move_turtle_node)
+         move_turtle_node.destroy_node()
          rclpy.shutdown()
 
-   if __name__ == '__main__':
-      main()
+      if __name__ == '__main__':
+         main()
+ 
 
+      
+
+.. Output video
+.. -----------------------
+
+.. .. raw:: html
+
+..    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/tjGNhEe-S_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 Commands used:
 
@@ -179,4 +179,4 @@ Follow the instructions given below to get started with the task.
    the official `ROSWIKI <http://wiki.ros.org/Documentation>`__ if you
    need help with anything regarding ROS2.
 
-Head over to `Submissions <./submissions.rst>`__ to submit your work 
+Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/submissions.html>`__ to submit your work 

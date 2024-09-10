@@ -22,7 +22,7 @@ the problem statement. Your performance will determine your score, and points wi
 
 **Qualification Criteria**
 
-To progress to the next stage, which is the interview phase, you must accumulate a minimum of 7 points in total. These 
+To progress to the next stage, which is the interview phase, you must accumulate a minimum of 5 points in total. These 
 points will be awarded after evaluating your submissions. Therefore, ensure you put your best foot forward for a chance to advance!
 
 
@@ -60,7 +60,7 @@ Task Description:
 
    1. Servo Motor Control: Rotate a servo motor based on the input from a potentiometer. The servo should move proportionally to the potentiometer's position.
    2. Angle Display: Print the current angle of the servo motor on an OLED screen. Ensure that the displayed angle accurately reflects the servo's position. 
-   3. Analyze the provided code and submit the output as demonstrated in the video.                                 5 pts
+   3. Analyze the provided code and submit the output as demonstrated in the video.                                 
 
 Expected Output
 ~~~~~~~~~~~~~~~
@@ -68,7 +68,14 @@ Expected Output
 
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/iGsrljodarg&t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+  <center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+
+
+.. note::
+
+   If you don't have hardware available, you can use a simulator such as `Wokwi <https://www.wokwi.com>`__  
+
 
 
 Task 1B 
@@ -77,7 +84,7 @@ Task 1B elevates the complexity with more intricate problems and higher point al
 
 Task Description:
 ~~~~~~~~~~~~~~~~~
-Light up six LEDs using only three GPIO pins of Arduino/ESP32/Microcontroller. **5 pts**
+Light up six LEDs using only three GPIO pins of Arduino/ESP32/Microcontroller. 
 
 Expected Output
 ~~~~~~~~~~~~~~~
@@ -85,7 +92,7 @@ Expected Output
 
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/iGsrljodarg&t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/iGsrljodarg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
 Level 2 - Expert Territory: 8pts
@@ -96,7 +103,7 @@ substantial point rewards.
 Task Description
 ^^^^^^^^^^^^^^^^
 PCB Designing - Create a schematic, perform routing, and submit a Gerber file. Additionally, provide screenshots of the 
-schematics and a text file explaining your approach and detailing the schematic.                                    10 pts
+schematics and a text file explaining your approach and detailing the schematic.                                   
 
 
 Problem Statement
@@ -108,4 +115,4 @@ track size to handle output currents of up to 2 Amps accordingly.
    The **Deadline** for completing the task: **15th October, 2024**
 
 
-Head over to `Submissions <./submissions.rst>`__ to submit your work 
+Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/submissions.html>`__ to submit your work 
