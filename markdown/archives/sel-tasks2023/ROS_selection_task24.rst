@@ -1,16 +1,16 @@
-ROS Selection Task 2023
-========================
+ROS Selection Task 2023-2024
+============================
 
 
 Problem statement
 -----------------
 
 -  The objective of the task is to move the turtle inside the turtlesim 
-   window in a vertical D shape of radius 1 unit.
+   window in a vertical Z shape 
 
 -  To acheive this task you are supposed to create a node named
-   /node_turtle_revolve within a python script,
-   node_turtle_revolve.py
+   /node_turtle_move within a python script,
+   node_turtle_move.py
 
 
 
@@ -28,32 +28,34 @@ Problem statement
    new to ROS.
 
 .. Warning::
-   The **Deadline** for completing the task: **11th December, 2022**
+   The **Deadline** for completing the task: **16th October, 2023**
 
 Expected Output
 ---------------
 
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/TaMQco4vvIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ja-QRX4gu6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
-.. Note:: THE TURTLE SHOULD STOP AT THE INITIAL POINT ONLY.
+.. Note:: THE Z SHOULD BE VERTICAL .
 
 Hints
 -----
 
--  The turtle needs to move in a vertical ‘D’ shape with a radius of 1 unit
-   during its sem-circular motion.
-   
--  Use linear velocity as well as angular velocity with some combination
-   to get this done.
+-  The turtle needs to move in a vertical ‘Z’ shape .
+
+-  You can refer `POSE <https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Pose.html>`__ to learn more about pose function.
+
+-  You can refer `TWIST <https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Twist.html>`__ to learn more about twist function.
+
+-  Use linear velocity and angular velocity to get this done.
 
 -  Keep tracking the distance travelled so as to know when to stop. You
    can refer to Overview of rospy for more hint
 
 Sample Code Snippet
-*******************
+-----------------------
 
 **Question:** Write a python code to move ROS's turtlesim bot on a straight path 
 while bot's distance is less than 6.
@@ -77,9 +79,9 @@ while bot's distance is less than 6.
       rospy.loginfo("Robot X = %f: Robot Y=%f\n",pose.x,pose.y)
       my_X = pose.x
       my_Y = pose.y
-              
+            
    def move_turtle(lin_vel):  
-        
+      
       global my_X
       rospy.init_node('move_turtle', anonymous=True)
       pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
@@ -102,7 +104,7 @@ while bot's distance is less than 6.
          if(x_dist < my_X ):
             rospy.loginfo("Turtle Reached destination")
             rospy.logwarn("Stopping Turtle")
-                 
+               
             break
    
          pub.publish(vel)
@@ -111,7 +113,7 @@ while bot's distance is less than 6.
    move_turtle(2.0)
 
 Output video
-*************
+-----------------------
 
 .. raw:: html
 
@@ -134,7 +136,7 @@ Follow the instructions given below to get started with the task.
    your ROS workspace. Once your package is created, source and build
    your workspace.
 -  Within this package, you should have a 'scripts' folder inside which
-   you'll create a python script, named node_turtle_revolve.py.
+   you'll create a python script, named node_turtle_move.py.
 -  Fill the script with proper programming ethics. Doing this will help
    us understand your code better and quicker than usual.
 -  After completing the python script. Make it executable, if it isn't
@@ -145,7 +147,7 @@ Follow the instructions given below to get started with the task.
    cd ~/catkin_ws
    catkin_make
    source devel/setup.bash
-   chmod +x ~/catkin_ws/src/selection_task/scripts/node_turtle_revolve.py
+   chmod +x ~/catkin_ws/src/selection_task/scripts/node_turtle_move.py
 
 -  Before executing make sure that roscore is running along with
    turtlesim_node. You can either run them in separate terminals or
@@ -158,7 +160,7 @@ Follow the instructions given below to get started with the task.
 
 -  turtlesim_node
 
--  node_turtle_revolve.py
+-  node_turtle_move.py
 
 .. seealso::
    Please refer to the tutorials and resouces given in the wiki or visit
