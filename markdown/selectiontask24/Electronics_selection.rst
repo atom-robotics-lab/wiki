@@ -1,7 +1,13 @@
 Electronics Selection Task 2024-2025
 ====================================
-This year, we've introduced a three-tiered Electronic Selection Task. Here's a brief summary:
 
+
+.. note::
+   If you don't have hardware available, you can use a simulator such as `Wokwi <https://www.wokwi.com>`__
+
+
+
+This year, we've introduced a three-tiered Electronic Selection Task. Here's a brief summary:
 
 **Challenge Levels**
 
