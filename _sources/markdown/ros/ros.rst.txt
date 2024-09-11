@@ -1,28 +1,23 @@
-Intro To ROS
+Intro To ROS 2
 ============
 
 
-**What is ROS ?**
+**What is ROS2 ?**
 
-ROS is an open-source, meta-operating system for your robot. It provides
-the services you would expect from an operating system, including
-hardware abstraction, low-level device control, implementation of
-commonly-used functionality, message-passing between processes, and
-package management.
+ROS 2 (Robot Operating System 2) is the next generation of the Robot Operating System (ROS), designed to be more flexible, scalable, and reliable for modern robotic systems. It provides a framework for developing robot software by offering tools, libraries, and conventions to simplify the task of creating complex and robust robot applications.
+Since ROS was started in 2007, a lot has changed in the robotics and ROS community. The goal of the ROS 2 project is to adapt to these changes, leveraging what is great about ROS 1 and improving what isn’t.
 
-.. note:: For more info on ROS please visit the \ `Official ROS Website <https://www.ros.org>`__. It has got really interesting videos and resources about the functioning and projects based on ROS. To get started with learning ROS head over to `ROS Tutorials <http://wiki.ros.org/action/fullsearch/ROS/Tutorials?action=fullsearch&context=180&value=linkto%3A%22ROS%2FTutorials%22>`__
+.. note:: For more info on ROS2 please visit the \ `Official ROS2 Website <https://docs.ros.org/en/humble/index.html#>`__. It has got really interesting videos and resources about the functioning and projects based on ROS2. To get started with learning ROS2 head over to `ROS2 Tutorials <https://docs.ros.org/en/humble/Tutorials.html>`__
 
 .. toctree::
    :maxdepth: 4
    :hidden:
    
    ./ROS_installation/ROS_index.rst
-   ./catkin_ws.rst
+   ./colcon_ws.rst
    ./package/package.rst
    ./node/node.rst
-   ./master/master.rst
    ./examples/example.rst
    ./launch/launch.rst
-   ./comm/comm.rst
    ./comm/topics/topics.rst
    ./comm/topics/rostopic.rst

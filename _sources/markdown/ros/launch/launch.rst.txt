@@ -1,230 +1,242 @@
 ****************
-ROS Launch Files
+ROS 2 Launch Files
 ****************
+
 .. contents:: Table of Contents
 
--  In the previous sections you must have noticed that we need to use
-   roscore command to
--  This is a tedious process to manually run nodes and load parameters.
--  Launch ﬁles provides the capability to do all these stuﬀ using a
-   single command.
--  The idea is to mention all the nodes that you want to run, all the
-   conﬁg ﬁle that you want to load etc in a single ﬁle which you can run
-   using roslaunch command.
+-  In the previous sections, you must have noticed that we need to manually run each ROS 2 node and load parameters, which can be a tedious process.
+-  ROS 2 Launch files simplify this by allowing us to run multiple nodes, load configuration files, and set parameters using a single command.
 
+Create a ROS 2 Launch file
+==========================
 
-Create a ROS Launch file
-========================
+ros2 launch Command
+-------------------
 
-roslaunch Command
------------------
-
--  roslaunch is a tool for easily launching multiple ROS nodes locally
-   and remotely via SSH.
-
--  It includes options to automatically respawn processes that have
-   already died. roslaunch takes in one or more XML conﬁguration ﬁles
-   (with the .launch extension) that specify the parameters to set and
-   nodes to launch.
+-  `ros2 launch` is a tool for launching multiple ROS 2 nodes either locally or remotely.
+-  It uses `.py` or `.launch.xml` files to define which nodes to run and which parameters to set.
 
 Usage:
 
 .. code:: shell
 
-   roslaunch <package> file.launch
+   ros2 launch <package_name> <launch_file>
 
--   is nothing but the package name which you have created using
-    catkin_create_pkg command or used any other package
+-  `<package_name>` is the name of the ROS 2 package.
+-  `<launch_file>` is the name of the launch file you want to execute.
 
-Steps to create a launch file
+Steps to Create a Launch File
 -----------------------------
 
--  After creating a package, create a folder in the package names as a
-   launch folder to store all the launch files in that folder.
+1. After creating a package, create a `launch` folder in your package to store the launch files.
 
 .. code:: shell
 
-   cd ~/catkin_ws/src/<package>
+   cd ~/ros2_ws/src/<package_name>
    mkdir launch
 
--  Here we can create launch ﬁles by running this command by going into
-   the launch directory, we can keep any name for the launch ﬁle
+2. Create a launch file by navigating into the `launch` directory and using a Python file or `.launch.xml` file for launch configuration.
 
 .. code:: shell
 
    cd launch
-   touch filename.launch
+   touch <file_name>.launch.py
 
-Now you can edit your launch ﬁle by adding diﬀerent nodes that you have
-to run simultaneously.
+For example, you can name the launch file `my_launch_file.launch.py`.
 
-Steps to add a ROS node in the launch ﬁle
------------------------------------------
+Basic Launch File Structure in ROS 2
+------------------------------------
 
--  
+1. In ROS 2, launch files can be written in Python or XML. Here's an example of a Python-based launch file structure:
 
-   1. Launch ﬁles always starts with
+.. code:: python
 
-``<launch>`` and end with ``</launch>``
+   from launch import LaunchDescription
+   from launch_ros.actions import Node
 
--  2.Now to add any executable ﬁle which we have seen in the
-   rosrun_command section, we have to add this line
+   def generate_launch_description():
+       return LaunchDescription([
+           Node(
+               package='my_package',
+               executable='my_node',
+               name='my_node_name',
+               output='screen',
+           ),
+       ])
 
-.. code:: xml
+-  `package`: The package that contains the node.
+-  `executable`: The name of the node executable (without extension).
+-  `name`: A user-defined name for the node.
+-  `output`: Set to `screen` to show output in the terminal.
 
-   <node pkg="name_of_package" type="name_of_executable.py" name="name_of_executable" output="screen"/>
+Steps to Load Configuration Files (YAML) in ROS 2
+-------------------------------------------------
 
--  name is the name of the node which is created in that executable
--  output means it will print the data given to the roslog command
--  type is the name of executable ﬁle
--  pkg is the package name which you have created.
+You can load YAML files in a ROS 2 launch file using the `launch.actions.SetParameterFile` or `ros2 param` commands.
 
-Steps to load Conﬁg YAML ﬁle in ROS Parameter Server
-----------------------------------------------------
+Here’s an example of loading parameters from a YAML file:
 
-You can use rosparam tag to load the YAML ﬁle.
+.. code:: python
 
--  type is the name of executable ﬁle
+   from launch import LaunchDescription
+   from launch_ros.actions import Node
+   from launch.actions import SetParameterFile
 
--  pkg is the package name which you have created
+   def generate_launch_description():
+       return LaunchDescription([
+           SetParameterFile(
+               node_name='my_node',
+               parameter_file='$(find my_package)/config/config.yaml'
+           ),
+           Node(
+               package='my_package',
+               executable='my_node',
+               name='my_node_name',
+               output='screen',
+           ),
+       ])
 
--  name_of_package is the name of your ROS package.
+Running a Shell Script in a ROS 2 Launch File
+---------------------------------------------
 
--  config.yaml is the name of your conﬁguration ﬁle.
+You can execute shell scripts within a ROS 2 launch file using the `ExecuteProcess` action.
 
-Steps to add a shell script in the launch file
-----------------------------------------------
+.. code:: python
 
-You can use node tag to run any shell script using launch ﬁle
+   from launch import LaunchDescription
+   from launch.actions import ExecuteProcess
 
-.. code:: xml
+   def generate_launch_description():
+       return LaunchDescription([
+           ExecuteProcess(
+               cmd=['bash', '$(find my_package)/scripts/my_script.sh'],
+               output='screen'
+           )
+       ])
 
-   <node pkg="name_of_package" type="shell_script.sh" name="shell_script" output="screen">
-       <param name="cmd" value="$(find name_of_package)/launch/shell_script.sh"/>
-   </node>
-
--  name_of_package is the name of your ROS package.
--  shell_script.sh is the name of your conﬁguration ﬁle.
--  /launch/shell_script.sh is the location of the shell script inside
-   your ROS Package folder.
-
-Example
-=======
-
-Example 1: Launch two ROS Nodes
--------------------------------
-
-Aim
-^^^
-
--  To launch talker and listener node present in rospy_tutorials
-   package.
-
--  For this create a chatter.launch ﬁle and save it in the launch folder
-   inside pkg_ros_basics package.
-
-.. NOTE:: To install rospy_tutorials package in your system you can run
-
-.. code:: shell
-
-   sudo apt-get install ros-noetic-ros-tutorials this command.
-
--  Once installed, you can use listener python script and talker
-   executable written in C++ present in rospy_tutorials package.
-
-Code
-^^^^
-
-chatter.launch
-
-.. code:: xml
-
-   <launch>
-   <node name="talker" pkg="rospy_tutorials" type="talker" output="screen"/>
-   <node name="listener" pkg="rospy_tutorials" type="listener.py" output="screen"/>
-   </launch>
-
--  Here ﬁrst talker.cpp ﬁle (for cpp ﬁle we dont need to add .cpp
-   extension) has been included with the node name as talker and also
-   set output as screen so you can see the output from talker node.
--  Next we have added listener.py which has node name as listener and
-   here also we have set output as screen.
-
-Run Command
-^^^^^^^^^^^
-
-Now run these command to run the launch ﬁle,
-
-.. code:: shell
-
-   roslaunch pkg_ros_basics chatter.launch
-
-Example 2: Launch turtle in forest
-----------------------------------
+Example 1: Launch Two ROS 2 Nodes
+=================================
 
 Aim
 ^^^
 
--  To write a launch ﬁle to run turtlesim_node node and
-   turtle_teleop_key node present in turtlesim package.
--  While launching the turtlesim_node make sure to change the background
-   colour of the simulator from blue to forest green.
--  Name the launch ﬁle turtlesim.launch and save it in launch folder
-   inside pkg_ros_basics package.
+-  Launch two ROS 2 nodes: `talker` and `listener` from the `demo_nodes_cpp` and `demo_nodes_py` packages, respectively.
 
-Code
-^^^^
+Steps
+^^^^^
 
-turtlesim.launch
+1. Create a launch file `talker_listener.launch.py` in the `launch` folder of your package.
 
-.. code:: xml
+.. code:: python
 
-   <launch>
-   <node pkg="turtlesim" type="turtlesim_node" name="node_turtlesim_node">
-   <param name="/turtlesim_node/background_r" value="34" />
-   <param name="/turtlesim_node/background_g" value="139" />
-   <param name="/turtlesim_node/background_b" value="34" />
-   <param name="/background_r" value="34" />
-   <param name="/background_g" value="139" />
-   <param name="/background_b" value="34" />
-   </node>
-   <node pkg="turtlesim" type="turtle_teleop_key" name="node_turtle_teleop_key" />   
-   </launch>
+   from launch import LaunchDescription
+   from launch_ros.actions import Node
+
+   def generate_launch_description():
+       return LaunchDescription([
+           Node(
+               package='demo_nodes_cpp',
+               executable='talker',
+               name='talker_node',
+               output='screen',
+           ),
+           Node(
+               package='demo_nodes_py',
+               executable='listener',
+               name='listener_node',
+               output='screen',
+           )
+       ])
 
 Run Command
 ^^^^^^^^^^^
 
 .. code:: shell
 
-   roslaunch pkg_ros_basics turtlesim.launch
+   ros2 launch <package_name> talker_listener.launch.py
 
-Example 3: Load YAML
---------------------
+Example 2: Launch Turtlesim with Custom Background Color
+========================================================
 
 Aim
 ^^^
 
--  To write a launch ﬁle to load config_my.yaml present in
-   pkg_ros_basics package.
--  Also launch the node_param_get_set.py ROS node after loading the YAML
-   ﬁle.
+-  Launch the `turtlesim_node` and `turtle_teleop_key` nodes.
+-  Change the background color of the Turtlesim simulator from blue to forest green.
 
-Code
-^^^^
+Steps
+^^^^^
 
-load_yaml.launch
+1. Create a launch file `turtlesim_custom.launch.py` in the `launch` folder of your package.
 
-.. code:: xml
+.. code:: python
 
-   <launch>
-   <rosparam file ="$(find pkg_ros_basics)/config/config_my.yaml"/>
-   <node pkg="pkg_ros_basics" type="node_param_get_set.py" name="node_param_get_set">
-   </launch>
+   from launch import LaunchDescription
+   from launch_ros.actions import Node
+
+   def generate_launch_description():
+       return LaunchDescription([
+           Node(
+               package='turtlesim',
+               executable='turtlesim_node',
+               name='sim_node',
+               output='screen',
+               parameters=[{
+                   'background_r': 34,
+                   'background_g': 139,
+                   'background_b': 34,
+               }]
+           ),
+           Node(
+               package='turtlesim',
+               executable='turtle_teleop_key',
+               name='teleop_node',
+               output='screen',
+           )
+       ])
 
 Run Command
 ^^^^^^^^^^^
 
 .. code:: shell
 
-   roslaunch pkg_ros_basics load_yaml.launch
+   ros2 launch <package_name> turtlesim_custom.launch.py
 
+Example 3: Load YAML Configuration
+==================================
+
+Aim
+^^^
+
+-  Load parameters from `config.yaml` and launch the node `node_param_get_set`.
+
+Steps
+^^^^^
+
+1. Create a launch file `load_yaml.launch.py` in the `launch` folder of your package.
+
+.. code:: python
+
+   from launch import LaunchDescription
+   from launch.actions import SetParameterFile
+   from launch_ros.actions import Node
+
+   def generate_launch_description():
+       return LaunchDescription([
+           SetParameterFile(
+               parameter_file='$(find my_package)/config/config.yaml'
+           ),
+           Node(
+               package='my_package',
+               executable='node_param_get_set',
+               name='param_node',
+               output='screen',
+           ),
+       ])
+
+Run Command
+^^^^^^^^^^^
+
+.. code:: shell
+
+   ros2 launch <package_name> load_yaml.launch.py

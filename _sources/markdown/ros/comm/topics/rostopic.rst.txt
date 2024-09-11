@@ -1,211 +1,134 @@
-rostopic command
-================
+ROS 2 Topic Command
+===================
 
--  rostopic contains the rostopic command-line tool for displaying debug
-   information about ROS Topics, including publishers, subscribers,
-   publishing rate, and ROS Messages.
+-  `ros2 topic` is a command-line tool for displaying debug information about ROS 2 Topics, including publishers, subscribers, publishing rates, and ROS Messages.
 
 -  Use
 
 .. code:: shell
 
-   rostopic --h
+   ros2 topic --help
 
-for getting the rostopic command help.
+to get the help for the `ros2 topic` command.
 
--  .. rubric:: rostopic-list
-      :name: rostopic-list
+ros2 topic list
+---------------
 
--  rostopic list returns a list of all topics currently subscribed to
-   and published.
+-  `ros2 topic list` returns a list of all topics currently being subscribed to and published.
 
--  In one terminal run
-
-.. code:: shell
-
-   roscore
-
--  In the other one, run
+-  In one terminal, ensure your ROS 2 environment is sourced and then run:
 
 .. code:: shell
 
-   rostopic list
+   ros2 topic list
 
-The above should give you a list of the default ROS topics
+The above will give you a list of the default ROS 2 topics.
 
--  For this tutorial, we will also use turtlesim. Please run in a new
-   terminal:
+-  For this tutorial, we will also use `turtlesim`. Please run in a new terminal:
 
 .. code:: shell
 
-   rosrun turtlesim turtlesim_node
+   ros2 run turtlesim turtlesim_node
 
-You will see a small blue box with probably a diﬀerent turtle within it.
+You will see a small blue box with a turtle inside it.
 
--  Now, check again the rostopic list command in another terminal and
-   observe the topics being subscribed or published.
+-  Now, check again the `ros2 topic list` command in another terminal and observe the topics being subscribed to or published.
 
--  .. rubric:: type, info and rosmsg
-      :name: type-info-and-rosmsg
+ros2 topic type, info, and ros2 interface
+-----------------------------------------
 
 type
 ----
 
-Communication on topics happens by sending ROS messages between nodes.
-To communicate, the publisher and subscriber must send and receive the
-same type of message. This means that a topic type is deﬁned by the
-message type published on it. The type of the message sent on a topic
-can be determined using rostopic type .
+Communication on topics happens by sending ROS 2 messages between nodes. To communicate, the publisher and subscriber must use the same message type. You can determine the message type being used on a topic with the `ros2 topic type` command.
 
 .. code:: shell
 
-   rostopic type [topic_name]
+   ros2 topic type [topic_name]
 
-From the previous section, we know that the turtlesim node has 3 topics
-being published/subscribed.
+From the turtlesim node, we know that there are several topics being published/subscribed, such as:
 
--  /turtle1/cmd_vel
--  /turtle1/pose
--  /turtle1/color_sensor
+-  `/turtle1/cmd_vel`
+-  `/turtle1/pose`
+-  `/turtle1/color_sensor`
 
-Lets consider the topics /turtle1/cmd_vel . Enter the following command
-to get the message type.
+Let’s check the message type associated with the topic `/turtle1/cmd_vel`. Enter the following command:
 
 .. code:: shell
 
-   rostopic type /turtle1/cmd_vel
+   ros2 topic type /turtle1/cmd_vel
 
-rosmsg
-------
+ros2 interface show
+-------------------
 
--  As you can observe the type of message associated with
-   /turtle1/cmd_vel is geometry_msgs/Twist . let’s look into more detail
-   of te message, using
+-  The message type associated with `/turtle1/cmd_vel` is `geometry_msgs/msg/Twist`. To see the message details, you can use the `ros2 interface show` command:
 
 .. code:: shell
 
-   rosmsg show geometry_msgs/Twist
+   ros2 interface show geometry_msgs/msg/Twist
 
--  A message consists of two parts, ﬁeld and constant. Simply, ﬁelds is
-   the datatype and constants are the representative value From the
-   above ﬁgure, you can observe that these ﬁeld and constants are
-   displayed twice. However, both of these sections, are separate since
-   they have a diﬀerent header or diﬀerent sub-information from the same
-   robot. The 2 headers seen are…
+-  A message consists of fields and constants. Fields represent the data type, and constants hold predefined values.
 
--  ``geometry_msgs/Vector3 linear`` : Describes the linear velocities of
-   all the 3 axes.
+-  You will see two fields under `geometry_msgs/msg/Twist`:
 
--  ``geometry_msgs/Vector3 angular`` : While this header describes,
-   angular velocities of all 3 axes.
+   - ``geometry_msgs/Vector3 linear`` : Describes the linear velocities for all three axes.
+   - ``geometry_msgs/Vector3 angular`` : Describes the angular velocities for all three axes.
 
--  .. rubric:: rostopic-info
-      :name: rostopic-info
+ros2 topic info
+---------------
 
--  This command provides a little more detail about topics then type
-   argument.
+-  This command provides more detail about a topic, including both the message type and the nodes publishing and subscribing to it.
 
 .. code:: shell
 
-   rostopic info /turtle1/cmd_vel
+   ros2 topic info /turtle1/cmd_vel
 
--  The output of this command will yield both the message type and the
-   nodes which are publishing it or subscribing it.
+ros2 topic pub
+--------------
 
--  .. rubric:: pub
-      :name: pub
+-  `ros2 topic pub` is used to publish data onto a topic currently advertised.
 
-   -  ``rostopic pub`` publishes data on to a topic currently
-      advertised.
-   -  Usage
-
-   .. code:: shell
-
-      rostopic pub [topic] [msg_type] [args]
-
-   -  Lets move the turtle inside the sim window
-
-   \```shell rostopic pub /turtle1/cmd_vel geometry_msgs/Twist “linear:
-   x: 0.0 y: 0.0 z: 0.0 angular: x: 0.0 y: 0.0 z: 0.0”
-
--  Now that we have the complete blank (with all constants as zeros) pub
-   command for /turtle1 /cmd_vel , let’s rotate it about its z-axis
-   (Yep! the Omega variable).
+-  Usage:
 
 .. code:: shell
 
-   rostopic pub /turtle1/cmd_vel geometry_msgs/Twist "linear:
-   x: 0.0
-   y: 0.0
-   z: 0.0
-   angular:
-   x: 0.0
-   y: 0.0
-   z: 0.5
+   ros2 topic pub [topic] [msg_type] [args]
 
--  After executing the above command you will see the turtle rotating
-   clockwise.
-
--  However, the turtle only rotated for a while and not continuously.
-   This is because our pub command was only sent once. So, to keep the
-   turtle rotating we need to keep sending our pub command repeatedly.
-   And to do so, we’ll use the -r argument with pub command.
-
--  The following command is used to publish a steady stream of commands
-   at a rate of 10Hz.
+-  Let’s move the turtle in the simulator by publishing a command to `/turtle1/cmd_vel`:
 
 .. code:: shell
 
-   rostopic pub -r 10 /turtle1/cmd_vel geometry_msgs/Twist "linear:
-   x: 0.0
-   y: 0.0
-   z: 0.0
-   angular:
-   x: 0.0
-   y: 0.0
-   z: 0.5"
+   ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}"
 
--  You can always know more about pub command by simply typing rostopic
-   pub –help .
+-  The above command will rotate the turtle clockwise around its z-axis.
 
--  .. rubric:: echo
-      :name: echo
-
--  rostopic echo shows the data published on a topic.
-
--  Usage
+-  However, the turtle will only rotate briefly because the command is sent only once. To continuously send the command, use the `--rate` argument.
 
 .. code:: shell
 
-   rostopic echo [topic]
+   ros2 topic pub --rate 10 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}"
 
--  In the earlier section, at the end, we used -r argument to keep it
-   rotation at an angular velocity of 0.5 units. But what if the
-   velocity is unknown and we need this information as feedback to
-   control the motion of turtle???
--  Our desire here is to get the pose information or simply one or all
-   of the turtle’s x,y, and z values w.r.t to the world.
--  But let’s see if there is any data being published by the turtlesim
-   node in the ﬁrst place. To do so, we’ll use the following command…
+-  The turtle will now rotate continuously at a rate of 10Hz. You can always get more information about the `pub` command by typing:
 
 .. code:: shell
 
-   rostopic list -p
+   ros2 topic pub --help
 
--  From the -p we know 2 topic is being published
+ros2 topic echo
+---------------
 
-.. code:: shell
+-  `ros2 topic echo` shows the data being published on a topic.
 
-   /turtle1/color_sensor
-   /turtle1/pose
-
--  Let’s see more into the /turtle1/pose topic.
-
--  Luckily the pose information of turtle from the turtlesim is being
-   published on the topic /turtle1/pose
-
--  To display the pose data, enter the following command…
+-  Usage:
 
 .. code:: shell
 
-   rostopic echo /turtle1/pose
+   ros2 topic echo [topic]
+
+-  Let’s check the pose information of the turtle in turtlesim, which is published on the `/turtle1/pose` topic. Run:
+
+.. code:: shell
+
+   ros2 topic echo /turtle1/pose
+
+-  You will see the x, y, z, and theta values (pose) of the turtle being published in real time.

@@ -1,50 +1,39 @@
 ROS Topics
 ==========
 
--  ROS Topics allow unidirectional communication between ROS Nodes.
+-  ROS 2 Topics allow unidirectional communication between ROS 2 Nodes.
 
--  When using ROS Topics a ROS Node can be a **publisher**, **subscriber** or
-   both.
+-  When using ROS 2 Topics, a ROS Node can act as a **publisher**, **subscriber**, or both.
 
--  A **ROS Node** acting as a publisher can publish data on a **ROS Topic** and
-   a subscriber **ROS Node** can subscribe to a **ROS Topic**.
+-  A **ROS Node** acting as a publisher can publish data on a **ROS Topic**, and a **subscriber** ROS Node can subscribe to a **ROS Topic**.
 
--  Publisher and Subscriber Nodes will exchange **ROS Messages** over a **ROS
-   Topic**.
+-  Publisher and Subscriber Nodes will exchange **ROS Messages** over a **ROS Topic**.
 
--  A **ROS Message** is a simple data structure, comprising typed ﬁelds
-   (integer, ﬂoating point, boolean, etc.). So a ROS Message can hold
-   data of various data-types.
+-  A **ROS Message** is a simple data structure comprising typed fields (integers, floating point numbers, booleans, etc.), so a ROS Message can hold data of various types.
 
- *Consider this analogy*
- 
-----------------------
+*Consider this analogy* 
+-----------------------
 
--  Let’s say you are subscribed to a newspaper called The Melodic
-   published by a publishing house called OSRF.
+-  Let’s say you are subscribed to a newspaper called *The Galactic*, published by a publishing house called OSRF.
 
--  Every morning your paperboy Jon Doe will deliver this newspaper to
-   you.
+-  Every morning your paperboy, Jon Doe, will deliver this newspaper to you.
 
-  ``OSRF <--> ROS Publisher Node``
+  ``OSRF <--> ROS 2 Publisher Node``
 
--  OSRF which is publishing the newspaper as a **Publisher Node**.
+-  OSRF, acting as the **Publisher Node**, is publishing the newspaper.
 
-  ``You <--> ROS Subscriber Node``
+  ``You <--> ROS 2 Subscriber Node``
 
--  You along with your neighbours who are subscribed to this newspaper
-   as **Subscriber Nodes**.
+-  You, along with your neighbors who are subscribed to the newspaper, are the **Subscriber Nodes**.
 
-  ``Jon Doe <--> ROS Topic``
+  ``Jon Doe <--> ROS 2 Topic``
 
--  Your paperboy who is taking the newspaper from the publisher and
-   delivering it to its subscribers as a **ROS Topic**.
+-  Jon Doe, the paperboy delivering the newspaper from the publisher to its subscribers, acts as the **ROS 2 Topic**.
 
-  ``The Melodic Newspaper <--> ROS Message``
+  ``The Galactic Newspaper <--> ROS 2 Message``
 
--  The physical newspaper is your **ROS Message**.
+-  The physical newspaper represents the **ROS 2 Message**.
 
-  ``Sports and Robotics Sections of The Melodic <--> Data Fields defined in ROS Message``
+  ``Sports and Technology Sections of The Galactic <--> Data Fields in ROS 2 Message``
 
--  The sections of the newspaper is the Data Fields deﬁned in the **ROS
-   Message**.
+-  The sections of the newspaper are equivalent to the Data Fields defined in the **ROS 2 Message**.

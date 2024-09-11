@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rostopic command &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+  <title>ROS 2 Topic Command &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
@@ -56,19 +56,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../tool_setup/tool_setup.html">Tool Setup</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../ros.html">Intro To ROS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../ROS_installation/ROS_index.html">ROS 1 Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../catkin_ws.html">Create Workspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../package/package.html">ROS Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../node/node.html">ROS Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../master/master.html">ROS Master</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../ros.html">Intro To ROS 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../package/package.html">Creating a package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../node/node.html">ROS 2 Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/example.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../launch/launch.html">ROS Launch Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../comm.html">ROS Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../launch/launch.html">ROS 2 Launch Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="topics.html">ROS Topics</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">rostopic command</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS 2 Topic Command</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-list">ros2 topic list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-type-info-and-ros2-interface">ros2 topic type, info, and ros2 interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#type">type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#rosmsg">rosmsg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-interface-show">ros2 interface show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-info">ros2 topic info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-pub">ros2 topic pub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-echo">ros2 topic echo</a></li>
 </ul>
 </li>
 </ul>
@@ -104,8 +105,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../ros.html">Intro To ROS</a></li>
-      <li class="breadcrumb-item active">rostopic command</li>
+          <li class="breadcrumb-item"><a href="../../ros.html">Intro To ROS 2</a></li>
+      <li class="breadcrumb-item active">ROS 2 Topic Command</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/comm/topics/rostopic.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -115,193 +116,131 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="rostopic-command">
-<h1>rostopic command<a class="headerlink" href="#rostopic-command" title="Link to this heading"></a></h1>
+  <section id="ros-2-topic-command">
+<h1>ROS 2 Topic Command<a class="headerlink" href="#ros-2-topic-command" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p>rostopic contains the rostopic command-line tool for displaying debug
-information about ROS Topics, including publishers, subscribers,
-publishing rate, and ROS Messages.</p></li>
+<li><p><cite>ros2 topic</cite> is a command-line tool for displaying debug information about ROS 2 Topics, including publishers, subscribers, publishing rates, and ROS Messages.</p></li>
 <li><p>Use</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>--h
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>--help
 </pre></div>
 </div>
-<p>for getting the rostopic command help.</p>
-<ul>
-<li><p class="rubric" id="rostopic-list">rostopic-list</p>
-</li>
-<li><p>rostopic list returns a list of all topics currently subscribed to
-and published.</p></li>
-<li><p>In one terminal run</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscore
-</pre></div>
-</div>
+<p>to get the help for the <cite>ros2 topic</cite> command.</p>
+<section id="ros2-topic-list">
+<h2>ros2 topic list<a class="headerlink" href="#ros2-topic-list" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>In the other one, run</p></li>
+<li><p><cite>ros2 topic list</cite> returns a list of all topics currently being subscribed to and published.</p></li>
+<li><p>In one terminal, ensure your ROS 2 environment is sourced and then run:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>list
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>list
 </pre></div>
 </div>
-<p>The above should give you a list of the default ROS topics</p>
+<p>The above will give you a list of the default ROS 2 topics.</p>
 <ul class="simple">
-<li><p>For this tutorial, we will also use turtlesim. Please run in a new
-terminal:</p></li>
+<li><p>For this tutorial, we will also use <cite>turtlesim</cite>. Please run in a new terminal:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
 </pre></div>
 </div>
-<p>You will see a small blue box with probably a diﬀerent turtle within it.</p>
-<ul>
-<li><p>Now, check again the rostopic list command in another terminal and
-observe the topics being subscribed or published.</p></li>
-<li><p class="rubric" id="type-info-and-rosmsg">type, info and rosmsg</p>
-</li>
+<p>You will see a small blue box with a turtle inside it.</p>
+<ul class="simple">
+<li><p>Now, check again the <cite>ros2 topic list</cite> command in another terminal and observe the topics being subscribed to or published.</p></li>
 </ul>
+</section>
+<section id="ros2-topic-type-info-and-ros2-interface">
+<h2>ros2 topic type, info, and ros2 interface<a class="headerlink" href="#ros2-topic-type-info-and-ros2-interface" title="Link to this heading"></a></h2>
+</section>
 <section id="type">
 <h2>type<a class="headerlink" href="#type" title="Link to this heading"></a></h2>
-<p>Communication on topics happens by sending ROS messages between nodes.
-To communicate, the publisher and subscriber must send and receive the
-same type of message. This means that a topic type is deﬁned by the
-message type published on it. The type of the message sent on a topic
-can be determined using rostopic type .</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">[</span>topic_name<span class="o">]</span>
+<p>Communication on topics happens by sending ROS 2 messages between nodes. To communicate, the publisher and subscriber must use the same message type. You can determine the message type being used on a topic with the <cite>ros2 topic type</cite> command.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">[</span>topic_name<span class="o">]</span>
 </pre></div>
 </div>
-<p>From the previous section, we know that the turtlesim node has 3 topics
-being published/subscribed.</p>
+<p>From the turtlesim node, we know that there are several topics being published/subscribed, such as:</p>
 <ul class="simple">
-<li><p>/turtle1/cmd_vel</p></li>
-<li><p>/turtle1/pose</p></li>
-<li><p>/turtle1/color_sensor</p></li>
+<li><p><cite>/turtle1/cmd_vel</cite></p></li>
+<li><p><cite>/turtle1/pose</cite></p></li>
+<li><p><cite>/turtle1/color_sensor</cite></p></li>
 </ul>
-<p>Lets consider the topics /turtle1/cmd_vel . Enter the following command
-to get the message type.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">type</span><span class="w"> </span>/turtle1/cmd_vel
+<p>Let’s check the message type associated with the topic <cite>/turtle1/cmd_vel</cite>. Enter the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">type</span><span class="w"> </span>/turtle1/cmd_vel
 </pre></div>
 </div>
 </section>
-<section id="rosmsg">
-<h2>rosmsg<a class="headerlink" href="#rosmsg" title="Link to this heading"></a></h2>
+<section id="ros2-interface-show">
+<h2>ros2 interface show<a class="headerlink" href="#ros2-interface-show" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>As you can observe the type of message associated with
-/turtle1/cmd_vel is geometry_msgs/Twist . let’s look into more detail
-of te message, using</p></li>
+<li><p>The message type associated with <cite>/turtle1/cmd_vel</cite> is <cite>geometry_msgs/msg/Twist</cite>. To see the message details, you can use the <cite>ros2 interface show</cite> command:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosmsg<span class="w"> </span>show<span class="w"> </span>geometry_msgs/Twist
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>interface<span class="w"> </span>show<span class="w"> </span>geometry_msgs/msg/Twist
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>A message consists of fields and constants. Fields represent the data type, and constants hold predefined values.</p></li>
+<li><p>You will see two fields under <cite>geometry_msgs/msg/Twist</cite>:</p>
 <ul>
-<li><p>A message consists of two parts, ﬁeld and constant. Simply, ﬁelds is
-the datatype and constants are the representative value From the
-above ﬁgure, you can observe that these ﬁeld and constants are
-displayed twice. However, both of these sections, are separate since
-they have a diﬀerent header or diﬀerent sub-information from the same
-robot. The 2 headers seen are…</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">geometry_msgs/Vector3</span> <span class="pre">linear</span></code> : Describes the linear velocities of
-all the 3 axes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">geometry_msgs/Vector3</span> <span class="pre">angular</span></code> : While this header describes,
-angular velocities of all 3 axes.</p></li>
-<li><p class="rubric" id="rostopic-info">rostopic-info</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">geometry_msgs/Vector3</span> <span class="pre">linear</span></code> : Describes the linear velocities for all three axes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geometry_msgs/Vector3</span> <span class="pre">angular</span></code> : Describes the angular velocities for all three axes.</p></li>
+</ul>
 </li>
-<li><p>This command provides a little more detail about topics then type
-argument.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>info<span class="w"> </span>/turtle1/cmd_vel
+</section>
+<section id="ros2-topic-info">
+<h2>ros2 topic info<a class="headerlink" href="#ros2-topic-info" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>This command provides more detail about a topic, including both the message type and the nodes publishing and subscribing to it.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>info<span class="w"> </span>/turtle1/cmd_vel
 </pre></div>
 </div>
-<ul>
-<li><p>The output of this command will yield both the message type and the
-nodes which are publishing it or subscribing it.</p></li>
-<li><p class="rubric" id="pub">pub</p>
+</section>
+<section id="ros2-topic-pub">
+<h2>ros2 topic pub<a class="headerlink" href="#ros2-topic-pub" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">pub</span></code> publishes data on to a topic currently
-advertised.</p></li>
-<li><p>Usage</p></li>
+<li><p><cite>ros2 topic pub</cite> is used to publish data onto a topic currently advertised.</p></li>
+<li><p>Usage:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span><span class="o">[</span>topic<span class="o">]</span><span class="w"> </span><span class="o">[</span>msg_type<span class="o">]</span><span class="w"> </span><span class="o">[</span>args<span class="o">]</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Lets move the turtle inside the sim window</p></li>
-</ul>
-<p>```shell rostopic pub /turtle1/cmd_vel geometry_msgs/Twist “linear:
-x: 0.0 y: 0.0 z: 0.0 angular: x: 0.0 y: 0.0 z: 0.0”</p>
-</li>
-<li><p>Now that we have the complete blank (with all constants as zeros) pub
-command for /turtle1 /cmd_vel , let’s rotate it about its z-axis
-(Yep! the Omega variable).</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/Twist<span class="w"> </span><span class="s2">&quot;linear:</span>
-<span class="s2">x: 0.0</span>
-<span class="s2">y: 0.0</span>
-<span class="s2">z: 0.0</span>
-<span class="s2">angular:</span>
-<span class="s2">x: 0.0</span>
-<span class="s2">y: 0.0</span>
-<span class="s2">z: 0.5</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span><span class="o">[</span>topic<span class="o">]</span><span class="w"> </span><span class="o">[</span>msg_type<span class="o">]</span><span class="w"> </span><span class="o">[</span>args<span class="o">]</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>After executing the above command you will see the turtle rotating
-clockwise.</p></li>
-<li><p>However, the turtle only rotated for a while and not continuously.
-This is because our pub command was only sent once. So, to keep the
-turtle rotating we need to keep sending our pub command repeatedly.
-And to do so, we’ll use the -r argument with pub command.</p></li>
-<li><p>The following command is used to publish a steady stream of commands
-at a rate of 10Hz.</p></li>
+<li><p>Let’s move the turtle in the simulator by publishing a command to <cite>/turtle1/cmd_vel</cite>:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>pub<span class="w"> </span>-r<span class="w"> </span><span class="m">10</span><span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/Twist<span class="w"> </span><span class="s2">&quot;linear:</span>
-<span class="s2">x: 0.0</span>
-<span class="s2">y: 0.0</span>
-<span class="s2">z: 0.0</span>
-<span class="s2">angular:</span>
-<span class="s2">x: 0.0</span>
-<span class="s2">y: 0.0</span>
-<span class="s2">z: 0.5&quot;</span>
-</pre></div>
-</div>
-<ul>
-<li><p>You can always know more about pub command by simply typing rostopic
-pub –help .</p></li>
-<li><p class="rubric" id="echo">echo</p>
-</li>
-<li><p>rostopic echo shows the data published on a topic.</p></li>
-<li><p>Usage</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="o">[</span>topic<span class="o">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/msg/Twist<span class="w"> </span><span class="s2">&quot;{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}&quot;</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>In the earlier section, at the end, we used -r argument to keep it
-rotation at an angular velocity of 0.5 units. But what if the
-velocity is unknown and we need this information as feedback to
-control the motion of turtle???</p></li>
-<li><p>Our desire here is to get the pose information or simply one or all
-of the turtle’s x,y, and z values w.r.t to the world.</p></li>
-<li><p>But let’s see if there is any data being published by the turtlesim
-node in the ﬁrst place. To do so, we’ll use the following command…</p></li>
+<li><p>The above command will rotate the turtle clockwise around its z-axis.</p></li>
+<li><p>However, the turtle will only rotate briefly because the command is sent only once. To continuously send the command, use the <cite>–rate</cite> argument.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span>list<span class="w"> </span>-p
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--rate<span class="w"> </span><span class="m">10</span><span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/msg/Twist<span class="w"> </span><span class="s2">&quot;{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}&quot;</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>From the -p we know 2 topic is being published</p></li>
+<li><p>The turtle will now rotate continuously at a rate of 10Hz. You can always get more information about the <cite>pub</cite> command by typing:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>/turtle1/color_sensor
-/turtle1/pose
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--help
+</pre></div>
+</div>
+</section>
+<section id="ros2-topic-echo">
+<h2>ros2 topic echo<a class="headerlink" href="#ros2-topic-echo" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>ros2 topic echo</cite> shows the data being published on a topic.</p></li>
+<li><p>Usage:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="o">[</span>topic<span class="o">]</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Let’s see more into the /turtle1/pose topic.</p></li>
-<li><p>Luckily the pose information of turtle from the turtlesim is being
-published on the topic /turtle1/pose</p></li>
-<li><p>To display the pose data, enter the following command…</p></li>
+<li><p>Let’s check the pose information of the turtle in turtlesim, which is published on the <cite>/turtle1/pose</cite> topic. Run:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rostopic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/turtle1/pose
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/turtle1/pose
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>You will see the x, y, z, and theta values (pose) of the turtle being published in real time.</p></li>
+</ul>
 </section>
 </section>
 

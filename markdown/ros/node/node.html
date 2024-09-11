@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROS Nodes &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+  <title>ROS 2 Nodes &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -25,8 +25,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="ROS Master" href="../master/master.html" />
-    <link rel="prev" title="ROS Package" href="../package/package.html" /> 
+    <link rel="next" title="Examples" href="../examples/example.html" />
+    <link rel="prev" title="Creating a package" href="../package/package.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,25 +56,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tool_setup/tool_setup.html">Tool Setup</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../ros.html">Intro To ROS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../ROS_installation/ROS_index.html">ROS 1 Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../catkin_ws.html">Create Workspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../package/package.html">ROS Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS Nodes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#creating-a-ros-node">Creating a ROS Node</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ros.html">Intro To ROS 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../package/package.html">Creating a package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS 2 Nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-ros-2-node">Creating a ROS 2 Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#steps-to-create-a-node-in-python">Steps to Create a Node in Python</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#command">Command</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#command-rosrun">Command: rosrun</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#command-rosnode">Command: rosnode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-ros2-run">Command: ros2 run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-ros2-node">Command: ros2 node</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../master/master.html">ROS Master</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../examples/example.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../launch/launch.html">ROS Launch Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../comm/comm.html">ROS Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../launch/launch.html">ROS 2 Launch Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../comm/topics/topics.html">ROS Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">rostopic command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">ROS 2 Topic Command</a></li>
 </ul>
 </li>
 </ul>
@@ -108,8 +107,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../ros.html">Intro To ROS</a></li>
-      <li class="breadcrumb-item active">ROS Nodes</li>
+          <li class="breadcrumb-item"><a href="../ros.html">Intro To ROS 2</a></li>
+      <li class="breadcrumb-item active">ROS 2 Nodes</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/node/node.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -119,22 +118,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ros-nodes">
-<h1><a class="toc-backref" href="#id1" role="doc-backlink">ROS Nodes</a><a class="headerlink" href="#ros-nodes" title="Link to this heading"></a></h1>
+  <section id="ros-2-nodes">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">ROS 2 Nodes</a><a class="headerlink" href="#ros-2-nodes" title="Link to this heading"></a></h1>
 <nav class="contents" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ros-nodes" id="id1">ROS Nodes</a></p>
+<li><p><a class="reference internal" href="#ros-2-nodes" id="id1">ROS 2 Nodes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#creating-a-ros-node" id="id2">Creating a ROS Node</a></p></li>
-<li><p><a class="reference internal" href="#command" id="id3">Command</a></p>
+<li><p><a class="reference internal" href="#creating-a-ros-2-node" id="id2">Creating a ROS 2 Node</a></p>
 <ul>
-<li><p><a class="reference internal" href="#command-rosrun" id="id4">Command: rosrun</a></p>
-<ul>
-<li><p><a class="reference internal" href="#to-create-an-executable-python-file" id="id5">To create an executable python file</a></p></li>
+<li><p><a class="reference internal" href="#steps-to-create-a-node-in-python" id="id3">Steps to Create a Node in Python</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#command-rosnode" id="id6">Command: rosnode</a></p></li>
+<li><p><a class="reference internal" href="#command" id="id4">Command</a></p>
+<ul>
+<li><p><a class="reference internal" href="#command-ros2-run" id="id5">Command: ros2 run</a></p>
+<ul>
+<li><p><a class="reference internal" href="#to-create-an-executable-python-file" id="id6">To create an executable Python file</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#command-ros2-node" id="id7">Command: ros2 node</a></p></li>
 </ul>
 </li>
 </ul>
@@ -142,251 +145,159 @@
 </ul>
 </nav>
 <ul class="simple">
-<li><p>A ROS Node is a piece of software/executable that uses ROS to
-communicate with other ROS Nodes.</p></li>
-<li><p>ROS Nodes are building block of any ROS Application.</p></li>
-<li><p>For example, if you have a wall-following robot then one ROS Node
-could get distance sensor values and another node can control the
-motors of the robot. So, these two nodes will communicate with each
-other in order to move the robot.</p></li>
-<li><p>You can write your entire ROS Application in a single node but having
-multiple nodes ensures that if a node crashes it won’t crash your
-entire ROS application.</p></li>
-<li><p>A ROS package can have multiple ROS Nodes.</p></li>
-<li><p>Python and C++ are majorly used to write ROS Nodes.</p></li>
+<li><p>A <strong>ROS 2 Node</strong> is a piece of software/executable that uses ROS 2 to
+communicate with other ROS 2 nodes.</p></li>
+<li><p>ROS 2 Nodes are the building blocks of any ROS 2 application.</p></li>
+<li><p>For example, in a wall-following robot, one ROS 2 node could retrieve
+distance sensor values while another node controls the robot’s
+motors. These nodes communicate to move the robot.</p></li>
+<li><p>Although it’s possible to write the entire application in a single
+node, having multiple nodes ensures modularity and fault tolerance—
+if one node crashes, it won’t crash the entire application.</p></li>
+<li><p>A <strong>ROS 2 package</strong> can contain multiple ROS 2 nodes.</p></li>
+<li><p>ROS 2 Nodes can be written in <strong>Python</strong> or <strong>C++</strong>.</p></li>
 </ul>
-<section id="creating-a-ros-node">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Creating a ROS Node</a><a class="headerlink" href="#creating-a-ros-node" title="Link to this heading"></a></h2>
+<section id="creating-a-ros-2-node">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Creating a ROS 2 Node</a><a class="headerlink" href="#creating-a-ros-2-node" title="Link to this heading"></a></h2>
+<section id="steps-to-create-a-node-in-python">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Steps to Create a Node in Python</a><a class="headerlink" href="#steps-to-create-a-node-in-python" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>In this section we will learn how to create a ROS Node inside
-pkg_ros_basics ROS Package which we created in the previous section.</p></li>
-<li><p>Navigate to pkg_ros_basics</p></li>
+<li><p>Navigate to your ROS 2 package (for example, <code class="docutils literal notranslate"><span class="pre">pkg_ros_basics</span></code>):</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/pkg_ros_basics
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src/pkg_ros_basics
+
+OR
 </pre></div>
 </div>
-<p>OR</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscd<span class="w"> </span>pkg_ros_basics
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span>pkg_ros_basics
+<span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src/pkg_ros_basics
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>roscd will work only if you have sourced setup.bash of your</p>
-</div>
-<p>catkin workspace.</p>
 <ul class="simple">
-<li><p>Create a scripts folder for your Python scripts and navigate into the
-folder.</p></li>
+<li><p>Create a folder called <code class="docutils literal notranslate"><span class="pre">scripts</span></code> for your Python scripts and navigate into the folder.</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>scripts
 <span class="nb">cd</span><span class="w"> </span>scripts
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Create a Python script called node_hello_ros.py .</p></li>
+<li><p>Create a Python script called <code class="docutils literal notranslate"><span class="pre">node_hello_ros.py</span></code>.</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>node_hello_ros.py
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Open the script in any text-editor and start editing.</p></li>
+<li><p>Open the script in a text editor and start editing.</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gedit<span class="w"> </span>node_hello_ros.py
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>First line of all your Python ROS scripts should be the following
-shebang</p></li>
+<li><p>The first line of all Python ROS 2 scripts should be the shebang.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Now write a ROS Node to print Hello World! on the console.</p></li>
+<li><p>Now write a ROS 2 node that prints “Hello World!” to the console.</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">rospy</span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-   <span class="c1">#Initialize the new node</span>
-   <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;node_hello_ros&#39;</span><span class="p">,</span> <span class="n">anonymous</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-   <span class="c1">#  Print info on console.</span>
-   <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+
+<span class="k">class</span> <span class="nc">HelloWorldNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;hello_world_node&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">HelloWorldNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">main</span><span class="p">()</span>
-    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ROSInterruptException</span><span class="p">:</span>
-        <span class="k">pass</span>
+    <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Make your node executable</p></li>
+<li><p>Make your node executable.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>node_hello_ros.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>node_hello_ros.py
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>Now to run your node:</p>
 <ul>
-<li><p>Now to run your node</p>
-<ul class="simple">
-<li><p>Open the terminal and run ROS master</p></li>
+<li><p>Open a terminal and run:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscore
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Once the roscore is running open a new terminal and run the main
-node</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>pkg_ros_basics<span class="w"> </span>node_hello_ros.py
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This command will work only if you have sourced setup.bash of your catkin workspace either manually or using .bashrc .</p>
-</div>
 </li>
 </ul>
-</section>
-<section id="command">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Command</a><a class="headerlink" href="#command" title="Link to this heading"></a></h2>
-<section id="command-rosrun">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Command: rosrun</a><a class="headerlink" href="#command-rosrun" title="Link to this heading"></a></h3>
-<p>rosrun allows you to run an executable in an arbitrary package from
-anywhere without having to give its full path or cd/roscd there ﬁrst.</p>
-<p>Usage:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>&lt;package&gt;<span class="w"> </span>&lt;executable&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>pkg_ros_basics<span class="w"> </span>node_hello_ros.py
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;package&gt;</span></code> is nothing but the package name which you have created
-using catkin_create_pkg command or used any other package.</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;executable&gt;</span></code> is the python or cpp ﬁle.</p>
+</section>
+</section>
+<section id="command">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Command</a><a class="headerlink" href="#command" title="Link to this heading"></a></h2>
+<section id="command-ros2-run">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Command: ros2 run</a><a class="headerlink" href="#command-ros2-run" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> allows you to run an executable in an arbitrary package from
+anywhere without having to give its full path or cd there first.</p>
+<p>Usage:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>&lt;package&gt;<span class="w"> </span>&lt;executable&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;package&gt;</span></code> is the name of the package you created using the
+<code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span></code> command.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;executable&gt;</span></code> is the Python or C++ file you want to run.</p>
 <section id="to-create-an-executable-python-file">
-<h4><a class="toc-backref" href="#id5" role="doc-backlink">To create an executable python file</a><a class="headerlink" href="#to-create-an-executable-python-file" title="Link to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id6" role="doc-backlink">To create an executable Python file</a><a class="headerlink" href="#to-create-an-executable-python-file" title="Link to this heading"></a></h4>
 <ul class="simple">
-<li><p>After creating a package, create a folder in the package names as
-scripts folder to store all the python ﬁles in that folder.</p></li>
+<li><p>After creating a package, create a folder in the package called
+<code class="docutils literal notranslate"><span class="pre">scripts</span></code> to store all Python files in that folder.</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/&lt;package&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src/&lt;package&gt;
 mkdir<span class="w"> </span>scripts
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Here we can create python scripts by running this command by going
-into the scripts directory,</p></li>
+<li><p>Create Python scripts by running this command in the <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory:</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>scripts
 touch<span class="w"> </span>filename.py
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Now you can edit your python ﬁle and before running you have to make
-it executable by running this command once,</p></li>
+<li><p>Edit your Python file, and make it executable before running:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src/&lt;package&gt;/scripts
-chmod<span class="w"> </span>+x<span class="w"> </span>filename.py
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Here we can create cpp ﬁles by running this command by going into the
-src directory,</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>src
-touch<span class="w"> </span>filename.cpp
-</pre></div>
-</div>
-<p>Now you can edit your cpp ﬁle , but for making it executable we have to
-edit the CMakeLists.txt ﬁle</p>
-<p>Add these few lines at the bottom of CMakeLists.txt ﬁle,</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>add_executable(filename<span class="w"> </span>src/filename.cpp)
-target_link_libraries(filename<span class="w"> </span>${catkin_LIBRARIES})
-</pre></div>
-</div>
-<p>Then run this command,</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws
-catkin_make
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>filename.py
 </pre></div>
 </div>
 </section>
 </section>
-<section id="command-rosnode">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Command: rosnode</a><a class="headerlink" href="#command-rosnode" title="Link to this heading"></a></h3>
+<section id="command-ros2-node">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Command: ros2 node</a><a class="headerlink" href="#command-ros2-node" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>rosnode contains the rosnode command-line tool for displaying debug
-information about ROS Nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span></code> provides command-line tools for displaying and debugging
+ROS 2 nodes.</p></li>
+<li><p>Use the following command to list all active ROS 2 nodes:</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For quick information about any command, be that outside of ROS,</p>
-</div>
-<p>simply type the command along with suﬃx –h or -help . This is a widely
-used concept among other Linux Command: rosrun commands for quick
-references. Here’s an example for rosnode –h command</p>
-<ul>
-<li><p class="rubric" id="list">list</p>
-</li>
-</ul>
-<p>rosnode list displays a list of all current nodes.</p>
-<p>Let’s ﬁgure out what argument the list sub-command needs. In a new
-terminal run start the rosmaster:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscore
-</pre></div>
-</div>
-<p>And in another terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>rospy_tutorials<span class="w"> </span>talker
-</pre></div>
-</div>
-<p>And in another terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode<span class="w"> </span>list
-</pre></div>
-</div>
-<p>Now the node named talker (node with word talker in it) will be printed
-on the terminal.</p>
-<ul>
-<li><p class="rubric" id="info">info</p>
-</li>
-<li><p>rosnode info /node_name displays information about a node, including
-publications and subscriptions.</p></li>
-<li><p>Let’s ﬁgure out what argument the info sub-command needs. In a new
-terminal run start the</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosmaster
-</pre></div>
-</div>
-<p>And in another terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>rospy_tutorials<span class="w"> </span>talker
-</pre></div>
-</div>
-<p>And in another terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode<span class="w"> </span>info<span class="w"> </span>&lt;talker_node&gt;
-</pre></div>
-</div>
-<p>This should give details of the particular node</p>
-<ul>
-<li><p class="rubric" id="kill">kill</p>
-</li>
-</ul>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>rosnode kill is not guaranteed to succeed.</p>
-</div>
-<ul class="simple">
-<li><p>Let’s ﬁgure out what argument the kill sub-command needs. In a new
-terminal run start the rosmaster:</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>roscore
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span>list
+
+This<span class="w"> </span>will<span class="w"> </span>print<span class="w"> </span>the<span class="w"> </span>names<span class="w"> </span>of<span class="w"> </span>all<span class="w"> </span>active<span class="w"> </span>nodes.
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>And in another terminal, run:</p></li>
+<li><p>To get information about a specific node, including its publications and subscriptions:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosrun<span class="w"> </span>rospy_tutorials<span class="w"> </span>talker
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span>info<span class="w"> </span>&lt;node_name&gt;
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>And in another terminal, run:</p></li>
+<li><p>To kill (terminate) a node:</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosnode<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>rosout<span class="w"> </span>&lt;talker_node&gt;
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>&lt;node_name&gt;
 </pre></div>
 </div>
 </section>
@@ -397,8 +308,8 @@ terminal run start the rosmaster:</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../package/package.html" class="btn btn-neutral float-left" title="ROS Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../master/master.html" class="btn btn-neutral float-right" title="ROS Master" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../package/package.html" class="btn btn-neutral float-left" title="Creating a package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../examples/example.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

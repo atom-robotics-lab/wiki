@@ -2,14 +2,13 @@
 Examples
 ********
 
-Example #1: ROS Node to Get and Set Parameters
-==============================================
+Example #1: ROS 2 Node to Get and Set Parameters
+===============================================
 
 Aim
 ---
 
-To write a ROS Node to read config_my.yaml ﬁle loaded in ROS Parameter
-Server (done here), print it on the console and modify the phone number.
+To write a ROS 2 Node that reads parameters from a `config.yaml` file, prints them on the console, and modifies the phone number.
 
 Code
 ----
@@ -17,39 +16,49 @@ Code
 .. code:: python
 
    node_param_get_set.py
-   #!/usr/bin/env python
-   import rospy
-   def main():
-       #1. Make the script a ROS Node.
-       rospy.init_node('node_param_get_set', anonymous=True)
-       # 2. Read from Parameter Server
-       rospy.loginfo("Reading from Parameter Server.")
-       param_config_my = rospy.get_param('details')
 
-       # Get all the parameters inside 'details'
-       # Store the parameters in variables
-       
-       first_name = param_config_my['name']['first']
-       last_name = param_config_my['name']['last']
-       address = param_config_my['contact']['address']
-       phone = param_config_my['contact']['phone']
-       
-       # Print the parameters
+   #!/usr/bin/env python3
+   import rclpy
+   from rclpy.node import Node
 
-       rospy.loginfo(">> First Name: {}".format(first_name))
-       rospy.loginfo(">> Last Name: {}".format(last_name))
-       rospy.loginfo(">> Address: {}".format(address))
-       rospy.loginfo(">> Phone: {}".format(phone))
-       
-       # 3. Modify the Phone Number
+   class ParamNode(Node):
+       def __init__(self):
+           super().__init__('node_param_get_set')
 
-       rospy.set_param('/details/contact/phone', 55555)
-       new_phone = rospy.get_param('/details/contact/phone')
-       rospy.loginfo(">> New Phone: {}".format(new_phone))
+           # 1. Read from Parameter Server
+           self.get_logger().info("Reading from Parameter Server.")
+           
+           # Get all the parameters inside 'details'
+           # Store the parameters in variables
+           param_config_my = self.get_parameters_by_prefix('details')
+           first_name = param_config_my['name.first'].value
+           last_name = param_config_my['name.last'].value
+           address = param_config_my['contact.address'].value
+           phone = param_config_my['contact.phone'].value
 
-       # Modify only Phone Number in Parame
-       # Get only Phone Number from Paramet
-       # Print the new Phone Number
+           # Print the parameters
+           self.get_logger().info(f">> First Name: {first_name}")
+           self.get_logger().info(f">> Last Name: {last_name}")
+           self.get_logger().info(f">> Address: {address}")
+           self.get_logger().info(f">> Phone: {phone}")
 
--  The code is self explainatory , please feel free to seek help if you
-   don’t understand it
+           # 2. Modify the Phone Number
+           self.set_parameters([rclpy.parameter.Parameter('details.contact.phone', rclpy.Parameter.Type.INTEGER, 55555)])
+           new_phone = self.get_parameter('details.contact.phone').value
+           self.get_logger().info(f">> New Phone: {new_phone}")
+
+   def main(args=None):
+       rclpy.init(args=args)
+       node = ParamNode()
+       rclpy.spin(node)
+       rclpy.shutdown()
+
+   if __name__ == '__main__':
+       main()
+
+Explanation
+-----------
+
+- This ROS 2 node reads parameters from the parameter server, prints them, and modifies the phone number.
+- It utilizes the ROS 2 `rclpy` library and leverages the `get_parameters_by_prefix()` function to access nested parameters.
+- The parameters include first name, last name, address, and phone number. The node prints these values and updates the phone number to `55555`.

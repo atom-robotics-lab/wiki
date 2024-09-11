@@ -25,8 +25,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="ROS Launch Files" href="../launch/launch.html" />
-    <link rel="prev" title="ROS Master" href="../master/master.html" /> 
+    <link rel="next" title="ROS 2 Launch Files" href="../launch/launch.html" />
+    <link rel="prev" title="ROS 2 Nodes" href="../node/node.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,24 +56,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tool_setup/tool_setup.html">Tool Setup</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../ros.html">Intro To ROS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../ROS_installation/ROS_index.html">ROS 1 Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../catkin_ws.html">Create Workspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../package/package.html">ROS Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../node/node.html">ROS Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../master/master.html">ROS Master</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ros.html">Intro To ROS 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../package/package.html">Creating a package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../node/node.html">ROS 2 Nodes</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-1-ros-node-to-get-and-set-parameters">Example #1: ROS Node to Get and Set Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-1-ros-2-node-to-get-and-set-parameters">Example #1: ROS 2 Node to Get and Set Parameters</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#aim">Aim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#explanation">Explanation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../launch/launch.html">ROS Launch Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../comm/comm.html">ROS Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../launch/launch.html">ROS 2 Launch Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../comm/topics/topics.html">ROS Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">rostopic command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">ROS 2 Topic Command</a></li>
 </ul>
 </li>
 </ul>
@@ -107,7 +104,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../ros.html">Intro To ROS</a></li>
+          <li class="breadcrumb-item"><a href="../ros.html">Intro To ROS 2</a></li>
       <li class="breadcrumb-item active">Examples</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/examples/example.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -120,54 +117,63 @@
              
   <section id="examples">
 <h1>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h1>
-<section id="example-1-ros-node-to-get-and-set-parameters">
-<h2>Example #1: ROS Node to Get and Set Parameters<a class="headerlink" href="#example-1-ros-node-to-get-and-set-parameters" title="Link to this heading"></a></h2>
+<section id="example-1-ros-2-node-to-get-and-set-parameters">
+<h2>Example #1: ROS 2 Node to Get and Set Parameters<a class="headerlink" href="#example-1-ros-2-node-to-get-and-set-parameters" title="Link to this heading"></a></h2>
 <section id="aim">
 <h3>Aim<a class="headerlink" href="#aim" title="Link to this heading"></a></h3>
-<p>To write a ROS Node to read config_my.yaml ﬁle loaded in ROS Parameter
-Server (done here), print it on the console and modify the phone number.</p>
+<p>To write a ROS 2 Node that reads parameters from a <cite>config.yaml</cite> file, prints them on the console, and modifies the phone number.</p>
 </section>
 <section id="code">
 <h3>Code<a class="headerlink" href="#code" title="Link to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">node_param_get_set</span><span class="o">.</span><span class="n">py</span>
-<span class="c1">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">rospy</span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="c1">#1. Make the script a ROS Node.</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;node_param_get_set&#39;</span><span class="p">,</span> <span class="n">anonymous</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="c1"># 2. Read from Parameter Server</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Reading from Parameter Server.&quot;</span><span class="p">)</span>
-    <span class="n">param_config_my</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;details&#39;</span><span class="p">)</span>
 
-    <span class="c1"># Get all the parameters inside &#39;details&#39;</span>
-    <span class="c1"># Store the parameters in variables</span>
+<span class="c1">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
 
-    <span class="n">first_name</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">][</span><span class="s1">&#39;first&#39;</span><span class="p">]</span>
-    <span class="n">last_name</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">][</span><span class="s1">&#39;last&#39;</span><span class="p">]</span>
-    <span class="n">address</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;contact&#39;</span><span class="p">][</span><span class="s1">&#39;address&#39;</span><span class="p">]</span>
-    <span class="n">phone</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;contact&#39;</span><span class="p">][</span><span class="s1">&#39;phone&#39;</span><span class="p">]</span>
+<span class="k">class</span> <span class="nc">ParamNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;node_param_get_set&#39;</span><span class="p">)</span>
 
-    <span class="c1"># Print the parameters</span>
+        <span class="c1"># 1. Read from Parameter Server</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Reading from Parameter Server.&quot;</span><span class="p">)</span>
 
-    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; First Name: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first_name</span><span class="p">))</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; Last Name: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">last_name</span><span class="p">))</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; Address: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">address</span><span class="p">))</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; Phone: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">phone</span><span class="p">))</span>
+        <span class="c1"># Get all the parameters inside &#39;details&#39;</span>
+        <span class="c1"># Store the parameters in variables</span>
+        <span class="n">param_config_my</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameters_by_prefix</span><span class="p">(</span><span class="s1">&#39;details&#39;</span><span class="p">)</span>
+        <span class="n">first_name</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;name.first&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">last_name</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;name.last&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">address</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;contact.address&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">phone</span> <span class="o">=</span> <span class="n">param_config_my</span><span class="p">[</span><span class="s1">&#39;contact.phone&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
 
-    <span class="c1"># 3. Modify the Phone Number</span>
+        <span class="c1"># Print the parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt; First Name: </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt; Last Name: </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt; Address: </span><span class="si">{</span><span class="n">address</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt; Phone: </span><span class="si">{</span><span class="n">phone</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="n">rospy</span><span class="o">.</span><span class="n">set_param</span><span class="p">(</span><span class="s1">&#39;/details/contact/phone&#39;</span><span class="p">,</span> <span class="mi">55555</span><span class="p">)</span>
-    <span class="n">new_phone</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;/details/contact/phone&#39;</span><span class="p">)</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; New Phone: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_phone</span><span class="p">))</span>
+        <span class="c1"># 2. Modify the Phone Number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_parameters</span><span class="p">([</span><span class="n">rclpy</span><span class="o">.</span><span class="n">parameter</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="s1">&#39;details.contact.phone&#39;</span><span class="p">,</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">Parameter</span><span class="o">.</span><span class="n">Type</span><span class="o">.</span><span class="n">INTEGER</span><span class="p">,</span> <span class="mi">55555</span><span class="p">)])</span>
+        <span class="n">new_phone</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;details.contact.phone&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt; New Phone: </span><span class="si">{</span><span class="n">new_phone</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Modify only Phone Number in Parame</span>
-    <span class="c1"># Get only Phone Number from Paramet</span>
-    <span class="c1"># Print the new Phone Number</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">ParamNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
+</section>
+<section id="explanation">
+<h3>Explanation<a class="headerlink" href="#explanation" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>The code is self explainatory , please feel free to seek help if you
-don’t understand it</p></li>
+<li><p>This ROS 2 node reads parameters from the parameter server, prints them, and modifies the phone number.</p></li>
+<li><p>It utilizes the ROS 2 <cite>rclpy</cite> library and leverages the <cite>get_parameters_by_prefix()</cite> function to access nested parameters.</p></li>
+<li><p>The parameters include first name, last name, address, and phone number. The node prints these values and updates the phone number to <cite>55555</cite>.</p></li>
 </ul>
 </section>
 </section>
@@ -177,8 +183,8 @@ don’t understand it</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../master/master.html" class="btn btn-neutral float-left" title="ROS Master" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../launch/launch.html" class="btn btn-neutral float-right" title="ROS Launch Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../node/node.html" class="btn btn-neutral float-left" title="ROS 2 Nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../launch/launch.html" class="btn btn-neutral float-right" title="ROS 2 Launch Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
