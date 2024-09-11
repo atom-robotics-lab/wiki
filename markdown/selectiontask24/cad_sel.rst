@@ -60,8 +60,14 @@ Expected Output
 
 .. figure:: Task1.png
 
+.. raw:: html
 
-Task 2: 8pts
+   </center>
+
+.. figure:: cad1.png
+
+
+Task 2: 5pts
 --------------
 .. raw:: html
 
@@ -123,4 +129,4 @@ Expected Output
 
 ..  caution:: THE DRAWING SHOULD BE DONE ACCURATELY AND AS EXPECTED .
    
-Head over to `Submissions <./submissions.rst>`__ to submit your work 
+Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/submissions.html>`__ to submit your work 
