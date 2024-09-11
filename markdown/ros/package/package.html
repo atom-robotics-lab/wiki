@@ -166,11 +166,14 @@ You can create a package using either CMake or Python, which are officially supp
 <section id="what-makes-up-a-ros-2-package">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">2 What makes up a ROS 2 package?</a><a class="headerlink" href="#what-makes-up-a-ros-2-package" title="Link to this heading"></a></h3>
 <p>ROS 2 CMake packages each have their own minimum required contents:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">* CMakeLists.txt file that describes how to build the code within the package</span>
-<span class="go">* include/&lt;package_name&gt; directory containing the public headers for the package</span>
-<span class="go">* package.xml file containing meta information about the package</span>
-<span class="go">* src directory containing the source code for the package</span>
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>CMakeLists.txt file that describes how to build the code within the package</p></li>
+<li><p>include/&lt;package_name&gt; directory containing the public headers for the package</p></li>
+<li><p>package.xml file containing meta information about the package</p></li>
+<li><p>src directory containing the source code for the package</p></li>
+</ul>
 </div>
 <p>The simplest possible package may have a file structure that looks like:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">my_package/</span>

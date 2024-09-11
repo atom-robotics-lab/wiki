@@ -227,6 +227,22 @@ OR
 </pre></div>
 </div>
 <ul class="simple">
+<li><dl class="simple">
+<dt>To add your newly created script, in CMakeLists.txt file</dt><dd><ul>
+<li><p>Open CmakeLists.txt in your package</p></li>
+<li><p>add the following piece of code as follows</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>install<span class="o">(</span>PROGRAMS
+<span class="w">    </span>scripts/node_hello_ros.py
+<span class="w">    </span>DESTINATION<span class="w"> </span>lib/<span class="si">${</span><span class="nv">PROJECT_NAME</span><span class="si">}</span>
+<span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>Now to run your node:</p>
 <ul>
 <li><p>Open a terminal and run:</p></li>

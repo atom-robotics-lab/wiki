@@ -28,7 +28,7 @@ You can create a package using either CMake or Python, which are officially supp
 
 ROS 2 CMake packages each have their own minimum required contents:
 
-.. code-block:: console
+.. note::
 
    * CMakeLists.txt file that describes how to build the code within the package
    * include/<package_name> directory containing the public headers for the package

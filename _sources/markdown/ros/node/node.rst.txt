@@ -88,6 +88,20 @@ Steps to Create a Node in Python
 
    chmod +x node_hello_ros.py
 
+- To add your newly created script, in CMakeLists.txt file
+    - Open CmakeLists.txt in your package
+    - add the following piece of code as follows
+
+.. code:: shell
+
+   install(PROGRAMS
+       scripts/node_hello_ros.py
+       DESTINATION lib/${PROJECT_NAME}
+   )
+
+
+
+
 -  Now to run your node:
 
    -  Open a terminal and run:
