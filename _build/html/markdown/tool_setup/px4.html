@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environment Setup &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Intro To ROS 2" href="../ros/ros.html" />
+    <link rel="prev" title="Installation of Computer Vision tools" href="virtualenv.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tool_setup.html">Tool Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ros-pi.html">Ready to use image for Raspberry Pi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="virtualenv.html">Installation of Computer Vision tools</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Environment Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-dependencies">1. General Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mavros-installation">2. MAVROS Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#px4-firmware-installation">4. PX4 Firmware Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="tool_setup.html">Tool Setup</a> &raquo;</li>
+      <li>Environment Setup</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/tool_setup/px4.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="environment-setup">
+<h1>Environment Setup<a class="headerlink" href="#environment-setup" title="Permalink to this heading"></a></h1>
+<section id="general-dependencies">
+<h2>1. General Dependencies<a class="headerlink" href="#general-dependencies" title="Permalink to this heading"></a></h2>
+<p>Install the general dependencies to setup all the basic things</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>ninja-build<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>exiftool<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-empy<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-toml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-numpy<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-pip<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>ninja-build<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>protobuf-compiler<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libeigen3-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>genromfs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libignition-rendering3<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libgstreamer-plugins-base1.0-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gstreamer1.0-plugins-bad<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gstreamer1.0-plugins-base<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gstreamer1.0-plugins-good<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gstreamer1.0-plugins-ugly
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pandas<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>jinja2<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pyserial<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>cerberus<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pyulog<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>numpy<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>toml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pyquaternion<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>kconfiglib<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--user<span class="w"> </span>packaging
+<span class="w">    </span>--user<span class="w"> </span>jsonschema
+</pre></div>
+</div>
+</section>
+<section id="mavros-installation">
+<h2>2. MAVROS Installation<a class="headerlink" href="#mavros-installation" title="Permalink to this heading"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-catkin-tools<span class="w"> </span>python3-rosinstall-generator<span class="w"> </span>python3-osrf-pycommon<span class="w"> </span>-y
+</pre></div>
+</div>
+<p><strong>Step 1</strong> : Create the workspace If you haven’t already</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/catkin_ws/src
+<span class="nb">cd</span><span class="w"> </span>~/catkin_ws
+catkin<span class="w"> </span>init
+wstool<span class="w"> </span>init<span class="w"> </span>src
+</pre></div>
+</div>
+<p><strong>Step 2</strong> : Install MAVLink: we use the Kinetic reference for all ROS
+distros as it’s not distro-specific and up to date</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosinstall_generator<span class="w"> </span>--rosdistro<span class="w"> </span>kinetic<span class="w"> </span>mavlink<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>/tmp/mavros.rosinstall
+</pre></div>
+</div>
+<p><strong>Step 3</strong> : Install MAVROS: get source (upstream - released)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosinstall_generator<span class="w"> </span>--upstream<span class="w"> </span>mavros<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/tmp/mavros.rosinstall
+</pre></div>
+</div>
+<p>alternatively,</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rosinstall_generator<span class="w"> </span>--upstream-development<span class="w"> </span>mavros<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/tmp/mavros.rosinstall
+</pre></div>
+</div>
+<p><strong>Step 4</strong> : Create workspace and deps</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>wstool<span class="w"> </span>merge<span class="w"> </span>-t<span class="w"> </span>src<span class="w"> </span>/tmp/mavros.rosinstall
+wstool<span class="w"> </span>update<span class="w"> </span>-t<span class="w"> </span>src<span class="w"> </span>-j4
+rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>-y
+</pre></div>
+</div>
+<p><strong>Step 5</strong> : Install Geographiclib datasets</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./src/mavros/mavros/scripts/install_geographiclib_datasets.sh
+</pre></div>
+</div>
+<p><strong>Step 6</strong> : Build source</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>catkin_make
+</pre></div>
+</div>
+<p><strong>Step 7</strong> : Make sure to use setup.bash</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>devel/setup.bash
+</pre></div>
+</div>
+</section>
+<section id="px4-firmware-installation">
+<h2>4. PX4 Firmware Installation<a class="headerlink" href="#px4-firmware-installation" title="Permalink to this heading"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PX4/PX4-Autopilot.git<span class="w"> </span>--recursive
+<span class="nb">cd</span><span class="w"> </span>PX4-Autopilot/
+make<span class="w"> </span>px4_sitl_default<span class="w"> </span>gazebo
+</pre></div>
+</div>
+<p>Modify your .bashrc file, open it up in a text editor and add the
+following lines to the end</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/catkin_ws/devel/setup.bash
+<span class="nb">source</span><span class="w"> </span>~/catkin_ws/src/PX4-Autopilot/Tools/setup_gazebo.bash<span class="w"> </span>~/catkin_ws/src/PX4-Autopilot/<span class="w"> </span>~/catkin_ws/src/PX4-Autopilot/build/px4_sitl_default
+<span class="nb">export</span><span class="w"> </span><span class="nv">ROS_PACKAGE_PATH</span><span class="o">=</span><span class="nv">$ROS_PACKAGE_PATH</span>:~/catkin_ws/src/PX4-Autopilot
+<span class="nb">export</span><span class="w"> </span><span class="nv">ROS_PACKAGE_PATH</span><span class="o">=</span><span class="nv">$ROS_PACKAGE_PATH</span>:~/catkin_ws/src/PX4-Autopilot/Tools/sitl_gazebo
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="virtualenv.html" class="btn btn-neutral float-left" title="Installation of Computer Vision tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ros/ros.html" class="btn btn-neutral float-right" title="Intro To ROS 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

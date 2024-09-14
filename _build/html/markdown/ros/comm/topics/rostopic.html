@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROS 2 Topic Command &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Selection Task 2024-25" href="../../../selectiontask24/selection_task24.html" />
+    <link rel="prev" title="ROS Topics" href="topics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tool_setup/tool_setup.html">Tool Setup</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ros.html">Intro To ROS 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ROS_installation/ROS_index.html">ROS 2 Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../colcon_ws.html">Creating a workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../package/package.html">Creating a package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../node/node.html">ROS 2 Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../launch/launch.html">ROS 2 Launch Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics.html">ROS Topics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS 2 Topic Command</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-list">ros2 topic list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-type-info-and-ros2-interface">ros2 topic type, info, and ros2 interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#type">type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-interface-show">ros2 interface show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-info">ros2 topic info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-pub">ros2 topic pub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros2-topic-echo">ros2 topic echo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/projects.html">Projects</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../ros.html">Intro To ROS 2</a> &raquo;</li>
+      <li>ROS 2 Topic Command</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/comm/topics/rostopic.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ros-2-topic-command">
+<h1>ROS 2 Topic Command<a class="headerlink" href="#ros-2-topic-command" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><cite>ros2 topic</cite> is a command-line tool for displaying debug information about ROS 2 Topics, including publishers, subscribers, publishing rates, and ROS Messages.</p></li>
+<li><p>Use</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>--help
+</pre></div>
+</div>
+<p>to get the help for the <cite>ros2 topic</cite> command.</p>
+<section id="ros2-topic-list">
+<h2>ros2 topic list<a class="headerlink" href="#ros2-topic-list" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>ros2 topic list</cite> returns a list of all topics currently being subscribed to and published.</p></li>
+<li><p>In one terminal, ensure your ROS 2 environment is sourced and then run:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>list
+</pre></div>
+</div>
+<p>The above will give you a list of the default ROS 2 topics.</p>
+<ul class="simple">
+<li><p>For this tutorial, we will also use <cite>turtlesim</cite>. Please run in a new terminal:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
+</pre></div>
+</div>
+<p>You will see a small blue box with a turtle inside it.</p>
+<ul class="simple">
+<li><p>Now, check again the <cite>ros2 topic list</cite> command in another terminal and observe the topics being subscribed to or published.</p></li>
+</ul>
+</section>
+<section id="ros2-topic-type-info-and-ros2-interface">
+<h2>ros2 topic type, info, and ros2 interface<a class="headerlink" href="#ros2-topic-type-info-and-ros2-interface" title="Permalink to this heading"></a></h2>
+</section>
+<section id="type">
+<h2>type<a class="headerlink" href="#type" title="Permalink to this heading"></a></h2>
+<p>Communication on topics happens by sending ROS 2 messages between nodes. To communicate, the publisher and subscriber must use the same message type. You can determine the message type being used on a topic with the <cite>ros2 topic type</cite> command.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">[</span>topic_name<span class="o">]</span>
+</pre></div>
+</div>
+<p>From the turtlesim node, we know that there are several topics being published/subscribed, such as:</p>
+<ul class="simple">
+<li><p><cite>/turtle1/cmd_vel</cite></p></li>
+<li><p><cite>/turtle1/pose</cite></p></li>
+<li><p><cite>/turtle1/color_sensor</cite></p></li>
+</ul>
+<p>Let’s check the message type associated with the topic <cite>/turtle1/cmd_vel</cite>. Enter the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">type</span><span class="w"> </span>/turtle1/cmd_vel
+</pre></div>
+</div>
+</section>
+<section id="ros2-interface-show">
+<h2>ros2 interface show<a class="headerlink" href="#ros2-interface-show" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>The message type associated with <cite>/turtle1/cmd_vel</cite> is <cite>geometry_msgs/msg/Twist</cite>. To see the message details, you can use the <cite>ros2 interface show</cite> command:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>interface<span class="w"> </span>show<span class="w"> </span>geometry_msgs/msg/Twist
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A message consists of fields and constants. Fields represent the data type, and constants hold predefined values.</p></li>
+<li><p>You will see two fields under <cite>geometry_msgs/msg/Twist</cite>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">geometry_msgs/Vector3</span> <span class="pre">linear</span></code> : Describes the linear velocities for all three axes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geometry_msgs/Vector3</span> <span class="pre">angular</span></code> : Describes the angular velocities for all three axes.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ros2-topic-info">
+<h2>ros2 topic info<a class="headerlink" href="#ros2-topic-info" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>This command provides more detail about a topic, including both the message type and the nodes publishing and subscribing to it.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>info<span class="w"> </span>/turtle1/cmd_vel
+</pre></div>
+</div>
+</section>
+<section id="ros2-topic-pub">
+<h2>ros2 topic pub<a class="headerlink" href="#ros2-topic-pub" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>ros2 topic pub</cite> is used to publish data onto a topic currently advertised.</p></li>
+<li><p>Usage:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span><span class="o">[</span>topic<span class="o">]</span><span class="w"> </span><span class="o">[</span>msg_type<span class="o">]</span><span class="w"> </span><span class="o">[</span>args<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Let’s move the turtle in the simulator by publishing a command to <cite>/turtle1/cmd_vel</cite>:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/msg/Twist<span class="w"> </span><span class="s2">&quot;{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The above command will rotate the turtle clockwise around its z-axis.</p></li>
+<li><p>However, the turtle will only rotate briefly because the command is sent only once. To continuously send the command, use the <cite>–rate</cite> argument.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--rate<span class="w"> </span><span class="m">10</span><span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/msg/Twist<span class="w"> </span><span class="s2">&quot;{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The turtle will now rotate continuously at a rate of 10Hz. You can always get more information about the <cite>pub</cite> command by typing:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--help
+</pre></div>
+</div>
+</section>
+<section id="ros2-topic-echo">
+<h2>ros2 topic echo<a class="headerlink" href="#ros2-topic-echo" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>ros2 topic echo</cite> shows the data being published on a topic.</p></li>
+<li><p>Usage:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="o">[</span>topic<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Let’s check the pose information of the turtle in turtlesim, which is published on the <cite>/turtle1/pose</cite> topic. Run:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/turtle1/pose
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You will see the x, y, z, and theta values (pose) of the turtle being published in real time.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="topics.html" class="btn btn-neutral float-left" title="ROS Topics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../selectiontask24/selection_task24.html" class="btn btn-neutral float-right" title="Selection Task 2024-25" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

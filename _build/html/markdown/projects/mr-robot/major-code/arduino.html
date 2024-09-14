@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arduino &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Miscellaneous" href="../miscellaneous/miss.html" />
+    <link rel="prev" title="ESP_diff_tf" href="esp_diff_tf.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tool_setup/tool_setup.html">Tool Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../mr-index.html">MR-ROBOT</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../script-use/basic.html">Basic Project Overview</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="code.html">Code Explanation</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="twist_to_pwm.html">Twist To PWM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp_diff_tf.html">ESP_diff_tf</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../miscellaneous/miss.html">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
+          <li><a href="../mr-index.html">MR-ROBOT</a> &raquo;</li>
+          <li><a href="code.html">Code Explanation</a> &raquo;</li>
+      <li>Arduino</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/projects/mr-robot/major-code/arduino.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="arduino">
+<h1>Arduino<a class="headerlink" href="#arduino" title="Permalink to this heading"></a></h1>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">LpwmCb</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std_msgs</span><span class="o">::</span><span class="n">Int32</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pwm</span><span class="p">){</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">pwm</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">ledcWrite</span><span class="p">(</span><span class="n">ledChannel1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">ledcWrite</span><span class="p">(</span><span class="n">ledChannel2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">pwm</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="n">ledcWrite</span><span class="p">(</span><span class="n">ledChannel1</span><span class="p">,</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">pwm</span><span class="p">.</span><span class="n">data</span><span class="p">));</span><span class="w"> </span><span class="n">ledcWrite</span><span class="p">(</span><span class="n">ledChannel2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">pwm</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="n">ledcWrite</span><span class="p">(</span><span class="n">ledChannel1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">ledcWrite</span><span class="p">(</span><span class="n">ledChannel2</span><span class="p">,</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">pwm</span><span class="p">.</span><span class="n">data</span><span class="p">));}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This code defines two callback functions, <code class="docutils literal notranslate"><span class="pre">LpwmCb()</span></code> and <code class="docutils literal notranslate"><span class="pre">RpwmCb()</span></code>, which take a std_msgs::Int32 object as input. The functions control the speed of 2 motors by writing PWM signals using the ledcWrite function.</p>
+<ul class="simple">
+<li><p>The if statements check the value of the input pwm.data and determine which PWM signal to write to each motor.</p></li>
+<li><p>If pwm.data is zero, then both PWM signals for the corresponding motor are set to zero, which stops the motor.</p></li>
+<li><p>If pwm.data is positive, then the first PWM signal is set to the absolute value of pwm.data, which sets the motor to move forward.</p></li>
+<li><p>If pwm.data is negative, then the second PWM signal is set to the absolute value of pwm.data, which sets the motor to move backward.</p></li>
+</ul>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="n">nh</span><span class="p">.</span><span class="n">initNode</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="p">(</span><span class="n">left_enc_pub</span><span class="p">);</span>
+<span class="w">  </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="p">(</span><span class="n">right_enc_pub</span><span class="p">);</span>
+<span class="w">  </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="p">(</span><span class="n">left_enc_error</span><span class="p">);</span>
+<span class="w">  </span><span class="n">nh</span><span class="p">.</span><span class="n">advertise</span><span class="p">(</span><span class="n">right_enc_error</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">Lpwm_sub</span><span class="p">);</span>
+<span class="w">  </span><span class="n">nh</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">Rpwm_sub</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">ledcSetup</span><span class="p">(</span><span class="n">ledChannel1</span><span class="p">,</span><span class="w"> </span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="n">resolution</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ledcSetup</span><span class="p">(</span><span class="n">ledChannel2</span><span class="p">,</span><span class="w"> </span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="n">resolution</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ledcSetup</span><span class="p">(</span><span class="n">ledChannel3</span><span class="p">,</span><span class="w"> </span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="n">resolution</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ledcSetup</span><span class="p">(</span><span class="n">ledChannel4</span><span class="p">,</span><span class="w"> </span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="n">resolution</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">encoderLPin1</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">encoderLPin2</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">encoderRPin1</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">encoderRPin2</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">standby</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">standby</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">ledcAttachPin</span><span class="p">(</span><span class="n">LForward</span><span class="p">,</span><span class="w">      </span><span class="n">ledChannel1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ledcAttachPin</span><span class="p">(</span><span class="n">LBackward</span><span class="p">,</span><span class="w">     </span><span class="n">ledChannel2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ledcAttachPin</span><span class="p">(</span><span class="n">RForward</span><span class="p">,</span><span class="w">      </span><span class="n">ledChannel3</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ledcAttachPin</span><span class="p">(</span><span class="n">RBackward</span><span class="p">,</span><span class="w">     </span><span class="n">ledChannel4</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">lastStateL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">encoderLPin1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">lastStateR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">encoderRPin1</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">attachInterrupt</span><span class="p">(</span><span class="n">digitalPinToInterrupt</span><span class="p">(</span><span class="n">encoderLPin1</span><span class="p">),</span><span class="w"> </span><span class="n">updateEncoder_L</span><span class="p">,</span><span class="w"> </span><span class="n">CHANGE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">attachInterrupt</span><span class="p">(</span><span class="n">digitalPinToInterrupt</span><span class="p">(</span><span class="n">encoderLPin2</span><span class="p">),</span><span class="w"> </span><span class="n">updateEncoder_L</span><span class="p">,</span><span class="w"> </span><span class="n">CHANGE</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">attachInterrupt</span><span class="p">(</span><span class="n">digitalPinToInterrupt</span><span class="p">(</span><span class="n">encoderRPin1</span><span class="p">),</span><span class="w"> </span><span class="n">updateEncoder_R</span><span class="p">,</span><span class="w"> </span><span class="n">CHANGE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">attachInterrupt</span><span class="p">(</span><span class="n">digitalPinToInterrupt</span><span class="p">(</span><span class="n">encoderRPin2</span><span class="p">),</span><span class="w"> </span><span class="n">updateEncoder_R</span><span class="p">,</span><span class="w"> </span><span class="n">CHANGE</span><span class="p">);</span>
+
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This code snippet is used to set up the various settings needed for the robot to operate, including the ROS node, PWM signals for the motors, encoder signals for the wheels, and interrupt service routines for updating the encoder counts.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">nh.initNode()</span></code> function initializes a node in the ROS (Robot Operating System).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">nh.advertise</span></code> functions advertise four topics in the ROS : <code class="docutils literal notranslate"><span class="pre">left_enc_pub</span></code>, <code class="docutils literal notranslate"><span class="pre">right_enc_pub</span></code>, <code class="docutils literal notranslate"><span class="pre">left_enc_error</span></code>, and <code class="docutils literal notranslate"><span class="pre">right_enc_error</span></code>. These topics are used to publish information about the state of the encoders on the left and right wheels of the robot.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">nh.subscribe`</span> <span class="pre">functions</span> <span class="pre">subscribe</span> <span class="pre">to</span> <span class="pre">two</span> <span class="pre">topics</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">ROS</span> <span class="pre">:</span> <span class="pre">``Lpwm_sub</span></code> and <code class="docutils literal notranslate"><span class="pre">Rpwm_sub</span></code>. These topics are used to receive PWM signals that control the speed and direction of the left and right motors.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">ledcSetup</span></code> functions set up four LEDC (LED Control) channels with the specified frequency and resolution. These channels are used to generate <strong>PWM signals for the left and right motors</strong>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">pinMode</span></code> functions set the pins used for the encoder signals to input mode with pull-up resistors. These pins are used to read the <strong>signals from the encoders on the left and right wheels</strong> of the robot and also this function sets the <strong>standby</strong> pin to output mode. This pin is used to <strong>enable/disable</strong> the motor driver.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">ledcAttachPin</span></code> functions attach each of the four LEDC channels to a specific pin on the Arduino. These pins are used to <strong>output the PWM signals</strong> to the left and right motors.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">lastStateL</span></code> and <code class="docutils literal notranslate"><span class="pre">lastStateR</span></code> variables are initialized with the <strong>initial state</strong> of the encoder signals for the left and right wheels, respectively.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">attachInterrupt</span></code> functions attach two interrupt service routines (<code class="docutils literal notranslate"><span class="pre">updateEncoder_L</span></code> and <code class="docutils literal notranslate"><span class="pre">updateEncoder_R</span></code>) to the encoder pins for the left and right wheels. These routines are called whenever the state of the encoder signals changes (i.e., when the wheel rotates). They are used to update the encoder counts and calculate the speed of the wheels.</p></li>
+</ul>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">publish_encoder_data</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">encoder_msg_left</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encoderValue_L</span><span class="p">;</span>
+<span class="w">  </span><span class="n">left_enc_pub</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder_msg_left</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">encoder_msg_right</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encoderValue_R</span><span class="p">;</span>
+<span class="w">  </span><span class="n">right_enc_pub</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder_msg_right</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">encoder_msg_left_error</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rpmL_error</span><span class="p">;</span>
+<span class="w">  </span><span class="n">left_enc_error</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder_msg_left_error</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">encoder_msg_right_error</span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rpmR_error</span><span class="p">;</span>
+<span class="w">  </span><span class="n">right_enc_error</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">encoder_msg_right_error</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">publish_encoder_data()</span></code> is used to publish the encoder values and any associated errors to their respective ROS topics.</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">updateEncoder_L</span><span class="p">(){</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">LMSB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">encoderLPin1</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">LLSB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">encoderLPin2</span><span class="p">);</span><span class="w"> </span><span class="c1">//LSB = least significant bit</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">Lencoded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">LMSB</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">LLSB</span><span class="p">;</span><span class="w"> </span><span class="c1">//converting the 2 pin value to single number</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">Lsum</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">lastEncoded_L</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Lencoded</span><span class="p">;</span><span class="w"> </span><span class="c1">//adding it to the previous encoded value</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">Lsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mb">0b1101</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">Lsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mb">0b0100</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">Lsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mb">0b0010</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">Lsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mb">0b1011</span><span class="p">)</span><span class="w"> </span><span class="n">encoderValue_L</span><span class="w"> </span><span class="o">++</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="n">Lsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mb">0b1110</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">Lsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mb">0b0111</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">Lsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mb">0b0001</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">Lsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mb">0b1000</span><span class="p">)</span><span class="w"> </span><span class="n">encoderValue_L</span><span class="w"> </span><span class="o">--</span><span class="p">;</span>
+
+<span class="n">lastEncoded_L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lencoded</span><span class="p">;</span><span class="w"> </span><span class="c1">//store this value for next time</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The <strong>Lencoded</strong> value is then combined with the previous encoded value of the left motor using the <code class="docutils literal notranslate"><span class="pre">bitwise</span> <span class="pre">OR</span> <span class="pre">operator</span> <span class="pre">(|)</span></code> and <strong>stored in the Lsum variable</strong>.</p></li>
+<li><p>The function then <strong>checks the value of Lsum</strong> against a set of four possible values <strong>(0b1101, 0b0100, 0b0010, 0b1011)</strong> and increments the <code class="docutils literal notranslate"><span class="pre">encoderValue_L</span></code> variable if it matches any of them. Similarly, if Lsum matches one of the four possible values <strong>(0b1110, 0b0111, 0b0001, 0b1000)</strong>, the function decrements the <code class="docutils literal notranslate"><span class="pre">encoderValue_L</span></code> variable.</p></li>
+<li><p>Finally, the current encoded value (Lencoded) is stored in the <code class="docutils literal notranslate"><span class="pre">lastEncoded_L</span></code> variable for use in the next iteration of the function.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="esp_diff_tf.html" class="btn btn-neutral float-left" title="ESP_diff_tf" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../miscellaneous/miss.html" class="btn btn-neutral float-right" title="Miscellaneous" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

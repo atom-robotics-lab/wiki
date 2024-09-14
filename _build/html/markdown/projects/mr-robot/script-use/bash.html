@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machine Specification For MR Robot &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Code Explanation" href="../major-code/code.html" />
+    <link rel="prev" title="Launch files" href="launch.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tool_setup/tool_setup.html">Tool Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../mr-index.html">MR-ROBOT</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="basic.html">Basic Project Overview</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="working.html">Working Of MR Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="launch.html">Launch files</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Machine Specification For MR Robot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../major-code/code.html">Code Explanation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscellaneous/miss.html">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
+          <li><a href="../mr-index.html">MR-ROBOT</a> &raquo;</li>
+          <li><a href="basic.html">Basic Project Overview</a> &raquo;</li>
+      <li>Machine Specification For MR Robot</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/projects/mr-robot/script-use/bash.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="machine-specification-for-mr-robot">
+<h1>Machine Specification For MR Robot<a class="headerlink" href="#machine-specification-for-mr-robot" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>In ROS (Robot Operating System), communication between different nodes (e.g., sensors, controllers, and other agents) is established through the use of a Master-Slave connection. The Master node acts as a central hub that manages the communication between different nodes, while the Slave nodes communicate with each other through the Master node.</p>
+<p>Implementation of the machine specifications for MR Robot are set up to launch various nodes in accordance with their desired locations. For instance, while rosserial is launched on the Raspberry Pi to obtain serial data from the microcontroller, RVIZ should run in the Master because visualisation is required. So, it is possible to use a single launch file by naming nodes.</p>
+</section>
+<section id="master-bashrc-file">
+<h2>Master Bashrc file<a class="headerlink" href="#master-bashrc-file" title="Permalink to this heading"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://localhost:11311/
+</pre></div>
+</div>
+<p>This line sets the environment variable <cite>ROS_MASTER_URI</cite>, which specifies the URI (Uniform Resource Identifier) of the ROS master node. In this case, the URI is set to <cite>http://localhost:11311/</cite>, which means that the master node is running on the same machine as the current node, and it is accessible using the HTTP protocol at port <cite>11311</cite>. The master node is responsible for managing the communication between different nodes in ROS.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_HOSTNAME</span><span class="o">=[</span>hostname<span class="o">]</span>
+</pre></div>
+</div>
+<p>This line sets the environment variable <cite>ROS_HOSTNAME</cite>, which specifies the hostname of the current node. In this case, the hostname should be set to the hostname of the machine running the current node. This variable is used by other nodes in ROS to connect to the current node.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_IP</span><span class="o">=[</span>ip_address<span class="o">]</span>
+</pre></div>
+</div>
+<p>This line sets the environment variable <cite>ROS_IP</cite>, which specifies the IP address of the current node. In this case, the IP address should be set to the IP address of the machine running the current node. This variable is used by other nodes in ROS to connect to the current node.</p>
+</section>
+<section id="environment-loader">
+<h2>Environment Loader<a class="headerlink" href="#environment-loader" title="Permalink to this heading"></a></h2>
+<p>In ROS, the env.sh file is used to set environment variables for a specific workspace. This file is typically located in the devel folder of the workspace, and it is sourced before running any ROS commands in that workspace.</p>
+<p>In the case of a slave node in a ROS network, the env.sh file can be used to set the environment variables necessary for the node to communicate with the master node and other nodes in the network.</p>
+<p>Here are some common environment variables that can be set in the env.sh file for a slave node:</p>
+<p>ROS_MASTER_URI: This variable specifies the URI of the ROS master node. It should be set to the URI of the master node that the slave node will be communicating with. For example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://192.168.0.100:11311
+</pre></div>
+</div>
+<p>ROS_IP or ROS_HOSTNAME: These variables specify the IP address or hostname of the machine running the slave node. They are used by other nodes in the network to connect to the slave node. For example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_IP</span><span class="o">=</span><span class="m">192</span>.168.0.101
+<span class="nb">export</span><span class="w"> </span><span class="nv">ROS_HOSTNAME</span><span class="o">=</span>my-slave-machine
+</pre></div>
+</div>
+<p>ROS_NAMESPACE: This variable specifies the namespace for the node. Namespaces are used to group nodes together and prevent name collisions. For example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_NAMESPACE</span><span class="o">=</span>my_slave_node
+</pre></div>
+</div>
+<p>By setting these environment variables in the env.sh file, the slave node can properly communicate with the ROS master node and other nodes in the network. It is important to ensure that the values for these variables are correct and consistent across all nodes in the network to avoid communication errors.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You are specifying the machine’s name and password in the launch file, which is not saved because you are giving master, access to your machine.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="launch.html" class="btn btn-neutral float-left" title="Launch files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../major-code/code.html" class="btn btn-neutral float-right" title="Code Explanation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ready to use image for Raspberry Pi &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Installation of Computer Vision tools" href="virtualenv.html" />
+    <link rel="prev" title="Tool Setup" href="tool_setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tool_setup.html">Tool Setup</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ready to use image for Raspberry Pi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-need">The Need</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initial-setup">Initial Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#featues-and-usage">Featues and usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="virtualenv.html">Installation of Computer Vision tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="px4.html">Environment Setup</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="tool_setup.html">Tool Setup</a> &raquo;</li>
+      <li>Ready to use image for Raspberry Pi</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/tool_setup/ros-pi.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ready-to-use-image-for-raspberry-pi">
+<h1>Ready to use image for Raspberry Pi<a class="headerlink" href="#ready-to-use-image-for-raspberry-pi" title="Permalink to this heading"></a></h1>
+<p>Custom 64 bit raspbian server image for raspberry pi 4/3b+ with
+pre-installed ROS noetic and many other useful packages for ready to use
+prototyping.</p>
+<p><a class="reference external" href="https://drive.google.com/u/0/uc?id=1LYr8p5FBA-MVOaV6yugyCXJ2T71vWfGg&amp;export=download&amp;confirm=t&amp;uuid=e87efbb1-d8e4-4c25-a82e-a93d25260810">Download Link</a></p>
+<section id="the-need">
+<h2>The Need<a class="headerlink" href="#the-need" title="Permalink to this heading"></a></h2>
+<p>Imagine the time you have completed your simulation and now you are
+ready to implement it on your awesome hardare. But to test that
+beautiful code you get through the boardem task of preping your sd card
+with a fresh flash of raspbian and go through the tedious job of
+installing ROS and other packages in it.</p>
+<p>So to avoid that we came up with the idea of creating our own custom
+image with pre-installed ROS and many other packages for a user friendly
+experience.</p>
+<p>So the next time you mess up something big time, dont worry!
+Just get ready with a fresh flash of this image and you are good to go.</p>
+</section>
+<section id="initial-setup">
+<h2>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this heading"></a></h2>
+<p>To get started, download the image file using the link given above.
+Alright, once the download is complete, it’s time to flash it on your sd
+card. You could do that using various softwares like Balena Etcher,
+RUFUS or use the Official Raspberry Pi Imager.</p>
+<ul class="simple">
+<li><p><strong>WIFI and SSH</strong>: While working with ROS and robotics related
+projects you will be required to establish a ssh connection with your
+raspberry pi to avoid the hassle of connecting it to a display via
+HDMI. So in order to establish a ssh connection with your laptop both
+the devices needs to be on the same network. To do so, plug in your
+sd card in your computer and open the <code class="docutils literal notranslate"><span class="pre">wpa_suppicant.conf</span></code> file in
+a text editor and add your <strong>ssid</strong> and <strong>password</strong> accordingly.
+This will automatically connect your raspberry pi to the network on
+startup.</p></li>
+</ul>
+<p>Ok, Once your pi is on the same network, we need to identify the ip
+address of your raspberry pi in order to ssh into it. You can use “nmap”
+to find devices on your network. Type in the following command to find
+all devices connected on the network.</p>
+<ul>
+<li><p>Installing nmap:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nmap
+</pre></div>
+</div>
+</li>
+<li><p>Checking all devices on the same network.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nmap<span class="w"> </span>-sN<span class="w"> </span>&lt;IP<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>device&gt;/24
+</pre></div>
+</div>
+<p>You should be a able to find a result that says Raspberry pi.</p>
+</li>
+<li><p>Find the IP of your raspberry in the list and ssh into using the
+command below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>pi@&lt;IP<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>Raspberry<span class="w"> </span>Pi&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Alright! you’re all set up and good to go.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Delault username: <strong>pi</strong> Default password: <strong>raspberry</strong></p>
+</div>
+</section>
+<section id="featues-and-usage">
+<h2>Featues and usage<a class="headerlink" href="#featues-and-usage" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p><strong>ROS</strong>: The image comes with pre-installed ROS neotic and Nav stack
+packages. For installation and more info on ROS please visit our
+Intro to ROS section.</p>
+<ul>
+<li><p><strong>ROS Master-Slave communication</strong>: ROS Master-Slave communication
+is essential when you are working with computational heavy
+packages which can can create a toll on your raspberry pi. To
+avoid that a Master-Slave communication is established so you can
+run differnet nodes on different devices accordingly. While using
+the above image, the raspberry pi is assumed to be a slave
+considering its master is running on your host device (eg: Your laptop
+running ROS). In order to do so, open your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file in
+your <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory and add the following lines in the end.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://localhost:11311/
+<span class="nb">export</span><span class="w"> </span><span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;ROS<span class="w"> </span>IP<span class="w"> </span>OF<span class="w"> </span>YOUR<span class="w"> </span>MASTER<span class="w"> </span>DEVICE&gt;
+<span class="nb">export</span><span class="w"> </span><span class="nv">ROS_IP</span><span class="o">=</span>&lt;ROS<span class="w"> </span>IP<span class="w"> </span>OF<span class="w"> </span>YOUR<span class="w"> </span>MASTER<span class="w"> </span>DEVICE&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Once you are done with that, just save it and close the editor. Source
+the edited bashrc or open a fresh terminal and run <code class="docutils literal notranslate"><span class="pre">roscore</span></code> and you
+will see your <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code> has been changed from local host to the IP
+of your master device.</p></li>
+<li><p>Once the master url has been exposed, your raspberry pi can connect
+to your device as a slave. To do so open the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file of
+raspberry pi and navigate to the botom. You will find some similar
+lines contaiting <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_IP</span></code>. Change
+the IP address of your devices accordingly and you are good to go.</p></li>
+</ul>
+</li>
+<li><p><strong>Virtual env Wrapper</strong>: virtual enviroment wrapper is a great tool for
+switching between diffenent python enviroments for diffent projects.
+The image comes pre-installed with it and has an existing enviroment
+named <strong>cv</strong> with OpenCV installed created in it. just type the below
+command and you are good to go.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>workon<span class="w"> </span>cv
+</pre></div>
+</div>
+<p>For more info and its usage please visit our <a class="reference external" href="./virtualenv.md">Virtual Enviroment
+tutorial</a>.</p>
+</li>
+<li><p><strong>workon_ros</strong>: workon ros is an awesome tool to source and switch
+between different ros workspaces made by Jasmeet Singh. The workspace
+is needed to be created and built in a directory called
+~/ros_workspace/. Once built, you can directly source the workspace
+using the <strong>workon_ros</strong> command. The image is already set up with
+the tool. To source with noetic workspace just paste the command
+below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>workon_ros<span class="w"> </span>noetic
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/jasmeet0915/workon_ros">Github repo for the project</a>. Your inputs are
+always welcome.</p>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tool_setup.html" class="btn btn-neutral float-left" title="Tool Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="virtualenv.html" class="btn btn-neutral float-right" title="Installation of Computer Vision tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

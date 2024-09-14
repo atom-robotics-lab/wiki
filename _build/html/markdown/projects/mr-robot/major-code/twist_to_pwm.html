@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twist To PWM &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="ESP_diff_tf" href="esp_diff_tf.html" />
+    <link rel="prev" title="Code Explanation" href="code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tool_setup/tool_setup.html">Tool Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../mr-index.html">MR-ROBOT</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../script-use/basic.html">Basic Project Overview</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="code.html">Code Explanation</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Twist To PWM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="esp_diff_tf.html">ESP_diff_tf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arduino.html">Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../miscellaneous/miss.html">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
+          <li><a href="../mr-index.html">MR-ROBOT</a> &raquo;</li>
+          <li><a href="code.html">Code Explanation</a> &raquo;</li>
+      <li>Twist To PWM</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/projects/mr-robot/major-code/twist_to_pwm.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="twist-to-pwm">
+<h1>Twist To PWM<a class="headerlink" href="#twist-to-pwm" title="Permalink to this heading"></a></h1>
+<p>This code is a Python script that implements a ROS node for a differential drive robot. The robot is controlled using velocity commands sent to the <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> topic and feedback on the actual wheel speeds is obtained from the <code class="docutils literal notranslate"><span class="pre">/left_speed</span></code> and <code class="docutils literal notranslate"><span class="pre">/right_speed</span></code> topics.</p>
+<p>The DifferentialDriver class is defined to encapsulate the functionality of the node. The constructor initializes the ROS node and sets up the necessary subscribers and publishers for the topics. It also reads various parameters related to the robot’s physical properties and calculates the maximum speed that the robot can achieve.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+   <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;cmdvel_listener&#39;</span><span class="p">,</span> <span class="n">anonymous</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+   <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&quot;/cmd_vel&quot;</span><span class="p">,</span> <span class="n">Twist</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">)</span>
+   <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&quot;left_speed&quot;</span><span class="p">,</span> <span class="n">Float64</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_left</span><span class="p">)</span>
+   <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&quot;right_speed&quot;</span><span class="p">,</span> <span class="n">Float64</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_right</span><span class="p">)</span>
+
+   <span class="bp">self</span><span class="o">.</span><span class="n">left_pwm_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;left_pwm&#39;</span><span class="p">,</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">right_pwm_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;right_pwm&#39;</span><span class="p">,</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+   <span class="bp">self</span><span class="o">.</span><span class="n">left_pwm</span> <span class="o">=</span> <span class="n">Int32</span><span class="p">()</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">right_pwm</span> <span class="o">=</span> <span class="n">Int32</span><span class="p">()</span>
+
+   <span class="bp">self</span><span class="o">.</span><span class="n">params_setup</span><span class="p">()</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">wheel_radius</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wheel_diameter</span><span class="o">/</span><span class="mi">2</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">circumference_of_wheel</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">wheel_radius</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">max_speed</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">circumference_of_wheel</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_rpm</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span>   <span class="c1"># m/sec</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">right_vel_actual</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">left_vel_actual</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="bp">self</span><span class="o">.</span><span class="n">kp</span> <span class="o">=</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+<p>This is the constructor method of the DifferentialDriver class. This method is called when an object of the class is created. In this method, we initialize the ROS node, create subscribers and publishers for topics <code class="docutils literal notranslate"><span class="pre">/cmd_vel,</span> <span class="pre">left_speed,</span> <span class="pre">right_speed,</span> <span class="pre">left_pwm</span> <span class="pre">and</span> <span class="pre">right_pwm</span></code>. We also call the method <code class="docutils literal notranslate"><span class="pre">params_setup()</span></code> to read the parameter values from the ROS parameter server and set the instance variables of the class DifferentialDriver.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">params_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">motor_rpm</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;mr_robot_firmware/motor_rpm&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wheel_diameter</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;mr_robot_firmware/wheel_diameter&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wheel_diameter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wheel_diameter</span><span class="o">/</span><span class="mi">100</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wheel_separation</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;mr_robot_firmware/wheel_diameter&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wheel_separation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wheel_separation</span><span class="o">/</span><span class="mi">100</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">max_pwm_val</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;mr_robot_firmware/twist_max_pwm&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">min_pwm_val</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;mr_robot_firmware/twist_min_pwm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This method reads the parameter values from the ROS parameter server and sets the instance variables of the class DifferentialDriver.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The parameters read and their respective instance variables are:</p>
+<p>mr_robot_firmware/motor_rpm: motor_rpm
+mr_robot_firmware/wheel_diameter: wheel_diameter
+mr_robot_firmware/wheel_separation: wheel_separation
+mr_robot_firmware/twist_max_pwm: max_pwm_val
+mr_robot_firmware/twist_min_pwm: min_pwm_val</p>
+<p>All the parameter values are read as float values and converted to the required units and are taken from <code class="docutils literal notranslate"><span class="pre">mr_robot_firmware.yaml</span></code></p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update_left</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">left_vel_actual</span> <span class="o">=</span> <span class="n">speed</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+<p>This method is called whenever a new message is received on the topic <code class="docutils literal notranslate"><span class="pre">/left_speed</span></code>. It updates the instance variable <code class="docutils literal notranslate"><span class="pre">/left_vel_actual</span></code> with the received value of speed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update_right</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">right_vel_actual</span> <span class="o">=</span> <span class="n">speed</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+<p>This method is called whenever a new message is received on the topic <code class="docutils literal notranslate"><span class="pre">/right_speed</span></code>. It updates the instance variable <code class="docutils literal notranslate"><span class="pre">/right_vel_actual</span></code> with the received value of speed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stop</span><span class="p">(</span> <span class="bp">self</span> <span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">change_duty_cycle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This method sets the PWM values for both the motors to zero, effectively stopping the robot. It calls the <code class="docutils literal notranslate"><span class="pre">change_duty_cycle()</span></code> method with zero values for both left and right PWM values.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_pwm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left_speed</span><span class="p">,</span> <span class="n">right_speed</span><span class="p">):</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">lspeedPWM</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">((</span><span class="n">left_speed</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">max_speed</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">max_pwm_val</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_pwm_val</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_pwm_val</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">rspeedPWM</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">((</span><span class="n">right_speed</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">max_speed</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">max_pwm_val</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">max_pwm_val</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_pwm_val</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lspeedPWM</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rspeedPWM</span>
+</pre></div>
+</div>
+<p>This method calculates the required PWM values for both the motors based on the given linear and angular velocities of the robot. The formula used is <code class="docutils literal notranslate"><span class="pre">(velocity</span> <span class="pre">/</span> <span class="pre">max_speed)</span> <span class="pre">*</span> <span class="pre">max_pwm_val</span></code>, where velocity can be either left or right wheel velocity and max_speed is the maximum possible speed of the robot. The calculated PWM values are limited to be within the range of <strong>min_pwm_val</strong> and <strong>max_pwm_val</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">correct_pwm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left_vel</span><span class="p">,</span> <span class="n">right_vel</span><span class="p">,</span> <span class="n">pwm_left</span><span class="p">,</span> <span class="n">pwm_right</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">r_error</span> <span class="o">=</span> <span class="n">right_vel</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_vel_actual</span>
+        <span class="n">l_error</span> <span class="o">=</span>  <span class="n">left_vel</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">left_vel_actual</span>
+        <span class="n">pwm_left</span> <span class="o">=</span> <span class="n">pwm_left</span> <span class="o">+</span> <span class="n">l_error</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">kp</span>
+        <span class="n">pwm_right</span> <span class="o">=</span> <span class="n">pwm_right</span> <span class="o">+</span> <span class="n">r_error</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">kp</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>This method is used to correct the calculated PWM values for the left and right motors based on the actual velocities of the motors as received from the topics <code class="docutils literal notranslate"><span class="pre">/left_speed</span></code> and <code class="docutils literal notranslate"><span class="pre">/right_speed</span></code>. The proportional gain kp is used to calculate the correction values. The corrected PWM values are returned by this method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+    <span class="n">linear_vel</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span>                                              <span class="c1"># Linear Velocity of Robot</span>
+    <span class="n">angular_vel</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span>                                            <span class="c1"># Angular Velocity of Robot</span>
+
+    <span class="n">right_vel</span> <span class="o">=</span> <span class="n">linear_vel</span> <span class="o">+</span> <span class="p">(</span><span class="n">angular_vel</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">wheel_separation</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>      <span class="c1"># right wheel velocity</span>
+    <span class="n">left_vel</span>  <span class="o">=</span> <span class="n">linear_vel</span> <span class="o">-</span> <span class="p">(</span><span class="n">angular_vel</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">wheel_separation</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>      <span class="c1"># left wheel velocity</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Left Velocity = </span><span class="si">{}</span><span class="s2">  |   Right Velocity = </span><span class="si">{}</span><span class="s2">  |   Left Actual = </span><span class="si">{}</span><span class="s2">    |   Right Actual = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">left_vel</span><span class="p">,</span> <span class="n">right_vel</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">left_vel_actual</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_vel_actual</span><span class="p">))</span>
+
+    <span class="n">left_pwm_data</span> <span class="p">,</span> <span class="n">right_pwm_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pwm</span><span class="p">(</span><span class="n">left_vel</span><span class="p">,</span> <span class="n">right_vel</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">left_pwm_data</span> <span class="p">,</span> <span class="n">right_pwm_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">correct_pwm</span><span class="p">(</span><span class="n">left_vel</span><span class="p">,</span> <span class="n">right_vel</span><span class="p">,</span> <span class="n">left_pwm_data</span> <span class="p">,</span> <span class="n">right_pwm_data</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="c1">#print(left_pwm_data)</span>
+    <span class="c1">#print(right_pwm_data)</span>
+
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">left_pwm</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">left_pwm_data</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">right_pwm</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">right_pwm_data</span><span class="p">)</span>
+
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">left_pwm_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left_pwm</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">right_pwm_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">right_pwm</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This method is called whenever a new message is received on the topic <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code>. It calculates the left and right wheel velocities based on the linear and angular twist velocities, and then calculates the PWM values for both the motors using the <code class="docutils literal notranslate"><span class="pre">get_pwm()</span></code> method. The PWM values are then corrected using the <code class="docutils literal notranslate"><span class="pre">correct_pwm()</span></code> method, and the corrected PWM values are published on the topics <code class="docutils literal notranslate"><span class="pre">/left_pwm</span></code> and <code class="docutils literal notranslate"><span class="pre">/right_pwm</span></code> using the <code class="docutils literal notranslate"><span class="pre">/left_pwm_pub</span></code> and <code class="docutils literal notranslate"><span class="pre">/right_pwm_pub</span></code> publishers, respectively. The method also prints the calculated and actual velocities of both the wheels for debugging purposes.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="code.html" class="btn btn-neutral float-left" title="Code Explanation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="esp_diff_tf.html" class="btn btn-neutral float-right" title="ESP_diff_tf" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

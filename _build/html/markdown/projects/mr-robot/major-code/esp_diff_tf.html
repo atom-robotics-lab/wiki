@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESP_diff_tf &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Arduino" href="arduino.html" />
+    <link rel="prev" title="Twist To PWM" href="twist_to_pwm.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tool_setup/tool_setup.html">Tool Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../mr-index.html">MR-ROBOT</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../script-use/basic.html">Basic Project Overview</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="code.html">Code Explanation</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="twist_to_pwm.html">Twist To PWM</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ESP_diff_tf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arduino.html">Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../miscellaneous/miss.html">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
+          <li><a href="../mr-index.html">MR-ROBOT</a> &raquo;</li>
+          <li><a href="code.html">Code Explanation</a> &raquo;</li>
+      <li>ESP_diff_tf</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/projects/mr-robot/major-code/esp_diff_tf.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="esp-diff-tf">
+<h1>ESP_diff_tf<a class="headerlink" href="#esp-diff-tf" title="Permalink to this heading"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&quot;diff_tf&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">nodename</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;-I- </span><span class="si">%s</span><span class="s2"> started&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodename</span><span class="p">)</span>
+
+    <span class="c1">#### parameters #######</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">rate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;mr_robot_firmware/rate&#39;</span><span class="p">)</span>  <span class="c1"># the rate at which to publish the transform</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ticks_meter</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;mr_robot_firmware/ticks_meter&#39;</span><span class="p">))</span>  <span class="c1"># The number of wheel encoder ticks per meter of travel</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">base_width</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;mr_robot_firmware/base_width&#39;</span><span class="p">))</span> <span class="c1"># The wheel base width in meters</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">base_frame_id</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;mr_robot_firmware/base_frame_id&#39;</span><span class="p">)</span> <span class="c1"># the name of the base frame of the robot</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">odom_frame_id</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;mr_robot_firmware/odom_frame_id&#39;</span><span class="p">)</span> <span class="c1"># the name of the odometry reference frame</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">encoder_min</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;encoder_min&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2147483648</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">encoder_max</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;encoder_max&#39;</span><span class="p">,</span> <span class="mi">2147483648</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">encoder_low_wrap</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;wheel_low_wrap&#39;</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">encoder_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_min</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.3</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_min</span> <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">encoder_high_wrap</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;wheel_high_wrap&#39;</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">encoder_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_min</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.7</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_min</span> <span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">t_delta</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Duration</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">rate</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">t_next</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">t_delta</span>
+
+    <span class="c1"># internal data</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">enc_left</span> <span class="o">=</span> <span class="kc">None</span>        <span class="c1"># wheel encoder readings</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">enc_right</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>               <span class="c1"># actual values coming back from robot</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lmult</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">rmult</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">prev_lencoder</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">prev_rencoder</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>                  <span class="c1"># position in xy plane</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="mi">0</span>                 <span class="c1"># speeds in x/rotation</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">dr</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">then</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">left_speed</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">right_speed</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># subscriptions</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&quot;left_encoder&quot;</span><span class="p">,</span> <span class="n">Int32</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lwheelCallback</span><span class="p">)</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&quot;right_encoder&quot;</span><span class="p">,</span> <span class="n">Int32</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rwheelCallback</span><span class="p">)</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s2">&quot;initialpose&quot;</span><span class="p">,</span> <span class="n">PoseWithCovarianceStamped</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_pose</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">odomPub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s2">&quot;odom&quot;</span><span class="p">,</span> <span class="n">Odometry</span><span class="p">,</span><span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">left_speed_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s2">&quot;left_speed&quot;</span><span class="p">,</span> <span class="n">Float64</span><span class="p">,</span><span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">right_speed_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s2">&quot;right_speed&quot;</span><span class="p">,</span> <span class="n">Float64</span><span class="p">,</span><span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">odomBroadcaster</span> <span class="o">=</span> <span class="n">TransformBroadcaster</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In this part we specify basic parameter like <strong>wheel encoder readings ,rate, base_width etc</strong>. As well subscribing &amp; publishing <strong>encoder and odom values.</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update_pose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="p">(</span><span class="n">roll</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">yaw</span><span class="p">)</span> <span class="o">=</span> <span class="n">euler_from_quaternion</span><span class="p">([</span><span class="n">data</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">w</span><span class="p">])</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="o">=</span> <span class="n">yaw</span>
+</pre></div>
+</div>
+<p>Inside the <code class="docutils literal notranslate"><span class="pre">update_pose()</span></code> method, the x, y, and z coordinates of the object’s position are extracted from the data dictionary and stored in the self.position attribute of the PoseEstimator object. This attribute is a tuple that contains the x, y, and z coordinates of the object’s position, respectively.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">now</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">t_next</span><span class="p">:</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">then</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">then</span> <span class="o">=</span> <span class="n">now</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">elapsed</span><span class="o">.</span><span class="n">to_sec</span><span class="p">()</span>
+
+
+        <span class="c1"># calculate odometry</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc_left</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">d_left</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">d_right</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">d_left</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc_left</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks_meter</span>
+            <span class="n">d_right</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc_right</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks_meter</span>
+
+        <span class="c1"># calculate the velocity of the 2 wheels</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left_speed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">/</span> <span class="n">elapsed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_speed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">/</span> <span class="n">elapsed</span>
+
+        <span class="c1"># print(d_left)</span>
+        <span class="c1"># print(self.right_speed)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">left_speed_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">d_left</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_speed_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">d_right</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc_left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc_right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span>
+
+        <span class="c1"># distance traveled is the average of the two wheels</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="p">(</span> <span class="n">d_left</span> <span class="o">+</span> <span class="n">d_right</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="c1"># this approximation works (in radians) for small angles</span>
+        <span class="n">th</span> <span class="o">=</span> <span class="p">(</span> <span class="n">d_right</span> <span class="o">-</span> <span class="n">d_left</span> <span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_width</span>
+        <span class="c1"># calculate velocities</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">d</span> <span class="o">/</span> <span class="n">elapsed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dr</span> <span class="o">=</span> <span class="n">th</span> <span class="o">/</span> <span class="n">elapsed</span>
+</pre></div>
+</div>
+<p>This code segment is checking whether the current time now is greater than the next time to update the pose t_next. If the condition is True, it proceeds to calculate the elapsed time elapsed since the last pose update, using the now and then times stored in the class.
+Then, the code calculates the odometry by determining the distance traveled by each wheel based on the change in encoder ticks since the last update. If the encoder ticks have not changed since the last update (i.e., enc_left is None), then the distance traveled by both wheels is set to 0.
+Finally, the code calculates the speed of each wheel based on the distance traveled and the elapsed time, and stores them in <code class="docutils literal notranslate"><span class="pre">left_speed</span></code> and <code class="docutils literal notranslate"><span class="pre">right_speed</span></code> variables respectively.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">d</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="c1"># calculate distance traveled in x and y</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span> <span class="n">th</span> <span class="p">)</span> <span class="o">*</span> <span class="n">d</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="n">sin</span><span class="p">(</span> <span class="n">th</span> <span class="p">)</span> <span class="o">*</span> <span class="n">d</span>
+        <span class="c1"># calculate the final position of the robot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="p">(</span> <span class="n">cos</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="n">sin</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="p">)</span> <span class="o">*</span> <span class="n">y</span> <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="p">(</span> <span class="n">sin</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="p">)</span> <span class="o">*</span> <span class="n">y</span> <span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">th</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="o">+</span> <span class="n">th</span>
+
+    <span class="c1"># publish the odom information</span>
+    <span class="n">quaternion</span> <span class="o">=</span> <span class="n">Quaternion</span><span class="p">()</span>
+    <span class="n">quaternion</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">quaternion</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">quaternion</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">)</span>
+    <span class="n">quaternion</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">th</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">odomBroadcaster</span><span class="o">.</span><span class="n">sendTransform</span><span class="p">(</span>
+        <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">quaternion</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">quaternion</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">quaternion</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">quaternion</span><span class="o">.</span><span class="n">w</span><span class="p">),</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_frame_id</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">odom_frame_id</span>
+        <span class="p">)</span>
+
+    <span class="n">odom</span> <span class="o">=</span> <span class="n">Odometry</span><span class="p">()</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">stamp</span> <span class="o">=</span> <span class="n">now</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">odom_frame_id</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="n">quaternion</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">child_frame_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_frame_id</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">twist</span><span class="o">.</span><span class="n">twist</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">twist</span><span class="o">.</span><span class="n">twist</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">odom</span><span class="o">.</span><span class="n">twist</span><span class="o">.</span><span class="n">twist</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dr</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">odomPub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">odom</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This section of the code is responsible for calculating and publishing the odometry information of the robot.</p>
+<p>If the robot has traveled a nonzero distance <code class="docutils literal notranslate"><span class="pre">(d</span> <span class="pre">!=</span> <span class="pre">0)</span></code>, it calculates the distance traveled in the x and y directions using the current angle of the robot <em>(th)</em> and the distance traveled <em>(d)</em>. It then updates the position of the robot by adding this distance to the current position.</p>
+<p>If the robot has turned a nonzero angle <code class="docutils literal notranslate"><span class="pre">(th</span> <span class="pre">!=</span> <span class="pre">0)</span></code>, it updates the current angle of the robot <em>(self.th)</em> by adding the angle turned <em>(th)</em>.</p>
+<p>Next, it creates a Quaternion object to represent the orientation of the robot, and sets its values based on the current angle of the robot.</p>
+<p>Then, it publishes the odometry information as a transform from the base frame to the odometry frame, and as an Odometry message on the <code class="docutils literal notranslate"><span class="pre">/odom</span></code> topic, with the position and orientation of the robot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lwheelCallback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+    <span class="n">enc</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">enc</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_low_wrap</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev_lencoder</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_high_wrap</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lmult</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lmult</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">enc</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_high_wrap</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev_lencoder</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_low_wrap</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lmult</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lmult</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">enc</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lmult</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">encoder_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder_min</span><span class="p">))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">prev_lencoder</span> <span class="o">=</span> <span class="n">enc</span>
+</pre></div>
+</div>
+<p>This is a callback function for the left wheel encoder subscriber. It receives a message from the topic to which it has subscribed, and extracts the data from it.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enc</span> <span class="pre">=</span> <span class="pre">msg.data</span></code>: extracts the data from the message and stores it in the enc variable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(enc</span> <span class="pre">&lt;</span> <span class="pre">self.encoder_low_wrap</span> <span class="pre">and</span> <span class="pre">self.prev_lencoder</span> <span class="pre">&gt;</span> <span class="pre">self.encoder_high_wrap)</span></code>: checks if the encoder value has wrapped around the low end (underflow) and the previous value was above the high end (overflow). If true, increment the left encoder multiplier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(enc</span> <span class="pre">&gt;</span> <span class="pre">self.encoder_high_wrap</span> <span class="pre">and</span> <span class="pre">self.prev_lencoder</span> <span class="pre">&lt;</span> <span class="pre">self.encoder_low_wrap)</span></code>: checks if the encoder value has wrapped around the high end (overflow) and the previous value was below the low end (underflow). If true, decrement the left encoder multiplier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self.left</span> <span class="pre">=</span> <span class="pre">1.0</span> <span class="pre">*</span> <span class="pre">(enc</span> <span class="pre">+</span> <span class="pre">self.lmult</span> <span class="pre">*</span> <span class="pre">(self.encoder_max</span> <span class="pre">-</span> <span class="pre">self.encoder_min))</span></code>:** calculates the left encoder count by adding the current encoder value to the left encoder multiplier times the range of the encoder values. The range is defined as the difference between the maximum and minimum encoder values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self.prev_lencoder</span> <span class="pre">=</span> <span class="pre">enc</span></code>: updates the previous encoder value with the current encoder value.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="twist_to_pwm.html" class="btn btn-neutral float-left" title="Twist To PWM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="arduino.html" class="btn btn-neutral float-right" title="Arduino" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

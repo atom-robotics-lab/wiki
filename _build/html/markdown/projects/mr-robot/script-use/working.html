@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Working Of MR Robot &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Launch files" href="launch.html" />
+    <link rel="prev" title="Basic Project Overview" href="basic.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tool_setup/tool_setup.html">Tool Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../mr-index.html">MR-ROBOT</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="basic.html">Basic Project Overview</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Working Of MR Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="launch.html">Launch files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bash.html">Machine Specification For MR Robot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../major-code/code.html">Code Explanation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscellaneous/miss.html">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
+          <li><a href="../mr-index.html">MR-ROBOT</a> &raquo;</li>
+          <li><a href="basic.html">Basic Project Overview</a> &raquo;</li>
+      <li>Working Of MR Robot</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/projects/mr-robot/script-use/working.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="working-of-mr-robot">
+<h1>Working Of MR Robot<a class="headerlink" href="#working-of-mr-robot" title="Permalink to this heading"></a></h1>
+<section id="hardware-working">
+<h2>Hardware Working<a class="headerlink" href="#hardware-working" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<img alt="../../../../_images/MRCKT.png" src="../../../../_images/MRCKT.png" />
+<figcaption>
+<p><span class="caption-text">MR Robot Circuit Diagram</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>MR Robot is a robot that is equipped with two encoder motors, an ESP32 microcontroller, a Raspberry Pi 4, an IMU, a LiDAR, a motor driver, and a 5V buck converter. The robot is designed to calculate the movement of the motors and send it to the microcontroller. The data is then published to a topic and used to calculate the odometer. The LiDAR and IMU are linked to the Raspberry Pi 4, and the motor driver is used to form an H-bridge for differential drive.</p>
+<p><strong>Encoder Motors</strong> :-
+MR Robot is equipped with two encoder motors. The encoder motor calculates the movement of the motor and sends it to the microcontroller. This data is then used to calculate the odometer.</p>
+<p><strong>ESP32 Microcontroller</strong> :-
+The ESP32 microcontroller is the brain of the robot. It receives data from the encoder motors and processes it. The microcontroller then publishes the data to a topic that is used to calculate the odometer.</p>
+<p><strong>Raspberry Pi 4</strong> :-
+The Raspberry Pi 4 is used to link the LiDAR and IMU. The LiDAR and IMU are connected to the Raspberry Pi 4, which processes the data from the sensors.</p>
+<p><strong>IMU</strong> :-
+The IMU is used to measure the orientation, acceleration, and angular velocity of the robot. The data from the IMU is processed by the Raspberry Pi 4 using a Kalman filter. The Kalman filter is used to estimate the orientation, acceleration, and angular velocity of the robot.</p>
+<p><strong>LiDAR X2L Model</strong> :-
+The LiDAR X2L Model is a type of LiDAR sensor that is used to detect the distance and angle of objects in the environment. The LiDAR X2L Model is connected to the Raspberry Pi 4 and is used to create a map of the environment.</p>
+<p><strong>Motor Driver</strong> :-
+The motor driver is used to form an H-bridge for differential drive. The motor driver is connected to the microcontroller and the encoder motors. The motor driver is responsible for controlling the speed and direction of the motors.</p>
+<p><strong>5V Buck Converter</strong> :-
+The 5V Buck Converter is used to convert the voltage from the battery to 5V.</p>
+<p><strong>Conclusion</strong> :-
+MR Robot is a sophisticated robot that is equipped with advanced sensors and components. The robot is designed to navigate the environment using the LiDAR, IMU and Encoder Motor. The motor driver is used to control the movement of the robot, and the microcontroller is used to process the data from the sensors. Overall, Mr. Robot is a powerful and versatile robot that is capable of performing a wide range of tasks.</p>
+</section>
+<section id="software-working">
+<h2>Software Working<a class="headerlink" href="#software-working" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id2">
+<img alt="../../../../_images/MRDFD.png" src="../../../../_images/MRDFD.png" />
+<figcaption>
+<p><span class="caption-text">MR Robot DFD</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>MR Robot is a robot that utilizes the ROS Serial protocol to communicate with its components. It uses Twist to PWM for motor control and ESP_Diff_TF for odom calculation. The robot has a LiDAR sensor connected to the Raspberry Pi 4, which is used for mapping and navigation.</p>
+<p><strong>ROS Serial Protocol</strong> :-
+ROS Serial is a protocol used to communicate with the robot’s components, such as the microcontroller and motor driver. It allows for the exchange of messages between the robot and the computer. This protocol is used to send and receive data from the robot, such as motor commands and sensor data.</p>
+<p><a class="reference external" href="http://wiki.ros.org/rosserial">http://wiki.ros.org/rosserial</a></p>
+<p><strong>Twist to PWM</strong> :-
+The Twist to PWM converter is used to control the speed and direction of the robot’s motors. It takes in Twist messages, which represent the desired linear and angular velocities of the robot, and converts them to PWM signals that are sent to the motor driver.</p>
+<p><strong>ESP_Diff_TF</strong> :-
+The ESP_Diff_TF node is used to calculate the robot’s odometry. It takes in the encoder data from the motor driver and uses it to calculate the robot’s position and orientation. The calculated odometry data is then sent to the Navigation Stack.</p>
+<p><strong>AMCL</strong> :-
+The Adaptive Monte Carlo Localization (AMCL) node is used to localize the robot within a map. It takes in sensor data, such as the LiDAR data from the Raspberry Pi 4, and uses it to estimate the robot’s position within the map. AMCL is a part of the Navigation Stack and is responsible for accurately determining the robot’s position.</p>
+<p><a class="reference external" href="http://wiki.ros.org/amcl">http://wiki.ros.org/amcl</a></p>
+<p><strong>Move Base</strong> :-
+The Move Base node is used for robot navigation. It takes in a goal location and uses the odometry and localization data from AMCL to navigate the robot to the goal location. Move Base utilizes a global planner and a local planner to plan a path to the goal and avoid obstacles in real-time.</p>
+<p><a class="reference external" href="http://wiki.ros.org/move_base">http://wiki.ros.org/move_base</a></p>
+<p><strong>LiDAR Data</strong> :-
+The LiDAR data from the Raspberry Pi 4 is used for mapping and navigation. The LiDAR sensor scans the environment and creates a 2D map of the surroundings. This map is then used by the Navigation Stack to determine the robot’s position and plan a path to the goal.</p>
+<p><a class="reference external" href="https://www.ydlidar.com/products/view/6.html">https://www.ydlidar.com/products/view/6.html</a></p>
+<p><strong>GMapping</strong> :-
+The LiDAR data from the Raspberry Pi 4 can also be used for mapping using the GMapping node. GMapping is a SLAM algorithm that uses the LiDAR data to create a map of the environment. The generated map can then be used for navigation by the Navigation Stack.</p>
+<p><a class="reference external" href="http://wiki.ros.org/gmapping">http://wiki.ros.org/gmapping</a></p>
+<p><strong>Conclusion</strong> :-
+MR Robot is a powerful and sophisticated robot that utilizes ROS Serial, Twist to PWM, and ESP_Diff_TF for motor control and odometry calculation. The Navigation Stack, which includes AMCL and Move Base, is used for robot navigation and localization. The LiDAR data from the Raspberry Pi 4 is used for mapping and navigation by the Navigation Stack, and can also be used for mapping using GMapping. Overall, Mr. Robot is a versatile and capable robot that is suitable for a wide range of tasks.</p>
+</section>
+<section id="tf-tree">
+<h2>TF TREE<a class="headerlink" href="#tf-tree" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id3">
+<img alt="../../../../_images/tf.png" src="../../../../_images/tf.png" />
+<figcaption>
+<p><span class="caption-text">TF TREE</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="node-graph">
+<h2>Node Graph<a class="headerlink" href="#node-graph" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id4">
+<img alt="../../../../_images/node.png" src="../../../../_images/node.png" />
+<figcaption>
+<p><span class="caption-text">Node Graph</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="basic.html" class="btn btn-neutral float-left" title="Basic Project Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="launch.html" class="btn btn-neutral float-right" title="Launch files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROS 2 Nodes &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Examples" href="../examples/example.html" />
+    <link rel="prev" title="Creating a package" href="../package/package.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tool_setup/tool_setup.html">Tool Setup</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../ros.html">Intro To ROS 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ROS_installation/ROS_index.html">ROS 2 Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../colcon_ws.html">Creating a workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../package/package.html">Creating a package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS 2 Nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-ros-2-node">Creating a ROS 2 Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#steps-to-create-a-node-in-python">Steps to Create a Node in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#command">Command</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#command-ros2-run">Command: ros2 run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-ros2-node">Command: ros2 node</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../launch/launch.html">ROS 2 Launch Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comm/topics/topics.html">ROS Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">ROS 2 Topic Command</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/projects.html">Projects</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../ros.html">Intro To ROS 2</a> &raquo;</li>
+      <li>ROS 2 Nodes</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/node/node.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ros-2-nodes">
+<h1><a class="toc-backref" href="#id1">ROS 2 Nodes</a><a class="headerlink" href="#ros-2-nodes" title="Permalink to this heading"></a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ros-2-nodes" id="id1">ROS 2 Nodes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creating-a-ros-2-node" id="id2">Creating a ROS 2 Node</a></p>
+<ul>
+<li><p><a class="reference internal" href="#steps-to-create-a-node-in-python" id="id3">Steps to Create a Node in Python</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#command" id="id4">Command</a></p>
+<ul>
+<li><p><a class="reference internal" href="#command-ros2-run" id="id5">Command: ros2 run</a></p>
+<ul>
+<li><p><a class="reference internal" href="#to-create-an-executable-python-file" id="id6">To create an executable Python file</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#command-ros2-node" id="id7">Command: ros2 node</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>A <strong>ROS 2 Node</strong> is a piece of software/executable that uses ROS 2 to
+communicate with other ROS 2 nodes.</p></li>
+<li><p>ROS 2 Nodes are the building blocks of any ROS 2 application.</p></li>
+<li><p>For example, in a wall-following robot, one ROS 2 node could retrieve
+distance sensor values while another node controls the robot’s
+motors. These nodes communicate to move the robot.</p></li>
+<li><p>Although it’s possible to write the entire application in a single
+node, having multiple nodes ensures modularity and fault tolerance—
+if one node crashes, it won’t crash the entire application.</p></li>
+<li><p>A <strong>ROS 2 package</strong> can contain multiple ROS 2 nodes.</p></li>
+<li><p>ROS 2 Nodes can be written in <strong>Python</strong> or <strong>C++</strong>.</p></li>
+</ul>
+<section id="creating-a-ros-2-node">
+<h2><a class="toc-backref" href="#id2">Creating a ROS 2 Node</a><a class="headerlink" href="#creating-a-ros-2-node" title="Permalink to this heading"></a></h2>
+<section id="steps-to-create-a-node-in-python">
+<h3><a class="toc-backref" href="#id3">Steps to Create a Node in Python</a><a class="headerlink" href="#steps-to-create-a-node-in-python" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Navigate to your ROS 2 package (for example, <code class="docutils literal notranslate"><span class="pre">pkg_ros_basics</span></code>):</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src/pkg_ros_basics
+
+OR
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span>pkg_ros_basics
+<span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src/pkg_ros_basics
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create a folder called <code class="docutils literal notranslate"><span class="pre">scripts</span></code> for your Python scripts and navigate into the folder.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>scripts
+<span class="nb">cd</span><span class="w"> </span>scripts
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create a Python script called <code class="docutils literal notranslate"><span class="pre">node_hello_ros.py</span></code>.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>node_hello_ros.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Open the script in a text editor and start editing.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gedit<span class="w"> </span>node_hello_ros.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The first line of all Python ROS 2 scripts should be the shebang.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Now write a ROS 2 node that prints “Hello World!” to the console.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">rclpy</span>
+<span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+
+<span class="k">class</span> <span class="nc">HelloWorldNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;hello_world_node&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">HelloWorldNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Make your node executable.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>node_hello_ros.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>To add your newly created script, in CMakeLists.txt file</dt><dd><ul>
+<li><p>Open CmakeLists.txt in your package</p></li>
+<li><p>add the following piece of code as follows</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>install<span class="o">(</span>PROGRAMS
+<span class="w">    </span>scripts/node_hello_ros.py
+<span class="w">    </span>DESTINATION<span class="w"> </span>lib/<span class="si">${</span><span class="nv">PROJECT_NAME</span><span class="si">}</span>
+<span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Now to run your node:</p>
+<ul>
+<li><p>Open a terminal and run:</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>pkg_ros_basics<span class="w"> </span>node_hello_ros.py
+</pre></div>
+</div>
+</section>
+</section>
+<section id="command">
+<h2><a class="toc-backref" href="#id4">Command</a><a class="headerlink" href="#command" title="Permalink to this heading"></a></h2>
+<section id="command-ros2-run">
+<h3><a class="toc-backref" href="#id5">Command: ros2 run</a><a class="headerlink" href="#command-ros2-run" title="Permalink to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> allows you to run an executable in an arbitrary package from
+anywhere without having to give its full path or cd there first.</p>
+<p>Usage:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>&lt;package&gt;<span class="w"> </span>&lt;executable&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;package&gt;</span></code> is the name of the package you created using the
+<code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span></code> command.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;executable&gt;</span></code> is the Python or C++ file you want to run.</p>
+<section id="to-create-an-executable-python-file">
+<h4><a class="toc-backref" href="#id6">To create an executable Python file</a><a class="headerlink" href="#to-create-an-executable-python-file" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>After creating a package, create a folder in the package called
+<code class="docutils literal notranslate"><span class="pre">scripts</span></code> to store all Python files in that folder.</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src/&lt;package&gt;
+mkdir<span class="w"> </span>scripts
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create Python scripts by running this command in the <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>scripts
+touch<span class="w"> </span>filename.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Edit your Python file, and make it executable before running:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>filename.py
+</pre></div>
+</div>
+</section>
+</section>
+<section id="command-ros2-node">
+<h3><a class="toc-backref" href="#id7">Command: ros2 node</a><a class="headerlink" href="#command-ros2-node" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span></code> provides command-line tools for displaying and debugging
+ROS 2 nodes.</p></li>
+<li><p>Use the following command to list all active ROS 2 nodes:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span>list
+
+This<span class="w"> </span>will<span class="w"> </span>print<span class="w"> </span>the<span class="w"> </span>names<span class="w"> </span>of<span class="w"> </span>all<span class="w"> </span>active<span class="w"> </span>nodes.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To get information about a specific node, including its publications and subscriptions:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span>info<span class="w"> </span>&lt;node_name&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To kill (terminate) a node:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>&lt;node_name&gt;
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../package/package.html" class="btn btn-neutral float-left" title="Creating a package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../examples/example.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

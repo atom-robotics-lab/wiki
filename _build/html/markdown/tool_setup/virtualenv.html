@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation of Computer Vision tools &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Environment Setup" href="px4.html" />
+    <link rel="prev" title="Ready to use image for Raspberry Pi" href="ros-pi.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tool_setup.html">Tool Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ros-pi.html">Ready to use image for Raspberry Pi</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation of Computer Vision tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#virtualenvwrapper">virtualenvwrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opencv">OpenCV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cv-bridge">cv_bridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-virtualenvwrapper">Installation of virtualenvwrapper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-new-virtual-environment">Creating a New Virtual Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-opencv">Installation of OpenCV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-of-cv-bridge">Installation of cv_bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="px4.html">Environment Setup</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="tool_setup.html">Tool Setup</a> &raquo;</li>
+      <li>Installation of Computer Vision tools</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/tool_setup/virtualenv.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-of-computer-vision-tools">
+<h1>Installation of Computer Vision tools<a class="headerlink" href="#installation-of-computer-vision-tools" title="Permalink to this heading"></a></h1>
+<p>These are some of the most commonly used Computer Vision tools in Robotics :</p>
+<section id="virtualenvwrapper">
+<h2>virtualenvwrapper<a class="headerlink" href="#virtualenvwrapper" title="Permalink to this heading"></a></h2>
+<p>Virtualenvwrapper is a set of extensions and wrappers used for creating, managing and deleting Python virtual environments using
+the terminal. Virtual environments are isolated Python installations that help in keeping dependencies required by different
+projects seperated. They also help in keeping a track of the dependencies or packages required by a project during deployement.</p>
+<p>You can read more about it <a class="reference external" href="https://pypi.org/project/virtualenvwrapper/">here(1)</a></p>
+</section>
+<section id="opencv">
+<h2>OpenCV<a class="headerlink" href="#opencv" title="Permalink to this heading"></a></h2>
+<p>OpenCV (Open Source Computer Vision Library) is an open source Computer Vision and Machine Learning software library, originally
+developed in C++. It is one of the most commonly used Computer Vision tool nowadays, with client libraries available in
+popular languages like Python, Java, MATLAB etc.</p>
+<p>You can learn more about it <a class="reference external" href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html">here(2)</a></p>
+</section>
+<section id="cv-bridge">
+<h2>cv_bridge<a class="headerlink" href="#cv-bridge" title="Permalink to this heading"></a></h2>
+<p>The cv_bridge packages contains the <code class="code highlight python docutils literal highlight-python"><span class="n">CvBridge</span></code> class which provides an interface between ROS and OpenCV. It helps in conversion from ROS Image messages
+to OpenCV images and vice-versa.
+You can learn more about it <a class="reference external" href="http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython">here(3)</a></p>
+<p>Now let’s go over the instructions to install these tools one-by-one :</p>
+</section>
+<section id="installation-of-virtualenvwrapper">
+<h2>Installation of virtualenvwrapper<a class="headerlink" href="#installation-of-virtualenvwrapper" title="Permalink to this heading"></a></h2>
+<p>We will use Python’s Official package manager, <code class="code highlight python docutils literal highlight-python"><span class="n">pip</span></code> for installing virtualenvwrapper.
+Open a terminal and enter the following command :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>virtualenvwrapper
+</pre></div>
+</div>
+<p>Now that we have virtualenvwrapper downloaded and installed, we need to add it’s path
+in the .bashrc file so that your Linux installation will be able to locate it.</p>
+<p>The .bashrc file contains terminal configurations, commands,
+environment variables etc. You can learn more about this <a class="reference external" href="https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux#defining-aliases-in-bashrc">here</a></p>
+<p>Follow the steps given below for the same :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Paste these lines in the .bashrc file which you opened above:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
+<span class="nb">export</span><span class="w"> </span><span class="nv">PROJECT_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Devel
+<span class="nb">source</span><span class="w"> </span>/usr/local/bin/virtualenvwrapper.sh
+</pre></div>
+</div>
+<p>Now that we have included the paths in the .bashrc file, we need to execute the given command to
+load the new environment variables :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If you face an error here, then reopen the .bashrc file by :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Now change the source  :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/usr/local/bin/virtualenvwrapper.sh
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>to :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/.local/bin/virtualenvwrapper.sh
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Again try loading the new environment variables by :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<section id="creating-a-new-virtual-environment">
+<h3>Creating a New Virtual Environment<a class="headerlink" href="#creating-a-new-virtual-environment" title="Permalink to this heading"></a></h3>
+<p>Now that we have virtualenvwrapper locked and loaded, let’s create a new virtual environment.</p>
+<ul class="simple">
+<li><p>The command given below will be used to create a new virtual environment :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkvirtualenv<span class="w"> </span><span class="o">[</span>name<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>virtual<span class="w"> </span>environment<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To use the new virtual environment</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>workon<span class="w"> </span><span class="o">[</span>name<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>virtual<span class="w"> </span>environment<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To deactivate virtual environment</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deactivate
+</pre></div>
+</div>
+</section>
+</section>
+<section id="installation-of-opencv">
+<h2>Installation of OpenCV<a class="headerlink" href="#installation-of-opencv" title="Permalink to this heading"></a></h2>
+<p>Follow the steps given below to install OpenCV. We will again use pip for downloading and installing OpenCV.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>opencv-python
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To test our OpenCV installation, Open Python interpreter in terminal by :</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Let’s try importing OpenCV in the above opened Python interpreter</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If your import statement executes error-free, you are good to go !!</p></li>
+</ul>
+</section>
+<section id="installation-of-cv-bridge">
+<h2>Installation of cv_bridge<a class="headerlink" href="#installation-of-cv-bridge" title="Permalink to this heading"></a></h2>
+<p>Follow these steps to install cv_bridge :</p>
+<ul class="simple">
+<li><p>Open a new terminal and execute the given command</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ros-noetic-cv-bridge
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Execute the command given below to confirm your cv_bridge installation :</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rospack<span class="w"> </span>find<span class="w"> </span>cv_bridge
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>cv_bridge is a ros package, so make sure you source your ROS installation before running the command below.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ros-pi.html" class="btn btn-neutral float-left" title="Ready to use image for Raspberry Pi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="px4.html" class="btn btn-neutral float-right" title="Environment Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

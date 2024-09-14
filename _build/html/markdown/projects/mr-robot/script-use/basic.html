@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Project Overview &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/copybutton.css" type="text/css" />
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/clipboard.min.js"></script>
+        <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Working Of MR Robot" href="working.html" />
+    <link rel="prev" title="MR-ROBOT" href="../mr-index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> A.T.O.M's Wiki
+            <img src="../../../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tool_setup/tool_setup.html">Tool Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ros/ros.html">Intro To ROS 2</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../selectiontask24/selection_task24.html">Selection Task 2024-25</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/access-repo.html">Using the access repo</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../archives/previous_tasks.html">Previous Tasks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../mr-index.html">MR-ROBOT</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Basic Project Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="working.html">Working Of MR Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="launch.html">Launch files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bash.html">Machine Specification For MR Robot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../major-code/code.html">Code Explanation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscellaneous/miss.html">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
+          <li><a href="../mr-index.html">MR-ROBOT</a> &raquo;</li>
+      <li>Basic Project Overview</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/projects/mr-robot/script-use/basic.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-project-overview">
+<h1>Basic Project Overview<a class="headerlink" href="#basic-project-overview" title="Permalink to this heading"></a></h1>
+<p>The Project MR Robot is an autonomous robot that is designed to navigate its environment using the ROS (Robot Operating System) navigation stack.
+The project is made keeping modularity in mind, which means that it is built with interchangeable parts that can be customized to suit different use cases.</p>
+<p>The MR-ROBOT project is built on top of the ROS navigation stack, which is a collection of software packages that provide navigation and mapping capabilities
+for robots. This allows MR-ROBOT to use sensors such as LIDAR, cameras, and inertial measurement units to accurately navigate its surroundings and avoid obstacles.</p>
+<p>One of the key benefits of the MR-ROBOT project is its modularity. This means that it can be customized to suit a wide range of applications, from warehouse
+automation to medical robotics. This modularity is achieved through the use of interchangeable parts and components, such as sensors, manipulators, and end-effectors.</p>
+<p>The MR Robot is an exciting development in the field of autonomous robotics, as it combines the power of the ROS navigation stack with the flexibility of
+a modular robot design. By leveraging these technologies, the MR Robot project has the potential to revolutionize a wide range of household and medical applications,
+from Cleaning and Sanitation to transportation. The only limit is your imagination of things that you could do with it.</p>
+<figure class="align-default" id="id1">
+<img alt="../../../../_images/mr-robot.gif" src="../../../../_images/mr-robot.gif" />
+<figcaption>
+<p><span class="caption-text">MR Robot CAD</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="working.html">Working Of MR Robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="working.html#hardware-working">Hardware Working</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working.html#software-working">Software Working</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working.html#tf-tree">TF TREE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working.html#node-graph">Node Graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="launch.html">Launch files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="launch.html#bringup-launch">1. bringup.launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launch.html#x2l-launch">2. X2L.launch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bash.html">Machine Specification For MR Robot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bash.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bash.html#master-bashrc-file">Master Bashrc file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bash.html#environment-loader">Environment Loader</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../mr-index.html" class="btn btn-neutral float-left" title="MR-ROBOT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="working.html" class="btn btn-neutral float-right" title="Working Of MR Robot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
