@@ -104,7 +104,7 @@ Description
 
 
 .. Warning::
-   The **Deadline** for completing the task: **15th October, 2024**
+   The **Deadline** for completing the task: **15th October, 2024**. Make sure to submit the files in .step format.
 
 Expected Output
 ^^^^^^^^^^^^^^^
