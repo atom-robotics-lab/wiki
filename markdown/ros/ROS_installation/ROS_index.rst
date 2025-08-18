@@ -47,18 +47,30 @@ First ensure that the `Ubuntu Universe repository <https://help.ubuntu.com/commu
    sudo apt install software-properties-common
    sudo add-apt-repository universe
 
-Now add the ROS 2 GPG key with apt.
+The `ros-apt-source packages <https://github.com/ros-infrastructure/ros-apt-source/>`_ provide keys and apt source configuration for the various ROS repositories.
+
+Installing the ros2-apt-source package will configure ROS 2 repositories for your system. Updates to repository 
+configuration will occur automatically when new versions of this package are released to the ROS repositories.
 
 .. code-block:: bash
 
    sudo apt update && sudo apt install curl -y
-   sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+   export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
+   curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb" # If using Ubuntu derivates use $UBUNTU_CODENAME
+   sudo dpkg -i /tmp/ros2-apt-source.deb
 
-Then add the repository to your sources list.
+.. Now add the ROS 2 GPG key with apt.
 
-.. code-block:: bash
+.. .. code-block:: bash
 
-   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+..    sudo apt update && sudo apt install curl -y
+..    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+.. Then add the repository to your sources list.
+
+.. .. code-block:: bash
+
+..    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
 Install ROS 2 packages
 ----------------------
@@ -68,6 +80,13 @@ Update your apt repository caches after setting up the repositories.
 .. code-block:: bash
 
    sudo apt update
+
+ROS 2 packages are built on frequently updated Ubuntu systems. It is always recommended that you ensure your system is up to 
+date before installing new packages.
+
+.. code-block:: bash
+
+   sudo apt upgrade
 
 .. include:: _Apt-Upgrade-Admonition.rst
 
