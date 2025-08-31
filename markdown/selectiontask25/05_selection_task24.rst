@@ -1,4 +1,4 @@
-Selection Task 2024-25
+Selection Task 2025-2026
 ========================
 
 Hi there, Welcome to the **A.T.O.M**'s Selection Task of 2024-2025.
@@ -26,7 +26,7 @@ There are currently two types of selection tasks which are:
 .. toctree::
    :maxdepth: 4
 
-   ROS Selection Task <ROS_selection_task24.rst>
-   Electronics Selection Task <Electronics_selection.rst>
-   CAD Selection Task <cad_sel.rst>
-   submissions.rst
+   ROS Selection Task <01_ROS_selection_task24.rst>
+   Electronics Selection Task <02_Electronics_selection.rst>
+   CAD Selection Task <03_cad_sel.rst>
+   04_submissions.rst
