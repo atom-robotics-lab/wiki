@@ -3,15 +3,15 @@ Electronics Selection Task 2025-2026
 
 
 .. note::
-   If you don't have hardware available, you can use a simulator such as `Wokwi <https://www.wokwi.com>`__
+   If you don't have hardware available, you can use a simulator such as `Wokwi <https://www.wokwi.com>`__ and `tinkercad <https://www.tinkercad.com/>`__
 
 
 
-This year, we've introduced a three-tiered Electronic Selection Task. Here's a brief summary:
+This year, we've introduced a four-tiered Electronic Selection Task. Here's a brief summary:
 
 **Challenge Levels**
 
-The electronic selection task is divided into three levels, labeled from Level 0 to Level 2. 
+The electronic selection task is divided into four levels, labeled from Level 0 to Level 3. 
 Each level presents its distinct set of challenges. 
 Whether you're a novice or an experienced enthusiast, there's something here for everyone.
 
@@ -22,25 +22,42 @@ the problem statement. Your performance will determine your score, and points wi
 
 **Qualification Criteria**
 
-To progress to the next stage, which is the interview phase, you must accumulate a minimum of 5 points in total. These 
+To progress to the next stage, which is the interview phase, you must accumulate a minimum of 13 points in total. These 
 points will be awarded after evaluating your submissions. Therefore, ensure you put your best foot forward for a chance to advance!
 
-
-
+.. note::
+   Note: For Level 0, 1,2,and 3 use either Arduino UNO, or esp32 as your
+   microcontroller to make the projects.
+   Assemble all you components on a breadboard using jumper wires and
+   resistors.
 
 Level 0 - Getting Started: 5pts
 -------------------------------
 
-Level 0 serves as the foundation and includes a task
+Level 0 serves as the foundation and includes following task:-
 
- 1. Blink an RGB light using three different buttons, where each button controls a specific color of the light.
- 2. The challenge is to ensure that pressing each button makes the corresponding color blink while the other colors remain unaffected.
-                                                                               
+Task 0A
+^^^^^^^
+Control the brightness of an LED using a potentiometer.
 
-
+Task Description
+^^^^^^^^^^^^^^^^
+* The brightness of the LED should vary smoothly as you rotate the potentiometer.
 
 Expected Output
-^^^^^^^^^^^^^^^
+---------------
+`video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
+
+.. raw:: html
+
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QPaCsf6LROg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+
+Task 0B
+^^^^^^^
+Play any music theme on a buzzer.
+                                                                               
+Expected Output
+---------------
 `video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
 
 .. raw:: html
@@ -48,42 +65,13 @@ Expected Output
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QPaCsf6LROg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
-Level 1 - Advanced Challenges: 8pts
-------------------------------------
+
+Level 1 - Challenges: 8pts
+--------------------------
 Level 1 elevates the complexity with more intricate problems and higher point allocations. Stay tuned for the list of tasks!
 
-Task 1A 
+Task 1A
 ^^^^^^^
-
-Task Description:
-~~~~~~~~~~~~~~~~~~
-
-   1. Servo Motor Control: Rotate a servo motor based on the input from a potentiometer. The servo should move proportionally to the potentiometer's position.
-   2. Angle Display: Print the current angle of the servo motor on an OLED screen. Ensure that the displayed angle accurately reflects the servo's position. 
-   3. Analyze the provided code and submit the output as demonstrated in the video.                                 
-
-Expected Output
-~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/shorts/lbVagJaASJ8>`__
-
-.. raw:: html
-
-  <center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-
-
-.. note::
-
-   If you don't have hardware available, you can use a simulator such as `Wokwi <https://www.wokwi.com>`__  
-
-
-
-Task 1B 
-^^^^^^^
-Task 1B elevates the complexity with more intricate problems and higher point allocations. 
-
-Task Description:
-~~~~~~~~~~~~~~~~~
 Light up six LEDs using only three GPIO pins of Arduino/ESP32/Microcontroller. 
 
 Expected Output
@@ -94,22 +82,109 @@ Expected Output
 
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/iGsrljodarg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
-
-Level 2 - Expert Territory: 8pts
----------------------------------
-The ultimate challenge! Level 2 will test even the most seasoned electronic enthusiasts. Prepare for some mind-bending tasks and 
-substantial point rewards.
+Task 1B 
+^^^^^^^
+Control an RGB LED using an Ultrasonic sensor.                                 
 
 Task Description
 ^^^^^^^^^^^^^^^^
-PCB Designing - Create a schematic, perform routing, and submit a Gerber file. Additionally, provide screenshots of the 
-schematics and a text file explaining your approach and detailing the schematic.                                   
+* Take input data from an ultrasonic sensor and convert it into distance (in cm).
+* Based on the distance calculated, light up RGB LED in these colours:
+ 1. 0-10cm : Red
+ 2. 10-20cm: Green
+ 3. 20-30cm: Blue
+
+.. note::
+
+   You may modify this range as you wish.
+   If you are doing it in real life, the ultrasonic sensor may face issues
+   in measuring distances less than 3 cm, ignore that error.
+
+Expected Output
+~~~~~~~~~~~~~~~
+`video link <https://www.youtube.com/shorts/lbVagJaASJ8>`__
+
+.. raw:: html
+
+  <center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 
-Problem Statement
-^^^^^^^^^^^^^^^^^
-Create a basic PCB capable of accepting battery input and producing different output voltages - 5V and 12V. Determine the 
-track size to handle output currents of up to 2 Amps accordingly.
+Level 2 - Expert Territory: 8pts
+---------------------------------
+This level will test even the most seasoned electronic enthusiasts. Prepare for some mind-bending tasks and 
+substantial point rewards.
+
+Task 2A
+^^^^^^^
+Take input from an LDR(Light Dependant Resistor/Photoresistor) and display it on a 16*2 LCD Display.  
+
+
+Expected Output
+~~~~~~~~~~~~~~~
+`video link <https://www.youtube.com/shorts/lbVagJaASJ8>`__
+
+.. raw:: html
+
+  <center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+Task 2B
+^^^^^^^
+* Calculate the distance of an object from an ultrasonic sensor in centimetres and then display it in binary using LEDs.
+
+Task Description
+^^^^^^^^^^^^^^^^
+* For real life: distance limit: 0-25 cm and No. of LEDs = 5
+* For simulation: distance limit: 0-50 cm and No. of LEDs = 6
+Ex: if you are using 5 LEDs and the distance reading is “20cm”,
+the output should be 10100 i.e. only 1st and 3rd LED should be ON.
+
+Expected Output
+~~~~~~~~~~~~~~~
+`video link <https://www.youtube.com/shorts/lbVagJaASJ8>`__
+
+.. raw:: html
+
+  <center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+Level 3 - A.T.O.M Special: 13pts
+--------------------------------
+The ultimate challenge! designed to push the boundaries of your electronics expertise, involving advanced 
+problem-solving, precision circuit analysis, and high-reward challenges. 
+
+Task Description(Case-Based):
+^^^^^^^^^^^^^^^^
+Your exams are right around the corner, but thanks to endless scrolling on
+Instagram Reels, your focus and attention span have taken a hit.
+To get back on track, you decide to build your own Pomodoro Clock—a
+study timer that helps you stay focused for 25 minutes at a stretch, followed by
+a short break.
+
+* You have the following components available:
+   ESP32/Arduino UNO, 16×2 LCD display, 2 push buttons, 2x10kohm
+   resistors, and a 12V DC adapter as your power source.
+
+Directions:
+^^^^^^^^^^^
+1. The clock should act as a 25-minute study timer with a display
+   countdown on the LCD.
+2. After 25 minutes, it should alert the user to take a short break (you
+   can display a message or restart the timer).
+3. Implement two buttons:
+   Start/Pause: Begin or pause the countdown.
+   Reset: reset the timer.
+
+.. note::
+   If you are making the project in a simulation platform, do not worry
+   about the power supply, the platform takes care of that for you.
+   But if you are building it in real life… either you use any safe power source
+   like 9v battery, a power bank, or simply power by laptop/PC and choose not the
+   get the extra points mentioned in the last step,
+   Or you design the PCB listed in the last step.
+
+PCB Designing(Optional Task):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Since your adapter provides 12V DC, you need to design a power supply
+PCB to safely power the ESP32/Arduino, which requires 5V. (Hint: Try LM2596)
 
 .. Warning::
    The **Deadline** for completing the task: **15th October, 2024**

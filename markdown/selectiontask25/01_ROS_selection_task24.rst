@@ -1,7 +1,6 @@
 ROS Selection Task 2025-2026
 ============================
 
-
 Problem statement
 -----------------
 
@@ -142,7 +141,7 @@ Procedure
 
    .. code:: shell
 
-      ros2 pkg create --build-type ament_python bonus_task
+      ros2 pkg create --build-type ament_python selection_task
 
    This will generate the basic package structure.
 
