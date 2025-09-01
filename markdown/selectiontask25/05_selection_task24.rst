@@ -1,7 +1,7 @@
 Selection Task 2025-2026
 ========================
 
-Hi there, Welcome to the **A.T.O.M**'s Selection Task of 2024-2025.
+Hi there, Welcome to the **A.T.O.M**'s Selection Task of 2025-2026.
 
 The TASK provided here are the selection criteria for joining the
 **A.T.O.M** society. Those who successfully finish the tasks within the
@@ -21,7 +21,7 @@ There are currently two types of selection tasks which are:
    improve your profile and increase your chances of getting selected.**
 
 .. Warning::
-   The **Deadline** for all the Tasks is **15th October, 2024**.
+   The **Deadline** for all the Tasks is **26th September, 2025**.
 
 .. toctree::
    :maxdepth: 4

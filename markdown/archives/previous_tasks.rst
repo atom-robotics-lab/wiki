@@ -7,7 +7,7 @@ the previous selection tasks, projects etc.
 List of previous selection tasks:
 
 .. toctree::
-    :maxdepth: 10
+    :maxdepth: 4
     
     ./sel-tasks2024/selection_task24.rst
     ./sel-tasks2023/selection_task23.rst

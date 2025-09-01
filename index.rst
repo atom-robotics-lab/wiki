@@ -10,40 +10,22 @@ A.T.O.M's Wiki !
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :caption: Documentation
+   :numbered:
 
    markdown/tool_setup/tool_setup.rst
-   
-
-.. toctree::
-   :maxdepth: 2
-
    markdown/ros/ros.rst
-
-.. toctree::
-   :maxdepth: 2
-
    markdown/selectiontask25/05_selection_task24.rst
-
-.. toctree::
-   :maxdepth: 2
-
    markdown/general/access-repo.rst
-
-.. toctree::
-   :maxdepth: 2
-
    markdown/archives/previous_tasks.rst
-
-.. toctree::
-   :maxdepth: 2
-
    markdown/projects/projects.rst
 
 .. toctree::
-
+   :maxdepth: 1
+   :caption: External Links
+   
    Socials <https://linktr.ee/a.t.o.m_robotics_lab>
-
 
 
 

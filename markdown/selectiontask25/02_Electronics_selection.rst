@@ -45,7 +45,7 @@ Task Description
 * The brightness of the LED should vary smoothly as you rotate the potentiometer.
 
 Expected Output
----------------
+~~~~~~~~~~~~~~~
 `video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
 
 .. raw:: html
@@ -57,7 +57,7 @@ Task 0B
 Play any music theme on a buzzer.
                                                                                
 Expected Output
----------------
+~~~~~~~~~~~~~~~
 `video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
 
 .. raw:: html
@@ -177,8 +177,7 @@ Directions:
    If you are making the project in a simulation platform, do not worry
    about the power supply, the platform takes care of that for you.
    But if you are building it in real life… either you use any safe power source
-   like 9v battery, a power bank, or simply power by laptop/PC and choose not the
-   get the extra points mentioned in the last step,
+   like 9v battery, a power bank, or simply power by laptop/PC.
    Or you design the PCB listed in the last step.
 
 PCB Designing(Optional Task):
@@ -187,7 +186,7 @@ Since your adapter provides 12V DC, you need to design a power supply
 PCB to safely power the ESP32/Arduino, which requires 5V. (Hint: Try LM2596)
 
 .. Warning::
-   The **Deadline** for completing the task: **15th October, 2024**
+   The **Deadline** for completing the task: **26th September, 2025**
 
 
 Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/submissions.html>`__ to submit your work 

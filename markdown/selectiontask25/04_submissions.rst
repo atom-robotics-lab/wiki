@@ -4,7 +4,7 @@ Submission Instructions
 For Submissions of your work please refer to the following instructions
 
 .. Warning::
-   The **Deadline** for all the Tasks is: **15th October 2023**
+   The **Deadline** for all the Tasks is: **26th September 2025**
 
 
 CAD Task

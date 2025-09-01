@@ -58,13 +58,13 @@ Expected Output
 
    </center>
 
-.. figure:: Task1.png
+.. figure:: cad.jpeg
 
 .. raw:: html
 
    </center>
 
-.. figure:: cad1.png
+.. figure:: cad2.jpeg
 
 
 Task 2: 5pts
@@ -86,7 +86,7 @@ Problem statement
 
 Description
 ^^^^^^^^^^^
-- The 3-DOF arm with simple joints is a versatile mechanical system featuring three degrees of freedom, allowing for a wide range of motion. This design focuses on fundamental movement capabilities, simplifying control and design while offering flexibility for various introductory robotic applications.
+- The Elliptical Crank with simple joints is a versatile mechanical system featuring three degrees of freedom, allowing for a wide range of motion. This design focuses on fundamental movement capabilities, simplifying control and design while offering flexibility for various introductory robotic applications.
 - You will be judged on the basis of the following criteria:
 
 
@@ -104,7 +104,7 @@ Description
 
 
 .. Warning::
-   The **Deadline** for completing the task: **15th October, 2024**
+   The **Deadline** for completing the task: **26th September, 2025**
 
 Expected Output
 ^^^^^^^^^^^^^^^
@@ -125,7 +125,7 @@ Expected Output
    </center>
 
  
-.. figure:: task2.png
+.. figure:: cad3.jpeg
 
 ..  caution:: THE DRAWING SHOULD BE DONE ACCURATELY AND AS EXPECTED .
    

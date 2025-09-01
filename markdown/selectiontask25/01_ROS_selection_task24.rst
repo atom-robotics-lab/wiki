@@ -28,7 +28,7 @@ Problem statement
    new to ROS2.
 
 .. Warning::
-   The **Deadline** for completing the task is **22nd September, 2025**.
+   The **Deadline** for completing the task is **26th September, 2025**.
 
 Expected Output
 ---------------
@@ -151,21 +151,21 @@ Procedure
    * Create:
       * ``node_turtle_move.py`` Complete your script ethically for the better understanding of the underlying concepts for drawing the desired shape .
    
-   Your package structure should look like this:
+   .. Your package structure should look like this:
 
-   .. code:: text
+   .. .. code:: text
 
-      turtle_ws/
-      └── src/
-         └── selection_task/
-            ├── selection_task/
-            │   ├── __init__.py
-            │   └── node_turtle_move.py
-            ├── package.xml
-            ├── setup.cfg
-            └── setup.py
+   ..    turtle_ws/
+   ..    └── src/
+   ..       └── selection_task/
+   ..          ├── selection_task/
+   ..          │   ├── __init__.py
+   ..          │   └── node_turtle_move.py
+   ..          ├── package.xml
+   ..          ├── setup.cfg
+   ..          └── setup.py
 
-* **Edit** ``setup.py`` To run both files with ros2 run, edit the setup.py so it contains:
+* **Edit** To run both files with ros2 run, edit the setup.py so it contains:
    .. code:: shell
 
       entry_points={
