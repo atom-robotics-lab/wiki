@@ -39,7 +39,7 @@ Expected Output
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/R6udlXtyplk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
-.. caution:: The DRONE should perfectly lie inside the turtlesim window. Also it is not necessary at all spawn to the drone in the turtlesim window instead you can continue with the default turtle spawned in the launch of the turtlesim window.
+.. caution:: The DRONE should perfectly lie inside the turtlesim window.
 
 Hints
 -----
@@ -60,72 +60,68 @@ Hints
 Sample Code Snippet
 -----------------------
 
-**Question:** Write a python code to move ROS's turtlesim bot on a straight path 
-while bot's distance is less than 3.
+**Question:** Write a python code to move ROS's turtlesim bot in a circle shape.
 
 .. code-block:: python
       
-      #!/usr/bin/env python3
+   #!/usr/bin/env python3
 
-      import rclpy
-      from rclpy.node import Node
-      from geometry_msgs.msg import Twist
-      from turtlesim.msg import Pose
-      import math
+   import rclpy
+   from rclpy.node import Node
+   from geometry_msgs.msg import Twist
+   from turtlesim.msg import Pose
+   import math
 
-      class MoveTurtle(Node):
+   class RotateTurtleOneTurn(Node):
+      def __init__(self):
+         super().__init__('rotate_turtle_one_turn')
+         self.cmd_pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
+         self.pose_sub = self.create_subscription(Pose, '/turtle1/pose', self.pose_callback, 10)
+         self.prev_theta = None
+         self.cumulative_rotation = 0.0
+         self.rotation_done = False
+         self.angular_speed = 1.0 
+         self.linear_speed = 1.0 
+         self.timer = self.create_timer(0.01, self.rotate)
 
-         def __init__(self):
-            super().__init__('move_turtle')
-            self.start_x = None
-            self.start_y = None
-            self.target_distance = 3.0  # Distance to move in pixels
-            self.lin_vel = 2.0  # Linear velocity
+      def pose_callback(self, msg):
+         """Track how much the turtle has rotated in total."""
+         current_theta = msg.theta
 
-            # Create a publisher for controlling the turtle's velocity
-            self.pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-            # Create a subscriber for getting the turtle's position
-            self.sub = self.create_subscription(Pose, '/turtle1/pose', self.pose_callback, 10)
+         if self.prev_theta is None:
+               self.prev_theta = current_theta
+               return
+         delta = current_theta - self.prev_theta
+         if delta > math.pi:
+               delta -= 2 * math.pi
+         elif delta < -math.pi:
+               delta += 2 * math.pi
+         self.cumulative_rotation += abs(delta)
+         self.prev_theta = current_theta
 
-         def pose_callback(self, pose):
-            if self.start_x is None and self.start_y is None:
-                  # Set the starting position when the first pose message is received
-                  self.start_x = pose.x
-                  self.start_y = pose.y
-                  self.get_logger().info(f"Starting position set to X = {self.start_x:.2f}, Y = {self.start_y:.2f}")
-            
-            # Calculate the distance from the starting position
-            distance = math.sqrt((pose.x - self.start_x) ** 2 + (pose.y - self.start_y) ** 2)
-            self.get_logger().info(f"Distance from start = {distance:.2f}")
+      def rotate(self):
+         twist = Twist()
 
-            # Create a Twist message to set the turtle's velocity
-            vel = Twist()
-            vel.linear.x = self.lin_vel
-            vel.linear.y = 0.0
-            vel.linear.z = 0.0
-            vel.angular.x = 0.0
-            vel.angular.y = 0.0
-            vel.angular.z = 0.0
+         if not self.rotation_done:
+               twist.linear.x = self.linear_speed
+               twist.angular.z = self.angular_speed
+               self.cmd_pub.publish(twist)
+               if self.cumulative_rotation >= 2 * math.pi:
+                  twist.linear.x = 0.0
+                  twist.angular.z = 0.0
+                  self.cmd_pub.publish(twist)
+                  self.rotation_done = True
+                  self.get_logger().info("Completed one full revolution!")
 
-            if distance >= self.target_distance:
-                  self.get_logger().info("Turtle reached the target distance")
-                  vel.linear.x = 0.0  # Stop the turtle
-                  self.get_logger().warn("Stopping Turtle")
-                  self.pub.publish(vel)
-                  rclpy.shutdown()
-            else:
-                  self.pub.publish(vel)
+   def main(args=None):
+      rclpy.init(args=args)
+      node = RotateTurtleOneTurn()
+      rclpy.spin(node)
+      node.destroy_node()
+      rclpy.shutdown()
 
-      def main(args=None):
-         rclpy.init(args=args)
-         move_turtle_node = MoveTurtle()
-         rclpy.spin(move_turtle_node)
-         move_turtle_node.destroy_node()
-         rclpy.shutdown()
-
-      if __name__ == '__main__':
-         main()
-
+   if __name__ == "__main__":
+      main()
 
 Procedure
 ---------

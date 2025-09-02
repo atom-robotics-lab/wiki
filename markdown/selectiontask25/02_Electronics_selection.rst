@@ -3,7 +3,7 @@ Electronics Selection Task 2025-2026
 
 
 .. note::
-   If you don't have hardware available, you can use a simulator such as `Wokwi <https://www.wokwi.com>`__ and `tinkercad <https://www.tinkercad.com/>`__
+   If you don't have hardware available, you can use a simulator such as `Wokwi <https://www.wokwi.com>`__ and `Tinkercad <https://www.tinkercad.com/>`__
 
 
 
@@ -44,25 +44,25 @@ Task Description
 ^^^^^^^^^^^^^^^^
 * The brightness of the LED should vary smoothly as you rotate the potentiometer.
 
-Expected Output
-~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
+.. Expected Output
+.. ~~~~~~~~~~~~~~~
+.. `video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
 
-.. raw:: html
+.. .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QPaCsf6LROg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+..    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QPaCsf6LROg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 Task 0B
 ^^^^^^^
 Play any music theme on a buzzer.
                                                                                
-Expected Output
-~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
+.. Expected Output
+.. ~~~~~~~~~~~~~~~
+.. `video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
 
-.. raw:: html
+.. .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QPaCsf6LROg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+..    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QPaCsf6LROg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
 
@@ -89,10 +89,10 @@ Control an RGB LED using an Ultrasonic sensor.
 Task Description
 ^^^^^^^^^^^^^^^^
 * Take input data from an ultrasonic sensor and convert it into distance (in cm).
-* Based on the distance calculated, light up RGB LED in these colours:
- 1. 0-10cm : Red
- 2. 10-20cm: Green
- 3. 20-30cm: Blue
+* Based on the distance calculated, light up the leds in the following order:
+ 1. 0-10cm : First LED
+ 2. 10-20cm: Second LED
+ 3. 20-30cm: Third LED
 
 .. note::
 
@@ -165,13 +165,10 @@ a short break.
 
 Directions:
 ^^^^^^^^^^^
-1. The clock should act as a 25-minute study timer with a display
-   countdown on the LCD.
-2. After 25 minutes, it should alert the user to take a short break (you
-   can display a message or restart the timer).
-3. Implement two buttons:
-   Start/Pause: Begin or pause the countdown.
-   Reset: reset the timer.
+1. The clock should function as a 25-minute study timer with a visible countdown 
+   displayed on a screen.
+2. After 25 minutes, it should notify the user to take a short break (by displaying a message on the screen).
+3. You may implement any number of buttons as needed, but the clock must remain interactive.
 
 .. note::
    If you are making the project in a simulation platform, do not worry
@@ -183,8 +180,14 @@ Directions:
 PCB Designing(Optional Task):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Since your adapter provides 12V DC, you need to design a power supply
-PCB to safely power the ESP32/Arduino, which requires 5V. (Hint: Try LM2596)
+Design a PCB for this mini project powered by an external 12V DC adapter.
+The board should also convert input voltage to: 
+1. 9 volts 
+2. 5 volts(Hint: Try LM2596)
 
+.. note::
+   Evaluation for this level will primarily focus on your creativity and design efficiency.
+   
 .. Warning::
    The **Deadline** for completing the task: **26th September, 2025**
 

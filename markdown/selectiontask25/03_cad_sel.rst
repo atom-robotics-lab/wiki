@@ -89,23 +89,6 @@ Description
 - The Elliptical Crank with simple joints is a versatile mechanical system featuring three degrees of freedom, allowing for a wide range of motion. This design focuses on fundamental movement capabilities, simplifying control and design while offering flexibility for various introductory robotic applications.
 - You will be judged on the basis of the following criteria:
 
-
-   **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
-   
-   - The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.
-   - Manufacturability of the links and mounts (Preferebly 3d Printable)
-   
-   - Adhering to the giving details and guidelines.
-   
-   - Reusability and esay to modify in future if required.
-   
-   - You may use any methods and tools to achieve the task buy make sure to follow proper 3d modeling practices like constraints, joints etc.
-
-
-
-.. Warning::
-   The **Deadline** for completing the task: **26th September, 2025**
-
 Expected Output
 ^^^^^^^^^^^^^^^
 
@@ -127,6 +110,47 @@ Expected Output
  
 .. figure:: cad3.jpeg
 
+.. note::
+      Advancement to the Personal Interview round requires completion of both mandatory tasks. To enhance 
+      your selection prospects and distinguish yourself from other candidates, we strongly recommend completing the optional Task 2 as well.
+
+Task 3: (Optional)
+------------------
+
+Problem statement
+^^^^^^^^^^^^^^^^^
+
+-  The objective of the task is to design and model in Fusion 360 a single-stage spur gear reduction gearbox 
+   that increases the torque by 3 times and reduces the speed by 3 times, based on the given DC motor specifications.
+
+-  The gearbox must be designed for a motor delivering 14 kg·cm torque at 100 rpm, using a gear ratio of 3:1.
+
+-  The design should clearly present:
+
+   * Pinion and gear tooth counts for achieving the ratio.
+   * Gear module, pressure angle, pitch diameters, and center distance.
+   * The expected output torque and speed.
+
+-  The design is based on the following assumptions:
+
+   * Module (m): 1 mm.
+   * Pressure angle (φ): 20°.
+
+   **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
+   
+   - Manufacturability of the links and mounts (Preferebly 3d Printable)
+   
+   - Adhering to the giving details and guidelines.
+   
+   - Reusability and esay to modify in future if required.
+   
+   - You may use any methods and tools to achieve the task buy make sure to follow proper 3d modeling practices like constraints, joints etc.
+
+
 ..  caution:: THE DRAWING SHOULD BE DONE ACCURATELY AND AS EXPECTED .
+
+
+.. Warning::
+   The **Deadline** for completing the task: **26th September, 2025**
    
 Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/submissions.html>`__ to submit your work 

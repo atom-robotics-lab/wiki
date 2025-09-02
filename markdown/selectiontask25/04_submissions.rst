@@ -119,8 +119,8 @@ ELECTRONICS TASK
 - you may still submit it. Points will be allocated accordingly.
 
 
-`Google Form for Task submission <https://docs.google.com/forms/d/e/1FAIpQLSfRqjmEOKQOZsRVqVBxTsB-w8MFzFunv0gutS7yq3fs-28t8g/viewform?usp=sf_link>`__
-----------------------------------------------------------------------------
+`Google Form for Task submission <https://forms.gle/Dg9XMdYYFW3qv7yD7>`__
+-------------------------------------------------------------------------
 
 .. Note:: This google form is common for all the tasks.
    You can make multiple submissions if you are performing more than 1 selection task.

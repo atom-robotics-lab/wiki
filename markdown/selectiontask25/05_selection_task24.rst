@@ -29,4 +29,4 @@ There are currently two types of selection tasks which are:
    ROS Selection Task <01_ROS_selection_task24.rst>
    Electronics Selection Task <02_Electronics_selection.rst>
    CAD Selection Task <03_cad_sel.rst>
-   04_submissions.rst
+   Submissions <04_submissions.rst>
