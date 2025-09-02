@@ -92,11 +92,11 @@ Description
 Expected Output
 ^^^^^^^^^^^^^^^
 
-`video link <https://www.youtube.com/watch?v=fbdGW2ZvFIM>`__
+`video link <https://www.youtube.com/watch?v=FYinm345jYQ>`__
 
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/fbdGW2ZvFIM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/FYinm345jYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
 
 
 .. raw:: html
@@ -112,7 +112,7 @@ Expected Output
 
 .. note::
       Advancement to the Personal Interview round requires completion of both mandatory tasks. To enhance 
-      your selection prospects and distinguish yourself from other candidates, we strongly recommend completing the optional Task 2 as well.
+      your selection prospects and distinguish yourself from other candidates, we strongly recommend completing the optional Task 3 as well.
 
 Task 3: (Optional)
 ------------------
@@ -135,6 +135,15 @@ Problem statement
 
    * Module (m): 1 mm.
    * Pressure angle (φ): 20°.
+
+Expected Output
+^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   </center>
+
+.. figure:: gearbox.jpeg
 
    **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
    

@@ -5,7 +5,7 @@ Problem statement
 -----------------
 
 -  The objective of the task is to move the turtle inside the turtlesim 
-   window in a drone shape.
+   window in a shape shown below.
 
 -  To acheive this task you are supposed to create a node named
    ``/node_turtle_move`` within a python script,
@@ -32,19 +32,17 @@ Problem statement
 
 Expected Output
 ---------------
-`video link <https://www.youtube.com/shorts/R6udlXtyplk>`__
+`video link <https://youtu.be/dDbr9OtL_4c?si=6J5pJFWAu7qvJLJN>`__
 
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/R6udlXtyplk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/dDbr9OtL_4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
-
-.. caution:: The DRONE should perfectly lie inside the turtlesim window.
 
 Hints
 -----
 
--  The turtle needs to move in a Drone shape .
+-  The turtle needs to move in a above shown shape .
 
 -  You can refer `POSE <https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Pose.html>`__ to learn more about pose function.
 

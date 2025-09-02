@@ -84,7 +84,7 @@ Expected Output
 
 Task 1B 
 ^^^^^^^
-Control an RGB LED using an Ultrasonic sensor.                                 
+Control an LED using an Ultrasonic sensor.                                 
 
 Task Description
 ^^^^^^^^^^^^^^^^
@@ -102,11 +102,11 @@ Task Description
 
 Expected Output
 ~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/shorts/lbVagJaASJ8>`__
+`video link <https://www.youtube.com/shorts/KkR5g6stXqU>`__
 
 .. raw:: html
 
-  <center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <center><iframe width="560" height="315" src="https://youtube.com/embed/KkR5g6stXqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 
 Level 2 - Expert Territory: 8pts
@@ -140,11 +140,11 @@ the output should be 10100 i.e. only 1st and 3rd LED should be ON.
 
 Expected Output
 ~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/shorts/lbVagJaASJ8>`__
+`video link <https://www.youtube.com/watch?v=CAPDpEotP-s>`__
 
 .. raw:: html
 
-  <center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/CAPDpEotP-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 Level 3 - A.T.O.M Special: 13pts
 --------------------------------
@@ -187,7 +187,7 @@ The board should also convert input voltage to:
 
 .. note::
    Evaluation for this level will primarily focus on your creativity and design efficiency.
-   
+
 .. Warning::
    The **Deadline** for completing the task: **26th September, 2025**
 
