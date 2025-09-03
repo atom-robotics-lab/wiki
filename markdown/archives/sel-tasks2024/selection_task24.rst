@@ -22,11 +22,10 @@ There are currently two types of selection tasks which are:
 
 .. Warning::
    The **Deadline** for all the Tasks is **15th October, 2024**.
-
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 6
 
-   ROS Selection Task <ROS_selection_task24.rst>
-   Electronics Selection Task <Electronics_selection.rst>
-   CAD Selection Task <cad_sel.rst>
-   submissions.rst
+   ./ROS_selection_task24.rst
+   ./Electronics_selection.rst
+   ./cad_sel.rst
+   ./submissions.rst
