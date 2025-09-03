@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.6. ROS 2 Launch Files &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+  <title>ROS 2 Launch Files &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -23,8 +23,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2.7. ROS Topics" href="../comm/topics/topics.html" />
-    <link rel="prev" title="2.5. Examples" href="../examples/example.html" /> 
+    <link rel="next" title="ROS Topics" href="../comm/topics/topics.html" />
+    <link rel="prev" title="Examples" href="../examples/example.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,35 +49,35 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../tool_setup/tool_setup.html">1. Tool Setup</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../ros.html">2. Intro To ROS 2</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../ROS_installation/ROS_index.html">2.1. ROS 2 Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../colcon_ws.html">2.2. Creating a workspace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../package/package.html">2.3. Creating a package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../node/node.html">2.4. ROS 2 Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../examples/example.html">2.5. Examples</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.6. ROS 2 Launch Files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#create-a-ros-2-launch-file">2.6.1. Create a ROS 2 Launch file</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ros2-launch-command">2.6.1.1. ros2 launch Command</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#steps-to-create-a-launch-file">2.6.1.2. Steps to Create a Launch File</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#basic-launch-file-structure-in-ros-2">2.6.1.3. Basic Launch File Structure in ROS 2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#steps-to-load-configuration-files-yaml-in-ros-2">2.6.1.4. Steps to Load Configuration Files (YAML) in ROS 2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#running-a-shell-script-in-a-ros-2-launch-file">2.6.1.5. Running a Shell Script in a ROS 2 Launch File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tool_setup/tool_setup.html">Tool Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ros.html">Intro To ROS 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ROS_installation/ROS_index.html">ROS 2 Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../colcon_ws.html">Creating a workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../package/package.html">Creating a package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../node/node.html">ROS 2 Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS 2 Launch Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-ros-2-launch-file">Create a ROS 2 Launch file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ros2-launch-command">ros2 launch Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#steps-to-create-a-launch-file">Steps to Create a Launch File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-launch-file-structure-in-ros-2">Basic Launch File Structure in ROS 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#steps-to-load-configuration-files-yaml-in-ros-2">Steps to Load Configuration Files (YAML) in ROS 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-a-shell-script-in-a-ros-2-launch-file">Running a Shell Script in a ROS 2 Launch File</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#example-1-launch-two-ros-2-nodes">2.6.2. Example 1: Launch Two ROS 2 Nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-2-launch-turtlesim-with-custom-background-color">2.6.3. Example 2: Launch Turtlesim with Custom Background Color</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-3-load-yaml-configuration">2.6.4. Example 3: Load YAML Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-1-launch-two-ros-2-nodes">Example 1: Launch Two ROS 2 Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-2-launch-turtlesim-with-custom-background-color">Example 2: Launch Turtlesim with Custom Background Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-3-load-yaml-configuration">Example 3: Load YAML Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../comm/topics/topics.html">2.7. ROS Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">2.8. ROS 2 Topic Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comm/topics/topics.html">ROS Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">ROS 2 Topic Command</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../selectiontask25/05_selection_task24.html">3. Selection Task 2025-2026</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/access-repo.html">4. Using the access repo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../archives/previous_tasks.html">5. Previous Tasks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/projects.html">6. Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selectiontask25/05_selection_task24.html">Selection Task 2025-2026</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../archives/previous_tasks.html">Previous Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/access-repo.html">Using the access repo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/projects.html">Projects</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">External Links</span></p>
 <ul>
@@ -98,8 +98,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../ros.html"><span class="section-number">2. </span>Intro To ROS 2</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2.6. </span>ROS 2 Launch Files</li>
+          <li class="breadcrumb-item"><a href="../ros.html">Intro To ROS 2</a></li>
+      <li class="breadcrumb-item active">ROS 2 Launch Files</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/ros/launch/launch.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -110,7 +110,7 @@
            <div itemprop="articleBody">
              
   <section id="ros-2-launch-files">
-<h1><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">2.6. </span>ROS 2 Launch Files</a><a class="headerlink" href="#ros-2-launch-files" title="Link to this heading"></a></h1>
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">ROS 2 Launch Files</a><a class="headerlink" href="#ros-2-launch-files" title="Link to this heading"></a></h1>
 <nav class="contents" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
@@ -137,9 +137,9 @@
 <li><p>ROS 2 Launch files simplify this by allowing us to run multiple nodes, load configuration files, and set parameters using a single command.</p></li>
 </ul>
 <section id="create-a-ros-2-launch-file">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink"><span class="section-number">2.6.1. </span>Create a ROS 2 Launch file</a><a class="headerlink" href="#create-a-ros-2-launch-file" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Create a ROS 2 Launch file</a><a class="headerlink" href="#create-a-ros-2-launch-file" title="Link to this heading"></a></h2>
 <section id="ros2-launch-command">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">2.6.1.1. </span>ros2 launch Command</a><a class="headerlink" href="#ros2-launch-command" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">ros2 launch Command</a><a class="headerlink" href="#ros2-launch-command" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>ros2 launch</cite> is a tool for launching multiple ROS 2 nodes either locally or remotely.</p></li>
 <li><p>It uses <cite>.py</cite> or <cite>.launch.xml</cite> files to define which nodes to run and which parameters to set.</p></li>
@@ -154,7 +154,7 @@
 </ul>
 </section>
 <section id="steps-to-create-a-launch-file">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">2.6.1.2. </span>Steps to Create a Launch File</a><a class="headerlink" href="#steps-to-create-a-launch-file" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Steps to Create a Launch File</a><a class="headerlink" href="#steps-to-create-a-launch-file" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>After creating a package, create a <cite>launch</cite> folder in your package to store the launch files.</p></li>
 </ol>
@@ -172,7 +172,7 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 <p>For example, you can name the launch file <cite>my_launch_file.launch.py</cite>.</p>
 </section>
 <section id="basic-launch-file-structure-in-ros-2">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">2.6.1.3. </span>Basic Launch File Structure in ROS 2</a><a class="headerlink" href="#basic-launch-file-structure-in-ros-2" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Basic Launch File Structure in ROS 2</a><a class="headerlink" href="#basic-launch-file-structure-in-ros-2" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>In ROS 2, launch files can be written in Python or XML. Here’s an example of a Python-based launch file structure:</p></li>
 </ol>
@@ -198,7 +198,7 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 </ul>
 </section>
 <section id="steps-to-load-configuration-files-yaml-in-ros-2">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">2.6.1.4. </span>Steps to Load Configuration Files (YAML) in ROS 2</a><a class="headerlink" href="#steps-to-load-configuration-files-yaml-in-ros-2" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Steps to Load Configuration Files (YAML) in ROS 2</a><a class="headerlink" href="#steps-to-load-configuration-files-yaml-in-ros-2" title="Link to this heading"></a></h3>
 <p>You can load YAML files in a ROS 2 launch file using the <cite>launch.actions.SetParameterFile</cite> or <cite>ros2 param</cite> commands.</p>
 <p>Here’s an example of loading parameters from a YAML file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">launch</span><span class="w"> </span><span class="kn">import</span> <span class="n">LaunchDescription</span>
@@ -222,7 +222,7 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 </div>
 </section>
 <section id="running-a-shell-script-in-a-ros-2-launch-file">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">2.6.1.5. </span>Running a Shell Script in a ROS 2 Launch File</a><a class="headerlink" href="#running-a-shell-script-in-a-ros-2-launch-file" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Running a Shell Script in a ROS 2 Launch File</a><a class="headerlink" href="#running-a-shell-script-in-a-ros-2-launch-file" title="Link to this heading"></a></h3>
 <p>You can execute shell scripts within a ROS 2 launch file using the <cite>ExecuteProcess</cite> action.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">launch</span><span class="w"> </span><span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">launch.actions</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExecuteProcess</span>
@@ -239,7 +239,7 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 </section>
 </section>
 <section id="example-1-launch-two-ros-2-nodes">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">2.6.2. </span>Example 1: Launch Two ROS 2 Nodes</a><a class="headerlink" href="#example-1-launch-two-ros-2-nodes" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Example 1: Launch Two ROS 2 Nodes</a><a class="headerlink" href="#example-1-launch-two-ros-2-nodes" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Launch two ROS 2 nodes: <cite>talker</cite> and <cite>listener</cite> from the <cite>demo_nodes_cpp</cite> and <cite>demo_nodes_py</cite> packages, respectively.</p></li>
 </ul>
@@ -271,7 +271,7 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 </div>
 </section>
 <section id="example-2-launch-turtlesim-with-custom-background-color">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">2.6.3. </span>Example 2: Launch Turtlesim with Custom Background Color</a><a class="headerlink" href="#example-2-launch-turtlesim-with-custom-background-color" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Example 2: Launch Turtlesim with Custom Background Color</a><a class="headerlink" href="#example-2-launch-turtlesim-with-custom-background-color" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Launch the <cite>turtlesim_node</cite> and <cite>turtle_teleop_key</cite> nodes.</p></li>
 <li><p>Change the background color of the Turtlesim simulator from blue to forest green.</p></li>
@@ -309,7 +309,7 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 </div>
 </section>
 <section id="example-3-load-yaml-configuration">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">2.6.4. </span>Example 3: Load YAML Configuration</a><a class="headerlink" href="#example-3-load-yaml-configuration" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Example 3: Load YAML Configuration</a><a class="headerlink" href="#example-3-load-yaml-configuration" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Load parameters from <cite>config.yaml</cite> and launch the node <cite>node_param_get_set</cite>.</p></li>
 </ul>
@@ -344,8 +344,8 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../examples/example.html" class="btn btn-neutral float-left" title="2.5. Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../comm/topics/topics.html" class="btn btn-neutral float-right" title="2.7. ROS Topics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../examples/example.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../comm/topics/topics.html" class="btn btn-neutral float-right" title="ROS Topics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

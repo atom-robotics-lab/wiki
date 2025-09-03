@@ -1,3 +1,5 @@
+:orphan:
+
 Selection Task 2024-25
 ========================
 
@@ -23,8 +25,8 @@ There are currently two types of selection tasks which are:
 .. Warning::
    The **Deadline** for all the Tasks is **15th October, 2024**.
 .. toctree::
-   :maxdepth: 6
-
+   :maxdepth: 2
+   
    ./ROS_selection_task24.rst
    ./Electronics_selection.rst
    ./cad_sel.rst
