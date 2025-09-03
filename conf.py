@@ -43,3 +43,5 @@ html_context = {
     "github_version": "main", # Version
     "conf_py_path": "/", # Path in the checkout to the docs root
 }
+
+numfig_secnum_depth = 0
