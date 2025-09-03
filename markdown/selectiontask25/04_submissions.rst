@@ -21,7 +21,7 @@ CAD Task
 
    -  Once your Model is complete, export it as a .step file and rename it
       as follows: For example if your name is ‘Alex’, then rename your file
-      as Task1_Alex.stl
+      as Task1_Alex.step
 
 TASK 1
 ^^^^^^^^
