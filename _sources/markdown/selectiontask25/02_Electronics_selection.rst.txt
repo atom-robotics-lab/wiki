@@ -121,11 +121,11 @@ Take input from an LDR(Light Dependant Resistor/Photoresistor) and display it on
 
 Expected Output
 ~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/shorts/lbVagJaASJ8>`__
+`video link <https://www.youtube.com/watch?v=hIHzK7cB62M>`__
 
 .. raw:: html
 
-  <center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <center><iframe width="560" height="315" src="https://youtube.com/embed/hIHzK7cB62M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 Task 2B
 ^^^^^^^
@@ -192,4 +192,4 @@ The board should also convert input voltage to:
    The **Deadline** for completing the task: **26th September, 2025**
 
 
-Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/submissions.html>`__ to submit your work 
+Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask25/04_submissions.html>`__ to submit your work 

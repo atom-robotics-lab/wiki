@@ -108,7 +108,7 @@ Expected Output
    </center>
 
  
-.. figure:: cad3.jpeg
+.. figure:: cad89.jpeg
 
 .. note::
       Advancement to the Personal Interview round requires completion of both mandatory tasks. To enhance 
@@ -162,4 +162,4 @@ Expected Output
 .. Warning::
    The **Deadline** for completing the task: **26th September, 2025**
    
-Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/submissions.html>`__ to submit your work 
+Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask25/04_submissions.html>`__ to submit your work 

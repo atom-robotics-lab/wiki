@@ -21,7 +21,7 @@ There are currently two types of selection tasks which are:
    improve your profile and increase your chances of getting selected.**
 
 .. Warning::
-   The **Deadline** for all the Tasks is **26th September, 2025**.
+   The **Deadline** for all the Tasks is **26th September, 2025**
 
 .. toctree::
    :maxdepth: 4
