@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.2. Electronics Selection Task 2025-2026 &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+
+  
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=71d9d8e6"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3.3. CAD Selection Task: Standard Instructions" href="03_cad_sel.html" />
+    <link rel="prev" title="3.1. ROS Selection Task 2025-2026" href="01_ROS_selection_task24.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
+              <img src="../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tool_setup/tool_setup.html">1. Tool Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/ros.html">2. Intro To ROS 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="05_selection_task24.html">3. Selection Task 2025-2026</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01_ROS_selection_task24.html">3.1. ROS Selection Task</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Electronics Selection Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#level-0-getting-started-5pts">3.2.1. Level 0 - Getting Started: 5pts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#task-0a">3.2.1.1. Task 0A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#task-description">3.2.1.2. Task Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#task-0b">3.2.1.3. Task 0B</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level-1-challenges-8pts">3.2.2. Level 1 - Challenges: 8pts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#task-1a">3.2.2.1. Task 1A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#task-1b">3.2.2.2. Task 1B</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.2.2.3. Task Description</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level-2-expert-territory-8pts">3.2.3. Level 2 - Expert Territory: 8pts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#task-2a">3.2.3.1. Task 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#task-2b">3.2.3.2. Task 2B</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">3.2.3.3. Task Description</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level-3-a-t-o-m-special-13pts">3.2.4. Level 3 - A.T.O.M Special: 13pts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#task-description-case-based">3.2.4.1. Task Description(Case-Based):</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#directions">3.2.4.2. Directions:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pcb-designing-optional-task">3.2.4.3. PCB Designing(Optional Task):</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_cad_sel.html">3.3. CAD Selection Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_submissions.html">3.4. Submissions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general/access-repo.html">4. Using the access repo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/previous_tasks.html">5. Previous Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">6. Projects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="05_selection_task24.html"><span class="section-number">3. </span>Selection Task 2025-2026</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Electronics Selection Task 2025-2026</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/selectiontask25/02_Electronics_selection.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="electronics-selection-task-2025-2026">
+<h1><span class="section-number">3.2. </span>Electronics Selection Task 2025-2026<a class="headerlink" href="#electronics-selection-task-2025-2026" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don’t have hardware available, you can use a simulator such as <a class="reference external" href="https://www.wokwi.com">Wokwi</a> and <a class="reference external" href="https://www.tinkercad.com/">Tinkercad</a></p>
+</div>
+<p>This year, we’ve introduced a four-tiered Electronic Selection Task. Here’s a brief summary:</p>
+<p><strong>Challenge Levels</strong></p>
+<p>The electronic selection task is divided into four levels, labeled from Level 0 to Level 3.
+Each level presents its distinct set of challenges.
+Whether you’re a novice or an experienced enthusiast, there’s something here for everyone.</p>
+<p><strong>Scoring System</strong></p>
+<p>To add an extra layer of excitement, each task within these levels carries a specific point value mentioned alongside
+the problem statement. Your performance will determine your score, and points will be awarded accordingly.</p>
+<p><strong>Qualification Criteria</strong></p>
+<p>To progress to the next stage, which is the interview phase, you must accumulate a minimum of 13 points in total. These
+points will be awarded after evaluating your submissions. Therefore, ensure you put your best foot forward for a chance to advance!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note: For Level 0, 1,2,and 3 use either Arduino UNO, or esp32 as your
+microcontroller to make the projects.
+Assemble all you components on a breadboard using jumper wires and
+resistors.</p>
+</div>
+<section id="level-0-getting-started-5pts">
+<h2><span class="section-number">3.2.1. </span>Level 0 - Getting Started: 5pts<a class="headerlink" href="#level-0-getting-started-5pts" title="Link to this heading"></a></h2>
+<p>Level 0 serves as the foundation and includes following task:-</p>
+<section id="task-0a">
+<h3><span class="section-number">3.2.1.1. </span>Task 0A<a class="headerlink" href="#task-0a" title="Link to this heading"></a></h3>
+<p>Control the brightness of an LED using a potentiometer.</p>
+</section>
+<section id="task-description">
+<h3><span class="section-number">3.2.1.2. </span>Task Description<a class="headerlink" href="#task-description" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The brightness of the LED should vary smoothly as you rotate the potentiometer.</p></li>
+</ul>
+</section>
+<section id="task-0b">
+<h3><span class="section-number">3.2.1.3. </span>Task 0B<a class="headerlink" href="#task-0b" title="Link to this heading"></a></h3>
+<p>Play any music theme on a buzzer.</p>
+</section>
+</section>
+<section id="level-1-challenges-8pts">
+<h2><span class="section-number">3.2.2. </span>Level 1 - Challenges: 8pts<a class="headerlink" href="#level-1-challenges-8pts" title="Link to this heading"></a></h2>
+<p>Level 1 elevates the complexity with more intricate problems and higher point allocations. Stay tuned for the list of tasks!</p>
+<section id="task-1a">
+<h3><span class="section-number">3.2.2.1. </span>Task 1A<a class="headerlink" href="#task-1a" title="Link to this heading"></a></h3>
+<p>Light up six LEDs using only three GPIO pins of Arduino/ESP32/Microcontroller.</p>
+<section id="expected-output">
+<h4><span class="section-number">3.2.2.1.1. </span>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading"></a></h4>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=iGsrljodarg&amp;t=2s">video link</a></p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/iGsrljodarg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br></section>
+</section>
+<section id="task-1b">
+<h3><span class="section-number">3.2.2.2. </span>Task 1B<a class="headerlink" href="#task-1b" title="Link to this heading"></a></h3>
+<p>Control an LED using an Ultrasonic sensor.</p>
+</section>
+<section id="id1">
+<h3><span class="section-number">3.2.2.3. </span>Task Description<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Take input data from an ultrasonic sensor and convert it into distance (in cm).</p></li>
+<li><p>Based on the distance calculated, light up the leds in the following order:</p></li>
+</ul>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>0-10cm : First LED</p></li>
+<li><p>10-20cm: Second LED</p></li>
+<li><p>20-30cm: Third LED</p></li>
+</ol>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may modify this range as you wish.
+If you are doing it in real life, the ultrasonic sensor may face issues
+in measuring distances less than 3 cm, ignore that error.</p>
+</div>
+<section id="id2">
+<h4><span class="section-number">3.2.2.3.1. </span>Expected Output<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<p><a class="reference external" href="https://www.youtube.com/shorts/KkR5g6stXqU">video link</a></p>
+<center><iframe width="560" height="315" src="https://youtube.com/embed/KkR5g6stXqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></section>
+</section>
+</section>
+<section id="level-2-expert-territory-8pts">
+<h2><span class="section-number">3.2.3. </span>Level 2 - Expert Territory: 8pts<a class="headerlink" href="#level-2-expert-territory-8pts" title="Link to this heading"></a></h2>
+<p>This level will test even the most seasoned electronic enthusiasts. Prepare for some mind-bending tasks and
+substantial point rewards.</p>
+<section id="task-2a">
+<h3><span class="section-number">3.2.3.1. </span>Task 2A<a class="headerlink" href="#task-2a" title="Link to this heading"></a></h3>
+<p>Take input from an LDR(Light Dependant Resistor/Photoresistor) and display it on a 16*2 LCD Display.</p>
+<section id="id3">
+<h4><span class="section-number">3.2.3.1.1. </span>Expected Output<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<p><a class="reference external" href="https://www.youtube.com/shorts/lbVagJaASJ8">video link</a></p>
+<center><iframe width="560" height="315" src="https://youtube.com/embed/lbVagJaASJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></section>
+</section>
+<section id="task-2b">
+<h3><span class="section-number">3.2.3.2. </span>Task 2B<a class="headerlink" href="#task-2b" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Calculate the distance of an object from an ultrasonic sensor in centimetres and then display it in binary using LEDs.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3><span class="section-number">3.2.3.3. </span>Task Description<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>For real life: distance limit: 0-25 cm and No. of LEDs = 5</p></li>
+<li><p>For simulation: distance limit: 0-50 cm and No. of LEDs = 6</p></li>
+</ul>
+<p>Ex: if you are using 5 LEDs and the distance reading is “20cm”,
+the output should be 10100 i.e. only 1st and 3rd LED should be ON.</p>
+<section id="id5">
+<h4><span class="section-number">3.2.3.3.1. </span>Expected Output<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=CAPDpEotP-s">video link</a></p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/CAPDpEotP-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></section>
+</section>
+</section>
+<section id="level-3-a-t-o-m-special-13pts">
+<h2><span class="section-number">3.2.4. </span>Level 3 - A.T.O.M Special: 13pts<a class="headerlink" href="#level-3-a-t-o-m-special-13pts" title="Link to this heading"></a></h2>
+<p>The ultimate challenge! designed to push the boundaries of your electronics expertise, involving advanced
+problem-solving, precision circuit analysis, and high-reward challenges.</p>
+<section id="task-description-case-based">
+<h3><span class="section-number">3.2.4.1. </span>Task Description(Case-Based):<a class="headerlink" href="#task-description-case-based" title="Link to this heading"></a></h3>
+<p>Your exams are right around the corner, but thanks to endless scrolling on
+Instagram Reels, your focus and attention span have taken a hit.
+To get back on track, you decide to build your own Pomodoro Clock—a
+study timer that helps you stay focused for 25 minutes at a stretch, followed by
+a short break.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>You have the following components available:</dt><dd><p>ESP32/Arduino UNO, 16×2 LCD display, 2 push buttons, 2x10kohm
+resistors, and a 12V DC adapter as your power source.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="directions">
+<h3><span class="section-number">3.2.4.2. </span>Directions:<a class="headerlink" href="#directions" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>The clock should function as a 25-minute study timer with a visible countdown
+displayed on a screen.</p></li>
+<li><p>After 25 minutes, it should notify the user to take a short break (by displaying a message on the screen).</p></li>
+<li><p>You may implement any number of buttons as needed, but the clock must remain interactive.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are making the project in a simulation platform, do not worry
+about the power supply, the platform takes care of that for you.
+But if you are building it in real life… either you use any safe power source
+like 9v battery, a power bank, or simply power by laptop/PC.
+Or you design the PCB listed in the last step.</p>
+</div>
+</section>
+<section id="pcb-designing-optional-task">
+<h3><span class="section-number">3.2.4.3. </span>PCB Designing(Optional Task):<a class="headerlink" href="#pcb-designing-optional-task" title="Link to this heading"></a></h3>
+<p>Since your adapter provides 12V DC, you need to design a power supply
+Design a PCB for this mini project powered by an external 12V DC adapter.
+The board should also convert input voltage to:
+1. 9 volts
+2. 5 volts(Hint: Try LM2596)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Evaluation for this level will primarily focus on your creativity and design efficiency.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <strong>Deadline</strong> for completing the task: <strong>26th September, 2025</strong></p>
+</div>
+<p>Head over to <a class="reference external" href="https://atom-robotics-lab.github.io/wiki/markdown/selectiontask24/submissions.html">Submissions</a> to submit your work</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="01_ROS_selection_task24.html" class="btn btn-neutral float-left" title="3.1. ROS Selection Task 2025-2026" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="03_cad_sel.html" class="btn btn-neutral float-right" title="3.3. CAD Selection Task: Standard Instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
