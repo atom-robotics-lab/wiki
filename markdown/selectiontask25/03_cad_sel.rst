@@ -108,7 +108,7 @@ Expected Output
    </center>
 
  
-.. figure:: cad3.jpeg
+.. figure:: cad89.jpeg
 
 .. note::
       Advancement to the Personal Interview round requires completion of both mandatory tasks. To enhance 
