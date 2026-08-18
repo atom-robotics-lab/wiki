@@ -15,7 +15,7 @@ Contents:
 
    markdown/tool_setup/tool_setup.rst
    markdown/ros/ros.rst
-   markdown/selectiontask25/05_selection_task24.rst
+   markdown/selectiontask26/05_selection_task24.rst
    markdown/archives/previous_tasks.rst
    markdown/general/access-repo.rst
    markdown/projects/projects.rst
