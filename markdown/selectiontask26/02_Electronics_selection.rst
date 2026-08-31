@@ -36,160 +36,81 @@ Level 0 - Getting Started: 5pts
 
 Level 0 serves as the foundation and includes following task:-
 
-Task 0A
+Task
 ^^^^^^^
-Control the brightness of an LED using a potentiometer.
+Imagine you are enjoying a vacation on a beach along the pacific coast, where you are captured by the iron guards from the movie Doraemon: New Nobita and the Castle of the Undersea Devil. While imprisoned you discover a part of the internal circuitry of the prison cell as depicted in the figure. The circuit appears to have some missing parts and need to be manipulated for you to exit the cell and join doraemon to safely evacuate from the undersea kingdom.
 
-Task Description
-^^^^^^^^^^^^^^^^
-* The brightness of the LED should vary smoothly as you rotate the potentiometer.
+Constraints
+^^^^^^^^^^^^
+* Cutting of power would alarm the iron guards of your activities.
+* Disconnecting wrong wires would cause an emergency closure of the entire system following which no one can go out or come in.
+* You have no other electronic equipment other than a few strips of wire and plastic strips.
 
-.. Expected Output
-.. ~~~~~~~~~~~~~~~
-.. `video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
+Circuit Diagram
+^^^^^^^^^^^^^^^^^
 
-.. .. raw:: html
+.. raw:: html
 
-..    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QPaCsf6LROg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+   <center>
 
-Task 0B
-^^^^^^^
-Play any music theme on a buzzer.
-                                                                               
-.. Expected Output
-.. ~~~~~~~~~~~~~~~
-.. `video link <https://www.youtube.com/shorts/QPaCsf6LROg>`__
+.. raw:: html
 
-.. .. raw:: html
+   </center>
 
-..    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/QPaCsf6LROg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+.. figure:: circuit.png
 
+.. note::
 
+   Lose connections that you can cut/change are depicted with blue circles
+   (Note: The circuit can not be changed at any other connection of component/wire)
+
+   Modify the circuit using the shortest, most logical method.
 
 Level 1 - Challenges: 8pts
 --------------------------
 Level 1 elevates the complexity with more intricate problems and higher point allocations. Stay tuned for the list of tasks!
 
-Task 1A
+Task 
 ^^^^^^^
-Light up six LEDs using only three GPIO pins of Arduino/ESP32/Microcontroller. 
+Using 3 GPIO pins of a microcontroller and 6 leds implement the falling sand pattern using the multiplexing technique known as charlieplexing.
 
 Expected Output
 ~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/watch?v=iGsrljodarg&t=2s>`__
-
-.. raw:: html
-
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/iGsrljodarg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
-
-Task 1B 
-^^^^^^^
-Control an LED using an Ultrasonic sensor.                                 
-
-Task Description
-^^^^^^^^^^^^^^^^
-* Take input data from an ultrasonic sensor and convert it into distance (in cm).
-* Based on the distance calculated, light up the leds in the following order:
- 1. 0-10cm : First LED
- 2. 10-20cm: Second LED
- 3. 20-30cm: Third LED
+`video link <https://youtube.com/shorts/ab3w8_wTiIk?si=MBE0CLLUcjJpmC8K>`__
 
 .. note::
 
-   You may modify this range as you wish.
-   If you are doing it in real life, the ultrasonic sensor may face issues
-   in measuring distances less than 3 cm, ignore that error.
-
-Expected Output
-~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/shorts/KkR5g6stXqU>`__
-
-.. raw:: html
-
-  <center><iframe width="560" height="315" src="https://youtube.com/embed/KkR5g6stXqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
+   You may refer to above video link to understand the expected solution.
 
 Level 2 - Expert Territory: 8pts
 ---------------------------------
 This level will test even the most seasoned electronic enthusiasts. Prepare for some mind-bending tasks and 
 substantial point rewards.
 
-Task 2A
+Task
 ^^^^^^^
-Take input from an LDR(Light Dependant Resistor/Photoresistor) and display it on a 16*2 LCD Display.  
-
-
-Expected Output
-~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/watch?v=hIHzK7cB62M>`__
-
-.. raw:: html
-
-  <center><iframe width="560" height="315" src="https://youtube.com/embed/hIHzK7cB62M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-Task 2B
-^^^^^^^
-* Calculate the distance of an object from an ultrasonic sensor in centimetres and then display it in binary using LEDs.
-
-Task Description
-^^^^^^^^^^^^^^^^
-* For real life: distance limit: 0-25 cm and No. of LEDs = 5
-* For simulation: distance limit: 0-50 cm and No. of LEDs = 6
-Ex: if you are using 5 LEDs and the distance reading is “20cm”,
-the output should be 10100 i.e. only 1st and 3rd LED should be ON.
-
-Expected Output
-~~~~~~~~~~~~~~~
-`video link <https://www.youtube.com/watch?v=CAPDpEotP-s>`__
-
-.. raw:: html
-
-  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/CAPDpEotP-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+Design and implement a circuit using a microcontroller of your choice to interface with an MPU6050 IMU and measure the tilt angles along the X, Y, and Z axes. 
+Display the measured tilt angles on an OLED display. 
+Additionally, use three indicator LEDs, one for each axis (X, Y, and Z), to represent the corresponding danger level of tilt. 
+Each LED should remain off below the lower danger threshold, turn on when the tilt angle exceeds 90°, and progressively increase in brightness as the angle approaches the upper danger limit of 180° in the respective direction.
 
 Level 3 - A.T.O.M Special: 13pts
 --------------------------------
 The ultimate challenge! designed to push the boundaries of your electronics expertise, involving advanced 
 problem-solving, precision circuit analysis, and high-reward challenges. 
 
-Task Description(Case-Based):
+Task Description:
 ^^^^^^^^^^^^^^^^
-Your exams are right around the corner, but thanks to endless scrolling on
-Instagram Reels, your focus and attention span have taken a hit.
-To get back on track, you decide to build your own Pomodoro Clock—a
-study timer that helps you stay focused for 25 minutes at a stretch, followed by
-a short break.
+Using KiCAD EDA software design and implement the schematic and PCB design of the TP4056 charging IC.
 
-* You have the following components available:
-   ESP32/Arduino UNO, 16×2 LCD display, 2 push buttons, 2x10kohm
-   resistors, and a 12V DC adapter as your power source.
-
-Directions:
-^^^^^^^^^^^
-1. The clock should function as a 25-minute study timer with a visible countdown 
-   displayed on a screen.
-2. After 25 minutes, it should notify the user to take a short break (by displaying a message on the screen).
-3. You may implement any number of buttons as needed, but the clock must remain interactive.
-
-.. note::
-   If you are making the project in a simulation platform, do not worry
-   about the power supply, the platform takes care of that for you.
-   But if you are building it in real life… either you use any safe power source
-   like 9v battery, a power bank, or simply power by laptop/PC.
-   Or you design the PCB listed in the last step.
-
-PCB Designing(Optional Task):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Since your adapter provides 12V DC, you need to design a power supply
-Design a PCB for this mini project powered by an external 12V DC adapter.
-The board should also convert input voltage to: 
-1. 9 volts 
-2. 5 volts(Hint: Try LM2596)
+----
 
 .. note::
    Evaluation for this level will primarily focus on your creativity and design efficiency.
 
+
 .. Warning::
-   The **Deadline** for completing the task: **26th September, 2025**
+   The **Deadline** for completing the task: **15th September, 2026**
 
 
-Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask25/04_submissions.html>`__ to submit your work 
+Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask26/04_submissions.html>`__ to submit your work 

@@ -25,7 +25,7 @@ Hints / Reference
 -----------------
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Ha6Ph8siaNc?si=gpTC5cUOt2XAEKaa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Ha6Ph8siaNc?si=R5TmqYDl-geT5OPP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center><br>
 
 
 Task 1 : 5pts
@@ -60,6 +60,11 @@ Expected Output
 
 .. figure:: cad.png
 
+`video link <https://youtube.com/shorts/eZyMwtAAypY?si=OfeJd3N39agMjqVa>`__
+
+.. note::
+
+   You may refer to above video link to get the better understanding of the expected solution.
 
 Task 2: 5pts
 --------------
@@ -80,17 +85,17 @@ Problem statement
 
 Description
 ^^^^^^^^^^^
-- The Elliptical Crank with simple joints is a versatile mechanical system featuring three degrees of freedom, allowing for a wide range of motion. This design focuses on fundamental movement capabilities, simplifying control and design while offering flexibility for various introductory robotic applications.
+- The 6-slot Geneva drive is a precision intermittent motion mechanism that converts continuous rotary input from the driving wheel into stepped, indexed rotation of the driven wheel. In this system, a continuous 360° rotation of the drive disc engages a pin into the radial slot to advance the output wheel by 60°, while the raised crescent cam locks the driven wheel securely in place during the dwell phase to prevent backlash. This mechanical design is widely utilized in automated assembly lines, rotary indexing tables, and tool changers where reliable, discrete positioning is required without external electronic stepping.
 - You will be judged on the basis of the following criteria:
 
 Expected Output
 ^^^^^^^^^^^^^^^
 
-`video link <https://www.youtube.com/watch?v=FYinm345jYQ>`__
+`video link <https://youtu.be/8LOQrb4f_CU?si=hvqnrCyYwkxhbeTv>`__
 
 .. raw:: html
 
-   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/FYinm345jYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><br>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/8LOQrb4f_CU?si=hvqnrCyYwkxhbeTv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center><br>
 
 
 .. raw:: html
@@ -102,42 +107,41 @@ Expected Output
    </center>
 
  
-.. figure:: cad89.jpeg
+.. figure:: cad_t2.png
 
 .. note::
       Advancement to the Personal Interview round requires completion of both mandatory tasks. To enhance 
       your selection prospects and distinguish yourself from other candidates, we strongly recommend completing the optional Task 3 as well.
 
-Task 3: (Optional)
-------------------
+Task 3: Open Innovation
+-----------------------
 
 Problem statement
 ^^^^^^^^^^^^^^^^^
 
--  The objective of the task is to design and model in Fusion 360 a single-stage spur gear reduction gearbox 
-   that increases the torque by 3 times and reduces the speed by 3 times, based on the given DC motor specifications.
+-  The objective of this open-ended task is to design and model an automated or mechanically driven waste bin with an opening/closing flap lid in Autodesk Fusion.
 
--  The gearbox must be designed for a motor delivering 14 kg·cm torque at 100 rpm, using a gear ratio of 3:1.
+-  The challenge is to **over-engineer the actuation mechanism** for opening and closing the lid, moving beyond conventional simple hinges or basic foot pedals.
 
--  The design should clearly present:
+-  Participants are free to conceptualize and implement innovative kinematic linkages and motion systems, such as:
 
-   * Pinion and gear tooth counts for achieving the ratio.
-   * Gear module, pressure angle, pitch diameters, and center distance.
-   * The expected output torque and speed.
+   * Multi-bar linkage systems (e.g., Chebyshev, Jansen, or four-bar linkages).
+   * Cam-follower, Geneva, or intermittent motion drives.
+   * Rack-and-pinion, scissor lift mechanisms, or complex gear trains.
 
--  The design is based on the following assumptions:
+-  The submission should demonstrate:
 
-   * Module (m): 1 mm.
-   * Pressure angle (φ): 20°.
+   * A fully constrained CAD assembly with functional motion joints.
+   * Feasible kinematic action ensuring the flap opens and closes without structural collisions.
+   * Thoughtful structural design, part mounting, and clearance tolerances.
 
-Expected Output
+Reference Image
 ^^^^^^^^^^^^^^^
-
 .. raw:: html
 
    </center>
 
-.. figure:: gearbox.jpeg
+.. figure:: dustbin.png
 
    **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
    
@@ -149,11 +153,16 @@ Expected Output
    
    - You may use any methods and tools to achieve the task buy make sure to follow proper 3d modeling practices like constraints, joints etc.
 
+.. note::
+
+   Above image is for reference only, you are free to design your own dustbin flap mechanism and its shape.
+
+----
 
 ..  caution:: THE DRAWING SHOULD BE DONE ACCURATELY AND AS EXPECTED .
 
 
 .. Warning::
-   The **Deadline** for completing the task: **26th September, 2025**
+   The **Deadline** for completing the task: **15th September, 2026**
    
-Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask25/04_submissions.html>`__ to submit your work 
+Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask26/04_submissions.html>`__ to submit your work 

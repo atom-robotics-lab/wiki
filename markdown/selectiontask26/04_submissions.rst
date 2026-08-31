@@ -4,7 +4,7 @@ Submission Instructions
 For Submissions of your work please refer to the following instructions
 
 .. Warning::
-   The **Deadline** for all the Tasks is: **26th September 2025**
+   The **Deadline** for all the Tasks is: **15th September 2026**
 
 
 CAD Task
@@ -118,8 +118,10 @@ ELECTRONICS TASK
 - the task, we will also consider the effort you have put into performing this task. Even if you are not able to complete the task, 
 - you may still submit it. Points will be allocated accordingly.
 
+----
+`Google Form for Task submission <https://forms.gle/nWEzq9jiDzUTVUpr6>`__
+----
 
-`Google Form for Task submission <https://forms.gle/Dg9XMdYYFW3qv7yD7>`__
 -------------------------------------------------------------------------
 
 .. Note:: This google form is common for all the tasks.
