@@ -1,4 +1,4 @@
-ROS Selection Task 2025-2026
+ROS Selection Task 2026-2027
 ============================
 
 Problem statement

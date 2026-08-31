@@ -24,7 +24,7 @@ Contents:
    :maxdepth: 2
    :caption: External Links
    
-   Socials <https://linktr.ee/a.t.o.m_robotics_lab>
+   Socials <https://linktr.ee/A.T.O.M_Robotics>
 
 
 

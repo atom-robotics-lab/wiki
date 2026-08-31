@@ -58,13 +58,7 @@ Expected Output
 
    </center>
 
-.. figure:: cad.jpeg
-
-.. raw:: html
-
-   </center>
-
-.. figure:: cad2.jpeg
+.. figure:: cad.png
 
 
 Task 2: 5pts
