@@ -120,7 +120,7 @@ ELECTRONICS TASK
 
 ----
 
-`Google Form for Task submission <https://forms.gle/nWEzq9jiDzUTVUpr6>`__
+`Google Form for Task submission <https://forms.gle/pwy5GZgw2BBzHuco9>`__
 -------------------------------------------------------------------------
 
 ----
