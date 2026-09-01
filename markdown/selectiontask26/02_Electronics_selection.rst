@@ -78,6 +78,10 @@ Expected Output
 ~~~~~~~~~~~~~~~
 `video link <https://youtube.com/shorts/ab3w8_wTiIk?si=MBE0CLLUcjJpmC8K>`__
 
+.. raw:: html
+
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ab3w8_wTiIk?si=9cWUKpAPQBLv-wqv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center><br>
+
 .. note::
 
    You may refer to above video link to understand the expected solution.
@@ -93,6 +97,14 @@ Design and implement a circuit using a microcontroller of your choice to interfa
 Display the measured tilt angles on an OLED display. 
 Additionally, use three indicator LEDs, one for each axis (X, Y, and Z), to represent the corresponding danger level of tilt. 
 Each LED should remain off below the lower danger threshold, turn on when the tilt angle exceeds 90°, and progressively increase in brightness as the angle approaches the upper danger limit of 180° in the respective direction.
+
+Expected Output
+~~~~~~~~~~~~~~~
+`video link <https://youtube.com/shorts/ab3w8_wTiIk?si=MBE0CLLUcjJpmC8K>`__
+
+.. raw:: html
+
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/pjhhh3utMFU?si=tm6AWsZlHUBJ_K5d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center><br>
 
 Level 3 - A.T.O.M Special: 13pts
 --------------------------------
