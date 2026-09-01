@@ -9,15 +9,15 @@ Electronics Selection Task 2026-2027
 
 This year, we've introduced a four-tiered Electronic Selection Task. Here's a brief summary:
 
-**Challenge Levels**
+**Challenge Tasks**
 
-The electronic selection task is divided into four levels, labeled from Level 0 to Level 3. 
-Each level presents its distinct set of challenges. 
+The electronic selection task is divided into four Tasks, labeled from Task 1 to Task 4. 
+Each Task presents its distinct set of challenges. 
 Whether you're a novice or an experienced enthusiast, there's something here for everyone.
 
 **Scoring System**
 
-To add an extra layer of excitement, each task within these levels carries a specific point value mentioned alongside 
+To add an extra layer of excitement, each task within these Tasks carries a specific point value mentioned alongside 
 the problem statement. Your performance will determine your score, and points will be awarded accordingly.
 
 **Qualification Criteria**
@@ -26,15 +26,15 @@ To progress to the next stage, which is the interview phase, you must accumulate
 points will be awarded after evaluating your submissions. Therefore, ensure you put your best foot forward for a chance to advance!
 
 .. note::
-   Note: For Level 0, 1,2,and 3 use either Arduino UNO, or esp32 as your
+   Note: For Task 1, 2, 3, and 4 use either Arduino UNO, or esp32 as your
    microcontroller to make the projects.
    Assemble all you components on a breadboard using jumper wires and
    resistors.
 
-Level 0 - Getting Started: 5pts
+Task 1 - Getting Started: 5pts
 -------------------------------
 
-Level 0 serves as the foundation and includes following task:-
+Task 1 serves as the foundation and includes following task:-
 
 Task
 ^^^^^^^
@@ -66,9 +66,9 @@ Circuit Diagram
 
    Modify the circuit using the shortest, most logical method.
 
-Level 1 - Challenges: 8pts
+Task 2 - Challenges: 8pts
 --------------------------
-Level 1 elevates the complexity with more intricate problems and higher point allocations. Stay tuned for the list of tasks!
+Task 2 elevates the complexity with more intricate problems and higher point allocations. Stay tuned for the list of tasks!
 
 Task 
 ^^^^^^^
@@ -86,39 +86,39 @@ Expected Output
 
    You may refer to above video link to understand the expected solution.
 
-Level 2 - Expert Territory: 8pts
+Task 3 - Expert Territory: 8pts
 ---------------------------------
-This level will test even the most seasoned electronic enthusiasts. Prepare for some mind-bending tasks and 
+This task will test even the most seasoned electronic enthusiasts. Prepare for some mind-bending tasks and 
 substantial point rewards.
 
 Task
 ^^^^^^^
 Design and implement a circuit using a microcontroller of your choice to interface with an MPU6050 IMU and measure the tilt angles along the X, Y, and Z axes. 
 Display the measured tilt angles on an OLED display. 
-Additionally, use three indicator LEDs, one for each axis (X, Y, and Z), to represent the corresponding danger level of tilt. 
+Additionally, use three indicator LEDs, one for each axis (X, Y, and Z), to represent the corresponding danger Task of tilt. 
 Each LED should remain off below the lower danger threshold, turn on when the tilt angle exceeds 90°, and progressively increase in brightness as the angle approaches the upper danger limit of 180° in the respective direction.
 
 Expected Output
 ~~~~~~~~~~~~~~~
-`video link <https://youtube.com/shorts/ab3w8_wTiIk?si=MBE0CLLUcjJpmC8K>`__
+`video link <https://youtu.be/pjhhh3utMFU?si=08jA5lDRZQvUpl9f>`__
 
 .. raw:: html
 
    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/pjhhh3utMFU?si=tm6AWsZlHUBJ_K5d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center><br>
 
-Level 3 - A.T.O.M Special: 13pts
+Task 4 - A.T.O.M Special: 13pts
 --------------------------------
 The ultimate challenge! designed to push the boundaries of your electronics expertise, involving advanced 
 problem-solving, precision circuit analysis, and high-reward challenges. 
 
 Task Description:
 ^^^^^^^^^^^^^^^^
-Using KiCAD EDA software design and implement the schematic and PCB design of the TP4056 charging IC.
+Using KiCAD software design and implement the schematic and PCB design of the TP4056 charging module.
 
 ----
 
 .. note::
-   Evaluation for this level will primarily focus on your creativity and design efficiency.
+   Evaluation for this Task will primarily focus on your creativity and design efficiency.
 
 
 .. Warning::
