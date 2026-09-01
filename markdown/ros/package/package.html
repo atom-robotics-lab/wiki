@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creating a package &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
 
   
@@ -16,8 +16,8 @@
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../_static/documentation_options.js?v=71d9d8e6"></script>
-      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -80,14 +80,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">ROS 2 Topic Command</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../selectiontask25/05_selection_task24.html">Selection Task 2025-2026</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selectiontask26/05_selection_task24.html">Selection Task 2026-2027</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../archives/previous_tasks.html">Previous Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/access-repo.html">Using the access repo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/projects.html">Projects</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">External Links</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/A.T.O.M_Robotics">Socials</a></li>
 </ul>
 
         </div>
@@ -236,8 +236,8 @@ You will create your package in this workspace.</p>
 <span class="go">package format: 3</span>
 <span class="go">version: 0.0.0</span>
 <span class="go">description: TODO: Package description</span>
-<span class="go">maintainer: [&#39;&lt;name&gt; &lt;email&gt;&#39;]</span>
-<span class="go">licenses: [&#39;TODO: License declaration&#39;]</span>
+<span class="go">maintainer: ['&lt;name&gt; &lt;email&gt;']</span>
+<span class="go">licenses: ['TODO: License declaration']</span>
 <span class="go">build type: ament_cmake</span>
 <span class="go">dependencies: []</span>
 <span class="go">node_name: my_node</span>
@@ -307,15 +307,15 @@ This is where all your custom C++ nodes will go in the future.</p>
 That’s because the package description and license declaration are not automatically set, but are required if you ever want to release your package.
 The <code class="docutils literal notranslate"><span class="pre">maintainer</span></code> field may also need to be filled in.</p>
 <p>From <code class="docutils literal notranslate"><span class="pre">ros2_ws/src/my_package</span></code>, open <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> using your preferred text editor:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 <span class="cp">&lt;?xml-model</span>
-<span class="cp">   href=&quot;http://download.ros.org/schema/package_format3.xsd&quot;</span>
-<span class="cp">   schematypens=&quot;http://www.w3.org/2001/XMLSchema&quot;?&gt;</span>
-<span class="nt">&lt;package</span><span class="w"> </span><span class="na">format=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>
+<span class="cp">   href="http://download.ros.org/schema/package_format3.xsd"</span>
+<span class="cp">   schematypens="http://www.w3.org/2001/XMLSchema"?&gt;</span>
+<span class="nt">&lt;package</span><span class="w"> </span><span class="na">format=</span><span class="s">"3"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;name&gt;</span>my_package<span class="nt">&lt;/name&gt;</span>
 <span class="nt">&lt;version&gt;</span>0.0.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;description&gt;</span>TODO:<span class="w"> </span>Package<span class="w"> </span>description<span class="nt">&lt;/description&gt;</span>
-<span class="nt">&lt;maintainer</span><span class="w"> </span><span class="na">email=</span><span class="s">&quot;user@todo.todo&quot;</span><span class="nt">&gt;</span>user<span class="nt">&lt;/maintainer&gt;</span>
+<span class="nt">&lt;maintainer</span><span class="w"> </span><span class="na">email=</span><span class="s">"user@todo.todo"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/maintainer&gt;</span>
 <span class="nt">&lt;license&gt;</span>TODO:<span class="w"> </span>License<span class="w"> </span>declaration<span class="nt">&lt;/license&gt;</span>
 
 <span class="nt">&lt;buildtool_depend&gt;</span>ament_cmake<span class="nt">&lt;/buildtool_depend&gt;</span>

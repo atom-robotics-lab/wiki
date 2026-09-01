@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROS Selection Task 2024-2025 &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
 
   
@@ -16,8 +16,8 @@
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../_static/documentation_options.js?v=71d9d8e6"></script>
-      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -51,8 +51,9 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../tool_setup/tool_setup.html">Tool Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ros/ros.html">Intro To ROS 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../selectiontask25/05_selection_task24.html">Selection Task 2025-2026</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selectiontask26/05_selection_task24.html">Selection Task 2026-2027</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../previous_tasks.html">Previous Tasks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../sel-tasks2025/selection_task25.html">Selection Task 2025-2026</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="selection_task24.html">Selection Task 2024-25</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ROS Selection Task 2024-2025</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#problem-statement">Problem statement</a></li>
@@ -77,7 +78,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">External Links</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/A.T.O.M_Robotics">Socials</a></li>
 </ul>
 
         </div>
@@ -174,29 +175,29 @@ while bot’s distance is less than 3.</p>
 <span class="k">class</span><span class="w"> </span><span class="nc">MoveTurtle</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
 
    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-      <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;move_turtle&#39;</span><span class="p">)</span>
+      <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">'move_turtle'</span><span class="p">)</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">start_x</span> <span class="o">=</span> <span class="kc">None</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">start_y</span> <span class="o">=</span> <span class="kc">None</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">target_distance</span> <span class="o">=</span> <span class="mf">3.0</span>  <span class="c1"># Distance to move in pixels</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">lin_vel</span> <span class="o">=</span> <span class="mf">2.0</span>  <span class="c1"># Linear velocity</span>
 
-      <span class="c1"># Create a publisher for controlling the turtle&#39;s velocity</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;/turtle1/cmd_vel&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-      <span class="c1"># Create a subscriber for getting the turtle&#39;s position</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Pose</span><span class="p">,</span> <span class="s1">&#39;/turtle1/pose&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pose_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+      <span class="c1"># Create a publisher for controlling the turtle's velocity</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">'/turtle1/cmd_vel'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+      <span class="c1"># Create a subscriber for getting the turtle's position</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Pose</span><span class="p">,</span> <span class="s1">'/turtle1/pose'</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pose_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
    <span class="k">def</span><span class="w"> </span><span class="nf">pose_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pose</span><span class="p">):</span>
       <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_y</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="c1"># Set the starting position when the first pose message is received</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">start_x</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">start_y</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">y</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting position set to X = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">start_x</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, Y = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">start_y</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Starting position set to X = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">start_x</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, Y = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">start_y</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
       <span class="c1"># Calculate the distance from the starting position</span>
       <span class="n">distance</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">pose</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">pose</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance from start = </span><span class="si">{</span><span class="n">distance</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Distance from start = </span><span class="si">{</span><span class="n">distance</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-      <span class="c1"># Create a Twist message to set the turtle&#39;s velocity</span>
+      <span class="c1"># Create a Twist message to set the turtle's velocity</span>
       <span class="n">vel</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
       <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lin_vel</span>
       <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -206,9 +207,9 @@ while bot’s distance is less than 3.</p>
       <span class="n">vel</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.0</span>
 
       <span class="k">if</span> <span class="n">distance</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_distance</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Turtle reached the target distance&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Turtle reached the target distance"</span><span class="p">)</span>
             <span class="n">vel</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c1"># Stop the turtle</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Stopping Turtle&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">"Stopping Turtle"</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
             <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
       <span class="k">else</span><span class="p">:</span>
@@ -221,7 +222,7 @@ while bot’s distance is less than 3.</p>
    <span class="n">move_turtle_node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
    <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>

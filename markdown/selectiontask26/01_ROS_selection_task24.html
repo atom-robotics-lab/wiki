@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROS Selection Task 2026-2027 &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+
+  
+    <link rel="shortcut icon" href="https://github.com/atom-robotics-lab/assets/blob/main/logo_with_background.jpg?raw=true"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=71d9d8e6"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Electronics Selection Task 2026-2027" href="02_Electronics_selection.html" />
+    <link rel="prev" title="Selection Task 2026-2027" href="05_selection_task24.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            A.T.O.M's Wiki
+              <img src="../../_static/logo_bg.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tool_setup/tool_setup.html">Tool Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ros/ros.html">Intro To ROS 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="05_selection_task24.html">Selection Task 2026-2027</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ROS Selection Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem-statement">Problem statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expected-output">Expected Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hints">Hints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample-code-snippet">Sample Code Snippet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#procedure">Procedure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-nodes">Running the Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Electronics_selection.html">Electronics Selection Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_cad_sel.html">CAD Selection Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_submissions.html">Submissions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../archives/previous_tasks.html">Previous Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/access-repo.html">Using the access repo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">External Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/A.T.O.M_Robotics">Socials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A.T.O.M's Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="05_selection_task24.html">Selection Task 2026-2027</a></li>
+      <li class="breadcrumb-item active">ROS Selection Task 2026-2027</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atom-robotics-lab/wiki/blob/main/markdown/selectiontask26/01_ROS_selection_task24.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ros-selection-task-2026-2027">
+<h1>ROS Selection Task 2026-2027<a class="headerlink" href="#ros-selection-task-2026-2027" title="Link to this heading"></a></h1>
+<section id="problem-statement">
+<h2>Problem statement<a class="headerlink" href="#problem-statement" title="Link to this heading"></a></h2>
+<ul>
+<li><p>The objective of the task is to move the turtle inside the turtlesim
+window in a shape shown below.</p></li>
+<li><p>To acheive this task you are supposed to create a node named
+<code class="docutils literal notranslate"><span class="pre">/node_turtle_move</span></code> within a python script,
+<code class="docutils literal notranslate"><span class="pre">node_turtle_move.py</span></code></p>
+<p>Dont worry if you are new to ROS or Linux(Ubuntu), the task
+is fairly simple and we have provided you with ample resource and
+tutorials in this WIKI to the complete this task so only a strong
+will and a little bit of brains is required to get the work done.
+Also even though this just a weekend task we have provided ample
+amount of time so that you guys can freely manage your time in order
+to complete the task.</p>
+</li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/ros2.jpg" src="../../_images/ros2.jpg" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All the resources to complete the said task are provided in
+the ROS section of ATOM WIKI. So make sure to check it out if you are
+new to ROS2.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <strong>Deadline</strong> for completing the task is <strong>15th September, 2026</strong>.</p>
+</div>
+</section>
+<section id="expected-output">
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://youtu.be/hKwh3ZDIP5M?si=sWmYize23raCZiMI">video link</a></p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/hKwh3ZDIP5M?si=sWmYize23raCZiMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center><br></section>
+<section id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The turtle needs to move in a above shown shape .</p></li>
+<li><p>You can refer <a class="reference external" href="https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Pose.html">POSE</a> to learn more about pose function.</p></li>
+<li><p>You can refer <a class="reference external" href="https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Twist.html">TWIST</a> to learn more about twist function.</p></li>
+<li><p>Use linear velocity and angular velocity to get this done.</p></li>
+<li><p>Use the premade topics and services of the turtlesim_node package to make the task easy. However you can always continue with your own custom topics and services.</p></li>
+<li><p>Keep tracking the position and distance travelled so as to perfectly draw the desired shape. You
+can refer to Overview of rclpy for more hint</p></li>
+</ul>
+</section>
+<section id="sample-code-snippet">
+<h2>Sample Code Snippet<a class="headerlink" href="#sample-code-snippet" title="Link to this heading"></a></h2>
+<p><strong>Question:</strong> Write a python code to move ROS’s turtlesim bot in a circle shape.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geometry_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Twist</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">DrawCircle</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+   <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">'draw_circle'</span><span class="p">)</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">cmd_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">'/turtle1/cmd_vel'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+      <span class="bp">self</span><span class="o">.</span><span class="n">linear_speed</span> <span class="o">=</span> <span class="mf">1.0</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">angular_speed</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+      <span class="c1"># time to complete one full circle: (2*pi) / angular_speed</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">angular_speed</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">elapsed</span> <span class="o">=</span> <span class="mf">0.0</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+      <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">)</span>
+
+   <span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="n">twist</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
+
+      <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">elapsed</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">duration</span><span class="p">:</span>
+            <span class="n">twist</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear_speed</span>
+            <span class="n">twist</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">angular_speed</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elapsed</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span>
+      <span class="k">else</span><span class="p">:</span>
+            <span class="n">twist</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">twist</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Circle complete!"</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+
+      <span class="bp">self</span><span class="o">.</span><span class="n">cmd_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">twist</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+   <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+   <span class="n">node</span> <span class="o">=</span> <span class="n">DrawCircle</span><span class="p">()</span>
+   <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+   <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+   <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+   <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Create Workspace</strong> Open a terminal and create a new ROS 2 workspace named <code class="docutils literal notranslate"><span class="pre">turtle_ws</span></code>:</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/turtle_ws/src
+<span class="nb">cd</span><span class="w"> </span>~/turtle_ws/src
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Create Python Package</strong> Inside turtle_ws/src, create a new package named selection_task:</p>
+<blockquote>
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span>--build-type<span class="w"> </span>ament_python<span class="w"> </span>selection_task
+</pre></div>
+</div>
+<p>This will generate the basic package structure.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Add Python Files</strong> Inside the selection_task/selection_task/ directory:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ensure there’s an init.py file (can be empty)</p></li>
+<li><dl class="simple">
+<dt>Create:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_turtle_move.py</span></code> Complete your script ethically for the better understanding of the underlying concepts for drawing the desired shape .</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><dl>
+<dt><strong>Edit</strong> To run both files with ros2 run, edit the setup.py so it contains:</dt><dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">entry_points</span><span class="o">={</span>
+<span class="w">   </span><span class="s1">'console_scripts'</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">         </span><span class="s1">'node_turtle_move = selection_task.node_turtle_move:main'</span>,
+<span class="w">   </span><span class="o">]</span>,
+<span class="o">}</span>,
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">main</span></code> with the actual function name that starts your node in each file.</p>
+</dd>
+</dl>
+</li>
+<li><p><strong>Build the Workspace</strong> From the root of your workspace:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/turtle_ws
+colcon<span class="w"> </span>build
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p>Source the workspace:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>install/setup.bash
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Run the Simulation</strong></p></li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p>Start Turtlesim</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
+</pre></div>
+</div>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">node_turtle_move.py</span></code> in a new terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/turtle_ws
+<span class="nb">source</span><span class="w"> </span>install/setup.bash
+ros2<span class="w"> </span>run<span class="w"> </span>selection_task<span class="w"> </span>node_turtle_move.py
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>After Running this script , you should probably see your turtle moving on the window while drawing the desired shape.</p></li>
+</ul>
+</section>
+<section id="running-the-nodes">
+<h2>Running the Nodes<a class="headerlink" href="#running-the-nodes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Terminal Method</strong> Open separate terminals for each node</p></li>
+<li><p><strong>Launch File Method</strong> Create a launch file to run multiple nodes:</p>
+<ul>
+<li><p>You can either run them in separate terminals or simply create a <code class="docutils literal notranslate"><span class="pre">selection_task.launch.py</span></code> file inside the <code class="docutils literal notranslate"><span class="pre">~/turtle_ws/src/selection_task/launch/</span></code> folder.</p></li>
+<li><p>Launch files can run multiple nodes unlike a python/cpp script.</p></li>
+<li><p>Run the launch file to execute two processes in parallel.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Please refer to the tutorials and resouces given in the wiki or visit
+the official <a class="reference external" href="http://wiki.ros.org/Documentation">ROSWIKI</a> if you
+need help with anything regarding ROS2.</p>
+</div>
+<p>Head over to <a class="reference external" href="https://atom-robotics-lab.github.io/wiki/markdown/selectiontask26/04_submissions.html">Submissions</a> to submit your work</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="05_selection_task24.html" class="btn btn-neutral float-left" title="Selection Task 2026-2027" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="02_Electronics_selection.html" class="btn btn-neutral float-right" title="Electronics Selection Task 2026-2027" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, A.T.O.M.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

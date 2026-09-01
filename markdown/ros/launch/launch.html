@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROS 2 Launch Files &mdash; A.T.O.M&#39;s Wiki 0.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
 
   
@@ -16,8 +16,8 @@
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../_static/documentation_options.js?v=71d9d8e6"></script>
-      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -74,14 +74,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../comm/topics/rostopic.html">ROS 2 Topic Command</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../selectiontask25/05_selection_task24.html">Selection Task 2025-2026</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selectiontask26/05_selection_task24.html">Selection Task 2026-2027</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../archives/previous_tasks.html">Previous Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/access-repo.html">Using the access repo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/projects.html">Projects</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">External Links</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/a.t.o.m_robotics_lab">Socials</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://linktr.ee/A.T.O.M_Robotics">Socials</a></li>
 </ul>
 
         </div>
@@ -182,10 +182,10 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 <span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
         <span class="n">Node</span><span class="p">(</span>
-            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;my_package&#39;</span><span class="p">,</span>
-            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;my_node&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_node_name&#39;</span><span class="p">,</span>
-            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">'my_package'</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">'my_node'</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">'my_node_name'</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">'screen'</span><span class="p">,</span>
         <span class="p">),</span>
     <span class="p">])</span>
 </pre></div>
@@ -208,14 +208,14 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 <span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
         <span class="n">SetParameterFile</span><span class="p">(</span>
-            <span class="n">node_name</span><span class="o">=</span><span class="s1">&#39;my_node&#39;</span><span class="p">,</span>
-            <span class="n">parameter_file</span><span class="o">=</span><span class="s1">&#39;$(find my_package)/config/config.yaml&#39;</span>
+            <span class="n">node_name</span><span class="o">=</span><span class="s1">'my_node'</span><span class="p">,</span>
+            <span class="n">parameter_file</span><span class="o">=</span><span class="s1">'$(find my_package)/config/config.yaml'</span>
         <span class="p">),</span>
         <span class="n">Node</span><span class="p">(</span>
-            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;my_package&#39;</span><span class="p">,</span>
-            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;my_node&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my_node_name&#39;</span><span class="p">,</span>
-            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">'my_package'</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">'my_node'</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">'my_node_name'</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">'screen'</span><span class="p">,</span>
         <span class="p">),</span>
     <span class="p">])</span>
 </pre></div>
@@ -230,8 +230,8 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 <span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
         <span class="n">ExecuteProcess</span><span class="p">(</span>
-            <span class="n">cmd</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;bash&#39;</span><span class="p">,</span> <span class="s1">&#39;$(find my_package)/scripts/my_script.sh&#39;</span><span class="p">],</span>
-            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span>
+            <span class="n">cmd</span><span class="o">=</span><span class="p">[</span><span class="s1">'bash'</span><span class="p">,</span> <span class="s1">'$(find my_package)/scripts/my_script.sh'</span><span class="p">],</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">'screen'</span>
         <span class="p">)</span>
     <span class="p">])</span>
 </pre></div>
@@ -252,16 +252,16 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 <span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
         <span class="n">Node</span><span class="p">(</span>
-            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_cpp&#39;</span><span class="p">,</span>
-            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;talker&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;talker_node&#39;</span><span class="p">,</span>
-            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">'demo_nodes_cpp'</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">'talker'</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">'talker_node'</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">'screen'</span><span class="p">,</span>
         <span class="p">),</span>
         <span class="n">Node</span><span class="p">(</span>
-            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;demo_nodes_py&#39;</span><span class="p">,</span>
-            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;listener&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;listener_node&#39;</span><span class="p">,</span>
-            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">'demo_nodes_py'</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">'listener'</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">'listener_node'</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">'screen'</span><span class="p">,</span>
         <span class="p">)</span>
     <span class="p">])</span>
 </pre></div>
@@ -285,21 +285,21 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 <span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
         <span class="n">Node</span><span class="p">(</span>
-            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;turtlesim&#39;</span><span class="p">,</span>
-            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;turtlesim_node&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sim_node&#39;</span><span class="p">,</span>
-            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">'turtlesim'</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">'turtlesim_node'</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">'sim_node'</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">'screen'</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="p">[{</span>
-                <span class="s1">&#39;background_r&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
-                <span class="s1">&#39;background_g&#39;</span><span class="p">:</span> <span class="mi">139</span><span class="p">,</span>
-                <span class="s1">&#39;background_b&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
+                <span class="s1">'background_r'</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
+                <span class="s1">'background_g'</span><span class="p">:</span> <span class="mi">139</span><span class="p">,</span>
+                <span class="s1">'background_b'</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
             <span class="p">}]</span>
         <span class="p">),</span>
         <span class="n">Node</span><span class="p">(</span>
-            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;turtlesim&#39;</span><span class="p">,</span>
-            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;turtle_teleop_key&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;teleop_node&#39;</span><span class="p">,</span>
-            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">'turtlesim'</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">'turtle_teleop_key'</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">'teleop_node'</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">'screen'</span><span class="p">,</span>
         <span class="p">)</span>
     <span class="p">])</span>
 </pre></div>
@@ -323,13 +323,13 @@ touch<span class="w"> </span>&lt;file_name&gt;.launch.py
 <span class="k">def</span><span class="w"> </span><span class="nf">generate_launch_description</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span>
         <span class="n">SetParameterFile</span><span class="p">(</span>
-            <span class="n">parameter_file</span><span class="o">=</span><span class="s1">&#39;$(find my_package)/config/config.yaml&#39;</span>
+            <span class="n">parameter_file</span><span class="o">=</span><span class="s1">'$(find my_package)/config/config.yaml'</span>
         <span class="p">),</span>
         <span class="n">Node</span><span class="p">(</span>
-            <span class="n">package</span><span class="o">=</span><span class="s1">&#39;my_package&#39;</span><span class="p">,</span>
-            <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;node_param_get_set&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;param_node&#39;</span><span class="p">,</span>
-            <span class="n">output</span><span class="o">=</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span>
+            <span class="n">package</span><span class="o">=</span><span class="s1">'my_package'</span><span class="p">,</span>
+            <span class="n">executable</span><span class="o">=</span><span class="s1">'node_param_get_set'</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s1">'param_node'</span><span class="p">,</span>
+            <span class="n">output</span><span class="o">=</span><span class="s1">'screen'</span><span class="p">,</span>
         <span class="p">),</span>
     <span class="p">])</span>
 </pre></div>
