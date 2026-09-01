@@ -85,7 +85,7 @@ Problem statement
 
 -  The objective of the task is to make a 3D model of the moving mechanism.
 
--  To acheive this task you are supposed to create a project in Fusion360 and and make the desired output.
+-  To complete this task, you are required to design and develop a project in Fusion 360 that achieves the desired output.
 
 Description
 ^^^^^^^^^^^
@@ -126,11 +126,10 @@ Problem statement
 
 -  The challenge is to **over-engineer the actuation mechanism** for opening and closing the lid, moving beyond conventional simple hinges.
 
--  Participants are free to conceptualize and implement innovative kinematic linkages and motion systems, such as:
+-  You are free to use any creative mechanical linkage or drive system, such as:
 
-   * Multi-bar linkage systems (e.g., Chebyshev, Jansen, or four-bar linkages).
-   * Cam-follower, Geneva, or intermittent motion drives.
-   * Rack-and-pinion, scissor lift mechanisms, or complex gear trains.
+   * Multi-bar linkages (four-bar, scissor mechanisms, etc.)
+   * Gear trains or rack-and-pinion systems.
 
 -  The submission should demonstrate:
 
