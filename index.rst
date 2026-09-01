@@ -15,7 +15,7 @@ Contents:
 
    markdown/tool_setup/tool_setup.rst
    markdown/ros/ros.rst
-   markdown/selectiontask25/05_selection_task24.rst
+   markdown/selectiontask26/05_selection_task24.rst
    markdown/archives/previous_tasks.rst
    markdown/general/access-repo.rst
    markdown/projects/projects.rst
@@ -24,7 +24,7 @@ Contents:
    :maxdepth: 2
    :caption: External Links
    
-   Socials <https://linktr.ee/a.t.o.m_robotics_lab>
+   Socials <https://linktr.ee/A.T.O.M_Robotics>
 
 
 

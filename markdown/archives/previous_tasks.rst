@@ -9,6 +9,7 @@ List of previous selection tasks:
 .. toctree::
     :maxdepth: 2
     
+    ./sel-tasks2025/selection_task25.rst
     ./sel-tasks2024/selection_task24.rst
     ./sel-tasks2023/selection_task23.rst
     ./sel-task2022/selection-task.rst
