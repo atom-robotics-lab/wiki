@@ -67,53 +67,41 @@ Sample Code Snippet
    import rclpy
    from rclpy.node import Node
    from geometry_msgs.msg import Twist
-   from turtlesim.msg import Pose
    import math
 
-   class RotateTurtleOneTurn(Node):
+   class DrawCircle(Node):
       def __init__(self):
-         super().__init__('rotate_turtle_one_turn')
+         super().__init__('draw_circle')
          self.cmd_pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-         self.pose_sub = self.create_subscription(Pose, '/turtle1/pose', self.pose_callback, 10)
-         self.prev_theta = None
-         self.cumulative_rotation = 0.0
-         self.rotation_done = False
-         self.angular_speed = 1.0 
-         self.linear_speed = 1.0 
-         self.timer = self.create_timer(0.01, self.rotate)
 
-      def pose_callback(self, msg):
-         """Track how much the turtle has rotated in total."""
-         current_theta = msg.theta
+         self.linear_speed = 1.0
+         self.angular_speed = 1.0
 
-         if self.prev_theta is None:
-               self.prev_theta = current_theta
-               return
-         delta = current_theta - self.prev_theta
-         if delta > math.pi:
-               delta -= 2 * math.pi
-         elif delta < -math.pi:
-               delta += 2 * math.pi
-         self.cumulative_rotation += abs(delta)
-         self.prev_theta = current_theta
+         # time to complete one full circle: (2*pi) / angular_speed
+         self.duration = (2 * math.pi) / self.angular_speed
+         self.elapsed = 0.0
+         self.dt = 0.1
 
-      def rotate(self):
+         self.timer = self.create_timer(self.dt, self.move)
+
+      def move(self):
          twist = Twist()
 
-         if not self.rotation_done:
+         if self.elapsed < self.duration:
                twist.linear.x = self.linear_speed
                twist.angular.z = self.angular_speed
-               self.cmd_pub.publish(twist)
-               if self.cumulative_rotation >= 2 * math.pi:
-                  twist.linear.x = 0.0
-                  twist.angular.z = 0.0
-                  self.cmd_pub.publish(twist)
-                  self.rotation_done = True
-                  self.get_logger().info("Completed one full revolution!")
+               self.elapsed += self.dt
+         else:
+               twist.linear.x = 0.0
+               twist.angular.z = 0.0
+               self.get_logger().info("Circle complete!")
+               self.timer.cancel()
+
+         self.cmd_pub.publish(twist)
 
    def main(args=None):
       rclpy.init(args=args)
-      node = RotateTurtleOneTurn()
+      node = DrawCircle()
       rclpy.spin(node)
       node.destroy_node()
       rclpy.shutdown()

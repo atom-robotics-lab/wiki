@@ -11,7 +11,7 @@ become a member of the **A.T.O.M** society.
    to see your diligence to learn new stuff the ablity to get the work
    done.
 
--  You will be required to finish **Two** tasks in the alloted time
+-  You will be required to finish atleast **Two** tasks in the alloted time
    frame. Both of them are supposed to be done in any 3d modeling
    software preferably **Fusion360**.
 
@@ -83,14 +83,13 @@ Task 2: 5pts
 Problem statement
 ^^^^^^^^^^^^^^^^^
 
--  The objective of the task is to create or draw an eg/cad drawing for the following displayed below.
+-  The objective of the task is to make a 3D model of the moving mechanism.
 
--  To acheive this task you are supposed to create a project in autocad and and make the desired output.
+-  To acheive this task you are supposed to create a project in Fusion360 and and make the desired output.
 
 Description
 ^^^^^^^^^^^
 - The 6-slot Geneva drive is a precision intermittent motion mechanism that converts continuous rotary input from the driving wheel into stepped, indexed rotation of the driven wheel. In this system, a continuous 360° rotation of the drive disc engages a pin into the radial slot to advance the output wheel by 60°, while the raised crescent cam locks the driven wheel securely in place during the dwell phase to prevent backlash. This mechanical design is widely utilized in automated assembly lines, rotary indexing tables, and tool changers where reliable, discrete positioning is required without external electronic stepping.
-- You will be judged on the basis of the following criteria:
 
 Expected Output
 ^^^^^^^^^^^^^^^
@@ -125,7 +124,7 @@ Problem statement
 
 -  The objective of this open-ended task is to design and model an automated or mechanically driven waste bin with an opening/closing flap lid in Autodesk Fusion.
 
--  The challenge is to **over-engineer the actuation mechanism** for opening and closing the lid, moving beyond conventional simple hinges or basic foot pedals.
+-  The challenge is to **over-engineer the actuation mechanism** for opening and closing the lid, moving beyond conventional simple hinges.
 
 -  Participants are free to conceptualize and implement innovative kinematic linkages and motion systems, such as:
 
@@ -148,6 +147,8 @@ Reference Image
 .. figure:: dustbin.png
 
    **The judging criteria for CAD selection tasks will include an evaluation of the design history of CAD during the interview.**
+
+- You will be judged on the basis of the following criteria:
    
    - Manufacturability of the links and mounts (Preferebly 3d Printable)
    
