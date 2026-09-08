@@ -75,7 +75,7 @@ Task 2: 5pts
 .. raw:: html
 
    <center>
-requirements.txt
+
 .. raw:: html
 
    </center>
