@@ -58,7 +58,7 @@ Expected Output
 
    </center>
 
-.. figure:: cad.png
+.. figure:: cad_task1_updated.png
 
 `video link <https://youtube.com/shorts/eZyMwtAAypY?si=OfeJd3N39agMjqVa>`__
 
@@ -75,7 +75,7 @@ Task 2: 5pts
 .. raw:: html
 
    <center>
-
+requirements.txt
 .. raw:: html
 
    </center>
@@ -116,7 +116,7 @@ Expected Output
       Advancement to the Personal Interview round requires completion of both mandatory tasks. To enhance 
       your selection prospects and distinguish yourself from other candidates, we strongly recommend completing the optional Task 3 as well.
 
-Task 3: Open Innovation
+Task 3: Open Innovation: 8pts
 -----------------------
 
 Problem statement
