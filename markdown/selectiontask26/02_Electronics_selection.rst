@@ -44,8 +44,7 @@ Constraints
 ^^^^^^^^^^^^
 * Cutting of power would alarm the iron guards of your activities.
 * Disconnecting wrong wires would cause an emergency closure of the entire system following which no one can go out or come in.
-* You have no other electronic equipment other than a few strips of wire and plastic strips.
-
+* You have no other electronic equipment other than a few strips of wire and plastic strips. However at the Question mark (?) area (see the image below) you are allowed to add a Electronic Component.
 Circuit Diagram
 ^^^^^^^^^^^^^^^^^
 
