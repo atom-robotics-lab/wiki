@@ -121,7 +121,7 @@ Using KiCAD software design and implement the schematic and PCB design of the TP
 
 
 .. Warning::
-   The **Deadline** for completing the task: **15th September, 2026**
+   The **Deadline** for completing the task: **17th September, 2026**
 
 
 Head over to `Submissions <https://atom-robotics-lab.github.io/wiki/markdown/selectiontask26/04_submissions.html>`__ to submit your work 
